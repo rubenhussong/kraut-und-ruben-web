@@ -1,27 +1,31 @@
-// How to install a plugin: sudo npm install gulp-* -D --unsafe-perm=true
+/*      How to install a plugin:
+        sudo npm install gulp-* -D --unsafe-perm=true
+ */
 
 var gulp = require('gulp'),
     gulpIf = require('gulp-if'),
 
-    // CSS
+    // Css
     sass = require('gulp-sass'),
     concatCss = require('gulp-concat-css'),
     minifyCss = require('gulp-minify-css'),
     autoprefixer = require('gulp-autoprefixer'),
 
-    // HTML
+    // Html
     minifyHtml = require('gulp-minify-html'),
 
-    // JS
+    // Js
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat');
+    concat = require('gulp-concat'),
+
+    // Img
+    imagemin = require('gulp-imagemin');
 
 
 /*
 imageMin = require('gulp-imagemin'),
 svgMin = require('gulp-svgmin');
 jshint = require('gulp-jshint'),
-imagemin = require('gulp-imagemin'),
 clean = require('gulp-clean'),
 notify = require('gulp-notify'),
 cache = require('gulp-cache'),
@@ -44,6 +48,7 @@ gulp.task('build', function(){
     convertSass('dist');
     convertHtml('dist');
     convertJs('dist');
+    convertImgs('dist');
 });
 
 
@@ -54,7 +59,10 @@ gulp.task('build', function(){
 function convertSass(destination){
     return gulp.src('app/scss/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(autoprefixer({ browsers: ['IE 6','Chrome 9', 'Firefox 14']})) // create browserlist config file
+        .pipe(autoprefixer({ browsers: [ // TO DO: create automatic browser list
+            'IE 6',
+            'Chrome 9',
+            'Firefox 14']}))
         .pipe(concatCss('style.css'))
         .pipe(gulpIf(currentTask == 'build', minifyCss())) // just in build-task
         .pipe(gulp.dest(destination + '/css'));
@@ -71,4 +79,14 @@ function convertJs(destination){
         .pipe(concat('main.js'))
         .pipe(uglify())
         .pipe(gulp.dest(destination + 'js'));
+}
+
+function convertImgs(destination){ // TO DO: add responsive image function
+    return gulp.src('app/images/**/*')
+        .pipe(cache(imagemin({
+            optimizationLevel: 5,
+            progressive: true,
+            interlaced: true
+        })))
+        .pipe(gulp.dest(destination + 'img'));
 }
