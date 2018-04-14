@@ -1,34 +1,43 @@
 /*      How to install a plugin:
         sudo npm install gulp-* -D --unsafe-perm=true
- */
+*/
 
 var gulp = require('gulp'),
-    gulpIf = require('gulp-if'),
+    gulpIf = require('gulp-if'),                        // integrate if-conditions
 
-    // Css
-    sass = require('gulp-sass'),
-    concatCss = require('gulp-concat-css'),
-    minifyCss = require('gulp-minify-css'),
-    autoprefixer = require('gulp-autoprefixer'),
+    // CSS
+    sass = require('gulp-sass'),                        // compile SASS to CSS
+    concatCss = require('gulp-concat-css'),             // combine CSS-Files
+    minifyCss = require('gulp-minify-css'),             // minify CSS-Code
+    autoprefixer = require('gulp-autoprefixer'),        // add vendor prefixes automatically
 
-    // Html
-    minifyHtml = require('gulp-minify-html'),
+    // HTML
+    minifyHtml = require('gulp-minify-html'),           // minify HTML-Code
 
-    // Js
+    // JS
     uglify = require('gulp-uglify'),
-    concat = require('gulp-concat'),
+    concat = require('gulp-concat'),                    // combine JS-Files
 
-    // Img
-    imagemin = require('gulp-imagemin');
+    // IMG
+    imagemin = require('gulp-imagemin'),                // optimize IMGs
+    changed = require('gulp-changed'),                  // just convert new or changed images (don’t know difference yet)
+    pngquant = require('imagemin-pngquant'),            // optimize PNGs even more
+    rename = require('gulp-rename'),
+    changeCase = require('change-case');
+    //cache = require('gulp-cache'),
+    //del = require("del"),
+    //deleteEmpty = require("delete-empty"),
+    //globby = require("globby"),
+    //gulpImageresize = require("gulp-image-resize"),
+    //gulpNewer = require("gulp-newer");
+    //merge2 = require("merge2");
 
 
 /*
-imageMin = require('gulp-imagemin'),
 svgMin = require('gulp-svgmin');
 jshint = require('gulp-jshint'),
 clean = require('gulp-clean'),
 notify = require('gulp-notify'),
-cache = require('gulp-cache'),
 livereload = require('gulp-livereload'),
 lr = require('tiny-lr'),
 server = lr();
@@ -40,15 +49,20 @@ var currentTask;
 
 gulp.task('prev', function(){
     currentTask = this.seq.slice(-1)[0];
-    convertSass('app');
+    var destination = 'app';
+
+    convertSass(destination);
+    convertJs(destination);
 });
 
 gulp.task('build', function(){
     currentTask = this.seq.slice(-1)[0];
-    convertSass('dist');
-    convertHtml('dist');
-    convertJs('dist');
-    convertImgs('dist');
+    var destination = 'dist';
+
+    convertSass(destination);
+    convertHtml(destination);
+    convertJs(destination);
+    convertImgs(destination);
 });
 
 
@@ -57,7 +71,7 @@ gulp.task('build', function(){
 // ============================================================ SMALL FUNCTIONS
 
 function convertSass(destination){
-    return gulp.src('app/scss/**/*.scss')
+    return gulp.src('app/scss/**/*.{sass,scss}')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({ browsers: [ // TO DO: create automatic browser list
             'IE 6',
@@ -70,23 +84,30 @@ function convertSass(destination){
 
 function convertHtml(destination){
     return gulp.src('app/index.html')
-        .pipe(minifyHtml())
+        //.pipe(minifyHtml({collapseWhitespace: true}))
         .pipe(gulp.dest(destination));
 }
 
 function convertJs(destination){
     return gulp.src('app/js/**/*.js')
-        .pipe(concat('main.js'))
+        .pipe(concat('main-min.js'))
         .pipe(uglify())
-        .pipe(gulp.dest(destination + 'js'));
+        .pipe(gulp.dest(destination + '/js'));
 }
 
 function convertImgs(destination){ // TO DO: add responsive image function
-    return gulp.src('app/images/**/*')
-        .pipe(cache(imagemin({
+    return gulp.src('app/img/**/*')
+        .pipe(changed(destination + '/img'))
+        .pipe(imagemin({ // TO DO: check out imagemin options
             optimizationLevel: 5,
             progressive: true,
-            interlaced: true
-        })))
-        .pipe(gulp.dest(destination + 'img'));
+            interlaced: true,
+            use: [pngquant()],
+            verbose: true
+            //svgoPlugins: [{ removeViewBox: false }, { removeUselessStrokeAndFill: false }]
+        }))
+        .pipe(rename(function(path){
+            path.extname = changeCase.lowerCase(path.extname)
+        }))
+        .pipe(gulp.dest(destination + '/img'));
 }
