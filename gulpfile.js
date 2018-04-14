@@ -4,6 +4,7 @@
 
 var gulp = require('gulp'),
     gulpIf = require('gulp-if'),                        // integrate if-conditions
+    watch = require('gulp-watch'),
 
     // CSS
     sass = require('gulp-sass'),                        // compile SASS to CSS
@@ -24,31 +25,25 @@ var gulp = require('gulp'),
     pngquant = require('imagemin-pngquant'),            // optimize PNGs even more
     rename = require('gulp-rename'),
     changeCase = require('change-case');
-    //cache = require('gulp-cache'),
-    //del = require("del"),
-    //deleteEmpty = require("delete-empty"),
-    //globby = require("globby"),
-    //gulpImageresize = require("gulp-image-resize"),
-    //gulpNewer = require("gulp-newer");
-    //merge2 = require("merge2");
 
 
 /*
+cache = require('gulp-cache'),
+del = require("del"),
+deleteEmpty = require("delete-empty"),
+gulpImageresize = require("gulp-image-resize"),
 svgMin = require('gulp-svgmin');
 jshint = require('gulp-jshint'),
 clean = require('gulp-clean'),
 notify = require('gulp-notify'),
-livereload = require('gulp-livereload'),
-lr = require('tiny-lr'),
-server = lr();
 */
+
+
+
 
 // ============================================================ MAIN TASKS
 
-var currentTask;
-
 gulp.task('build', function(){
-    currentTask = this.seq.slice(-1)[0];
     var destination = 'dist';
 
     convertSass(destination);
@@ -58,7 +53,6 @@ gulp.task('build', function(){
 });
 
 gulp.task('prev', function(){
-    currentTask = this.seq.slice(-1)[0];
     var destination = 'app';
 
     convertSass(destination);
@@ -66,12 +60,28 @@ gulp.task('prev', function(){
 });
 
 
+
+
+
 // ============================================================ AUTOMATIC TASKS
 
 gulp.task('watch', function() {
-    gulp.watch('/app/scss/**/*.{sass,scss}', [convertSass('app')]);
-    gulp.watch('app/js/**/*.js', [convertJs('app')]);
-})
+    gulp.watch('app/scss/**/*.{sass,scss}', ['autoConvertSass']);
+    gulp.watch(['app/js/**/*.js', '!app/scss/main-min.js'], ['autoConvertJs']);
+});
+
+gulp.task('autoConvertSass', function(){
+    var destination = 'app';
+    convertSass(destination);
+});
+
+gulp.task('autoConvertJs', function(){
+    var destination = 'app';
+    convertJs(destination);
+});
+
+
+
 
 
 // ============================================================ FUNCTIONS
@@ -82,9 +92,10 @@ function convertSass(destination){
         .pipe(autoprefixer({ browsers: [ // TO DO: create automatic browser list
             'IE 6',
             'Chrome 9',
-            'Firefox 14']}))
+            'Firefox 14'
+        ]}))
         .pipe(concatCss('style.css'))
-        .pipe(gulpIf(currentTask == 'build', minifyCss())) // just in build-task
+        .pipe(gulpIf(destination == 'dist', minifyCss())) // just in build-task
         .pipe(gulp.dest(destination + '/css'));
 }
 
@@ -95,9 +106,9 @@ function convertHtml(destination){
 }
 
 function convertJs(destination){
-    return gulp.src('app/js/**/*.js')
+    return gulp.src(['app/js/**/*.js', '!app/js/main-min.js'])
         .pipe(concat('main-min.js'))
-        .pipe(uglify())
+        .pipe(gulpIf(destination == 'dist', uglify()))
         .pipe(gulp.dest(destination + '/js'));
 }
 
