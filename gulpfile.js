@@ -43,17 +43,9 @@ lr = require('tiny-lr'),
 server = lr();
 */
 
-// ============================================================ MAIN FUNCTIONS
+// ============================================================ MAIN TASKS
 
 var currentTask;
-
-gulp.task('prev', function(){
-    currentTask = this.seq.slice(-1)[0];
-    var destination = 'app';
-
-    convertSass(destination);
-    convertJs(destination);
-});
 
 gulp.task('build', function(){
     currentTask = this.seq.slice(-1)[0];
@@ -65,10 +57,24 @@ gulp.task('build', function(){
     convertImgs(destination);
 });
 
+gulp.task('prev', function(){
+    currentTask = this.seq.slice(-1)[0];
+    var destination = 'app';
+
+    convertSass(destination);
+    convertJs(destination);
+});
 
 
+// ============================================================ AUTOMATIC TASKS
 
-// ============================================================ SMALL FUNCTIONS
+gulp.task('watch', function() {
+    gulp.watch('/app/scss/**/*.{sass,scss}', [convertSass('app')]);
+    gulp.watch('app/js/**/*.js', [convertJs('app')]);
+})
+
+
+// ============================================================ FUNCTIONS
 
 function convertSass(destination){
     return gulp.src('app/scss/**/*.{sass,scss}')
