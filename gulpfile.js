@@ -14,6 +14,8 @@ var gulp = require('gulp'),
 
     // HTML
     minifyHtml = require('gulp-minify-html'),           // minify HTML-Code
+    replace = require('gulp-replace'),                  // replace img-tags to create img-srcsets
+    dom = require('gulp-dom'),
 
     // JS
     uglify = require('gulp-uglify'),
@@ -24,6 +26,7 @@ var gulp = require('gulp'),
     changed = require('gulp-changed'),                  // just convert new or changed images (don’t know difference yet)
     pngquant = require('imagemin-pngquant'),            // optimize PNGs even more
     rename = require('gulp-rename'),
+    imageResize = require("gulp-image-resize"),
     changeCase = require('change-case');
 
 
@@ -40,6 +43,20 @@ notify = require('gulp-notify'),
 
 
 
+const screenSize = [
+    480,
+    640,
+    768,
+    900,
+    1024,
+    1366,
+    1600,
+    1920,
+    2260
+];
+
+
+
 
 // ============================================================ MAIN TASKS
 
@@ -49,7 +66,12 @@ gulp.task('build', function(){
     convertSass(destination);
     convertHtml(destination);
     convertJs(destination);
-    convertImgs(destination);
+
+
+    for (var i = 0; i < screenSize.length; i++) {
+        console.log(screenSize[i]);
+        convertImgs(destination, screenSize[i]);
+    }
 });
 
 gulp.task('prev', function(){
@@ -100,8 +122,10 @@ function convertSass(destination){
 }
 
 function convertHtml(destination){
-    return gulp.src('app/index.html')
+    return gulp.src('app/*.html')
         //.pipe(minifyHtml({collapseWhitespace: true}))
+        .pipe(replace('test-01.png', 'test-02.png'))
+        .pipe(concat('index.html'))
         .pipe(gulp.dest(destination));
 }
 
@@ -112,19 +136,23 @@ function convertJs(destination){
         .pipe(gulp.dest(destination + '/js'));
 }
 
-function convertImgs(destination){ // TO DO: add responsive image function
+function convertImgs(destination, sourceSet, imageWidth){ // TO DO: add responsive image function
     return gulp.src('app/img/**/*')
-        .pipe(changed(destination + '/img'))
+        .pipe(rename(function(path){
+            path.basename = path.basename + '-' + sourceSet.toString() + 'px';
+            path.extname = changeCase.lowerCase(path.extname)
+        }))
+        .pipe(changed(destination + '/img/' + sourceSet + 'px'))
+        .pipe(imageResize({
+            width : sourceSet, // TO DO: implement imageSize-coefficient
+            upscale: true,
+            imageMagick: true
+        }))
         .pipe(imagemin({ // TO DO: check out imagemin options
-            optimizationLevel: 5,
             progressive: true,
             interlaced: true,
             use: [pngquant()],
             verbose: true
-            //svgoPlugins: [{ removeViewBox: false }, { removeUselessStrokeAndFill: false }]
         }))
-        .pipe(rename(function(path){
-            path.extname = changeCase.lowerCase(path.extname)
-        }))
-        .pipe(gulp.dest(destination + '/img'));
+        .pipe(gulp.dest(destination + '/img/' + sourceSet + 'px'));
 }
