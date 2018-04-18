@@ -15,7 +15,7 @@ var gulp = require('gulp'),
     // HTML
     minifyHtml = require('gulp-minify-html'),           // minify HTML-Code
     replace = require('gulp-replace'),                  // replace img-tags to create img-srcsets
-    dom = require('gulp-dom'),
+    lazyScr = require('gulp-lazysizes-srcset'),
 
     // JS
     uglify = require('gulp-uglify'),
@@ -44,7 +44,7 @@ notify = require('gulp-notify'),
 
 
 const screenSize = [
-    480,
+    320,
     640,
     768,
     900,
@@ -54,7 +54,6 @@ const screenSize = [
     1920,
     2260
 ];
-
 
 
 
@@ -69,7 +68,6 @@ gulp.task('build', function(){
 
 
     for (var i = 0; i < screenSize.length; i++) {
-        console.log(screenSize[i]);
         convertImgs(destination, screenSize[i]);
     }
 });
@@ -124,7 +122,27 @@ function convertSass(destination){
 function convertHtml(destination){
     return gulp.src('app/*.html')
         //.pipe(minifyHtml({collapseWhitespace: true}))
-        .pipe(replace('test-01.png', 'test-02.png'))
+        .pipe(replace('src=', 'data-src='))
+        .pipe(replace('sizes=', 'data-sizes='))
+        .pipe(lazyScr({
+            decodeEntities: false,
+            src: 'data-src',
+            srcset: 'data-srcset',
+            suffix: {
+                '320w': '-320px',
+                '640w': '-640px',
+                '768w': '-768px',
+                '900w': '-900px',
+                '1024w': '-1024px',
+                '1366w': '-1366px',
+                '1600w': '-1600px',
+                '1920w': '-1920px',
+                '2260w': '-2260px'
+            }
+        }))
+        //.pipe(replace('data-src=', 'src='))
+        //.pipe(replace('data-srcset=', 'srcset='))
+        //.pipe(replace('data-sizes=', 'sizes='))
         .pipe(concat('index.html'))
         .pipe(gulp.dest(destination));
 }
@@ -142,9 +160,9 @@ function convertImgs(destination, sourceSet, imageWidth){ // TO DO: add responsi
             path.basename = path.basename + '-' + sourceSet.toString() + 'px';
             path.extname = changeCase.lowerCase(path.extname)
         }))
-        .pipe(changed(destination + '/img/' + sourceSet + 'px'))
+        .pipe(changed(destination + '/img/'/* + sourceSet + 'px'*/))
         .pipe(imageResize({
-            width : sourceSet, // TO DO: implement imageSize-coefficient
+            width : sourceSet, // TO DO: implement imageSize-coefficient (search with dom() for sizes-attribute of img-tag with alt=path.basename and make it a number)
             upscale: true,
             imageMagick: true
         }))
@@ -154,5 +172,5 @@ function convertImgs(destination, sourceSet, imageWidth){ // TO DO: add responsi
             use: [pngquant()],
             verbose: true
         }))
-        .pipe(gulp.dest(destination + '/img/' + sourceSet + 'px'));
+        .pipe(gulp.dest(destination + '/img/'/* + sourceSet + 'px'*/));
 }

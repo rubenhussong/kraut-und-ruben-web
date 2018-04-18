@@ -22,6 +22,8 @@
     "gulp-if": "^2.0.2",
     "gulp-image-resize": "^0.13.0",
     "gulp-imagemin": "^4.1.0",
+    "gulp-lazysizes-data-srcset": "^1.0.0",
+    "gulp-lazysizes-srcset": "^0.2.0",
     "gulp-lowerCase": "^1.0.3",
     "gulp-minify-css": "^1.2.4",
     "gulp-minify-html": "^1.0.6",
