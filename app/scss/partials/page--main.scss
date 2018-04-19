@@ -1,0 +1,48 @@
+
+
+#page--main {
+
+  #section--about {
+    width: 100vw;
+    height: 30rem;
+  }
+
+  #section--projects {
+
+    padding: ($column / 2);
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .project-banner {
+
+      display: inline-block;
+      margin: ($column / 2);
+
+      &.img-small {
+        width: 3 * $column;
+      }
+      &.img-middle {
+        width: 5 * $column;
+      }
+      &.img-large {
+        width: 7 * $column;
+      }
+
+      img {
+        width: 100%;
+        transition: transform 1s ease;
+      }
+
+      &:hover img {
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  footer {
+    width: 100vw;
+    height: 30rem;
+  }
+}

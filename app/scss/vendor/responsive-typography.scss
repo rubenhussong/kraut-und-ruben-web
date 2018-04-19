@@ -1,0 +1,26 @@
+/* Supply Base
+*
+*   Viewport-based Typography as sugessted in
+*   http://zellwk.com/blog/viewport-based-typography/
+*
+*/
+
+$baseFontSize: 16;
+$scalledViewport: 2560;
+$scalledFontSize: 30;
+
+// better do not change
+$baseViewport: 320;
+$b1: $baseFontSize / 16 * 1em;
+$v1: $scalledFontSize - $baseFontSize;
+$v2: $baseViewport / 16 * 1em;
+$v3: $scalledViewport - $baseViewport;
+
+
+html {
+  font-size: 18px;
+  font-size: calc(#{$b1} + #{$v1} * (100vw - #{$v2}) / #{$v3});
+
+  // Remove system specific highligh color
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}

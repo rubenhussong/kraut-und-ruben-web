@@ -1,0 +1,14 @@
+
+@import "../modules/variables";
+
+
+body {
+  background: $color-background;
+  color: $color-main;
+}
+
+
+a {
+  color: inherit;
+  text-decoration: none; /* no underline */
+}

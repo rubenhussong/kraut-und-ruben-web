@@ -107,7 +107,7 @@ gulp.task('autoConvertJs', function(){
 // ============================================================ FUNCTIONS
 
 function convertSass(destination){
-    return gulp.src('app/scss/**/*.{sass,scss}')
+    return gulp.src('app/scss/main.scss')
         .pipe(sass().on('error', sass.logError))
         .pipe(autoprefixer({ browsers: [ // TO DO: create automatic browser list
             'IE 6',
