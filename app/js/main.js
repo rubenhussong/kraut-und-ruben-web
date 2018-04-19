@@ -4,11 +4,6 @@ var offsetTopStarting;
 
 $( document ).ready(function() {
 
-    //console.log("top: " + $(".scroll-horizontal-move").offset().top);
-    //$(".scroll-horizontal-move").offset().top = $(".scroll-horizontal-move").offset({top: 500});
-
-    //console.log();
-
 });
 
 

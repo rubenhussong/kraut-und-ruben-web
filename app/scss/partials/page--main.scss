@@ -1,14 +1,24 @@
 
+body {
+}
+
+.page .section {
+  overflow-x: hidden;
+  width: 100vw;
+}
+
 
 #page--main {
+  overflow-x: hidden;
 
   #section--about {
     width: 100vw;
-    height: 30rem;
+    height: 10rem;
   }
 
   #section--projects {
-
+    //overflow-x: hidden;
+    width: 100vw;
     padding: ($column / 2);
 
     display: flex;
@@ -17,22 +27,25 @@
 
     .project-banner {
 
-      display: inline-block;
-      margin: ($column / 2);
+      display: block;
+      //margin: ($column * 2) ($column / 2);
+      height: 100vh;
+      width: 100vw;
 
-      &.img-small {
+      &.img-small img {
         width: 3 * $column;
       }
-      &.img-middle {
+      &.img-middle img {
         width: 5 * $column;
       }
-      &.img-large {
+      &.img-large img {
         width: 7 * $column;
       }
 
       img {
         width: 100%;
         transition: transform 1s ease;
+        overflow-y: hidden;
       }
 
       &:hover img {
@@ -43,6 +56,7 @@
 
   footer {
     width: 100vw;
-    height: 30rem;
+    height: 10rem;
+    overflow-y: hidden;
   }
 }
