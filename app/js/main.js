@@ -1,8 +1,54 @@
-var scrollPosition = $(window).scrollTop();
-var offsetTopStarting;
+$(window).on('load', function() {
+    $(window).scroll(function() {
+
+        var scrollPositionTop = $(window).scrollTop();
+        var header = $('header');
+
+        //console.log(scrollPositionTop);
+        if (scrollPositionTop > 50) {
+            if (header.hasClass('header-top')) {
+                header.addClass('header-scroll');
+                header.removeClass('header-top');
+                console.log("biste unten");
+            }
+        } else {
+            if (header.hasClass('header-scroll')) {
+                header.addClass('header-top');
+                header.removeClass('header-scroll');
+                console.log("biste oben");
+            }
+        }
 
 
-$( document ).ready(function() {
+        $('.fadeIn').each(function() {
+            var scrollPosition = $(window).scrollTop() + $(window).height();
+            var elementPosition = $(this).offset().top + .75 * $(this).outerHeight();
+
+            if (scrollPosition > elementPosition) {
+                if (!$(this).hasClass('fadeIn-visible')) {
+                    $(this).addClass('fadeIn-visible');
+                }
+            } else {
+                if ($(this).hasClass('fadeIn-visible')) {
+                    $(this).removeClass('fadeIn-visible');
+                }
+            }
+
+        });
+
+    });
+
+
+    var iconRotation = 0;
+
+    $(window).mousemove(function() {
+        iconRotation = iconRotation + 5;
+
+        $('.head-icon').each(function() {
+            var sRotate = "rotate(" + iconRotation + "deg)";
+            $(this).css({"-moz-transform" : sRotate, "-webkit-transform" : sRotate});
+        });
+    });
 
 });
 
@@ -10,21 +56,15 @@ $( document ).ready(function() {
 
 $( document ).scroll(function() {
 
+    /*
     scrollPosition = $(window).scrollTop();
-
     $('.scroll-horizontal-left').each(function() {
-        console.log($(this).height());
-
         var offset = $(this).offset().top;
-
         $(this).css({'transform' : 'translate(' + (scrollPosition - offset) + 'px, 0)'});
     });
-
     $('.scroll-horizontal-right').each(function() {
-        console.log($(this).height());
-
         var offset = $(this).offset().top;
-
         $(this).css({'transform' : 'translate(' + (offset - scrollPosition) + 'px, 0)'});
     });
+    */
 });

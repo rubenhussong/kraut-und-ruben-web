@@ -1,15 +1,61 @@
 
-body {
-}
-
-.page .section {
+body, .page {
   overflow-x: hidden;
   width: 100vw;
 }
 
+.fadeIn {
+
+  * {
+    transition:
+            opacity .3s ease,
+            transform .5s ease;
+
+    opacity: 0;
+    transform: scale(0);
+  }
+
+  &.fadeIn-visible * {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+header {
+  position: fixed;
+  width: 100%;
+
+  background: blue;
+
+  .head-icon {
+    //position: absolute;
+    margin: 1rem;
+    width: 2rem;
+    display: inline-block;
+
+
+    &:hover img {
+      transform: rotate(-720deg);
+    }
+
+    &#head-icon--kraut {
+      float: left;
+    }
+    &#head-icon--ruebe {
+      float: right;
+    }
+
+    img {
+      width: 100%;
+      transition: transform .5s ease;
+    }
+
+  }
+}
+
 
 #page--main {
-  overflow-x: hidden;
 
   #section--about {
     width: 100vw;
@@ -17,38 +63,29 @@ body {
   }
 
   #section--projects {
-    //overflow-x: hidden;
     width: 100vw;
     padding: ($column / 2);
 
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
     .project-banner {
+      display: inline-block;
+      margin: ($column / 2);
+      transition: transform 1s ease;
 
-      display: block;
-      //margin: ($column * 2) ($column / 2);
-      height: 100vh;
-      width: 100vw;
-
-      &.img-small img {
+      &.img-small {
         width: 3 * $column;
       }
-      &.img-middle img {
+      &.img-middle {
         width: 5 * $column;
       }
-      &.img-large img {
+      &.img-large {
         width: 7 * $column;
       }
 
       img {
         width: 100%;
-        transition: transform 1s ease;
-        overflow-y: hidden;
       }
 
-      &:hover img {
+      &:hover {
         transform: scale(1.05);
       }
     }
