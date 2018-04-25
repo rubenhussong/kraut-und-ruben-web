@@ -37,7 +37,7 @@ ehthumbs.db
 Thumbs.db
 
 
-# Direstories #
+# Directories #
 node_modules/
 dist/
 app/css/style.css
