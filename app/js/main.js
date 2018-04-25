@@ -22,7 +22,7 @@ $(window).on('load', function() {
 
         $('.fadeIn').each(function() {
             var scrollPosition = $(window).scrollTop() + $(window).height();
-            var elementPosition = $(this).offset().top + .75 * $(this).outerHeight();
+            var elementPosition = $(this).offset().top + .5 * $(this).outerHeight();
 
             if (scrollPosition > elementPosition) {
                 if (!$(this).hasClass('fadeIn-visible')) {

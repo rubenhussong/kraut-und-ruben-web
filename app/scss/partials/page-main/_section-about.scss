@@ -1,5 +1,27 @@
 #section--about {
-  padding: $gutter;
-  width: 50vw;
-  height: 10rem;
+  width: 100%;
+  display: inline-block;
+  box-sizing: border-box;
+  padding: (.5 * $gutter);
+  margin: $gutter 0;
+
+  font-family: $font-serif;
+  font-size: $font-size--medium;
+  line-height: 1.5;
+
+  .about-column {
+    width: 50%;
+    padding: 0 (.5 * $gutter);
+    box-sizing: border-box;
+    float: left;
+    .about-banner {
+      display: inline-block;
+      &.img-large {
+        width: 100%;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
 }
