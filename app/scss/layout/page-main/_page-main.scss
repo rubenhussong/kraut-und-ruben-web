@@ -1,9 +1,9 @@
 #page--main {
   padding: $gutter 0;
 
-  @import "page-main/_section-about.scss";
+  @import "section-about";
 
-  @import "page-main/_section-projects.scss";
+  @import "section-projects";
 
   footer {
     width: 100vw;

@@ -15,9 +15,10 @@ header {
         right: calc(50% + 0.7rem);
       }
       &#h1--center {
+        text-align: center;
+        top: 0;
         width: .8rem;
         left: calc(50% - .4rem);
-        text-align: center;
       }
       &#h1--right {
         left: calc(50% + 0.7rem);
