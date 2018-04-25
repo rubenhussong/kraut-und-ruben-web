@@ -42,4 +42,4 @@ node_modules/
 dist/
 app/css/style.css
 
-.idea/workspace.xml
+.idea/*
