@@ -9,7 +9,7 @@ var gulp = require('gulp'),
     // CSS
     sass = require('gulp-sass'),                        // compile SASS to CSS
     concatCss = require('gulp-concat-css'),             // combine CSS-Files
-    minifyCss = require('gulp-minify-css'),             // minify CSS-Code
+    minifyCss = require('gulp-clean-css'),             // minify CSS-Code
     autoprefixer = require('gulp-autoprefixer'),        // add vendor prefixes automatically
 
     // HTML

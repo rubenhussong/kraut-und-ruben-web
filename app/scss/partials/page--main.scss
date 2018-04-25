@@ -26,7 +26,7 @@ header {
   position: fixed;
   width: 100%;
 
-  background: blue;
+  background: #fff;
 
   .head-icon {
     //position: absolute;
@@ -58,35 +58,43 @@ header {
 #page--main {
 
   #section--about {
-    width: 100vw;
+    //width: 100vw;
     height: 10rem;
   }
 
   #section--projects {
-    width: 100vw;
-    padding: ($column / 2);
+    display: inline-block;
+    padding: (.5 * $column);
 
-    .project-banner {
-      display: inline-block;
-      margin: ($column / 2);
-      transition: transform 1s ease;
+    .project-column {
+      box-sizing: border-box;
+      float: left;
+      width: 50%;
 
-      &.img-small {
-        width: 3 * $column;
-      }
-      &.img-middle {
-        width: 5 * $column;
-      }
-      &.img-large {
-        width: 7 * $column;
-      }
+      padding: 0 (.5 * $column);
 
-      img {
-        width: 100%;
-      }
+      .project-banner {
+        display: inline-block;
+        margin: ($column / 2) 0;
+        transition: transform 1s ease;
 
-      &:hover {
-        transform: scale(1.05);
+        &.img-small {
+          width: 2.5 * $column;
+        }
+        &.img-middle {
+          width: 3.5 * $column;
+        }
+        &.img-large {
+          width: 4.5 * $column;
+        }
+
+        img {
+          width: 100%;
+        }
+
+        &:hover {
+          transform: scale(1.05);
+        }  
       }
     }
   }
