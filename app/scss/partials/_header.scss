@@ -1,23 +1,22 @@
 header {
   position: fixed;
-  top: 0;
-  left: 0;
   z-index: 1;
   width: 100%;
   .word-mark {
     position: absolute;
     width: 100%;
-    margin-top: 1rem;
+    box-sizing: border-box;
     p {
       position: absolute;
       font-family: $font-sans;
+      font-size: $font-size--small;
+      margin: (($gutter - 1.5rem) / 2) 0;
       &#h1--left {
         right: calc(50% + 0.7rem);
       }
       &#h1--center {
         width: .8rem;
         left: calc(50% - .4rem);
-        top: 0;
         text-align: center;
       }
       &#h1--right {
@@ -28,7 +27,7 @@ header {
   .head-icon {
     position: absolute;
     display: inline-block;
-    margin: 1rem;
+    margin: (($gutter - 1.5rem) / 2);
     width: 1.5rem;
     top: -3rem;
     &#head-icon--kraut {

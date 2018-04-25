@@ -1,0 +1,13 @@
+#page--main {
+  padding: $gutter 0;
+
+  @import "page-main/_section-about.scss";
+
+  @import "page-main/_section-projects.scss";
+
+  footer {
+    width: 100vw;
+    height: 10rem;
+    overflow-y: hidden;
+  }
+}
