@@ -1,0 +1,20 @@
+$breakpoints: (
+  xl: (min-width: 1600px),
+  l: (max-width: 1200px),
+  m: (max-width: 880px),
+  s: (max-width: 700px),
+  xs: (max-width: 420px)
+);
+
+@mixin bp($name) {
+  $value: map-get($breakpoints, $name);
+  @if map-has-key($breakpoints, $name) {
+    @media #{inspect(map-get($breakpoints, $name))} {
+      @content;
+    }
+  }
+  @else {
+    @warn "The '#{$name}' breakpoint is not defined. "
+        + "Please make sure it is defined in the global.scss '$breakpoint' map.";
+  }
+}
