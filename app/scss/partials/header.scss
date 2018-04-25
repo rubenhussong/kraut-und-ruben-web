@@ -1,0 +1,46 @@
+header {
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  .word-mark {
+    position: absolute;
+    width: 100%;
+    margin: 1rem;
+    p {
+      position: absolute;
+      font-family: $font-sans;
+      &#h1--left {
+        right: calc(50% + 0.7rem);
+      }
+      &#h1--center {
+        width: 0.8rem;
+        left: calc(50vw - 0.4rem);
+        top: 0;
+        text-align: center;
+      }
+      &#h1--right {
+        left: calc(50% + 0.7rem);
+      }
+    }
+  }
+  .head-icon {
+    position: absolute;
+    margin: 1rem;
+    width: 1.5rem;
+    display: inline-block;
+    top: -3rem;
+    img {
+      width: 100%;
+      transition: transform .5s ease;
+    }
+    &#head-icon--kraut {
+      left: 0;
+    }
+    &#head-icon--ruebe {
+      right: 0;
+    }
+    &:hover img {
+      transform: rotate(-720deg);
+    }
+  }
+}

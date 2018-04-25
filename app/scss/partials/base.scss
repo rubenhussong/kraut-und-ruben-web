@@ -1,5 +1,6 @@
 
 @import "../modules/variables";
+@import "../modules/scroll-transitions";
 
 
 body {
@@ -7,6 +8,10 @@ body {
   color: $color-main;
 }
 
+body, .page {
+  overflow-x: hidden;
+  width: 100vw;
+}
 
 a {
   color: inherit;

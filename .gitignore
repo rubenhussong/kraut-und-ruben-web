@@ -40,6 +40,6 @@ Thumbs.db
 # Direstories #
 node_modules/
 dist/
-app/css/
+app/css/style.css
 
 .idea/workspace.xml

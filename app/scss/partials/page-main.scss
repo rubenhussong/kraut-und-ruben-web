@@ -1,0 +1,41 @@
+#page--main {
+  #section--about {
+    width: 100vw;
+    height: 10rem;
+  }
+  #section--projects {
+    display: inline-block;
+    padding: ($column / 2);
+    .project-column {
+      width: 50%;
+      padding: 0 ($column / 2);
+      box-sizing: border-box;
+      float: left;
+      .project-banner {
+        display: inline-block;
+        margin: ($column / 2) 0;
+        transition: transform 1s ease;
+        &.img-small {
+          width: 3 * $column;
+        }
+        &.img-middle {
+          width: 5 * $column;
+        }
+        &.img-large {
+          width: 4 * $column;
+        }
+        img {
+          width: 100%;
+        }
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+  }
+  footer {
+    width: 100vw;
+    height: 10rem;
+    overflow-y: hidden;
+  }
+}

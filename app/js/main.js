@@ -5,7 +5,7 @@ $(window).on('load', function() {
         var header = $('header');
 
         //console.log(scrollPositionTop);
-        if (scrollPositionTop > 50) {
+        if (scrollPositionTop > 100) {
             if (header.hasClass('header-top')) {
                 header.addClass('header-scroll');
                 header.removeClass('header-top');
@@ -50,21 +50,4 @@ $(window).on('load', function() {
         });
     });
 
-});
-
-
-
-$( document ).scroll(function() {
-
-    /*
-    scrollPosition = $(window).scrollTop();
-    $('.scroll-horizontal-left').each(function() {
-        var offset = $(this).offset().top;
-        $(this).css({'transform' : 'translate(' + (scrollPosition - offset) + 'px, 0)'});
-    });
-    $('.scroll-horizontal-right').each(function() {
-        var offset = $(this).offset().top;
-        $(this).css({'transform' : 'translate(' + (offset - scrollPosition) + 'px, 0)'});
-    });
-    */
 });
