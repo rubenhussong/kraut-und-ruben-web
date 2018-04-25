@@ -1,3 +1,7 @@
+// -----------------------------------------------------------------------------
+// This file contains all breakpoints.
+// -----------------------------------------------------------------------------
+
 $breakpoints: (
   xl: (min-width: 1600px),
   l: (max-width: 1200px),
@@ -5,6 +9,8 @@ $breakpoints: (
   s: (max-width: 700px),
   xs: (max-width: 420px)
 );
+
+// Mixin
 
 @mixin bp($name) {
   $value: map-get($breakpoints, $name);

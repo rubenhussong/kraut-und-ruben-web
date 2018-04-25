@@ -1,4 +1,6 @@
-// Color map
+// -----------------------------------------------------------------------------
+// This file contains all color declarations.
+// -----------------------------------------------------------------------------
 
 $colors: (
   primary: rgb(50, 50, 50),
@@ -11,3 +13,13 @@ $colors: (
   active: rgb(50, 50, 50),
   focus: rgb(50, 50, 50)
 );
+
+// Mixin
+@function color($key) {
+  @if map-has-key($colors, $key) {
+    @return map-get($colors, $key);
+  }
+ 
+  @warn "Unknown `#{$key}` in $colors.";
+  @return null;
+}
