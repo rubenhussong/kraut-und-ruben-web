@@ -32,5 +32,10 @@
         transform: scale(1.05);
       }
     }
+
+    @include bp(s) {
+      width: 100%;
+      float: none;
+    }
   }
 }

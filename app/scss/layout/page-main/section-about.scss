@@ -6,21 +6,27 @@
   margin: $gutter 0;
 
   font-family: $font-serif;
-  font-size: $font-size--medium;
+  font-size: $font-size--large;
   line-height: 1.5;
 
   .about-column {
-    width: 50%;
-    padding: 0 (.5 * $gutter);
+    width: 50rem;
+    padding: (.5 * $gutter);
     box-sizing: border-box;
-    float: left;
-    .about-banner {
-      display: inline-block;
-      &.img-large {
-        width: 100%;
-      }
-      img {
-        width: 100%;
+    margin: 0 10%;
+
+    max-width: 100%;
+
+    p {
+      transition:
+              opacity .75s cubic-bezier(0, .4, .4, 1),
+              transform 1.5s cubic-bezier(0, .4, .4, 1);
+      opacity: 0;
+      transform: scale(0.95) translate(0, 2.5rem);
+
+      &.on-load-ready {
+        opacity: 1;
+        transform: scale(1) translate(0, 0);
       }
     }
   }

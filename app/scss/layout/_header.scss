@@ -28,9 +28,10 @@ header {
   .head-icon {
     position: absolute;
     display: inline-block;
-    margin: (($gutter - 1.5rem) / 2);
-    width: 1.5rem;
-    top: -3rem;
+    margin: (($gutter - 2rem) / 2);
+    width: 2rem;
+    top: -4rem;
+
     &#head-icon--kraut {
       left: 0;
     }
