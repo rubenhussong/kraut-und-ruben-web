@@ -42,4 +42,6 @@ node_modules/
 dist/
 app/css/style.css
 
+package.json
+package-lock.json
 .idea/workspace.xml
