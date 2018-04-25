@@ -1,39 +1,28 @@
-
 // Add Animation on Scroll to HTML-Objects
 // Javascript: AddClass and RemoveClass
 
-
-
 // Img-Scroll
-
 .fadeIn {
-
   * {
     transition:
-            opacity .3s ease,
-            transform .5s ease;
-
+            opacity .3s cubic-bezier(0, .4, .4, 1),
+            transform .6s cubic-bezier(0, .4, .4, 1);
     opacity: 0;
-    //transform: scale(0);
-    transform: translate(0, 5rem);
+    transform: scale(0.9) translate(0, 5rem);
   }
-
   &.fadeIn-visible * {
     opacity: 1;
-    //transform: scale(1);
-    transform: translate(0, 0);
+    transform: scale(1) translate(0, 0);
   }
 }
 
-
 // Header-Scroll
-
 header {
   .word-mark p {
-    transition: right .5s ease, left .5s ease, top .5s ease;
+    transition: right .8s ease, left .8s ease, top .8s ease;
   }
   .head-icon {
-    transition: top .5s cubic-bezier(.75, 0, .25, 1);
+    transition: top .8s cubic-bezier(.75, 0, .25, 1);
   }
   &.header-scroll {
     .word-mark {

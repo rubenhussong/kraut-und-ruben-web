@@ -1,28 +1,34 @@
 #page--main {
   #section--about {
-    width: 100vw;
+    width: 50vw;
     height: 10rem;
   }
   #section--projects {
     display: inline-block;
-    padding: ($column / 2);
+    padding: (.5 * $gutter);
     .project-column {
       width: 50%;
-      padding: 0 ($column / 2);
+      padding: 0 (.5 * $gutter);
       box-sizing: border-box;
       float: left;
       .project-banner {
         display: inline-block;
-        margin: ($column / 2) 0;
+        margin: (.5 * $gutter) 0;
         transition: transform 1s ease;
         &.img-small {
-          width: 3 * $column;
+          width: 60%;
         }
         &.img-middle {
-          width: 5 * $column;
+          width: 80%;
         }
         &.img-large {
-          width: 4 * $column;
+          width: 100%;
+        }
+        &.img-left {
+          float: left;
+        }
+        &.img-right {
+          float: right;
         }
         img {
           width: 100%;
