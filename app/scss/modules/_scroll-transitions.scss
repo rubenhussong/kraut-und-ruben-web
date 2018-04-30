@@ -1,34 +1,37 @@
-// Add Animation on Scroll to HTML-Objects
+// Animations on Scroll
 // Javascript: AddClass and RemoveClass
 
-// Img-Scroll
-.fadeIn {
-  * {
+// Main-Elements on Scroll (Project-Images and About-Text)
+.fade-in {
+  *:not(a):not(span) {
     transition:
-            opacity .75s cubic-bezier(0, .4, .4, 1),
+            opacity 1s cubic-bezier(0, .4, .4, 1),
             transform 1.5s cubic-bezier(0, .4, .4, 1);
     opacity: 0;
-    transform: perspective(50em) rotateX(-45deg) scale(0.95) translate(0, 5rem);
+    transform: perspective(50em) rotateX(-22.5deg) scale(0.95) translate(0, 5rem);
   }
-  &.fadeIn-visible * {
+  &.fade-in-visible *:not(a):not(span) {
     opacity: 1;
     transform: perspective(50em) rotateX(0deg) scale(1) translate(0, 0);
   }
-  &.fadeOut * {
+  &.fade-out *:not(a):not(span) {
     opacity: 0;
-    transform: perspective(50em) rotateX(45deg) scale(0.95) translate(0, -5rem);
+    transform: perspective(50em) rotateX(22.5deg) scale(0.95) translate(0, -5rem);
   }
 }
 
-// Header-Scroll
+// Header on Scroll
 header {
   .word-mark p {
     transition: right .8s ease, left .8s ease, top .8s ease;
   }
   .head-icon {
-    transition: top .8s cubic-bezier(.75, 0, .25, 1);
+    opacity: 0;
+    transition:
+            opacity .6s cubic-bezier(.75, 0, .25, 1) .4s,
+            top 1.2s cubic-bezier(.75, 0, .25, 1);
   }
-  &.header-scroll {
+  &.scroll-down {
     .word-mark {
       p {
         &#h1--left {
@@ -44,6 +47,28 @@ header {
     }
     .head-icon {
       top: 0;
+      opacity: 1;
+      transition:
+              opacity .6s cubic-bezier(.75, 0, .25, 1),
+              top 1.2s cubic-bezier(.75, 0, .25, 1);
+    }
+  }
+}
+
+// Scroll-Marker on Scroll
+nav {
+  #scroll-marker {
+    transition:
+            transform .8s cubic-bezier(.75, 0, .25, 1),
+            pointer-events 0s linear .7s,
+            opacity .6s cubic-bezier(.75, 0, .25, 1);
+    transform: translateY(0);
+  }
+  &.scroll-down {
+    #scroll-marker {
+      opacity: 0;
+      pointer-events: none;
+      transform: translateY(4rem);
     }
   }
 }

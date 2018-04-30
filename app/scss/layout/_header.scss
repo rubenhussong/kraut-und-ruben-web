@@ -2,48 +2,34 @@ header {
   position: fixed;
   z-index: 1;
   width: 100%;
+  @include on-load--header();
   .word-mark {
+    box-sizing: border-box;
     position: absolute;
     width: 100%;
-    box-sizing: border-box;
     p {
       position: absolute;
-      font-family: $font-sans;
-      font-size: $font-size--small;
       margin: (($gutter - 1.5rem) / 2) 0;
-      &#h1--left {
-        right: calc(50% + 0.7rem);
-      }
+      @include monospace-small();
+      &#h1--left { right: calc(50% + 0.7rem); }
+      &#h1--right { left: calc(50% + 0.7rem); }
       &#h1--center {
         text-align: center;
-        top: 0;
         width: .8rem;
+        top: 0;
         left: calc(50% - .4rem);
-      }
-      &#h1--right {
-        left: calc(50% + 0.7rem);
       }
     }
   }
   .head-icon {
-    position: absolute;
     display: inline-block;
+    position: absolute;
     margin: (($gutter - 2rem) / 2);
     width: 2rem;
     top: -4rem;
-
-    &#head-icon--kraut {
-      left: 0;
-    }
-    &#head-icon--ruebe {
-      right: 0;
-    }
-    img {
-      width: 100%;
-      transition: transform .5s ease;
-    }
-    &:hover img {
-      transform: scale(3);
-    }
+    &#head-icon--kraut { left: 0; }
+    &#head-icon--ruebe { right: 0; }
+    img { width: 100%; }
+    @include hover--head-icon();
   }
 }

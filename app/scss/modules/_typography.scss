@@ -1,11 +1,53 @@
 
 
 // ================================================== FONTS & TYPOGRAPHY
+@font-face {
+  font-family: 'agipo';
+  src: url('../fonts/AgipoRegular.otf') format('opentype');
+}
 
-$font-sans:             "Tenor Sans", Helvetica, sans-serif;
 $font-serif:            "Spectral", Times, serif;
+$font-mono:             'Overpass Mono', Courier, monospace;
 
-$font-size--small:      1rem;
-$font-size--medium:     1.5rem;
-$font-size--large:      2rem;
+/*
+  'Overpass Mono', monospace; 400
+'Space Mono', monospace; 400, 700
+'Share Tech', sans-serif; 400
+
+  'nimbus-sans' 400, 700
+*/
+
+$font-size--xs:     .75rem;
+$font-size--s:      1rem;
+$font-size--m:      1.5rem;
+$font-size--l:      2rem;
+
+$basic-line-height: 1.5;
+
+@mixin monospace-small() {
+  font-family: $font-mono;
+  font-size: $font-size--s;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
+@mixin monospace-extrasmall() {
+  font-family: $font-mono;
+  font-size: $font-size--xs;
+  font-weight: 400;
+  line-height: 1.0;
+}
+@mixin serif-large() {
+  font-family: $font-serif;
+  font-size: $font-size--l;
+  font-weight: 400;
+  line-height: $basic-line-height;
+}
+@mixin serif-large-italic() {
+  font-family: $font-serif;
+  font-size: $font-size--l;
+  font-weight: 400;
+  line-height: $basic-line-height;
+  letter-spacing: .01em;
+  font-style: italic;
+}
 

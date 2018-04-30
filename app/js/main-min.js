@@ -4,9 +4,22 @@ $(document).ready(function() {
         $(this).addClass('on-load-ready');
     });
 
-    $('.fadeIn').each(function() {
+    $('.fade-in').each(function() {
         imageScrollAnimation($(this));
     });
+
+    var scrollDistance = 100;
+    headerScrollAnimation(scrollDistance);
+    arrowScrollAnimation(scrollDistance);
+
+    /*
+    var spanPositionWir = $("#span--wir").offset();
+    console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
+    var spanPositionWebseiten = $("#span--webseiten").offset();
+    console.log("Webseiten – Top: " + spanPositionWebseiten.top + " Left: " + spanPositionWebseiten.left);
+    */
+
+    AboutImageFade($('#span--wir'), $('#about-image--wir'))
 
 });
 
@@ -15,9 +28,11 @@ $(window).on('load', function() {
 
     $(window).scroll(function() {
 
-        headerScrollAnimation();
+        var scrollDistance = 100;
+        headerScrollAnimation(scrollDistance);
+        arrowScrollAnimation(scrollDistance);
 
-        $('.fadeIn').each(function() {
+        $('.fade-in').each(function() {
             imageScrollAnimation($(this));
         });
     });
@@ -44,22 +59,53 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 });
 
 
+
+// ================================================== F U N C T I O N S
+
+// About Image Fade Function
+
+function AboutImageFade(selector, image) {
+    selector.mouseenter(function() {
+        image.addClass('about-image-visible');
+    });
+    selector.mouseleave(function() {
+        image.removeClass('about-image-visible');
+    });
+}
+
+
 // Scroll Functions
 
-function headerScrollAnimation() {
+function headerScrollAnimation(distance) {
     var scrollPositionTop = $(window).scrollTop();
     var header = $('header');
-    if (scrollPositionTop > 100) {
-        if (header.hasClass('header-top')) {
-            header.addClass('header-scroll');
-            header.removeClass('header-top');
+    if (scrollPositionTop > distance) {
+        if (header.hasClass('scroll-top')) {
+            header.addClass('scroll-down');
+            header.removeClass('scroll-top');
         }
     } else {
-        if (header.hasClass('header-scroll')) {
-            header.addClass('header-top');
-            header.removeClass('header-scroll');
+        if (header.hasClass('scroll-down')) {
+            header.addClass('scroll-top');
+            header.removeClass('scroll-down');
         }
     }
+}
+
+function arrowScrollAnimation(distance) {
+    var scrollPositionTop = $(window).scrollTop();
+    var nav = $('nav');
+    if (scrollPositionTop > distance) {
+        if (nav.hasClass('scroll-top')) {
+            nav.addClass('scroll-down');
+            nav.removeClass('scroll-top');
+        }
+    } /*else {
+        if (nav.hasClass('scroll-down')) {
+            nav.addClass('scroll-top');
+            nav.removeClass('scroll-down');
+        }
+    }*/
 }
 
 function imageScrollAnimation(object) {
@@ -68,25 +114,25 @@ function imageScrollAnimation(object) {
     var elementPosition = object.offset().top + .5 * object.outerHeight();
 
     if (scrollPositionTop > elementPosition) {
-        if (object.hasClass('fadeIn-visible')) {
-            object.removeClass('fadeIn-visible');
+        if (object.hasClass('fade-in-visible')) {
+            object.removeClass('fade-in-visible');
         }
-        if (!object.hasClass('fadeOut')) {
-            object.addClass('fadeOut');
+        if (!object.hasClass('fade-out')) {
+            object.addClass('fade-out');
         }
     } else if (scrollPosition > elementPosition) {
-        if (!object.hasClass('fadeIn-visible')) {
-            object.addClass('fadeIn-visible');
+        if (!object.hasClass('fade-in-visible')) {
+            object.addClass('fade-in-visible');
         }
-        if (object.hasClass('fadeOut')) {
-            object.removeClass('fadeOut');
+        if (object.hasClass('fade-out')) {
+            object.removeClass('fade-out');
         }
     } else {
-        if (object.hasClass('fadeIn-visible')) {
-            object.removeClass('fadeIn-visible');
+        if (object.hasClass('fade-in-visible')) {
+            object.removeClass('fade-in-visible');
         }
-        if (object.hasClass('fadeOut')) {
-            object.removeClass('fadeOut');
+        if (object.hasClass('fade-out')) {
+            object.removeClass('fade-out');
         }
     }
 }

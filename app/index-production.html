@@ -16,11 +16,14 @@
     <script language="javascript" type="text/javascript" src="js/main-min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow:400,500|Nobile:400,500|Overpass+Mono:400,600|Overpass:400,600|Share+Tech|Space+Mono:400,700" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.typekit.net/jnr4uns.css">
+    <link href="https://fonts.googleapis.com/css?family=Belleza|Proza+Libre:400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Spectral:400,400i" rel="stylesheet">
 </head>
 
 <body class="home">
-<header class="header-top">
+<header class="on-load scroll-top">
     <div class="word-mark">
         <p id="h1--left">Kraut</p>
         <p id="h1--center">&</p>
@@ -34,36 +37,53 @@
     </a>
 </header>
 
+<nav class="on-load scroll-top">
+    <a href="#section--projects" id="scroll-marker">
+        <p>Projekte</p>
+        <p id="scroll-arrow">&#9660;</p>
+    </a>
+</nav>
+
 <section class="page" id="page--main">
 
     <div class="section" id="section--about">
-        <div class="about-column">
-            <p class="on-load">
-                Hallo, <a href="#">wir</a> sind Flo und Ruben, zwei Designer aus Konstanz am Bodensee.
-                Am Liebsten gestalten und entwickeln wir Webseiten.
+        <div class="fade-in fade-in-visible on-load" id="about-text">
+            <p>
+                Hallo, <span id="span--wir">wir</span>
+                sind <span id="span--flo">Flo</span>
+                und <span id="span--ruben">Ruben</span>,
+                zwei Designer aus <span id="span--konstanz">Konstanz</span>
+                am <span id="span--bodensee">Bodensee</span>.
+                Am Liebsten gestalten und entwickeln wir <span id="span--webseiten">Webseiten</span>.
                 Außerdem visualisieren wir Marken, erstellen Editorial-Designs und ungefähr einer von uns zwei ist ein toller Illustrator.
-                Wir mögen Menschen – also <a href="#">schreib</a> uns, <a href="#section--footer">ruf</a> uns an oder <a href="#section--footer">besuch</a> uns gleich auf ein, zwei, drei Kaffee!
+                Wir mögen Menschen – also <a href="mailto:gutentag@krautundruben.de">schreib</a>
+                uns, <a href="#section--footer">ruf</a>
+                uns an oder <a href="#section--footer">besuch</a>
+                uns gleich auf ein, zwei, drei Kaffee!
             </p>
+        </div>
+        <div id="about-images">
+            <img class="about-image" id="about-image--wir" src="img/flo-und-ruben.jpg" alt="kraut-und-ruben" sizes="auto">
         </div>
     </div>
 
     <div class="section" id="section--projects">
         <div class="project-column" id="project-column--left">
-            <a class="fadeIn project-banner img-large img-left" href="#">
+            <a class="fade-in project-banner img-large img-left" href="#">
                 <img src="img/space-banner.jpg" alt="space-banner" sizes="auto">
             </a>
-            <a class="fadeIn project-banner img-middle img-right" href="#">
+            <a class="fade-in project-banner img-middle img-right" href="#">
                 <img src="img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
             </a>
-            <a class="fadeIn project-banner img-small img-left" href="#">
+            <a class="fade-in project-banner img-small img-left" href="#">
                 <img src="img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
             </a>
         </div>
         <div class="project-column" id="project-column--right">
-            <a class="fadeIn project-banner img-small img-right" href="#">
+            <a class="fade-in project-banner img-small img-right" href="#">
                 <img src="img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
             </a>
-            <a class="fadeIn project-banner img-middle img-left" href="#">
+            <a class="fade-in project-banner img-middle img-left" href="#">
                 <img src="img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
             </a>
         </div>
@@ -77,7 +97,3 @@
 
 </body>
 </html>
-
-<!--
-<img id="test-01" src="img/test-01.png" alt="test-01" sizes="100vw">
--->
