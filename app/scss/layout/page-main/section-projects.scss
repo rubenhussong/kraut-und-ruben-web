@@ -3,9 +3,13 @@
   padding: (.5 * $gutter);
   .project-column {
     width: 50%;
+    float: left;
+    @include bp(s) {
+      width: 100%;
+      //float: none;
+    }
     padding: 0 (.5 * $gutter);
     box-sizing: border-box;
-    float: left;
     .project-banner {
       display: inline-block;
       margin: (.5 * $gutter) 0;
@@ -31,11 +35,6 @@
       &:hover {
         transform: scale(1.05);
       }
-    }
-
-    @include bp(s) {
-      width: 100%;
-      float: none;
     }
   }
 }

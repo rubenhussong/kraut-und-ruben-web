@@ -8,7 +8,8 @@ $(document).ready(function() {
         imageScrollAnimation($(this));
     });
 
-    var scrollDistance = 100;
+    var windowWidth = $(window).width();
+    var scrollDistance = windowWidth / 15;
     headerScrollAnimation(scrollDistance);
     arrowScrollAnimation(scrollDistance);
 
@@ -28,7 +29,8 @@ $(window).on('load', function() {
 
     $(window).scroll(function() {
 
-        var scrollDistance = 100;
+        var windowWidth = $(window).width();
+        var scrollDistance = windowWidth / 12.5;
         headerScrollAnimation(scrollDistance);
         arrowScrollAnimation(scrollDistance);
 

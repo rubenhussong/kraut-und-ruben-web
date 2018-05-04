@@ -1,0 +1,36 @@
+footer {
+  display: inline-block;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0 (.5 * $gutter);
+  #footer-text {
+    box-sizing: border-box;
+    width: 50rem;
+    max-width: 100%;
+    padding: $gutter (.5 * $gutter);
+    @include serif-large();
+    p { margin: 0; }
+  }
+  #foot-line {
+    width: 100%;
+    @include monospace-extrasmall();
+    //line-height: 1.5;
+    list-style: none;
+    padding: (.25 * $gutter) (.5 * $gutter);
+    margin-bottom: (.5 * $gutter);
+    //justify-content: space-between;
+    li {
+      padding: (.5 * $gutter) 0;
+      width: calc(100% / 3);
+      float: left;
+      #copyright {
+        word-spacing: -.2em;
+      }
+      a {
+        &:hover {
+          color: $color-active
+        }
+      }
+    }
+  }
+}

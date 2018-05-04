@@ -5,8 +5,5 @@
 
   @import "section-projects";
 
-  footer {
-    width: 100vw;
-    overflow-y: hidden;
-  }
+  @import "footer";
 }
