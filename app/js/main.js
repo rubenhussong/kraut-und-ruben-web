@@ -13,21 +13,32 @@ $(document).ready(function() {
     headerScrollAnimation(scrollDistance);
     arrowScrollAnimation(scrollDistance);
 
-    /*
+/*
     var spanPositionWir = $("#span--wir").offset();
     console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
     var spanPositionWebseiten = $("#span--webseiten").offset();
     console.log("Webseiten – Top: " + spanPositionWebseiten.top + " Left: " + spanPositionWebseiten.left);
-    */
-
+    $('#about-image--wir').css('top', spanPositionWir.top).css('left', spanPositionWir.left);
+*/
     AboutImageFade($('#span--wir'), $('#about-image--wir'))
+
+    $('#project-link--space').click(function() {
+        $('body').addClass('modal-is-active');
+        $('body').addClass('project-modal--space');
+    });
+
+    $('.close-modal').click(function() {
+        $('body').removeClass('modal-is-active');
+        $('body').removeClass('project-modal--space');
+    });
+
 
 });
 
 
 $(window).on('load', function() {
 
-    $(window).scroll(function() {
+    $('#page-main').scroll(function() {
 
         var windowWidth = $(window).width();
         var scrollDistance = windowWidth / 12.5;
@@ -75,11 +86,10 @@ function AboutImageFade(selector, image) {
     });
 }
 
-
 // Scroll Functions
 
 function headerScrollAnimation(distance) {
-    var scrollPositionTop = $(window).scrollTop();
+    var scrollPositionTop = $('#page-main').scrollTop();
     var header = $('header');
     if (scrollPositionTop > distance) {
         if (header.hasClass('scroll-top')) {
@@ -95,7 +105,7 @@ function headerScrollAnimation(distance) {
 }
 
 function arrowScrollAnimation(distance) {
-    var scrollPositionTop = $(window).scrollTop();
+    var scrollPositionTop = $('#page-main').scrollTop();
     var nav = $('nav');
     if (scrollPositionTop > distance) {
         if (nav.hasClass('scroll-top')) {

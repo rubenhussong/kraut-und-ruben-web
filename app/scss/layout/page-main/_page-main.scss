@@ -1,9 +1,6 @@
-#page--main {
-  padding-top: 8vw;
-
+#page-main {
+  @import "nav";
   @import "section-about";
-
   @import "section-projects";
-
   @import "footer";
 }

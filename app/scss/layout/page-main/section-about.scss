@@ -2,7 +2,7 @@
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 (.5 * $gutter);
+  padding: 8vw (.5 * $gutter) $gutter;
   @include serif-large();
   #about-text {
     box-sizing: border-box;
@@ -18,16 +18,19 @@
     span { cursor: default; }
   }
   #about-images {
-    position: fixed;
+    pointer-events: none;
+    position: absolute;
     width: 100%;
-    z-index: -1;
-    top: 0; bottom: 0; left: 0; right: 0;
+    height: 100%;
+    top: 0; left: 0;
+    overflow: hidden;
     .about-image {
       position: absolute;
-      max-width: 100%;
-      max-height: 60vh;
-      margin: auto;
-      top: 0; bottom: 0; left: 0; right: 0;
+      min-width: 100%;
+      min-height: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate3D(-50%,-50%,0);
       @include hover--about-image();
     }
   }

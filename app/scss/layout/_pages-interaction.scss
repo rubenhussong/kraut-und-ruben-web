@@ -1,0 +1,29 @@
+body {
+  .page-project {
+    display: none;
+    z-index: 50;
+  }
+  #page-main {
+    transition:
+            opacity 1s ease,
+            z-index 0s ease 1s,;
+    opacity: 1;
+    z-index: 100;
+  }
+
+  &.modal-is-active {
+    header {
+      display: none;
+    }
+    #page-main {
+      //display: none;
+      opacity: 0;
+      z-index: -100;
+    }
+    &.project-modal--space {
+      #page-project--space {
+        display: block;
+      }
+    }
+  }
+}
