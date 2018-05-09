@@ -20,31 +20,51 @@ $(document).ready(function() {
     console.log("Webseiten – Top: " + spanPositionWebseiten.top + " Left: " + spanPositionWebseiten.left);
     $('#about-image--wir').css('top', spanPositionWir.top).css('left', spanPositionWir.left);
 */
-    AboutImageFade($('#span--wir'), $('#about-image--wir'))
+    AboutImageFade($('#span--wir'), $('#about-image--wir'));
 
     $('#project-link--space').click(function() {
-        $('body').addClass('modal-is-active');
-        $('body').addClass('project-modal--space');
     });
-
-    $('.close-modal').click(function() {
-        $('body').removeClass('modal-is-active');
-        $('body').removeClass('project-modal--space');
-    });
-
 
 });
 
 
+// LINK INTERACTION
+
+$(document).on('click', 'a[href^="#"]', function (event) {
+    event.preventDefault();
+    var linkTarget = $(this).attr("href");
+    if (linkTarget.match("^#page")) {
+        //console.log('history: ' + history.state);
+        var targetPageDomain = '';
+        if (linkTarget == "#page--main") {
+            var bodyClassList = $('body').attr('class').split(' ');
+            for (var i = 0; i < bodyClassList.length; i++) {
+                if (bodyClassList[i].includes('modal')) $('body').removeClass(bodyClassList[i]);
+            }
+            history.go(-1);
+        } else {
+            targetPageDomain = linkTarget.split('--').slice(-1)[0];
+            $('body').addClass('modal-is-active');
+            $('body').addClass('modal--' + targetPageDomain);
+            history.pushState({}, '', window.location.pathname + targetPageDomain);
+        }
+    } else {
+        var currentPage = '#' + $(this).closest(".page").attr('id');
+        $($(currentPage)).animate({
+            scrollTop: $(linkTarget).position().top
+        }, 1000);
+    }
+});
+
+
 $(window).on('load', function() {
+    console.log('Domain: ' + window.location.href);
 
-    $('#page-main').scroll(function() {
-
+    $('#page--main').scroll(function() {
         var windowWidth = $(window).width();
         var scrollDistance = windowWidth / 12.5;
         headerScrollAnimation(scrollDistance);
         arrowScrollAnimation(scrollDistance);
-
         $('.fade-in').each(function() {
             imageScrollAnimation($(this));
         });
@@ -62,13 +82,6 @@ $(window).on('load', function() {
         $('#head-icon--ruebe').css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
     });
 
-});
-
-$(document).on('click', 'a[href^="#"]', function (event) {
-    event.preventDefault();
-    $('html, body').animate({
-        scrollTop: $($.attr(this, 'href')).offset().top
-    }, 1000);
 });
 
 
@@ -89,7 +102,7 @@ function AboutImageFade(selector, image) {
 // Scroll Functions
 
 function headerScrollAnimation(distance) {
-    var scrollPositionTop = $('#page-main').scrollTop();
+    var scrollPositionTop = $('#page--main').scrollTop();
     var header = $('header');
     if (scrollPositionTop > distance) {
         if (header.hasClass('scroll-top')) {
@@ -105,7 +118,7 @@ function headerScrollAnimation(distance) {
 }
 
 function arrowScrollAnimation(distance) {
-    var scrollPositionTop = $('#page-main').scrollTop();
+    var scrollPositionTop = $('#page--main').scrollTop();
     var nav = $('nav');
     if (scrollPositionTop > distance) {
         if (nav.hasClass('scroll-top')) {

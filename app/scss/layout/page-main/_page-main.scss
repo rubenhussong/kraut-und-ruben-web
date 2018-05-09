@@ -1,4 +1,5 @@
-#page-main {
+#page--main {
+  background: $color-background-bright;
   @import "nav";
   @import "section-about";
   @import "section-projects";

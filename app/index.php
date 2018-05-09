@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <title>Kraut und Ruben</title>
+    <base href="index.html">
 
     <meta name="description" content="Independent graphic design and web development studio" />
     <meta name="keywords" content="kraut und ruben, web development, design, graphic, hot and fancy" />
@@ -36,7 +37,7 @@
     </a>
 </header>
 
-<section class="page page-main" id="page-main">
+<section class="page page--main" id="page--main">
     <nav class="on-load scroll-top">
         <a href="#section--projects" id="scroll-marker">
             <p>Projekte</p>
@@ -66,7 +67,7 @@
     <div class="section" id="section--projects">
         <div class="project-column" id="project-column--left">
             <div class="fade-in project-banner img-large img-left">
-                <a href="#" id="project-link--space">
+                <a href="#page-project--space" id="project-link--space">
                     <img src="img/space-banner.jpg" alt="space-banner" sizes="auto">
                 </a>
                 <div class="project-text">
@@ -161,7 +162,7 @@
 </section>
 
 <section class="page page-project" id="page-project--space">
-    <p class="close-modal">Close</p>
+    <a href="#page--main" class="close-modal">Close</a>
 </section>
 
 </body>

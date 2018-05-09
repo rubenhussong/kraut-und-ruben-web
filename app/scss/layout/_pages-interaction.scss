@@ -1,28 +1,38 @@
 body {
   .page-project {
-    display: none;
-    z-index: 50;
-  }
-  #page-main {
+    //opacity: 0;
+    transform: translateY(-100vh);
     transition:
+            transform 1s ease,
             opacity 1s ease,
-            z-index 0s ease 1s,;
+            z-index 0s ease 1s;
+    //z-index: $z-index-page-hidden;
+  }
+  #page--main {
+    transform: translateY(0);
+    transition:
+            transform 1s ease,
+            opacity 1s ease,
+            z-index 0s ease 1s;
     opacity: 1;
-    z-index: 100;
+    //z-index: $z-index-page-visible;
   }
 
   &.modal-is-active {
     header {
       display: none;
     }
-    #page-main {
+    #page--main {
+      transform: translateY(100vh);
       //display: none;
-      opacity: 0;
-      z-index: -100;
+      //opacity: 0;
+      //z-index: $z-index-page-hidden;
     }
-    &.project-modal--space {
+    &.modal--space {
       #page-project--space {
-        display: block;
+        transform: translateY(0);
+        opacity: 1;
+        //z-index: $z-index-page-visible;
       }
     }
   }
