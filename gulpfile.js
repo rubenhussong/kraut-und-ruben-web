@@ -90,6 +90,9 @@ gulp.task('watch', function() {
     gulp.watch(['app/js/**/*.js', '!app/scss/main-min.js'], ['autoConvertJs']);
 });
 
+
+// Watch Modules
+
 gulp.task('autoConvertSass', function(){
     var destination = 'app';
     convertSass(destination);
@@ -99,9 +102,6 @@ gulp.task('autoConvertJs', function(){
     var destination = 'app';
     convertJs(destination);
 });
-
-
-
 
 
 // ============================================================ FUNCTIONS

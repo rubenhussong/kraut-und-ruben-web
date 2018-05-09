@@ -1,7 +1,7 @@
 body {
   .page-project {
     //opacity: 0;
-    transform: translateY(-100vh);
+    transform: translateY(100vh);
     transition:
             transform 1s ease,
             opacity 1s ease,
@@ -23,7 +23,7 @@ body {
       display: none;
     }
     #page--main {
-      transform: translateY(100vh);
+      //transform: translateY(100vh);
       //display: none;
       //opacity: 0;
       //z-index: $z-index-page-hidden;

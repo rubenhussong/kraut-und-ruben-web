@@ -1,94 +1,135 @@
-$(document).ready(function() {
+/** =========================================================================== D E E P - L I N K I N G - E V E N T S
+ */
 
-    $('.on-load').each(function() {
-        $(this).addClass('on-load-ready');
-    });
+var existingSubPages = [
+    "space",
+    "casino-bregenz",
+    "grenzkunst",
+    "hypernet",
+    "el-presidente"
+];
 
-    $('.fade-in').each(function() {
-        imageScrollAnimation($(this));
-    });
+/** ========================= On Page Load & Back and Forward Button
+ */
 
-    var windowWidth = $(window).width();
-    var scrollDistance = windowWidth / 15;
-    headerScrollAnimation(scrollDistance);
-    arrowScrollAnimation(scrollDistance);
-
-/*
-    var spanPositionWir = $("#span--wir").offset();
-    console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
-    var spanPositionWebseiten = $("#span--webseiten").offset();
-    console.log("Webseiten – Top: " + spanPositionWebseiten.top + " Left: " + spanPositionWebseiten.left);
-    $('#about-image--wir').css('top', spanPositionWir.top).css('left', spanPositionWir.left);
-*/
-    AboutImageFade($('#span--wir'), $('#about-image--wir'));
-
-    $('#project-link--space').click(function() {
-    });
-
+$(window).ready(function() {
+    loadCurrentPage();
+});
+$(window).on('popstate', function() {
+    loadCurrentPage();
 });
 
-
-// LINK INTERACTION
+/** ========================= On Link Click (also Pager Internal Links)
+ */
 
 $(document).on('click', 'a[href^="#"]', function (event) {
     event.preventDefault();
     var linkTarget = $(this).attr("href");
     if (linkTarget.match("^#page")) {
-        //console.log('history: ' + history.state);
-        var targetPageDomain = '';
         if (linkTarget == "#page--main") {
-            var bodyClassList = $('body').attr('class').split(' ');
-            for (var i = 0; i < bodyClassList.length; i++) {
-                if (bodyClassList[i].includes('modal')) $('body').removeClass(bodyClassList[i]);
-            }
-            history.go(-1);
+            closeModal();
+            history.pushState({}, '', '/');
         } else {
-            targetPageDomain = linkTarget.split('--').slice(-1)[0];
-            $('body').addClass('modal-is-active');
-            $('body').addClass('modal--' + targetPageDomain);
+            var targetPageDomain = linkTarget.split('--').slice(-1)[0];
+            openModal(targetPageDomain);
             history.pushState({}, '', window.location.pathname + targetPageDomain);
         }
     } else {
-        var currentPage = '#' + $(this).closest(".page").attr('id');
-        $($(currentPage)).animate({
-            scrollTop: $(linkTarget).position().top
-        }, 1000);
+        pageInternalLink($(this));
     }
 });
 
+/** =========================================================================== L I N K - M O D U L E S
+ */
+
+function loadCurrentPage() {
+    var pagePath = window.location.pathname;
+    var subPagePath = pagePath.split('/').slice(-1)[0];
+    if(existingSubPages.indexOf(subPagePath) > -1) {
+        openModal(subPagePath);
+    } else  if(subPagePath == '') {
+        closeModal();
+    } else {
+        history.replaceState({}, '', '/');
+    }
+}
+
+function openModal(target) {
+    $('body').addClass('modal-is-active');
+    $('body').addClass('modal--' + target);
+}
+
+function closeModal() {
+    var bodyClassList = $('body').attr('class').split(' ');
+    for (var i = 0; i < bodyClassList.length; i++) {
+        if (bodyClassList[i].includes('modal')) $('body').removeClass(bodyClassList[i]);
+    }
+}
+
+function pageInternalLink(link) {
+    var currentPage = '#' + link.closest(".page").attr('id');
+    $($(currentPage)).animate({
+        scrollTop: $(link.attr("href")).position().top
+    }, 1000);
+}
+
+/** =========================================================================== P A G E - I N T E R N A L - E V E N T S
+ */
 
 $(window).on('load', function() {
-    console.log('Domain: ' + window.location.href);
 
-    $('#page--main').scroll(function() {
-        var windowWidth = $(window).width();
-        var scrollDistance = windowWidth / 12.5;
-        headerScrollAnimation(scrollDistance);
-        arrowScrollAnimation(scrollDistance);
-        $('.fade-in').each(function() {
-            imageScrollAnimation($(this));
-        });
+    $('.on-load').each(function() {
+        $(this).addClass('on-load-ready');
     });
 
+    /** ========================= Header and Scroll Marker Animation on Scroll
+     */
+
+    var scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
+    headerScrollAnimation(scrollDistance);
+    arrowScrollAnimation(scrollDistance);
+
+    /** ========================= Header and Scroll Marker Animation on Scroll
+     */
+
+    $('.fade-in').each(function() {
+        objectScrollAnimation($(this));
+    });
+
+    /*
+     var spanPositionWir = $("#span--wir").offset();
+     console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
+     var spanPositionWebseiten = $("#span--webseiten").offset();
+     console.log("Webseiten – Top: " + spanPositionWebseiten.top + " Left: " + spanPositionWebseiten.left);
+     $('#about-image--wir').css('top', spanPositionWir.top).css('left', spanPositionWir.left);
+     */
+
+    AboutImageFade($('#span--wir'), $('#about-image--wir'));
 
     var iconRotation = 0;
-
     $(window).mousemove(function() {
         iconRotation = iconRotation - 5;
-
         var kRotate = "rotate(" + iconRotation + "deg)";
         var rRotate = "rotate(" + (-iconRotation) + "deg)";
         $('#head-icon--kraut').css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
         $('#head-icon--ruebe').css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
     });
 
+    $('#page--main').scroll(function() {
+        scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
+        headerScrollAnimation(scrollDistance);
+        arrowScrollAnimation(scrollDistance);
+        $('.fade-in').each(function() {
+            objectScrollAnimation($(this));
+        });
+    });
 });
 
+/** =========================================================================== H O V E R - M O D U L E S
+ */
 
-
-// ================================================== F U N C T I O N S
-
-// About Image Fade Function
+/** ================================================== Fading Title Images in About Section on Hover
+ */
 
 function AboutImageFade(selector, image) {
     selector.mouseenter(function() {
@@ -99,7 +140,11 @@ function AboutImageFade(selector, image) {
     });
 }
 
-// Scroll Functions
+/** =========================================================================== S C R O L L - M O D U L E S
+ */
+
+/** ================================================== Header Scroll Animation
+ */
 
 function headerScrollAnimation(distance) {
     var scrollPositionTop = $('#page--main').scrollTop();
@@ -117,6 +162,9 @@ function headerScrollAnimation(distance) {
     }
 }
 
+/** ================================================== Scroll Marker Scroll Animation
+ */
+
 function arrowScrollAnimation(distance) {
     var scrollPositionTop = $('#page--main').scrollTop();
     var nav = $('nav');
@@ -133,7 +181,10 @@ function arrowScrollAnimation(distance) {
     }*/
 }
 
-function imageScrollAnimation(object) {
+/** ================================================== Object Scroll Animation
+ */
+
+function objectScrollAnimation(object) {
     var scrollPositionTop = $(window).scrollTop();
     var scrollPosition = $(window).scrollTop() + $(window).height();
     var elementPosition = object.offset().top + .5 * object.outerHeight();

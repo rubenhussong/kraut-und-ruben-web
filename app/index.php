@@ -78,7 +78,7 @@
                 </div>
             </div>
             <div class="fade-in project-banner img-middle img-right">
-                <a href="#">
+                <a href="#page-project--casino-bregenz" id="project-link--casino-bregenz">
                     <img src="img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
                 </a>
                 <div class="project-text project-text--dark">
@@ -89,7 +89,7 @@
                 </div>
             </div>
             <div class="fade-in project-banner img-small img-left">
-                <a href="#">
+                <a href="#page-project--grenzkunst" id="project-link--grenzkunst">
                     <img src="img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
                 </a>
                 <div class="project-text">
@@ -102,7 +102,7 @@
         </div>
         <div class="project-column" id="project-column--right">
             <div class="fade-in project-banner img-small img-right">
-                <a href="#">
+                <a href="#page-project--hypernet" id="project-link--hypernet">
                     <img src="img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
                 </a>
                 <div class="project-text project-text--dark">
