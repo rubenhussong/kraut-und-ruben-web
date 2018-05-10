@@ -1,7 +1,8 @@
 body {
   .page-project {
     //opacity: 0;
-    transform: translateY(100vh);
+    transform:
+            rotateY(90deg);
     transition:
             transform 1s ease,
             opacity 1s ease,
@@ -9,7 +10,7 @@ body {
     //z-index: $z-index-page-hidden;
   }
   #page--main {
-    transform: translateY(0);
+    transform: scale(1);
     transition:
             transform 1s ease,
             opacity 1s ease,
@@ -23,14 +24,43 @@ body {
       display: none;
     }
     #page--main {
-      //transform: translateY(100vh);
+      transform: scale(2);
       //display: none;
-      //opacity: 0;
+      opacity: 0;
       //z-index: $z-index-page-hidden;
     }
+
     &.modal--space {
       #page-project--space {
-        transform: translateY(0);
+        transform: rotateY(0deg);
+        opacity: 1;
+        //z-index: $z-index-page-visible;
+      }
+    }
+    &.modal--casino-bregenz {
+      #page-project--casino-bregenz {
+        transform: rotateY(0deg);
+        opacity: 1;
+        //z-index: $z-index-page-visible;
+      }
+    }
+    &.modal--eulenflug {
+      #page-project--eulenflug {
+        transform: rotateY(0deg);
+        opacity: 1;
+        //z-index: $z-index-page-visible;
+      }
+    }
+    &.modal--hypernet {
+      #page-project--hypernet {
+        transform: rotateY(0deg);
+        opacity: 1;
+        //z-index: $z-index-page-visible;
+      }
+    }
+    &.modal--el-presidente {
+      #page-project--el-presidente {
+        transform: rotateY(0deg);
         opacity: 1;
         //z-index: $z-index-page-visible;
       }

@@ -32,7 +32,7 @@
         align-items: center;
         justify-content: center;
         opacity: 0;
-        h3 {
+        h2 {
           @include monospace-medium();
           transition: transform .5s ease;
           transform: scale(0);
@@ -43,7 +43,7 @@
         }
         &.project-text--dark {
           background: radial-gradient(circle at center, rgba($color-main,1) 0, rgba($color-main,0) 90%);
-          h3 {
+          h2 {
             color: $color-background-bright;
           }
         }
@@ -59,7 +59,7 @@
         &:hover {
           .project-text {
             opacity: 1;
-            h3 {
+            h2 {
               transform: scale(1);
             }
           }

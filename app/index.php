@@ -10,11 +10,11 @@
     <meta name="author" content="Ruben Hussong, Florian Ortlieb" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="shortcut icon" href="fav.ico"/>
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-    <script language="javascript" type="text/javascript" src="js/main-min.js"></script>
+    <script language="javascript" type="text/javascript" src="/js/main-min.js"></script>
 
     <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500|Nobile:400,500|Overpass+Mono:400,600|Overpass:400,600|Share+Tech|Space+Mono:400,700" rel="stylesheet">
@@ -30,10 +30,10 @@
         <span id="h1--right">Ruben</span>
     </h1>
     <a class="head-icon" id="head-icon--kraut" href="#">
-        <img src="img/kraut-icon.png" alt="kraut-icon" sizes="auto">
+        <img src="/img/kraut-icon.png" alt="kraut-icon" sizes="auto">
     </a>
     <a class="head-icon" id="head-icon--ruebe" href="#">
-        <img src="img/ruebe-icon.png" alt="ruebe-icon" sizes="auto">
+        <img src="/img/ruebe-icon.png" alt="ruebe-icon" sizes="auto">
     </a>
 </header>
 
@@ -46,7 +46,7 @@
     </nav>
     <div class="section" id="section--about">
         <div id="about-images">
-            <img class="about-image" id="about-image--wir" src="img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
+            <img class="about-image" id="about-image--wir" src="/img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
         </div>
         <div class="fade-in fade-in-visible on-load" id="about-text">
             <p>
@@ -68,59 +68,59 @@
         <div class="project-column" id="project-column--left">
             <div class="fade-in project-banner img-large img-left">
                 <a href="#page-project--space" id="project-link--space">
-                    <img src="img/space-banner.jpg" alt="space-banner" sizes="auto">
+                    <img src="" data-src="/img/space-banner.jpg" alt="space-banner" sizes="auto">
                 </a>
                 <div class="project-text">
-                    <h3>
+                    <h2>
                         Space<br>
                         <span>Editorial</span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div class="fade-in project-banner img-middle img-right">
                 <a href="#page-project--casino-bregenz" id="project-link--casino-bregenz">
-                    <img src="img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
+                    <img src="/img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
                 </a>
                 <div class="project-text project-text--dark">
-                    <h3>
+                    <h2>
                         Casino Bregenz<br>
                         <span>Animation</span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div class="fade-in project-banner img-small img-left">
                 <a href="#page-project--grenzkunst" id="project-link--grenzkunst">
-                    <img src="img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
+                    <img src="/img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
                 </a>
                 <div class="project-text">
-                    <h3>
+                    <h2>
                         Grenzkunst<br>
                         <span>Branding</span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
         </div>
         <div class="project-column" id="project-column--right">
             <div class="fade-in project-banner img-small img-right">
                 <a href="#page-project--hypernet" id="project-link--hypernet">
-                    <img src="img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
+                    <img src="/img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
                 </a>
                 <div class="project-text project-text--dark">
-                    <h3>
+                    <h2>
                         Hypernet<br>
                         <span>Virtual Reality</span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
             <div class="fade-in project-banner img-middle img-left">
-                <a href="#">
-                    <img src="img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
+                <a href="#page-project--el-presidente" id="project-link--el-presidente">
+                    <img src="/img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
                 </a>
                 <div class="project-text project-text--dark">
-                    <h3>
+                    <h2>
                         El Presidente<br>
                         <span>Virtual Reality</span>
-                    </h3>
+                    </h2>
                 </div>
             </div>
         </div>
@@ -162,6 +162,22 @@
 </section>
 
 <section class="page page-project" id="page-project--space">
+    <a href="#page--main" class="close-modal">Close</a>
+</section>
+
+<section class="page page-project" id="page-project--casino-bregenz">
+    <a href="#page--main" class="close-modal">Close</a>
+</section>
+
+<section class="page page-project" id="page-project--eulenflug">
+    <a href="#page--main" class="close-modal">Close</a>
+</section>
+
+<section class="page page-project" id="page-project--hypernet">
+    <a href="#page--main" class="close-modal">Close</a>
+</section>
+
+<section class="page page-project" id="page-project--el-presidente">
     <a href="#page--main" class="close-modal">Close</a>
 </section>
 

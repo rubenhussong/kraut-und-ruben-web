@@ -44,10 +44,10 @@ $(document).on('click', 'a[href^="#"]', function (event) {
 
 function loadCurrentPage() {
     var pagePath = window.location.pathname;
-    var subPagePath = pagePath.split('/').slice(-1)[0];
-    if(existingSubPages.indexOf(subPagePath) > -1) {
-        openModal(subPagePath);
-    } else  if(subPagePath == '') {
+    var subPage = pagePath.split('/').slice(-1)[0];
+    if(existingSubPages.indexOf(subPage) > -1) {
+        openModal(subPage);
+    } else  if(subPage == '') {
         closeModal();
     } else {
         history.replaceState({}, '', '/');
@@ -57,6 +57,9 @@ function loadCurrentPage() {
 function openModal(target) {
     $('body').addClass('modal-is-active');
     $('body').addClass('modal--' + target);
+    console.log(target);
+
+    // L A Z Y - L O A D I N G - I M A G E S
 }
 
 function closeModal() {
@@ -64,6 +67,8 @@ function closeModal() {
     for (var i = 0; i < bodyClassList.length; i++) {
         if (bodyClassList[i].includes('modal')) $('body').removeClass(bodyClassList[i]);
     }
+
+    // L A Z Y - L O A D I N G - I M A G E S
 }
 
 function pageInternalLink(link) {
