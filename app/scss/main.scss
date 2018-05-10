@@ -1,10 +1,11 @@
 // Modules and Variables
-@import "layout/_base";
+@import "layout/base";
 
 // Partials
-@import "layout/_header";
-@import "layout/_nav";
+@import "layout/header";
 @import "layout/page-main/page-main";
+@import "layout/page-project/page-project";
+@import "layout/pages-interaction";
 
 // Third-party
 @import "vendor/responsive-typography";

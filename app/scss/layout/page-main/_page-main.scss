@@ -1,9 +1,7 @@
 #page--main {
-  padding-top: 8vw;
-
+  background: $color-background-bright;
+  @import "nav";
   @import "section-about";
-
   @import "section-projects";
-
   @import "footer";
 }

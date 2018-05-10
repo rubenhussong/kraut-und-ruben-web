@@ -9,12 +9,19 @@
 
 
 body {
+  background: $color-background-bright;
+  color: $color-main;
+  overflow: hidden;
+}
+
+.page {
+  position: absolute;
+  top: 0;
+  left: 0;
   overflow-x: hidden;
   overflow-y: scroll;
   width: 100vw;
   height: 100vh;
-  background: $color-background;
-  color: $color-main;
 }
 
 a {
@@ -24,5 +31,5 @@ a {
 
 ::selection {
   background: $color-active;
-  color: $color-background;
+  color: $color-background-bright;
 }

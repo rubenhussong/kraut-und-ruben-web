@@ -1,8 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ lang }}">
 <head>
     <meta charset="UTF-8">
     <title>Kraut und Ruben</title>
+    <base href="index.html">
 
     <meta name="description" content="Independent graphic design and web development studio" />
     <meta name="keywords" content="kraut und ruben, web development, design, graphic, hot and fancy" />
@@ -18,7 +19,7 @@
     <link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Barlow:400,500|Nobile:400,500|Overpass+Mono:400,600|Overpass:400,600|Share+Tech|Space+Mono:400,700" rel="stylesheet">
     <link rel="stylesheet" href="https://use.typekit.net/jnr4uns.css">
-    <link href="https://fonts.googleapis.com/css?family=Spectral:400,400i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Spectral:400,400i,500,600,700" rel="stylesheet">
 </head>
 
 <body class="home">
@@ -36,16 +37,17 @@
     </a>
 </header>
 
-<nav class="on-load scroll-top">
-    <a href="#section--projects" id="scroll-marker">
-        <p>Projekte</p>
-        <p id="scroll-arrow">&#9660;</p>
-    </a>
-</nav>
-
-<section class="page" id="page--main">
-
+<section class="page page--main" id="page--main">
+    <nav class="on-load scroll-top">
+        <a href="#section--projects" id="scroll-marker">
+            <p>Projekte</p>
+            <p id="scroll-arrow">&#9660;</p>
+        </a>
+    </nav>
     <div class="section" id="section--about">
+        <div id="about-images">
+            <img class="about-image" id="about-image--wir" src="img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
+        </div>
         <div class="fade-in fade-in-visible on-load" id="about-text">
             <p>
                 Hallo, <span id="span--wir">wir</span>
@@ -61,33 +63,68 @@
                 uns gleich auf ein, zwei, drei Kaffee!
             </p>
         </div>
-        <div id="about-images">
-            <img class="about-image" id="about-image--wir" src="img/flo-und-ruben.jpg" alt="kraut-und-ruben" sizes="auto">
-        </div>
     </div>
-
     <div class="section" id="section--projects">
         <div class="project-column" id="project-column--left">
-            <a class="fade-in project-banner img-large img-left" href="#">
-                <img src="img/space-banner.jpg" alt="space-banner" sizes="auto">
-            </a>
-            <a class="fade-in project-banner img-middle img-right" href="#">
-                <img src="img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
-            </a>
-            <a class="fade-in project-banner img-small img-left" href="#">
-                <img src="img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
-            </a>
+            <div class="fade-in project-banner img-large img-left">
+                <a href="#page-project--space" id="project-link--space">
+                    <img src="img/space-banner.jpg" alt="space-banner" sizes="auto">
+                </a>
+                <div class="project-text">
+                    <h3>
+                        Space<br>
+                        <span>Editorial</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="fade-in project-banner img-middle img-right">
+                <a href="#page-project--casino-bregenz" id="project-link--casino-bregenz">
+                    <img src="img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
+                </a>
+                <div class="project-text project-text--dark">
+                    <h3>
+                        Casino Bregenz<br>
+                        <span>Animation</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="fade-in project-banner img-small img-left">
+                <a href="#page-project--grenzkunst" id="project-link--grenzkunst">
+                    <img src="img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
+                </a>
+                <div class="project-text">
+                    <h3>
+                        Grenzkunst<br>
+                        <span>Branding</span>
+                    </h3>
+                </div>
+            </div>
         </div>
         <div class="project-column" id="project-column--right">
-            <a class="fade-in project-banner img-small img-right" href="#">
-                <img src="img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
-            </a>
-            <a class="fade-in project-banner img-middle img-left" href="#">
-                <img src="img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
-            </a>
+            <div class="fade-in project-banner img-small img-right">
+                <a href="#page-project--hypernet" id="project-link--hypernet">
+                    <img src="img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
+                </a>
+                <div class="project-text project-text--dark">
+                    <h3>
+                        Hypernet<br>
+                        <span>Virtual Reality</span>
+                    </h3>
+                </div>
+            </div>
+            <div class="fade-in project-banner img-middle img-left">
+                <a href="#">
+                    <img src="img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
+                </a>
+                <div class="project-text project-text--dark">
+                    <h3>
+                        El Presidente<br>
+                        <span>Virtual Reality</span>
+                    </h3>
+                </div>
+            </div>
         </div>
     </div>
-
     <footer class="section" id="section--footer">
         <div class="fade-in" id="footer-text">
             <p>
@@ -96,15 +133,15 @@
             </p>
         </div>
         <ul class="" id="foot-line">
-            <li class="fade-in">
+            <li class="fade-in footer-li">
                 <p>
                     <a href="mailto:gutentag@krautundruben.de">gutentag@krautundruben.de</a>
                 </p>
                 <p>
-                    +4915738207073
+                    <span>+4915738207073</span>
                 </p>
             </li>
-            <li class="fade-in">
+            <li class="fade-in footer-li">
                 <p>
                     <a href="https://www.instagram.com/krautundruben/">Instagram</a>
                 </p>
@@ -112,17 +149,20 @@
                     <a href="https://twitter.com/kraut_und_ruben">Twitter</a>
                 </p>
             </li>
-            <li class="fade-in">
+            <li class="fade-in footer-li">
                 <p>
                     <a href="#">Impressum</a>
                 </p>
                 <p id="copyright">
-                    © Kraut & Ruben
+                    <span>© Kraut & Ruben</span>
                 </p>
             </li>
         </ul>
     </footer>
+</section>
 
+<section class="page page-project" id="page-project--space">
+    <a href="#page--main" class="close-modal">Close</a>
 </section>
 
 </body>

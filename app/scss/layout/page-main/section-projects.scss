@@ -1,39 +1,69 @@
 #section--projects {
   display: inline-block;
-  padding: (.5 * $gutter);
+  padding: $gutter (.5 * $gutter);
   .project-column {
     width: 50%;
     float: left;
-    @include bp(s) {
+    @include bp(m) {
       width: 100%;
-      //float: none;
     }
     padding: 0 (.5 * $gutter);
     box-sizing: border-box;
     .project-banner {
       display: inline-block;
+      box-sizing: border-box;
+      position: relative;
       margin: (.5 * $gutter) 0;
-      transition: transform 1s ease;
-      &.img-small {
-        width: 60%;
-      }
-      &.img-middle {
-        width: 80%;
-      }
-      &.img-large {
+      transition: background .6s ease;
+      font-size: 0;
+      &.img-small { width: 60%; }
+      &.img-middle { width: 80%; }
+      &.img-large { width: 100%; }
+      &.img-left { float: left; }
+      &.img-right { float: right; }
+      .project-text {
+        position: absolute;
+        pointer-events: none;
+        background: radial-gradient(circle at center, rgba($color-background-bright,1) 0, rgba($color-background-bright,0) 90%);
         width: 100%;
+        height: 100%;
+        top: 0; bottom: 0; left: 0; right: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        opacity: 0;
+        h3 {
+          @include monospace-medium();
+          transition: transform .5s ease;
+          transform: scale(0);
+          text-align: center;
+          span {
+            @include serif-extrasmall();
+          }
+        }
+        &.project-text--dark {
+          background: radial-gradient(circle at center, rgba($color-main,1) 0, rgba($color-main,0) 90%);
+          h3 {
+            color: $color-background-bright;
+          }
+        }
       }
-      &.img-left {
-        float: left;
-      }
-      &.img-right {
-        float: right;
-      }
-      img {
+      a {
+        display: inline-block;
         width: 100%;
+        img {
+          width: 100%;
+        }
       }
-      &:hover {
-        transform: scale(1.05);
+      &.fade-in-visible {
+        &:hover {
+          .project-text {
+            opacity: 1;
+            h3 {
+              transform: scale(1);
+            }
+          }
+        }
       }
     }
   }

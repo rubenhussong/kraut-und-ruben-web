@@ -2,7 +2,8 @@ footer {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: 0 (.5 * $gutter);
+  padding: (.5 * $gutter);
+  background: $color-background-dark;
   #footer-text {
     box-sizing: border-box;
     width: 50rem;
@@ -14,11 +15,9 @@ footer {
   #foot-line {
     width: 100%;
     @include monospace-extrasmall();
-    //line-height: 1.5;
     list-style: none;
-    padding: (.25 * $gutter) (.5 * $gutter);
+    padding: (.5 * $gutter) (.5 * $gutter);
     margin-bottom: (.5 * $gutter);
-    //justify-content: space-between;
     li {
       padding: (.5 * $gutter) 0;
       width: calc(100% / 3);
@@ -26,10 +25,12 @@ footer {
       #copyright {
         word-spacing: -.2em;
       }
-      a {
-        &:hover {
-          color: $color-active
-        }
+      p a {
+        display: inline-block;
+        @include hover--footer-link();
+      }
+      span {
+        display: inline-block;
       }
     }
   }

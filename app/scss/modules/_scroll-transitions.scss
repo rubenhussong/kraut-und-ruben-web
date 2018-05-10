@@ -3,20 +3,24 @@
 
 // Main-Elements on Scroll (Project-Images and About-Text)
 .fade-in {
-  *:not(a):not(span) {
+  > * {
     transition:
             opacity 1s cubic-bezier(0, .4, .4, 1),
             transform 1.5s cubic-bezier(0, .4, .4, 1);
     opacity: 0;
-    transform: perspective(50em) rotateX(-30deg) scale(0.95) translate(0, 5rem);
+    transform: perspective(100vw) rotateX(-30deg) scale(0.95) translate(0, 5rem);
   }
-  &.fade-in-visible *:not(a):not(span) {
+  &.footer-li > * {
+    transition: opacity 1.5s cubic-bezier(0, .4, .4, 1);
+    transform: translate(0, 0);
+  }
+  &.fade-in-visible > * {
     opacity: 1;
-    transform: perspective(50em) rotateX(0deg) scale(1) translate(0, 0);
+    transform: perspective(100vw) rotateX(0deg) scale(1) translate(0, 0);
   }
-  &.fade-out *:not(a):not(span) {
+  &.fade-out > * {
     opacity: 0;
-    transform: perspective(50em) rotateX(30deg) scale(0.95) translate(0, -5rem);
+    transform: perspective(100vw) rotateX(30deg) scale(0.95) translate(0, -5rem);
   }
 }
 
@@ -28,29 +32,23 @@ header {
   .head-icon {
     opacity: 0;
     transition:
-            opacity .6s cubic-bezier(.75, 0, .25, 1) .4s,
-            top 1.2s cubic-bezier(.75, 0, .25, 1);
+            opacity .6s cubic-bezier(.25, 0, .25, 1) .4s,
+            top 1.2s cubic-bezier(.25, 0, .25, 1);
   }
   &.scroll-down {
     .word-mark {
       span {
-        &#h1--left {
-          right: 120%;
-        }
-        &#h1--center {
-          top: -3rem;
-        }
-        &#h1--right {
-          left: 120%;
-        }
+        &#h1--left { right: 120%; }
+        &#h1--center { top: -3rem; }
+        &#h1--right { left: 120%; }
       }
     }
     .head-icon {
       top: 0;
       opacity: 1;
       transition:
-              opacity .6s cubic-bezier(.75, 0, .25, 1),
-              top 1.2s cubic-bezier(.75, 0, .25, 1);
+              opacity .6s cubic-bezier(.25, 0, .25, 1),
+              top 1.2s cubic-bezier(.25, 0, .25, 1);
     }
   }
 }

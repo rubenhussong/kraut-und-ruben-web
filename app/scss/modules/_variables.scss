@@ -2,12 +2,17 @@
 
 // ================================================== COLOR
 
-$color-main:            black;
-$color-active:          #E62;
-$color-background:      #EEE;
-
+$color-main:                   #111;
+$color-active:                 #E62;
+$color-background-bright:      #EEE;
+$color-background-dark:        #DDD;
 
 
 // ================================================== GRID
 
 $gutter: 3rem;
+
+
+$z-index-header:               1000;
+$z-index-page-visible:         100;
+$z-index-page-hidden:          -100;

@@ -1,6 +1,6 @@
 header {
+  z-index: $z-index-header;
   position: fixed;
-  z-index: 1;
   width: 100%;
   @include on-load--header();
   .word-mark {
@@ -29,6 +29,5 @@ header {
     &#head-icon--kraut { left: 0; }
     &#head-icon--ruebe { right: 0; }
     img { width: 100%; }
-    @include hover--head-icon();
   }
 }

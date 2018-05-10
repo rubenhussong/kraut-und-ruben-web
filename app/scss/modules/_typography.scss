@@ -2,12 +2,24 @@
 
 // ================================================== FONTS & TYPOGRAPHY
 @font-face {
-  font-family: 'agipo';
-  src: url('../fonts/AgipoRegular.otf') format('opentype');
+  font-family: 'Messina Sans Mono';
+  src: url('../fonts/MessinaSansMonoTrial-Regular.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Messina Serif';
+  src: url('../fonts/MessinaSerifTrial-Light.otf') format('opentype');
+}
+@font-face {
+  font-family: 'Messina Serif Italic';
+  src: url('../fonts/MessinaSerifTrial-RegularItalic.otf') format('opentype');
 }
 
+
+
+
 $font-serif:            "Spectral", Palatino, serif;
-$font-mono:             'Overpass Mono', Courier, monospace;
+$font-serif-italic:     "Messina Serif Italic", Palatino, serif;
+$font-mono:             'Messina Sans Mono', Courier, monospace;
 
 /*
   'Overpass Mono', monospace; 400
@@ -24,6 +36,12 @@ $font-size--l:      2rem;
 
 $basic-line-height: 1.5;
 
+@mixin monospace-medium() {
+  font-family: $font-mono;
+  font-size: $font-size--m;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
 @mixin monospace-small() {
   font-family: $font-mono;
   font-size: $font-size--s;
@@ -49,5 +67,12 @@ $basic-line-height: 1.5;
   line-height: $basic-line-height;
   letter-spacing: .01em;
   font-style: italic;
+}
+@mixin serif-extrasmall() {
+  font-family: $font-serif;
+  font-size: $font-size--xs;
+  font-weight: 500;
+  line-height: $basic-line-height;
+  letter-spacing: .03em;
 }
 
