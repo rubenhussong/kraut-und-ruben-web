@@ -67,7 +67,7 @@
     <div class="section" id="section--projects">
         <div class="project-column" id="project-column--left">
             <div class="fade-in project-banner img-large img-left">
-                <a href="#page-project--space" id="project-link--space">
+                <a href="#page--space" id="project-link--space">
                     <img src="" data-src="/img/space-banner.jpg" alt="space-banner" sizes="auto">
                 </a>
                 <div class="project-text">
@@ -78,8 +78,8 @@
                 </div>
             </div>
             <div class="fade-in project-banner img-middle img-right">
-                <a href="#page-project--casino-bregenz" id="project-link--casino-bregenz">
-                    <img src="/img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
+                <a href="#page--casino-bregenz" id="project-link--casino-bregenz">
+                    <img src="" data-src="/img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
                 </a>
                 <div class="project-text project-text--dark">
                     <h2>
@@ -89,8 +89,8 @@
                 </div>
             </div>
             <div class="fade-in project-banner img-small img-left">
-                <a href="#page-project--grenzkunst" id="project-link--grenzkunst">
-                    <img src="/img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
+                <a href="#page--grenzkunst" id="project-link--grenzkunst">
+                    <img src="" data-src="/img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
                 </a>
                 <div class="project-text">
                     <h2>
@@ -102,8 +102,8 @@
         </div>
         <div class="project-column" id="project-column--right">
             <div class="fade-in project-banner img-small img-right">
-                <a href="#page-project--hypernet" id="project-link--hypernet">
-                    <img src="/img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
+                <a href="#page--hypernet" id="project-link--hypernet">
+                    <img src="" data-src="/img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
                 </a>
                 <div class="project-text project-text--dark">
                     <h2>
@@ -113,8 +113,8 @@
                 </div>
             </div>
             <div class="fade-in project-banner img-middle img-left">
-                <a href="#page-project--el-presidente" id="project-link--el-presidente">
-                    <img src="/img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
+                <a href="#page--el-presidente" id="project-link--el-presidente">
+                    <img src="" data-src="/img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
                 </a>
                 <div class="project-text project-text--dark">
                     <h2>
@@ -169,7 +169,7 @@
     <a href="#page--main" class="close-modal">Close</a>
 </section>
 
-<section class="page page--project" id="page--eulenflug">
+<section class="page page--project" id="page--grenzkunst">
     <a href="#page--main" class="close-modal">Close</a>
 </section>
 

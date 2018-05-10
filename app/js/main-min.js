@@ -55,20 +55,18 @@ function loadCurrentPage() {
 }
 
 function openModal(target) {
+    lazyLoadImages('#page--' + target);
     $('body').addClass('modal-is-active');
     $('body').addClass('modal--' + target);
     console.log(target);
-
-    // L A Z Y - L O A D I N G - I M A G E S
 }
 
 function closeModal() {
+    lazyLoadImages('#page--main');
     var bodyClassList = $('body').attr('class').split(' ');
     for (var i = 0; i < bodyClassList.length; i++) {
         if (bodyClassList[i].includes('modal')) $('body').removeClass(bodyClassList[i]);
     }
-
-    // L A Z Y - L O A D I N G - I M A G E S
 }
 
 function pageInternalLink(link) {
@@ -76,6 +74,13 @@ function pageInternalLink(link) {
     $($(currentPage)).animate({
         scrollTop: $(link.attr("href")).position().top
     }, 1000);
+}
+
+function lazyLoadImages(page) {
+    $(page).find('img').each(function() {
+        var lazySrc = $(this).attr('data-src');
+        $(this).attr('src', lazySrc);
+    });
 }
 
 /** =========================================================================== P A G E - I N T E R N A L - E V E N T S
