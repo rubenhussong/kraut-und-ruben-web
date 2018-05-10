@@ -30,6 +30,7 @@ body {
       //z-index: $z-index-page-hidden;
     }
 
+
     &.modal--space {
       #page--space {
         transform: rotateY(0deg);
@@ -44,8 +45,8 @@ body {
         //z-index: $z-index-page-visible;
       }
     }
-    &.modal--eulenflug {
-      #page--eulenflug {
+    &.modal--grenzkunst {
+      #page--grenzkunst {
         transform: rotateY(0deg);
         opacity: 1;
         //z-index: $z-index-page-visible;
@@ -65,5 +66,7 @@ body {
         //z-index: $z-index-page-visible;
       }
     }
+
+
   }
 }
