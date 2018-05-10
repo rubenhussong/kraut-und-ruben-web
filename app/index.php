@@ -1,3 +1,7 @@
+<?php
+$lang = substr($_SERVER['HTTP_ACCEPT_LANGUAGE'], 0, 2);
+?>
+
 <!DOCTYPE html>
 <html lang="{{ lang }}">
 <head>
@@ -29,12 +33,12 @@
         <span id="h1--center">&</span>
         <span id="h1--right">Ruben</span>
     </h1>
-    <a class="head-icon" id="head-icon--kraut" href="#">
+    <div class="head-icon" id="head-icon--kraut" href="#">
         <img src="/img/kraut-icon.png" alt="kraut-icon" sizes="auto">
-    </a>
-    <a class="head-icon" id="head-icon--ruebe" href="#">
+    </div>
+    <div class="head-icon" id="head-icon--ruebe" href="#">
         <img src="/img/ruebe-icon.png" alt="ruebe-icon" sizes="auto">
-    </a>
+    </div>
 </header>
 
 <section class="page page--main" id="page--main">
@@ -50,17 +54,35 @@
         </div>
         <div class="fade-in fade-in-visible on-load" id="about-text">
             <p>
-                Hallo, <span id="span--wir">wir</span>
-                sind <span id="span--flo">Flo</span>
-                und <span id="span--ruben">Ruben</span>,
-                zwei Designer aus <span id="span--konstanz">Konstanz</span>
-                am <span id="span--bodensee">Bodensee</span>.
-                Am Liebsten gestalten und entwickeln wir <span id="span--webseiten">Webseiten</span>.
-                Außerdem visualisieren wir Marken, erstellen Editorial-Designs und ungefähr einer von uns zwei ist ein toller Illustrator.
-                Wir mögen Menschen – also <a href="mailto:gutentag@krautundruben.de">schreib</a>
-                uns, <a href="#section--footer">ruf</a>
-                uns an oder <a href="#section--footer">besuch</a>
-                uns gleich auf ein, zwei, drei Kaffee!
+                <?php if ($lang == 'de'): ?>
+
+                    Hallo, <span id="span--wir">wir</span>
+                    sind <span id="span--flo">Flo</span>
+                    und <span id="span--ruben">Ruben</span>,
+                    zwei Designer aus <span id="span--konstanz">Konstanz</span>
+                    am <span id="span--bodensee">Bodensee</span>.
+                    Am Liebsten gestalten und entwickeln wir <span id="span--webseiten">Webseiten</span>.
+                    Außerdem visualisieren wir Marken, erstellen Editorial-Designs und ungefähr einer von uns zwei ist ein toller Illustrator.
+                    Wir mögen Menschen – also <a href="mailto:gutentag@krautundruben.de">schreib</a>
+                    uns, <a href="#section--footer">ruf</a>
+                    uns an oder <a href="#section--footer">besuch</a>
+                    uns gleich auf ein, zwei, drei Kaffee!
+
+                <?php else: ?>
+
+                    Hello, <span id="span--wir">we</span>
+                    are <span id="span--flo">Flo</span>
+                    and <span id="span--ruben">Ruben</span>,
+                    two designers from <span id="span--konstanz">Constance</span>,
+                    Germany.
+                    We love creating <span id="span--webseiten">websites</span>,
+                    but also do branding and editorial design. At least one of us is a great illustrator.
+                    We like people – so <a href="mailto:gutentag@krautundruben.de">mail</a>,
+                    <a href="#section--footer">call</a>
+                    or <a href="#section--footer">visit</a>
+                    us for one, two, three cups of coffee!
+
+                <?php endif ?>
             </p>
         </div>
     </div>

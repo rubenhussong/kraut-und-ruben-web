@@ -6,19 +6,19 @@
   src: url('../fonts/MessinaSansMonoTrial-Regular.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Messina Serif';
-  src: url('../fonts/MessinaSerifTrial-Light.otf') format('opentype');
+  font-family: 'Messina Sans';
+  src: url('../fonts/MessinaSansTrial-Regular.otf') format('opentype');
 }
 @font-face {
-  font-family: 'Messina Serif Italic';
-  src: url('../fonts/MessinaSerifTrial-RegularItalic.otf') format('opentype');
+  font-family: 'Messina Serif';
+  src: url('../fonts/MessinaSerifTrial-Regular.otf') format('opentype');
 }
 
 
 
 
 $font-serif:            "Spectral", Palatino, serif;
-$font-serif-italic:     "Messina Serif Italic", Palatino, serif;
+//$font-serif-italic:     "Messina Serif Italic", Palatino, serif;
 $font-mono:             'Messina Sans Mono', Courier, monospace;
 
 /*

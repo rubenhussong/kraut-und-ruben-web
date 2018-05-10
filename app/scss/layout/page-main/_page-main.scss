@@ -1,5 +1,6 @@
 #page--main {
   background: $color-background-bright;
+  position: absolute;
   @import "nav";
   @import "section-about";
   @import "section-projects";

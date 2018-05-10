@@ -1,72 +1,43 @@
-body {
-  .page--project {
-    //opacity: 0;
-    transform:
-            rotateY(90deg);
-    transition:
-            transform 1s ease,
-            opacity 1s ease,
-            z-index 0s ease 1s;
-    //z-index: $z-index-page-hidden;
+
+// =========================================================================== M A I N P A G E
+
+.page--project {
+  opacity: 0;
+  z-index: $z-index-page-hidden;
+  transition:
+          z-index 0s ease 1s,
+          opacity 1s ease;
+}
+#page--main {
+  z-index: $z-index-page-visible;
+
+  #project-column--right, #project-column--left {
+     transform: translateX(0);
+     transition: transform 1s ease;
   }
+}
+
+// =========================================================================== S U B P A G E
+
+.modal-is-active {
   #page--main {
-    transform: scale(1);
-    transition:
-            transform 1s ease,
-            opacity 1s ease,
-            z-index 0s ease 1s;
-    opacity: 1;
-    //z-index: $z-index-page-visible;
+    z-index: $z-index-page-hidden;
+
+    #project-column--right {
+      transform: translateX(50vw);
+    }
+    #project-column--left {
+      transform: translateX(-50vw);
+    }
   }
 
-  &.modal-is-active {
-    header {
-      display: none;
+  @each $subpage in $subpages {
+    &.modal--#{$subpage} #page--#{$subpage} {
+      z-index: $z-index-page-visible;
+      transition:
+              z-index 0s ease,
+              opacity 1s ease;
+      opacity: 1;
     }
-    #page--main {
-      transform: scale(2);
-      //display: none;
-      opacity: 0;
-      //z-index: $z-index-page-hidden;
-    }
-
-
-    &.modal--space {
-      #page--space {
-        transform: rotateY(0deg);
-        opacity: 1;
-        //z-index: $z-index-page-visible;
-      }
-    }
-    &.modal--casino-bregenz {
-      #page--casino-bregenz {
-        transform: rotateY(0deg);
-        opacity: 1;
-        //z-index: $z-index-page-visible;
-      }
-    }
-    &.modal--grenzkunst {
-      #page--grenzkunst {
-        transform: rotateY(0deg);
-        opacity: 1;
-        //z-index: $z-index-page-visible;
-      }
-    }
-    &.modal--hypernet {
-      #page--hypernet {
-        transform: rotateY(0deg);
-        opacity: 1;
-        //z-index: $z-index-page-visible;
-      }
-    }
-    &.modal--el-presidente {
-      #page--el-presidente {
-        transform: rotateY(0deg);
-        opacity: 1;
-        //z-index: $z-index-page-visible;
-      }
-    }
-
-
   }
 }
