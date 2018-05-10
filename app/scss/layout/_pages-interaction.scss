@@ -1,5 +1,5 @@
 body {
-  .page-project {
+  .page--project {
     //opacity: 0;
     transform:
             rotateY(90deg);
@@ -31,35 +31,35 @@ body {
     }
 
     &.modal--space {
-      #page-project--space {
+      #page--space {
         transform: rotateY(0deg);
         opacity: 1;
         //z-index: $z-index-page-visible;
       }
     }
     &.modal--casino-bregenz {
-      #page-project--casino-bregenz {
+      #page--casino-bregenz {
         transform: rotateY(0deg);
         opacity: 1;
         //z-index: $z-index-page-visible;
       }
     }
     &.modal--eulenflug {
-      #page-project--eulenflug {
+      #page--eulenflug {
         transform: rotateY(0deg);
         opacity: 1;
         //z-index: $z-index-page-visible;
       }
     }
     &.modal--hypernet {
-      #page-project--hypernet {
+      #page--hypernet {
         transform: rotateY(0deg);
         opacity: 1;
         //z-index: $z-index-page-visible;
       }
     }
     &.modal--el-presidente {
-      #page-project--el-presidente {
+      #page--el-presidente {
         transform: rotateY(0deg);
         opacity: 1;
         //z-index: $z-index-page-visible;

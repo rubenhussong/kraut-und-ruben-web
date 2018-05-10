@@ -161,23 +161,23 @@
     </footer>
 </section>
 
-<section class="page page-project" id="page-project--space">
+<section class="page page--project" id="page--space">
     <a href="#page--main" class="close-modal">Close</a>
 </section>
 
-<section class="page page-project" id="page-project--casino-bregenz">
+<section class="page page--project" id="page--casino-bregenz">
     <a href="#page--main" class="close-modal">Close</a>
 </section>
 
-<section class="page page-project" id="page-project--eulenflug">
+<section class="page page--project" id="page--eulenflug">
     <a href="#page--main" class="close-modal">Close</a>
 </section>
 
-<section class="page page-project" id="page-project--hypernet">
+<section class="page page--project" id="page--hypernet">
     <a href="#page--main" class="close-modal">Close</a>
 </section>
 
-<section class="page page-project" id="page-project--el-presidente">
+<section class="page page--project" id="page--el-presidente">
     <a href="#page--main" class="close-modal">Close</a>
 </section>
 
