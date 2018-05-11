@@ -9,6 +9,8 @@ const existingSubPages = [
     "el-presidente"
 ];
 
+var pageMainTitle = document.title;
+
 /*
 var browserLanguage = navigator.language.substr(0, 2);
 if (browserLanguage !== 'de') browserLanguage = 'en';
@@ -68,15 +70,41 @@ function loadCurrentPage() {
 
 function openModal(target) {
     lazyLoadImages('#page--' + target);
+    changeDocumentTitle(target);
     $('body').addClass('modal-is-active');
     $('body').addClass('modal--' + target);
 }
 
 function closeModal() {
     lazyLoadImages('#page--main');
+    changeDocumentTitle('main');
     var bodyClassList = $('body').attr('class').split(' ');
     for (var i = 0; i < bodyClassList.length; i++) {
-        if (bodyClassList[i].includes('modal')) $('body').removeClass(bodyClassList[i]);
+        if (bodyClassList[i].includes('modal')) {
+            $('body').removeClass(bodyClassList[i]);
+        }
+    }
+}
+
+function lazyLoadImages(page) {
+    $(page).find('img').each(function() {
+        var lazySrc = $(this).attr('data-src');
+        $(this).attr('src', lazySrc);
+    });
+}
+
+function changeDocumentTitle(target) {
+    if (target == 'main') {
+        document.title = pageMainTitle;
+    } else {
+        var pageSubTitle = target.replace('-', ' ' );
+        pageSubTitle = pageSubTitle.replace(pageSubTitle.charAt(0), pageSubTitle.charAt(0).toUpperCase());
+        for (var i = 0; i < pageSubTitle.length; i++) {
+            if (pageSubTitle.charAt(i) == ' ') {
+                pageSubTitle = pageSubTitle.replace(pageSubTitle.charAt(i + 1), pageSubTitle.charAt(i + 1).toUpperCase());
+            }
+        }
+        document.title = pageMainTitle + ' – ' + pageSubTitle;
     }
 }
 
@@ -85,13 +113,6 @@ function pageInternalLink(link) {
     $($(currentPage)).animate({
         scrollTop: $(link.attr("href")).position().top
     }, 1000);
-}
-
-function lazyLoadImages(page) {
-    $(page).find('img').each(function() {
-        var lazySrc = $(this).attr('data-src');
-        $(this).attr('src', lazySrc);
-    });
 }
 
 /** =========================================================================== P A G E - I N T E R N A L - E V E N T S
@@ -186,9 +207,9 @@ function headerScrollAnimation(distance) {
 
 function arrowScrollAnimation(distance) {
     var scrollPositionTop = $('#page--main').scrollTop();
-    var nav = $('nav');
+    var scrollMarker = $('#scroll-marker-wrapper');
     if (scrollPositionTop > distance) {
-        nav.addClass('scroll-down').removeClass('scroll-top');
+        scrollMarker.addClass('scroll-down').removeClass('scroll-top');
     } /*else {
         nav.addClass('scroll-top');
         nav.removeClass('scroll-down');

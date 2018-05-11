@@ -1,7 +1,7 @@
 #page--main {
   background: $color-background-bright;
   position: absolute;
-  @import "nav";
+  @import "scroll-marker";
   @import "section-about";
   @import "section-projects";
   @import "footer";

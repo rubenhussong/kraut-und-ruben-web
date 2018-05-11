@@ -54,7 +54,7 @@ header {
 }
 
 // Scroll-Marker on Scroll
-nav {
+#scroll-marker-wrapper {
   #scroll-marker {
     transition:
             transform .8s cubic-bezier(.75, 0, .25, 1),
