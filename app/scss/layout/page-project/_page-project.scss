@@ -1,6 +1,28 @@
 .page--project {
-  background: $color-background-dark;
-  height: 100%;
-  width: 100%;
-  padding: $gutter;
+  box-sizing: border-box;
+  background: $color-main;
+  color: $color-background-dark;
+  padding: 8vw $gutter $gutter;
+  .page-wrapper {
+    .project-title {
+      h1 {
+        @include monospace-large();
+      }
+      h2 {
+        @include serif-medium();
+      }
+    }
+    .project-hero {
+      padding: (.5 * $gutter) 0;
+      width: 80%;
+      img {
+        width: 100%;
+      }
+    }
+    .project-description {
+      width: 50rem;
+      max-width: 100%;
+      @include serif-large();
+    }
+  }
 }

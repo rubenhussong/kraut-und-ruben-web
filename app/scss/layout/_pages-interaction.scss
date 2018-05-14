@@ -1,19 +1,25 @@
 
+$page-change-transition: cubic-bezier(0, .25, .25, 1);
+
 // =========================================================================== M A I N P A G E
 
 .page--project {
   opacity: 0;
   z-index: $z-index-page-hidden;
   transition:
-          z-index 0s ease 1s,
-          opacity 1s ease;
+          z-index 0s  1s,
+          opacity 1s $page-change-transition;
+  .page-wrapper {
+    transition: transform 1s $page-change-transition;
+    //transform: translateY(100vh);
+  }
 }
 #page--main {
   z-index: $z-index-page-visible;
 
   #project-column--right, #project-column--left {
      transform: translateX(0);
-     transition: transform 1s ease;
+     transition: transform 1s $page-change-transition;
   }
 }
 
@@ -35,9 +41,13 @@
     &.modal--#{$subpage} #page--#{$subpage} {
       z-index: $z-index-page-visible;
       transition:
-              z-index 0s ease,
-              opacity 1s ease;
+              z-index 0s $page-change-transition,
+              opacity 1s $page-change-transition;
       opacity: 1;
+      .page-wrapper {
+        transition: transform 1s $page-change-transition;
+        transform: translateY(0);
+      }
     }
   }
 }

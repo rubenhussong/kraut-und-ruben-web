@@ -2,13 +2,13 @@
   display: inline-block;
   padding: $gutter (.5 * $gutter);
   .project-column {
-    width: 50%;
+    box-sizing: border-box;
     float: left;
+    width: 50%;
+    padding: 0 (.5 * $gutter);
     @include bp(m) {
       width: 100%;
     }
-    padding: 0 (.5 * $gutter);
-    box-sizing: border-box;
     .project-banner {
       display: inline-block;
       box-sizing: border-box;
@@ -21,6 +21,11 @@
       &.img-large { width: 100%; }
       &.img-left { float: left; }
       &.img-right { float: right; }
+      a {
+        display: inline-block;
+        //width: 100%;
+        img { width: 100%; }
+      }
       .project-text {
         position: absolute;
         pointer-events: none;
@@ -46,13 +51,6 @@
           h2 {
             color: $color-background-bright;
           }
-        }
-      }
-      a {
-        display: inline-block;
-        width: 100%;
-        img {
-          width: 100%;
         }
       }
       &.fade-in-visible {

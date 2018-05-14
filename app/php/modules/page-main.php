@@ -15,11 +15,11 @@
                 Hallo, <span id="span--wir">wir</span>
                 sind <span id="span--flo">Flo</span>
                 und <span id="span--ruben">Ruben</span>,
-                                                       zwei Designer aus <span id="span--konstanz">Konstanz</span>
+                zwei Designer aus <span id="span--konstanz">Konstanz</span>
                 am <span id="span--bodensee">Bodensee</span>.
-                                                            Am Liebsten gestalten und entwickeln wir <span id="span--webseiten">Webseiten</span>.
-                                                                                                                                                Außerdem visualisieren wir Marken, erstellen Editorial-Designs und ungefähr einer von uns zwei ist ein toller Illustrator.
-                                                                                                                                                Wir mögen Menschen – also <a href="mailto:gutentag@krautundruben.de">schreib</a>
+                Am Liebsten gestalten und entwickeln wir <span id="span--webseiten">Webseiten</span>.
+                Außerdem visualisieren wir Marken, erstellen Editorial-Designs und ungefähr einer von uns zwei ist ein toller Illustrator.
+                Wir mögen Menschen – also <a href="mailto:gutentag@krautundruben.de">schreib</a>
                 uns, <a href="#section--footer">ruf</a>
                 uns an oder <a href="#section--footer">besuch</a>
                 uns gleich auf ein, zwei, drei Kaffee!
@@ -29,11 +29,11 @@
                 Hello, <span id="span--wir">we</span>
                 are <span id="span--flo">Flo</span>
                 and <span id="span--ruben">Ruben</span>,
-                                                       two designers from <span id="span--konstanz">Constance</span>,
-                                                                                                                    Germany.
-                                                                                                                    We love creating <span id="span--webseiten">websites</span>,
-                                                                                                                                                                               but also do branding and editorial design. At least one of us is a great illustrator.
-                                                                                                                                                                               We like people – so <a href="mailto:gutentag@krautundruben.de">mail</a>,
+                two designers from <span id="span--konstanz">Constance</span>,
+                Germany.
+                We love creating <span id="span--webseiten">websites</span>,
+                but also do branding and editorial design. At least one of us is a great illustrator.
+                We like people – so <a href="mailto:gutentag@krautundruben.de">mail</a>,
                 <a href="#section--footer">call</a>
                 or <a href="#section--footer">visit</a>
                 us for one, two, three cups of coffee!

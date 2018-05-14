@@ -36,6 +36,13 @@ $font-size--l:      2rem;
 
 $basic-line-height: 1.5;
 
+@mixin monospace-large() {
+  font-family: $font-mono;
+  font-size: $font-size--l;
+  font-weight: 400;
+  letter-spacing: .01em;
+  line-height: $basic-line-height;
+}
 @mixin monospace-medium() {
   font-family: $font-mono;
   font-size: $font-size--m;
@@ -67,6 +74,12 @@ $basic-line-height: 1.5;
   line-height: $basic-line-height;
   letter-spacing: .01em;
   font-style: italic;
+}
+@mixin serif-medium() {
+  font-family: $font-serif;
+  font-size: $font-size--m;
+  font-weight: 400;
+  line-height: $basic-line-height;
 }
 @mixin serif-extrasmall() {
   font-family: $font-serif;
