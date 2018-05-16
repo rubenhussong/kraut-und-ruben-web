@@ -11,7 +11,7 @@ header {
     span {
       position: absolute;
       top: 0;
-      margin: (($gutter - 1.5rem) / 2) 0;
+      margin: (($gutter-x - 1.5rem) / 2) 0;
       &#h1--left { right: calc(50% + 0.7rem); }
       &#h1--right { left: calc(50% + 0.7rem); }
       &#h1--center {
@@ -24,7 +24,7 @@ header {
   .head-icon {
     display: inline-block;
     position: absolute;
-    margin: (($gutter - 2rem) / 2);
+    margin: (($gutter-x - 2rem) / 2);
     width: 2rem;
     top: -4rem;
     &#head-icon--kraut { left: 0; }

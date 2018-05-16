@@ -33,3 +33,22 @@ a {
   background: $color-active;
   color: $color-background-bright;
 }
+
+%clear {
+  &:before,
+  &:after {
+    content: "";
+    display: table;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.left {
+  float: left;
+}
+
+.right {
+  float: right;
+}

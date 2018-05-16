@@ -10,7 +10,9 @@ $color-background-dark:        #DDD;
 
 // ================================================== GRID
 
-$gutter: 3rem;
+
+$gutter-x: 2rem;
+$gutter-y: $gutter-x;
 
 
 $z-index-header:               1000;

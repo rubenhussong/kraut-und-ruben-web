@@ -2,13 +2,13 @@
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: 8vw (.5 * $gutter) $gutter;
+  padding: 8vw (.5 * $gutter-x) $gutter-y;
   @include serif-large();
   #about-text {
     box-sizing: border-box;
     width: 50rem;
     max-width: 100%;
-    padding: 0 (.5 * $gutter);
+    padding: 0 (.5 * $gutter-x);
     @include on-load--about-text();
     a, span {
       display: inline-block;

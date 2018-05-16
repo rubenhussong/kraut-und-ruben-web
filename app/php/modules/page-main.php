@@ -116,7 +116,7 @@
                 <a href="mailto:gutentag@krautundruben.de">gutentag@krautundruben.de</a>
             </p>
             <p>
-                <span>+4915738207073</span>
+                <span>+49 157 382 070 73</span>
             </p>
         </li>
         <li class="fade-in footer-li">

@@ -1,28 +1,68 @@
 .page--project {
   box-sizing: border-box;
-  background: $color-main;
-  color: $color-background-dark;
-  padding: 8vw $gutter $gutter;
+  background: $color-background-bright;
+  color: $color-main;
+  padding: 8vw $gutter-x $gutter-y;
   .page-wrapper {
     .project-title {
+   	  margin-top: 3em;
+   	  width: 24rem;
+   	  max-width: 100%;
       h1 {
-        @include monospace-large();
+        @include sans-extralarge();
       }
       h2 {
         @include serif-medium();
       }
     }
     .project-hero {
-      padding: (.5 * $gutter) 0;
-      width: 80%;
+      margin: (2 * $gutter-y) 0;
+      width: 100%;
+      box-sizing: border-box;
+      overflow: hidden;
       img {
-        width: 100%;
+        width: 82%;
+        float: right;
       }
     }
     .project-description {
-      width: 50rem;
-      max-width: 100%;
+	    width: 50rem;
+	    padding: $gutter-y 0;
+	    max-width: 100%;
+	    box-sizing: border-box;
       @include serif-large();
+    }
+    .project-content {
+	  width: 100%;
+	  display: inline-block;
+	  box-sizing: border-box;
+	  .img-container {
+	  	&.img-small { width: 30%; }
+        &.img-middle { width: 50%; }
+        &.img-large { width: 70%; }
+	    @include bp(m) {
+	  	&.img-small { width: 70%; }
+        &.img-middle { width: 80%; }
+        &.img-large { width: 90%; }
+	    }
+	  	margin-top: 7.8vw;
+	  	img { width: 100%; }
+	    p {
+			@include monospace-extrasmall();
+			width: 90%;
+		}
+	  }
+    }
+    .project-quote {
+    	width: 80%;
+    	margin: (2 * $gutter-y) auto;
+    	padding: 0.5em 3em;
+    	background-color: #f6f6f6;
+    	border-radius: 0.25em;
+    	box-shadow: 0px 0px 15px #ccc;
+    	h2 {
+          @include serif-medium();
+      	}
     }
   }
 }

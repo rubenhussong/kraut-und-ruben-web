@@ -2,13 +2,13 @@ footer {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: (.5 * $gutter);
+  padding: (.5 * $gutter-y) (.5 * $gutter-x);
   background: $color-background-dark;
   #footer-text {
     box-sizing: border-box;
     width: 50rem;
     max-width: 100%;
-    padding: $gutter (.5 * $gutter);
+    padding: $gutter-y (.5 * $gutter-x);
     @include serif-large();
     p { margin: 0; }
   }
@@ -16,10 +16,10 @@ footer {
     width: 100%;
     @include monospace-extrasmall();
     list-style: none;
-    padding: (.5 * $gutter) (.5 * $gutter);
-    margin-bottom: (.5 * $gutter);
+    padding: (.5 * $gutter-y) (.5 * $gutter-x);
+    margin-bottom: (.5 * $gutter-y) (.5 * $gutter-x);
     li {
-      padding: (.5 * $gutter) 0;
+      padding: (.5 * $gutter-y) 0;
       width: calc(100% / 3);
       float: left;
       #copyright {
