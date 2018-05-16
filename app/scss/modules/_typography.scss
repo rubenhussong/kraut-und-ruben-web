@@ -2,6 +2,14 @@
 
 // ================================================== FONTS & TYPOGRAPHY
 @font-face {
+  font-family: 'Kraut und Ruben Logo';
+  src: 
+      url('../fonts/KrautUndRuben-Logo.ttf') format('truetype'),
+      url('../fonts/KrautUndRuben-Logo.eot') format('embedded-opentype'),
+      url('../fonts/KrautUndRuben-Logo.woff2') format('woff2'),
+      url('../fonts/KrautUndRuben-Logo.woff') format('woff');
+}
+@font-face {
   font-family: 'Messina Sans Mono';
   src: url('../fonts/MessinaSansMonoTrial-Regular.otf') format('opentype');
 }
@@ -15,20 +23,11 @@
 }
 
 
-
-
-$font-serif:            "Spectral", Palatino, serif;
-$font-sans:             "Messina Sans", Helvetica, sans-serif;
-//$font-serif-italic:     "Messina Serif Italic", Palatino, serif;
+$logotype:              'Kraut und Ruben Logo', Courier, monospace;
+$font-serif:            'Spectral', Palatino, serif;
+$font-sans:             'Messina Sans', Helvetica, sans-serif;
 $font-mono:             'Messina Sans Mono', Courier, monospace;
 
-/*
-  'Overpass Mono', monospace; 400
-'Space Mono', monospace; 400, 700
-'Share Tech', sans-serif; 400
-
-  'nimbus-sans' 400, 700
-*/
 
 $font-size--xs:     .75rem;
 $font-size--s:      1rem;
@@ -39,6 +38,18 @@ $font-size--xl:     2.5rem;
 $basic-line-height: 1.5;
 $heading-line-height: 1.3;
 
+@mixin logotype() {
+  font-family: $logotype;
+  font-size: $font-size--s;
+  font-weight: 400;
+}
+@mixin monospace-extralarge() {
+  font-family: $font-mono;
+  font-size: $font-size--xl;
+  font-weight: 400;
+  letter-spacing: -.02em;
+  line-height: $basic-line-height;
+}
 @mixin monospace-large() {
   font-family: $font-mono;
   font-size: $font-size--l;
@@ -87,14 +98,22 @@ $heading-line-height: 1.3;
 @mixin serif-extrasmall() {
   font-family: $font-serif;
   font-size: $font-size--xs;
-  font-weight: 500;
+  font-weight: 600;
   line-height: $basic-line-height;
   letter-spacing: .03em;
+}
+@mixin sans-medium() {
+  font-family: $font-sans;
+  font-size: $font-size--m;
+  font-weight: 400;
+  letter-spacing: .03em;
+  text-rendering: optimizeLegibility;
 }
 @mixin sans-extralarge() {
   font-family: $font-sans;
   font-size: $font-size--xl;
-  font-weight: 500;
+  font-weight: 400;
   line-height: $heading-line-height;
+  letter-spacing: .02em;
 }
 

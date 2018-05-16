@@ -12,6 +12,8 @@ body {
   background: $color-background-bright;
   color: $color-main;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+
 }
 
 .page {

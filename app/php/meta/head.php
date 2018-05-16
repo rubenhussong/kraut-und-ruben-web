@@ -13,7 +13,5 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
 <script language="javascript" type="text/javascript" src="/js/main-min.js"></script>
 
-<link href="https://fonts.googleapis.com/css?family=Tenor+Sans" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Barlow:400,500|Nobile:400,500|Overpass+Mono:400,600|Overpass:400,600|Share+Tech|Space+Mono:400,700" rel="stylesheet">
 <link rel="stylesheet" href="https://use.typekit.net/jnr4uns.css">
 <link href="https://fonts.googleapis.com/css?family=Spectral:400,400i,500,600,700" rel="stylesheet">
