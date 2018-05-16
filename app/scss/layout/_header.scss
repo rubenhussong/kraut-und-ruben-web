@@ -8,6 +8,7 @@ header {
     display: inline-block;
     width: 100%;
     @include monospace-small();
+    @include logotype();
     span {
       position: absolute;
       top: 0;
