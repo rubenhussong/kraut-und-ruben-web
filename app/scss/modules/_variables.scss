@@ -2,10 +2,18 @@
 
 // ================================================== COLOR
 
-$color-main:                   #111;
-$color-active:                 #E62;
-$color-background-bright:      #EEE;
-$color-background-dark:        #DDD;
+$color-main:                   rgb(220, 82, 90);
+$color-accent:                 rgb(102, 200, 116);
+$color-background-light:       rgb(255, 240, 245);
+$color-background-dark:        rgb(235, 245, 245);
+$color-background-black:	   #111;
+
+$color-hover-background-light: #EEE;
+$color-hover-light: 		   #EEE;
+$color-hover-background-dark:  #111;
+$color-hover-dark:  		   #111;
+
+
 
 
 // ================================================== GRID

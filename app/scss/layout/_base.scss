@@ -9,7 +9,7 @@
 
 
 body {
-  background: $color-background-bright;
+  background: $color-background-light;
   color: $color-main;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
@@ -32,8 +32,8 @@ a {
 }
 
 ::selection {
-  background: $color-active;
-  color: $color-background-bright;
+  background: $color-accent;
+  color: $color-background-light;
 }
 
 %clear {
