@@ -1,6 +1,15 @@
 
 
 // ================================================== FONTS & TYPOGRAPHY
+
+@font-face {
+  font-family: 'Kraut und Ruben Logo';
+  src:
+          url('../fonts/KrautUndRuben-Logo.ttf') format('truetype'),
+          url('../fonts/KrautUndRuben-Logo.eot') format('embedded-opentype'),
+          url('../fonts/KrautUndRuben-Logo.woff2') format('woff2'),
+          url('../fonts/KrautUndRuben-Logo.woff') format('woff');
+}
 @font-face {
   font-family: 'Messina Sans Mono';
   src: url('../fonts/MessinaSansMonoTrial-Regular.otf') format('opentype');
@@ -16,8 +25,8 @@
 
 
 
-
-$font-serif:            "Spectral", Palatino, serif;
+$logotype:              'Kraut und Ruben Logo', Courier, monospace;
+$font-serif:            'Spectral', Palatino, serif;
 //$font-serif-italic:     "Messina Serif Italic", Palatino, serif;
 $font-mono:             'Messina Sans Mono', Courier, monospace;
 
@@ -35,6 +44,13 @@ $font-size--m:      1.5rem;
 $font-size--l:      2rem;
 
 $basic-line-height: 1.5;
+
+@mixin logotype() {
+  font-family: $logotype;
+  font-size: $font-size--s;
+  font-weight: 400;
+  letter-spacing: .01em;
+}
 
 @mixin monospace-large() {
   font-family: $font-mono;
