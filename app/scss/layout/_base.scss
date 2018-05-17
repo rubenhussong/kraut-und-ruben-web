@@ -31,6 +31,10 @@ a {
   text-decoration: none; /* no underline */
 }
 
+p {
+  margin: 0;
+}
+
 ::selection {
   background: $color-accent;
   color: $color-background-light;

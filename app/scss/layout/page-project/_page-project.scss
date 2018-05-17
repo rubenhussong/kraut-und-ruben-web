@@ -6,13 +6,23 @@
   .page-wrapper {
     .project-title {
    	  margin-top: 3em;
-   	  width: 25rem;
+   	  //width: 25rem;
    	  max-width: 100%;
+      display: flex;
+      justify-content: space-between;
       h1 {
         @include sans-extralarge();
+        width: 25rem;
       }
       h2 {
         @include serif-medium();
+      }
+      .project-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        padding: 0 0 0.25em 0;
+        p {@include serif-extrasmall();}
       }
     }
     .project-hero {

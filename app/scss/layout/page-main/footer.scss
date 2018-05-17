@@ -13,24 +13,28 @@ footer {
     p { margin: 0; }
   }
   #foot-line {
-    width: 100%;
-    @include monospace-extrasmall();
+    max-width: 100%;
+    width: 50rem;
+    @include sans-extrasmall();
     list-style: none;
-    padding: (.5 * $gutter-y) (.5 * $gutter-x);
-    margin-bottom: (.5 * $gutter-y) (.5 * $gutter-x);
+    padding: (.5 * $gutter-y) 0;
+    margin: 0 (.5 * $gutter-y);
+    display: flex;
+    justify-content: space-between;
     li {
       padding: (.5 * $gutter-y) 0;
-      width: calc(100% / 3);
-      float: left;
-      #copyright {
-        word-spacing: -.2em;
-      }
-      p a {
-        display: inline-block;
-        @include hover--footer-link();
+      p {
+        margin: .5rem 0;
+        a {
+          display: inline-block;
+          @include hover--footer-link();
+        }
       }
       span {
         display: inline-block;
+      }
+      &.footer-li-middle {
+        transform: translateX(-1rem);
       }
     }
   }

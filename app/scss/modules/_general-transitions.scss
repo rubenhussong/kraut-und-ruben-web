@@ -42,7 +42,7 @@
 @mixin hover--about-link() {
   transition: transform .9s ease;
   &:hover {
-    transform: skewX(8.75deg);
+    transform: skewX(7.5deg);
   }
 }
 @mixin hover--footer-link() {

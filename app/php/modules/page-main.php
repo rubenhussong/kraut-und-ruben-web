@@ -35,8 +35,8 @@
                 but also do branding and editorial design. At least one of us is a great illustrator.
                 We like people – so <a href="mailto:gutentag@krautundruben.de">mail</a>,
                 <a href="#section--footer">call</a>
-                or <a href="#section--footer">visit</a>
-                us for one, two, three cups of coffee!
+                or simply <a href="#section--footer">visit</a>
+                us for a cup of coffee. Or two.
 
             <?php endif ?>
         </p>
@@ -119,7 +119,7 @@
                 <span>+49 157 382 070 73</span>
             </p>
         </li>
-        <li class="fade-in footer-li">
+        <li class="fade-in footer-li footer-li-middle">
             <p>
                 <a href="https://www.instagram.com/krautundruben/">Instagram</a>
             </p>

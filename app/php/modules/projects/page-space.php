@@ -1,6 +1,12 @@
 <div class="page-wrapper" id="page-wrapper--space">
     <div class="project-title fade-in">
         <h1>Space – A Journey into the Void</h1>
+        <div class="project-details">
+            <p>
+                <span>Editorial,</span> 
+                <span>Illustration</span>
+            </p>
+        </div>
     </div>
 
     <div class="project-hero">

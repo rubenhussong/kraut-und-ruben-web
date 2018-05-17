@@ -8,6 +8,17 @@
       url('../fonts/KrautUndRuben-Logo.eot') format('embedded-opentype'),
       url('../fonts/KrautUndRuben-Logo.woff2') format('woff2'),
       url('../fonts/KrautUndRuben-Logo.woff') format('woff');
+
+}
+@font-face {
+  font-family: 'Galaxie Copernicus';
+  src: url('../fonts/CopernicusBook.otf') format('opentype');
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Galaxie Copernicus';
+  src: url('../fonts/CopernicusBookItalic.otf') format('opentype');
+  font-style: italic;
 }
 @font-face {
   font-family: 'Messina Sans Mono';
@@ -24,7 +35,7 @@
 
 
 $logotype:              'Kraut und Ruben Logo', Courier, monospace;
-$font-serif:            'Spectral', Palatino, serif;
+$font-serif:            'Galaxie Copernicus', Palatino, serif;
 $font-sans:             'Messina Sans', Helvetica, sans-serif;
 $font-mono:             'Messina Sans Mono', Courier, monospace;
 
@@ -42,6 +53,7 @@ $heading-line-height: 1.3;
   font-family: $logotype;
   font-size: $font-size--s;
   font-weight: 400;
+  letter-spacing: .02em;
 }
 @mixin monospace-extralarge() {
   font-family: $font-mono;
@@ -115,5 +127,12 @@ $heading-line-height: 1.3;
   font-weight: 400;
   line-height: $heading-line-height;
   letter-spacing: .02em;
+}
+@mixin sans-extrasmall() {
+  font-family: $font-sans;
+  font-size: $font-size--xs;
+  font-weight: 400;
+  line-height: $heading-line-height;
+  letter-spacing: .04em;
 }
 
