@@ -4,6 +4,7 @@
   width: 100%;
   padding: 8vw (.5 * $gutter-x) $gutter-y;
   @include serif-large();
+  background: linear-gradient(to bottom, $color-background-light 20%, $color-background-dark 100%);
   #about-text {
     box-sizing: border-box;
     width: 50rem;

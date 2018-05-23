@@ -2,8 +2,10 @@ footer {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: (.5 * $gutter-y) (.5 * $gutter-x);
   background: $color-background-dark;
+  padding: $gutter-x (.5 * $gutter-y) (.5 * $gutter-x);
+  //background: $color-background-dark;
+  background: linear-gradient(to bottom, $color-background-dark 0, $color-background-light 80%);
   #footer-text {
     box-sizing: border-box;
     width: 50rem;
