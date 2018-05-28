@@ -36,7 +36,7 @@ header {
       &.header-element--right { right: 0; }
       img { width: 100%; }
     }
-    .arrow-switch-project {
+    .arrow-switch-project, .cross-close-imprint {
       @include logotype();
       position: absolute;
       width: 1rem;

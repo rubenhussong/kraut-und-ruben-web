@@ -33,5 +33,7 @@ if ($lang !== 'de') $lang = 'en';
     <section class="page page--project" id="page--el-presidente">
         <?php include 'php/modules/projects/page-el-presidente.php'; ?>
     </section>
+
+    <?php include 'php/modules/imprint.php'; ?>
 </body>
 </html>

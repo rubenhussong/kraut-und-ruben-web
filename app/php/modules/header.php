@@ -23,4 +23,9 @@
             &#x2192;
         </a>
     </div>
+    <div class="page-header" id="header--imprint">
+        <a class="cross-close-imprint header-element header-element--center" href="#close-imprint">
+            &#x2715;
+        </a>
+    </div>
 </header>

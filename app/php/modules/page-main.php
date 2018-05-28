@@ -128,7 +128,7 @@
         </li>
         <li class="fade-in footer-li">
             <p>
-                <a href="#">Impressum</a>
+                <a href="#imprint">Impressum</a>
             </p>
             <p id="copyright">
                 <span>© Kraut & Ruben</span>

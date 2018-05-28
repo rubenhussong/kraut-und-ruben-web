@@ -1,6 +1,44 @@
 
 $page-change-transition: cubic-bezier(0, .25, .25, 1);
 
+// =========================================================================== I M P R I N T
+
+.imprint-is-active {
+  header {
+    #header--page-main {
+      .word-mark {
+        top: -3rem;
+      }
+      .header-element--left {
+        left: -4rem;
+      }
+      .header-element--right {
+        right: -4rem;
+      }
+    }
+    #header--page-project {
+      .header-element--center {
+        top: -3rem;
+      }
+      .header-element--left {
+        left: -4rem;
+      }
+      .header-element--right {
+        right: -4rem;
+      }
+    }
+    #header--imprint {
+      .cross-close-imprint {
+        top: 0;
+      }
+    }
+  }
+  .page {
+    filter: blur(1rem);
+  }
+}
+
+
 // =========================================================================== M A I N P A G E
 
 header {
@@ -31,6 +69,11 @@ header {
     }
     .header-element--right {
       right: -4rem;
+    }
+  }
+  #header--imprint {
+    .cross-close-imprint {
+      top: -3rem;
     }
   }
 }

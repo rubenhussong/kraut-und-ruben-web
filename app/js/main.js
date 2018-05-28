@@ -27,7 +27,7 @@ $(window).on('popstate', function() {
     loadCurrentPage();
 });
 
-/** ========================= On Link Click (also Pager Internal Links)
+/** ========================= On Link Click (also Page Internal Links)
  */
 
 $(document).on('click', 'a[href^="#"]', function (event) {
@@ -43,7 +43,13 @@ $(document).on('click', 'a[href^="#"]', function (event) {
             history.pushState({}, '', targetPageDomain + '/');
         }
     } else {
-        pageInternalLink($(this));
+        if (linkTarget == "#imprint") {
+            $('body').addClass('imprint-is-active');
+        } else if (linkTarget == "#close-imprint") {
+            $('body').removeClass('imprint-is-active');
+        } else {
+            pageInternalLink($(this));
+        }
     }
 });
 
