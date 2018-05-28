@@ -2,10 +2,10 @@
 
 // ================================================== COLOR
 
-$color-main:                   rgb(232, 72, 76); // red front color				rgb(236, 72, 73); // rgb(228, 90, 100);
-$color-accent:                 rgb(133, 205, 117); // green front color			rgb(95, 200, 140); //rgb(102, 200, 116);
-$color-background-light:       hsl(350, 90, 95); // red background color 		rgb(250, 232, 235);
-$color-background-dark:        rgb(228, 236, 228); // green background color    hsl(151, 60, 94); //rgb(228, 245, 240);
+$color-red:                   rgb(232, 72, 76);
+$color-green:                 rgb(133, 205, 117);
+$color-background-red:        hsl(350, 90, 95);	  // light
+$color-background-green:      rgb(228, 236, 228); // dark
 
 $color-hover-background-light: #EEE;
 $color-hover-light: 		   #EEE;

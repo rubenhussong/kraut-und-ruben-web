@@ -2,7 +2,7 @@ header {
   user-select: none;
   z-index: $z-index-header;
   position: fixed;
-  color: $color-main;
+  color: $color-red;
   width: 100%;
   //@include on-load--header();
   .page-header {
@@ -36,7 +36,7 @@ header {
       &.header-element--right { right: 0; }
       img { width: 100%; }
     }
-    .arrow-switch-project {
+    .arrow-switch-project, .cross-close-imprint {
       @include logotype();
       position: absolute;
       width: 1rem;

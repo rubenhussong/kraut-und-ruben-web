@@ -1,7 +1,7 @@
 .page--project {
   box-sizing: border-box;
-  background: $color-background-dark;
-  color: $color-accent;
+  background: $color-background-green;
+  color: $color-green;
   padding: 8vw $gutter-x $gutter-y;
   .page-wrapper {
     .project-title {
@@ -48,18 +48,19 @@
 	  box-sizing: border-box;
 	  .img-container {
 	  	&.img-small { width: 30%; }
-        &.img-middle { width: 50%; }
-        &.img-large { width: 70%; }
+      &.img-middle { width: 50%; }
+       &.img-large { width: 70%; }
 	    @include bp(m) {
-	  	&.img-small { width: 70%; }
+	  	  &.img-small { width: 70%; }
         &.img-middle { width: 80%; }
         &.img-large { width: 90%; }
 	    }
 	  	margin-top: 7.8vw;
 	  	img { width: 100%; }
 	    p {
-			 @include monospace-extrasmall();
+			 @include sans-extrasmall();
 			 width: 90%;
+       margin: .25rem 0;
 		}
 	  }
     }
