@@ -2,34 +2,53 @@ header {
   user-select: none;
   z-index: $z-index-header;
   position: fixed;
+  color: $color-main;
   width: 100%;
-  @include on-load--header();
-  .word-mark {
-    color: $color-main;
-    display: inline-block;
+  //@include on-load--header();
+  .page-header {
+    position: absolute;
     width: 100%;
-    @include logotype();
-    span {
+    .word-mark {
+      display: inline-block;
+      width: 100%;
       position: absolute;
-      top: 0;
-      margin: (($gutter-x - 1.5rem) / 2) 0;
-      &#h1--left { right: calc(50% + 0.7rem); }
-      &#h1--right { left: calc(50% + 0.7rem); }
-      &#h1--center {
-        text-align: center;
-        width: .8rem;
-        left: calc(50% - .4rem);
+      @include logotype();
+      span {
+        position: absolute;
+        top: 0;
+        margin: (($gutter-x - 1.5rem) / 2) 0;
+        &#h1--left { right: calc(50% + 0.7rem); }
+        &#h1--right { left: calc(50% + 0.7rem); }
+        &#h1--center {
+          text-align: center;
+          width: .8rem;
+          left: calc(50% - .4rem);
+        }
       }
     }
-  }
-  .head-icon {
-    display: inline-block;
-    position: absolute;
-    margin: (($gutter-x - 2rem) / 2);
-    width: 2rem;
-    top: -4rem;
-    &#head-icon--kraut { left: 0; }
-    &#head-icon--ruebe { right: 0; }
-    img { width: 100%; }
+    .header-icon {
+      display: inline-block;
+      position: absolute;
+      margin: (($gutter-x - 2rem) / 2);
+      width: 2rem;
+      top: -4rem;
+      &.header-element--left { left: 0; }
+      &.header-element--right { right: 0; }
+      img { width: 100%; }
+    }
+    .arrow-switch-project {
+      @include logotype();
+      position: absolute;
+      width: 1rem;
+      margin: (($gutter-x - 1.5rem) / 2);
+      text-align: center;
+      &.header-element--left { left: 0; }
+      &.header-element--right { right: 0; }
+      &.header-element--center {
+        left: calc(50% - .5rem);
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
   }
 }

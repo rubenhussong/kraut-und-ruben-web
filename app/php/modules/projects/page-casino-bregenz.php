@@ -1,1 +1,0 @@
-<a href="#page--main" class="close-modal">Close</a>

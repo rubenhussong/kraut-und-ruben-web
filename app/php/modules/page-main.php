@@ -1,7 +1,7 @@
 <div class="on-load scroll-top" id="scroll-marker-wrapper">
     <a href="#section--projects" id="scroll-marker">
         <p>Projekte</p>
-        <p id="scroll-arrow">&#9660;</p>
+        <p id="scroll-arrow">&#x2193;</p>
     </a>
 </div>
 <div class="section" id="section--about">
@@ -15,10 +15,9 @@
                 Hallo, <span id="span--wir">wir</span>
                 sind <span id="span--flo">Flo</span>
                 und <span id="span--ruben">Ruben</span>,
-                zwei Designer aus <span id="span--konstanz">Konstanz</span>
-                am <span id="span--bodensee">Bodensee</span>.
-                Am Liebsten gestalten und entwickeln wir <span id="span--webseiten">Webseiten</span>.
-                Außerdem visualisieren wir Marken, erstellen Editorial-Designs und ungefähr einer von uns zwei ist ein toller Illustrator.
+                zwei Designer aus <span id="span--konstanz">Konstanz</span>.
+                Am Liebsten entwickeln wir <span id="span--webseiten">Webseiten</span>.
+                Außerdem gestalten wir Marken und Editorial-Designs. Mindestens einer von uns ist ein toller Illustrator.
                 Wir mögen Menschen – also <a href="mailto:gutentag@krautundruben.de">schreib</a>
                 uns, <a href="#section--footer">ruf</a>
                 uns an oder <a href="#section--footer">besuch</a>
@@ -48,7 +47,7 @@
             <a href="#page--space" id="project-link--space">
                 <img src="" data-src="/img/space-banner.jpg" alt="space-banner" sizes="auto">
             </a>
-            <div class="project-text">
+            <div class="project-text project-text--light">
                 <h2>
                     Space<br>
                     <span>Editorial</span>
@@ -70,7 +69,7 @@
             <a href="#page--grenzkunst" id="project-link--grenzkunst">
                 <img src="" data-src="/img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
             </a>
-            <div class="project-text">
+            <div class="project-text project-text--light">
                 <h2>
                     Grenzkunst<br>
                     <span>Branding</span>

@@ -152,8 +152,8 @@ $(window).on('load', function() {
         iconRotation = iconRotation - 5;
         var kRotate = "rotate(" + iconRotation + "deg)";
         var rRotate = "rotate(" + (-iconRotation) + "deg)";
-        $('#head-icon--kraut').css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
-        $('#head-icon--ruebe').css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
+        $('.object-rotate--left').css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
+        $('.object-rotate--right').css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
     });
 
     $('.page').each(function() {

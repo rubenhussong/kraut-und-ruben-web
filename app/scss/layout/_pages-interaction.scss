@@ -3,6 +3,37 @@ $page-change-transition: cubic-bezier(0, .25, .25, 1);
 
 // =========================================================================== M A I N P A G E
 
+header {
+  .header-element {
+    transition:
+            top 1s ease,
+            left 1s ease,
+            right 1s ease,
+            opacity 1s ease;
+  }
+  #header--page-main {
+    .word-mark {
+      top: 0;
+    }
+    .header-element--left {
+      left: 0;
+    }
+    .header-element--right {
+      right: 0;
+    }
+  }
+  #header--page-project {
+    .header-element--center {
+      top: -3rem;
+    }
+    .header-element--left {
+      left: -4rem;
+    }
+    .header-element--right {
+      right: -4rem;
+    }
+  }
+}
 .page--project {
   opacity: 0;
   z-index: $z-index-page-hidden;
@@ -26,6 +57,31 @@ $page-change-transition: cubic-bezier(0, .25, .25, 1);
 // =========================================================================== S U B P A G E
 
 .modal-is-active {
+  header {
+    #header--page-main {
+      .word-mark {
+        top: -3rem;
+      }
+      .header-element--left {
+        left: -4rem;
+      }
+      .header-element--right {
+        right: -4rem;
+      }
+    }
+    #header--page-project {
+      .header-element--center {
+        top: 0;
+      }
+      .header-element--left {
+        left: 0;
+      }
+      .header-element--right {
+        right: 0;
+      }
+    }
+  }
+
   #page--main {
     z-index: $z-index-page-hidden;
 
