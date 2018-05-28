@@ -9,8 +9,8 @@
 
 
 body {
-  background: $color-background-light;
-  color: $color-main;
+  background: $color-background-red;
+  color: $color-red;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
 
@@ -36,8 +36,8 @@ p {
 }
 
 ::selection {
-  background: $color-accent;
-  color: $color-background-light;
+  background: $color-green;
+  color: $color-background-red;
 }
 
 %clear {

@@ -46,8 +46,8 @@ $font-size--m:      1.5rem;
 $font-size--l:      2rem;
 $font-size--xl:     2.5rem;
 
-$basic-line-height: 1.5;
-$heading-line-height: 1.3;
+$line-height: 1.5;
+$line-height--heading: 1.3;
 
 @mixin logotype() {
   font-family: $logotype;
@@ -60,14 +60,14 @@ $heading-line-height: 1.3;
   font-size: $font-size--xl;
   font-weight: 400;
   letter-spacing: -.02em;
-  line-height: $basic-line-height;
+  line-height: $line-height;
 }
 @mixin monospace-large() {
   font-family: $font-mono;
   font-size: $font-size--l;
   font-weight: 400;
   letter-spacing: .01em;
-  line-height: $basic-line-height;
+  line-height: $line-height;
 }
 @mixin monospace-medium() {
   font-family: $font-mono;
@@ -91,13 +91,13 @@ $heading-line-height: 1.3;
   font-family: $font-serif;
   font-size: $font-size--l;
   font-weight: 400;
-  line-height: $basic-line-height;
+  line-height: $line-height;
 }
 @mixin serif-large-italic() {
   font-family: $font-serif;
   font-size: $font-size--l;
   font-weight: 400;
-  line-height: $basic-line-height;
+  line-height: $line-height;
   letter-spacing: .01em;
   font-style: italic;
 }
@@ -105,13 +105,13 @@ $heading-line-height: 1.3;
   font-family: $font-serif;
   font-size: $font-size--m;
   font-weight: 400;
-  line-height: $basic-line-height;
+  line-height: $line-height;
 }
 @mixin serif-extrasmall() {
   font-family: $font-serif;
   font-size: $font-size--xs;
   font-weight: 600;
-  line-height: $basic-line-height;
+  line-height: $line-height;
   letter-spacing: .03em;
 }
 @mixin sans-medium() {
@@ -125,14 +125,14 @@ $heading-line-height: 1.3;
   font-family: $font-sans;
   font-size: $font-size--xl;
   font-weight: 400;
-  line-height: $heading-line-height;
+  line-height: $line-height--heading;
   letter-spacing: .02em;
 }
 @mixin sans-extrasmall() {
   font-family: $font-sans;
   font-size: $font-size--xs;
   font-weight: 400;
-  line-height: $heading-line-height;
+  line-height: $line-height--heading;
   letter-spacing: .04em;
 }
 
