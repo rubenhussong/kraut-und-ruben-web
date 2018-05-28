@@ -32,8 +32,5 @@
             <img src="/img/space/space03.jpg" alt="Book spread, graphic nonsense.">
             <p>There we go again.</p>
         </div>  
-    </div>
-    <div class="project-quote">
-        <h2>The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home. — Carl Sagan</h2>
-    </div>     
+    </div>   
 </div>
