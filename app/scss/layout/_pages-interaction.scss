@@ -1,5 +1,6 @@
 
 $page-change-transition: cubic-bezier(0, .25, .25, 1);
+$imprint-transition: ease;
 
 // =========================================================================== I M P R I N T
 
@@ -34,7 +35,7 @@ $page-change-transition: cubic-bezier(0, .25, .25, 1);
     }
   }
   .page {
-    filter: blur(1rem);
+    filter: blur(.5rem);
   }
 }
 
@@ -82,18 +83,17 @@ header {
   z-index: $z-index-page-hidden;
   transition:
           z-index 0s  1s,
+          filter .5s $imprint-transition,
           opacity 1s $page-change-transition;
-  .page-wrapper {
-    transition: transform 1s $page-change-transition;
-    //transform: translateY(100vh);
-  }
 }
 #page--main {
   z-index: $z-index-page-visible;
 
+  transition: filter .5s $imprint-transition;
+
   #project-column--right, #project-column--left {
-     transform: translateX(0);
-     transition: transform 1s $page-change-transition;
+    transform: translateX(0);
+    transition: transform 1s $page-change-transition;
   }
 }
 
@@ -143,10 +143,6 @@ header {
               z-index 0s $page-change-transition,
               opacity 1s $page-change-transition;
       opacity: 1;
-      .page-wrapper {
-        transition: transform 1s $page-change-transition;
-        transform: translateY(0);
-      }
     }
   }
 }
