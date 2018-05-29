@@ -13,7 +13,7 @@ body {
   color: $color-red;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
-
+  text-rendering: optimizeLegibility;
 }
 
 .page {

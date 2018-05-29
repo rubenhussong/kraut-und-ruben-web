@@ -33,106 +33,81 @@
   src: url('../fonts/MessinaSerifTrial-Regular.otf') format('opentype');
 }
 
-
+// Font Variables
 $logotype:              'Kraut und Ruben Logo', Courier, monospace;
 $font-serif:            'Galaxie Copernicus', Palatino, serif;
 $font-sans:             'Messina Sans', Helvetica, sans-serif;
 $font-mono:             'Messina Sans Mono', Courier, monospace;
 
+// Font Weight Variables
+$light: 300;
+$normal: 400;
+$semibold: 500;
+$bold: 700;
 
-$font-size--xs:     .75rem;
-$font-size--s:      1rem;
-$font-size--m:      1.5rem;
-$font-size--l:      2rem;
-$font-size--xl:     2.5rem;
-
-$line-height: 1.5;
+// Line Height Variables
+$line-height--base: 1.5;
 $line-height--heading: 1.3;
+
+// Font Size Map
+$font-size: (
+  xs:     .75rem,
+  s:      1rem,
+  m:      1.5rem,
+  l:      2rem,
+  xl:     2.5rem
+);
+
+// Map key extraction
+
+@function font-size($key) {
+  @if map-has-key($font-size, $key) {
+    @return map-get($font-size, $key);
+  }
+  @warn "Unknown `#{$key}` in $font-size.";
+  @return null;
+}
+
+// Typo Mixins
+
+@mixin font-sans($font-size, $letter-spacing: false, $line-height: false, $font-style: false) {
+  font-size: font-size($font-size);
+  font-family: $font-sans;
+  font-weight: $normal;
+  @if $letter-spacing { letter-spacing: $letter-spacing; }
+  @if $line-height { line-height: $line-height; } @else { line-height: $line-height--base }
+  @if $font-style { font-style: $font-style; }
+}
+
+@mixin font-serif($font-size, $letter-spacing: false, $line-height: false, $font-style: false) {
+  font-size: font-size($font-size);
+  font-family: $font-serif;
+  font-weight: $normal;
+  @if $letter-spacing { letter-spacing: $letter-spacing; }
+  @if $line-height { line-height: $line-height; } @else { line-height: $line-height--base }
+  @if $font-style { font-style: $font-style; }
+}
+
+/* @mixin sans($size...) {
+    font-family: $font-sans;
+    @each in $font-size {}
+    @if $size { font-size: font-size($size); }
+    @if $colour { color: $colour; }
+    @if $weight { font-weight: $weight; }
+    @if $lh { line-height: $lh; }
+}
+*/
 
 @mixin logotype() {
   font-family: $logotype;
-  font-size: $font-size--s;
+  font-size: font-size(s);
   font-weight: 400;
   letter-spacing: .02em;
 }
-@mixin monospace-extralarge() {
-  font-family: $font-mono;
-  font-size: $font-size--xl;
-  font-weight: 400;
-  letter-spacing: -.02em;
-  line-height: $line-height;
-}
-@mixin monospace-large() {
-  font-family: $font-mono;
-  font-size: $font-size--l;
-  font-weight: 400;
-  letter-spacing: .01em;
-  line-height: $line-height;
-}
-@mixin monospace-medium() {
-  font-family: $font-mono;
-  font-size: $font-size--m;
-  font-weight: 400;
-  letter-spacing: .01em;
-}
-@mixin monospace-small() {
-  font-family: $font-mono;
-  font-size: $font-size--s;
-  font-weight: 400;
-  letter-spacing: .01em;
-}
-@mixin monospace-extrasmall() {
-  font-family: $font-mono;
-  font-size: $font-size--xs;
-  font-weight: 400;
-  line-height: 1.5;
-}
-@mixin serif-large() {
-  font-family: $font-serif;
-  font-size: $font-size--l;
-  font-weight: 400;
-  line-height: $line-height;
-}
-@mixin serif-large-italic() {
-  font-family: $font-serif;
-  font-size: $font-size--l;
-  font-weight: 400;
-  line-height: $line-height;
-  letter-spacing: .01em;
-  font-style: italic;
-}
-@mixin serif-medium() {
-  font-family: $font-serif;
-  font-size: $font-size--m;
-  font-weight: 400;
-  line-height: $line-height;
-}
-@mixin serif-extrasmall() {
-  font-family: $font-serif;
-  font-size: $font-size--xs;
-  font-weight: 600;
-  line-height: $line-height;
-  letter-spacing: .03em;
-}
-@mixin sans-medium() {
-  font-family: $font-sans;
-  font-size: $font-size--m;
-  font-weight: 400;
-  letter-spacing: .03em;
-  text-rendering: optimizeLegibility;
-}
-@mixin sans-extralarge() {
-  font-family: $font-sans;
-  font-size: $font-size--xl;
-  font-weight: 400;
+
+@mixin heading() {
   line-height: $line-height--heading;
   letter-spacing: .02em;
 }
-@mixin sans-extrasmall() {
-  font-family: $font-sans;
-  font-size: $font-size--xs;
-  font-weight: 400;
-  line-height: $line-height--heading;
-  letter-spacing: .04em;
-}
+
 
