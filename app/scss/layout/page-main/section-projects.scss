@@ -36,12 +36,12 @@
         justify-content: center;
         opacity: 0;
         h2 {
-          @include sans-medium();
+          @include font-sans(m, .03em, 1.15);
           transition: transform .5s ease;
           transform: scale(0);
           text-align: center;
           span {
-            @include serif-extrasmall();
+            @include font-serif(xs, .03em);
           }
         }
         &.project-text--light {

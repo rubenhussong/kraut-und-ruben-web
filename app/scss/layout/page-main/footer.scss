@@ -10,15 +10,15 @@ footer {
     width: 50rem;
     max-width: 100%;
     padding: $gutter-y (.5 * $gutter-x);
-    @include serif-large();
+    @include font-serif(l);
     p { margin: 0; }
   }
   #foot-line {
-    max-width: 100%;
+    max-width: 85%;
     width: 50rem;
-    @include sans-extrasmall();
+    @include font-sans(xs, .04em);
     list-style: none;
-    padding: (.5 * $gutter-y) 0;
+    padding: (.5 * $gutter-y) 0 0 0;
     margin: 0 (.5 * $gutter-y);
     display: flex;
     justify-content: space-between;

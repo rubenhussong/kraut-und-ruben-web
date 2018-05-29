@@ -6,15 +6,14 @@
   width: 5rem;
   margin: 0 auto;
   left: 0; right: 0; bottom: .5rem;
-  @include monospace-extrasmall();
-  line-height: 1.75;
+  @include font-sans(xs, .05em, 1.75);
   @include on-load--scroll-marker();
   #scroll-marker {
     display: inline-block;
     pointer-events: all;
     #scroll-arrow {
       @include logotype();
-      font-size: $font-size--xs;
+      font-size: font-size(xs);
       animation: scrollArrow .75s ease infinite alternate-reverse;
     }
   }
