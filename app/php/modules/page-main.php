@@ -1,6 +1,5 @@
 <div class="on-load scroll-top" id="scroll-marker-wrapper">
     <a href="#section--projects" id="scroll-marker">
-        <p>Projekte</p>
         <p>
             <?php if ($lang == 'de'): ?>
                 Projekte
@@ -135,7 +134,6 @@
         </li>
         <li class="fade-in footer-li">
             <p>
-                <a href="#imprint">Impressum</a>
                 <a href="#imprint">
                     <?php if ($lang == 'de'): ?>
 
@@ -149,7 +147,6 @@
                 </a>
             </p>
             <p id="copyright">
-                <span>© Kraut & Ruben</span>
                 <span>© <?php echo date("Y"); ?></span>
             </p>
         </li>
