@@ -18,6 +18,7 @@ $(window).ready(function() {
     loadCurrentPage();
 });
 $(window).on('popstate', function() {
+    $('body').removeClass('imprint-is-active');
     loadCurrentPage();
 });
 

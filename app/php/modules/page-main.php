@@ -1,6 +1,13 @@
 <div class="on-load scroll-top" id="scroll-marker-wrapper">
     <a href="#section--projects" id="scroll-marker">
         <p>Projekte</p>
+        <p>
+            <?php if ($lang == 'de'): ?>
+                Projekte
+            <?php else: ?>
+                Projects
+            <?php endif ?>
+        </p>
         <p id="scroll-arrow">&#x2193;</p>
     </a>
 </div>
@@ -129,9 +136,21 @@
         <li class="fade-in footer-li">
             <p>
                 <a href="#imprint">Impressum</a>
+                <a href="#imprint">
+                    <?php if ($lang == 'de'): ?>
+
+                        Impressum
+
+                    <?php else: ?>
+
+                        Legal Notice
+
+                    <?php endif ?>
+                </a>
             </p>
             <p id="copyright">
                 <span>© Kraut & Ruben</span>
+                <span>© <?php echo date("Y"); ?></span>
             </p>
         </li>
     </ul>
