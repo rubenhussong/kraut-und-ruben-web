@@ -11,12 +11,6 @@ const existingSubPages = [
 
 var pageMainTitle = document.title;
 
-/*
-var browserLanguage = navigator.language.substr(0, 2);
-if (browserLanguage !== 'de') browserLanguage = 'en';
-        --> history.pushState({}, '', browserLanguage + '/');
-*/
-
 /** ========================= On Page Load & Back and Forward Button
  */
 
@@ -39,8 +33,23 @@ $(document).on('click', 'a[href^="#"]', function (event) {
             history.pushState({}, '', '/');
         } else {
             targetPageDomain = linkTarget.split('--').slice(-1)[0];
+            if (targetPageDomain == 'prev-project') {
+                var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
+                if (existingSubPages.indexOf(currentSubPage) > 0) {
+                    targetPageDomain = existingSubPages[existingSubPages.indexOf(currentSubPage) - 1];
+                } else {
+                    targetPageDomain = existingSubPages[existingSubPages.length - 1];
+                }
+            } else if (targetPageDomain == 'next-project') {
+                var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
+                if (existingSubPages.indexOf(currentSubPage) < existingSubPages.length - 1) {
+                    targetPageDomain = existingSubPages[existingSubPages.indexOf(currentSubPage) + 1];
+                } else {
+                    targetPageDomain = existingSubPages[0];
+                }
+            }
             openModal(targetPageDomain);
-            history.pushState({}, '', targetPageDomain + '/');
+            history.pushState({}, '', '/' + targetPageDomain);
         }
     } else {
         if (linkTarget == "#imprint") {
@@ -60,21 +69,26 @@ function loadCurrentPage() {
     var pagePath = window.location.pathname;
     var subPage;
     if (pagePath.substring(pagePath.length - 1) == '/') {
-        subPage = pagePath.slice(0,-1).split('/').slice(-1)[0];;
+        subPage = pagePath.slice(0,-1).split('/').slice(-1)[0];
     } else {
         subPage = pagePath.split('/').slice(-1)[0];
     }
     if(existingSubPages.indexOf(subPage) > -1) {
         openModal(subPage);
-    } else  if(subPage == '') {
-        closeModal();
+        history.replaceState({}, '', '/' + subPage);
     } else {
-        history.replaceState({}, '', '/');
         closeModal();
+        history.replaceState({}, '', '/');
     }
 }
 
 function openModal(target) {
+    var bodyClassList = $('body').attr('class').split(' ');
+    for (var i = 0; i < bodyClassList.length; i++) {
+        if (bodyClassList[i].includes('modal')) {
+            $('body').removeClass(bodyClassList[i]);
+        }
+    }
     lazyLoadImages('#page--' + target);
     changeDocumentTitle(target);
     $('body').addClass('modal-is-active');

@@ -13,7 +13,7 @@
         </div>
     </div>
     <div class="page-header" id="header--page-project">
-        <a class="arrow-switch-project header-element header-element--left" href="#page--last-project" id="arrow--last-project">
+        <a class="arrow-switch-project header-element header-element--left" href="#page--prev-project" id="arrow--prev-project">
             &#x2190;
         </a>
         <a class="arrow-switch-project header-element header-element--center" href="#page--main" id="arrow--page-main">
