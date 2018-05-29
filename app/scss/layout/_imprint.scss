@@ -1,3 +1,36 @@
 #imprint {
-	@include font-sans();
+	box-sizing: border-box;
+	z-index: $z-index-imprint;
+	padding: $gutter-y (.5 * $gutter-x);
+	color: black;
+	
+	h1 {
+		text-align: center;
+		@include font-serif(l);
+		margin-bottom: 3rem;
+	}
+	h2 {
+		@include font-sans(s);
+	}
+	
+	.imprint-header {
+		padding: (.5 * $gutter-y) (.5 * $gutter-x);
+		p {
+			@include font-sans(m, 0, 1.5);
+			margin: (.25 * $gutter-y) 0;
+		}
+	}
+	.imprint-column {
+	    box-sizing: border-box;
+	    float: left;
+	    width: 50%;
+	    padding: 0 (.5 * $gutter-x);
+	    @include bp(m) {
+	      width: 100%;
+	    }
+		p {
+			@include font-serif(xs, 0, $line-height--large);
+			margin: 1.275rem 0;
+		}
+	}
 }

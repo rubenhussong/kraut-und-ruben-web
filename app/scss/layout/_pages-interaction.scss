@@ -37,6 +37,9 @@ $imprint-transition: ease;
   .page {
     filter: blur(.5rem);
   }
+  #imprint {
+    transform: translateY(0);
+  }
 }
 
 
@@ -95,6 +98,10 @@ header {
     transform: translateX(0);
     transition: transform 1s $page-change-transition;
   }
+}
+#imprint {
+  transition: transform 1s ease;
+  transform: translateY(100vh);
 }
 
 // =========================================================================== S U B P A G E

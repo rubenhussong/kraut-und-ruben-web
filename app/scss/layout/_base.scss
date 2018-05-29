@@ -16,7 +16,7 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-.page {
+.page, #imprint {
   position: absolute;
   top: 0;
   left: 0;
@@ -33,6 +33,10 @@ a {
 
 p {
   margin: 0;
+}
+
+.small-caps {
+  font-variant: small-caps;
 }
 
 ::selection {
