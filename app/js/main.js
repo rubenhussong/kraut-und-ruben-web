@@ -11,12 +11,6 @@ const existingSubPages = [
 
 var pageMainTitle = document.title;
 
-/*
-var browserLanguage = navigator.language.substr(0, 2);
-if (browserLanguage !== 'de') browserLanguage = 'en';
-        --> history.pushState({}, '', browserLanguage + '/');
-*/
-
 /** ========================= On Page Load & Back and Forward Button
  */
 
@@ -39,8 +33,16 @@ $(document).on('click', 'a[href^="#"]', function (event) {
             history.pushState({}, '', '/');
         } else {
             targetPageDomain = linkTarget.split('--').slice(-1)[0];
+            if (targetPageDomain == 'last-project') {
+
+                targetPageDomain = '';                                      // CHANGE LIST POSITION HERE
+
+            } else if (targetPageDomain == 'next-project') {
+                targetPageDomain = '';                                      // CHANGE LIST POSITION HERE
+            }
             openModal(targetPageDomain);
-            history.pushState({}, '', targetPageDomain + '/');
+            console.log(targetPageDomain);
+            history.pushState({}, '', '/' + targetPageDomain);
         }
     } else {
         if (linkTarget == "#imprint") {
@@ -60,13 +62,13 @@ function loadCurrentPage() {
     var pagePath = window.location.pathname;
     var subPage;
     if (pagePath.substring(pagePath.length - 1) == '/') {
-        subPage = pagePath.slice(0,-1).split('/').slice(-1)[0];;
+        subPage = pagePath.slice(0,-1).split('/').slice(-1)[0];
     } else {
         subPage = pagePath.split('/').slice(-1)[0];
     }
     if(existingSubPages.indexOf(subPage) > -1) {
         openModal(subPage);
-    } else  if(subPage == '') {
+    } else if(subPage == '') {
         closeModal();
     } else {
         history.replaceState({}, '', '/');
