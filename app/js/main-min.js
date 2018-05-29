@@ -33,15 +33,22 @@ $(document).on('click', 'a[href^="#"]', function (event) {
             history.pushState({}, '', '/');
         } else {
             targetPageDomain = linkTarget.split('--').slice(-1)[0];
-            if (targetPageDomain == 'last-project') {
-
-                targetPageDomain = '';                                      // CHANGE LIST POSITION HERE
-
+            if (targetPageDomain == 'prev-project') {
+                var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
+                if (existingSubPages.indexOf(currentSubPage) > 0) {
+                    targetPageDomain = existingSubPages[existingSubPages.indexOf(currentSubPage) - 1];
+                } else {
+                    targetPageDomain = existingSubPages[existingSubPages.length - 1];
+                }
             } else if (targetPageDomain == 'next-project') {
-                targetPageDomain = '';                                      // CHANGE LIST POSITION HERE
+                var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
+                if (existingSubPages.indexOf(currentSubPage) < existingSubPages.length - 1) {
+                    targetPageDomain = existingSubPages[existingSubPages.indexOf(currentSubPage) + 1];
+                } else {
+                    targetPageDomain = existingSubPages[0];
+                }
             }
             openModal(targetPageDomain);
-            console.log(targetPageDomain);
             history.pushState({}, '', '/' + targetPageDomain);
         }
     } else {
@@ -68,15 +75,20 @@ function loadCurrentPage() {
     }
     if(existingSubPages.indexOf(subPage) > -1) {
         openModal(subPage);
-    } else if(subPage == '') {
-        closeModal();
+        history.replaceState({}, '', '/' + subPage);
     } else {
-        history.replaceState({}, '', '/');
         closeModal();
+        history.replaceState({}, '', '/');
     }
 }
 
 function openModal(target) {
+    var bodyClassList = $('body').attr('class').split(' ');
+    for (var i = 0; i < bodyClassList.length; i++) {
+        if (bodyClassList[i].includes('modal')) {
+            $('body').removeClass(bodyClassList[i]);
+        }
+    }
     lazyLoadImages('#page--' + target);
     changeDocumentTitle(target);
     $('body').addClass('modal-is-active');
