@@ -5,8 +5,8 @@
 	color: black;
 	
 	h1 {
-		text-align: center;
-		@include font-serif(l);
+		text-align: right;
+		@include font-serif(xl);
 		margin-bottom: 3rem;
 	}
 	h2 {
@@ -15,10 +15,16 @@
 	
 	.imprint-header {
 		padding: (.5 * $gutter-y) (.5 * $gutter-x);
+		margin-bottom: 2rem;
+		@include font-sans(s, 0, 2.5);
 		p {
-			@include font-sans(m, 0, 1.5);
-			margin: (.25 * $gutter-y) 0;
+			margin: (.2 * $gutter-y) 0 (.6 * $gutter-y) 0;
+			//text-align: center;
+			span {
+				@include font-serif(m, 0, 1.7);
+			}
 		}
+
 	}
 	.imprint-column {
 	    box-sizing: border-box;

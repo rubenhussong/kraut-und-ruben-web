@@ -1,18 +1,23 @@
 <section id="imprint">
 <div class="imprint-header">
 	<h1>Impressum</h1>
-	<p>
-		Verantwortlich gemäß § 5 <span class="small-caps">TMG</span>
-	</p>
-	<p>
-		<span>Kraut & Ruben</span> <br>
-		<span>Ruben Hussong, Florian Ortlieb</span> <br>
-		<span>Wessenbergstr. 13, 78462 Konstanz</span>
-	</p>
-	<p>
-		<span>gutentag@krautundruben.com</span> <br>
-		<span>+49 157 382 070 73</span> <br>
-	</p>
+	<div class="contact">
+			<h2>Verantwortlich gemäß § 5 TMG</h2>
+		<p>
+			<span>Kraut & Ruben</span> <br>
+			<span>
+				[<a href="http://rubenhussong.com">Ruben Hussong</a>, 
+				<a href="http://florianortlieb.com">Florian Ortlieb</a>]
+			</span> <br>
+			<span>Wessenbergstr. 13, 78462 Konstanz</span>
+		</p>
+
+		<h2>Kontakt</h2>
+		<p>
+			<span>gutentag@krautundruben.com</span> <br>
+			<span>+49 157 382 070 73</span> <br>
+		</p>
+	</div>
 </div>
 <div class="imprint-column" id="imprint-column--left">
 
