@@ -110,7 +110,7 @@
         </p>
     </div>
     <ul class="" id="foot-line">
-        <li class="fade-in footer-li">
+        <li class="fade-in footer-li footer-li-left">
             <p>
                 <a href="mailto:gutentag@krautundruben.de">gutentag@krautundruben.de</a>
             </p>
@@ -126,12 +126,12 @@
                 <a href="https://twitter.com/kraut_und_ruben">Twitter</a>
             </p>
         </li>
-        <li class="fade-in footer-li">
+        <li class="fade-in footer-li footer-li-right">
             <p>
                 <a href="#imprint">Impressum</a>
             </p>
             <p id="copyright">
-                <span>© Kraut & Ruben</span>
+                <span>© <?php echo date("Y"); ?></span>
             </p>
         </li>
     </ul>

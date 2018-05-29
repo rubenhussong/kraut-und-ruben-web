@@ -9,7 +9,7 @@
 		@include font-serif(xl);
 		margin-bottom: 3rem;
 	}
-	h2 {
+	h2, h3 {
 		@include font-sans(s);
 	}
 	
