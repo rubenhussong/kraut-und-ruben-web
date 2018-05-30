@@ -2,25 +2,46 @@
 // Javascript: AddClass and RemoveClass
 
 // Main-Elements on Scroll (Project-Images and About-Text)
-.fade-in {
-  > * {
-    transition:
-            opacity 1s cubic-bezier(0, .4, .4, 1),
-            transform 1.5s cubic-bezier(0, .4, .4, 1);
-    opacity: 0;
-    transform: perspective(100vw) rotateX(-30deg) scale(0.95) translate(0, 5rem);
+.page--main {
+  .fade-in {
+    > * {
+      transition:
+              opacity 1s cubic-bezier(0, .4, .4, 1),
+              transform 1.5s cubic-bezier(0, .4, .4, 1);
+      opacity: 0;
+      transform: perspective(100vw) rotateX(-30deg) scale(0.95) translate(0, 5rem);
+    }
+    &.footer-li > * {
+      transition: opacity 1.5s cubic-bezier(0, .4, .4, 1);
+      transform: translate(0, 0);
+    }
+    &.fade-in-visible > * {
+      opacity: 1;
+      transform: perspective(100vw) rotateX(0deg) scale(1) translate(0, 0);
+    }
+    &.fade-out > * {
+      opacity: 0;
+      transform: perspective(100vw) rotateX(30deg) scale(0.95) translate(0, -5rem);
+    }
   }
-  &.footer-li > * {
-    transition: opacity 1.5s cubic-bezier(0, .4, .4, 1);
-    transform: translate(0, 0);
-  }
-  &.fade-in-visible > * {
-    opacity: 1;
-    transform: perspective(100vw) rotateX(0deg) scale(1) translate(0, 0);
-  }
-  &.fade-out > * {
-    opacity: 0;
-    transform: perspective(100vw) rotateX(30deg) scale(0.95) translate(0, -5rem);
+}
+.page--project {
+  .fade-in {
+    > * {
+      transition:
+              opacity 1s cubic-bezier(0, .4, .4, 1),
+              transform 1.5s cubic-bezier(0, .4, .4, 1);
+      opacity: 0;
+      transform: translate(0, 5rem);
+    }
+    &.fade-in-visible > * {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+    &.fade-out > * {
+      opacity: 0;
+      transform: translate(0, -5rem);
+    }
   }
 }
 
