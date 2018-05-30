@@ -12,7 +12,7 @@
 </div>
 <div class="section" id="section--about">
     <div id="about-images">
-        <img class="about-image" id="about-image--wir" src="/img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
+        <img class="about-image" id="about-image--wir" src="" data-src="/img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
     </div>
     <div class="fade-in fade-in-visible on-load" id="about-text">
         <p>
