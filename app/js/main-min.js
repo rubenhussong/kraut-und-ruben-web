@@ -144,20 +144,6 @@ $(window).on('load', function() {
         $(this).addClass('on-load-ready');
     });
 
-    /** ========================= Header and Scroll Marker Animation on Scroll
-     */
-
-    var scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
-    headerScrollAnimation(scrollDistance);
-    arrowScrollAnimation(scrollDistance);
-
-    /** ========================= Header and Scroll Marker Animation on Scroll
-     */
-
-    $('.fade-in').each(function() {
-        objectScrollAnimation($(this));
-    });
-
     /*
      var spanPositionWir = $("#span--wir").offset();
      console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
@@ -179,9 +165,17 @@ $(window).on('load', function() {
 
     $('.page').each(function() {
         var thisPage = '#' + $(this).attr('id');
+        $(thisPage).find('.fade-in').each(function() {
+            objectScrollAnimation($(thisPage), $(this));
+        });
+        if (thisPage == '#page--main') {
+            scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
+            headerScrollAnimation(scrollDistance);
+            arrowScrollAnimation(scrollDistance);
+        }
         $(thisPage).scroll(function() {
             $(this).find('.fade-in').each(function() {
-                objectScrollAnimation($(this));
+                objectScrollAnimation($(thisPage), $(this));
             });
             if (thisPage == '#page--main') {
                 scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
@@ -240,11 +234,10 @@ function arrowScrollAnimation(distance) {
 /** ================================================== Object Scroll Animation
  */
 
-function objectScrollAnimation(object) {
-    var scrollPositionTop = $(window).scrollTop();
-    var scrollPosition = $(window).scrollTop() + $(window).height();
-    var elementPosition = object.offset().top + .5 * object.outerHeight();
-
+function objectScrollAnimation(page, object) {
+    var scrollPositionTop = 0;
+    var scrollPosition = $(window).height();
+    var elementPosition = object.offset().top + .5 * object.outerHeight() - page.offset().top;
     if (scrollPositionTop > elementPosition) {
         object.removeClass('fade-in-visible');
         object.addClass('fade-out');

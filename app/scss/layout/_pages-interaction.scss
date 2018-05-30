@@ -1,9 +1,14 @@
 
-$page-change-transition: cubic-bezier(0, .25, .25, 1);
+$page-change-transition: cubic-bezier(0, .8, .6, 1);
 $imprint-transition: ease;
 
 // =========================================================================== I M P R I N T
 
+
+.page {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
 .imprint-is-active {
   header {
     #header--page-main {
@@ -17,20 +22,24 @@ $imprint-transition: ease;
         right: -4rem;
       }
     }
-    #header--page-project {
-      .header-element--center {
-        top: -3rem;
-      }
-      .header-element--left {
-        left: -4rem;
-      }
-      .header-element--right {
-        right: -4rem;
-      }
-    }
     #header--imprint {
       .cross-close-imprint {
         top: 0;
+      }
+    }
+  }
+  &.modal-is-active {
+    header {
+      #header--page-project {
+        .header-element--center {
+          top: -3rem;
+        }
+        .header-element--left {
+          left: -4rem;
+        }
+        .header-element--right {
+          right: -4rem;
+        }
       }
     }
   }
@@ -83,24 +92,28 @@ header {
   }
 }
 .page--project {
-  opacity: 0;
   z-index: $z-index-page-hidden;
+  transform: translateY(25vh) translateX(0);
+  opacity: 0;
   transition:
-          z-index 0s  1s,
           filter .5s $imprint-transition,
-          -webkit-filter .5s $imprint-transition,
+          z-index 0s 1.3s,
+          transform 1s $page-change-transition,
           opacity 1s $page-change-transition;
 }
 #page--main {
   z-index: $z-index-page-visible;
 
   transition:
-          filter .5s $imprint-transition,
-          -webkit-filter .5s $imprint-transition;
+          filter .5s $imprint-transition;
 
+  #section--about, #section--footer {
+    transform: translateY(0);
+    transition: transform 1s $page-change-transition .3s;
+  }
   #project-column--right, #project-column--left {
-    transform: translateX(0);
-    transition: transform 1s $page-change-transition;
+    transform: translateY(0);
+    transition: transform 1s $page-change-transition .3s;
   }
 }
 #imprint {
@@ -138,22 +151,41 @@ header {
 
   #page--main {
     z-index: $z-index-page-hidden;
-
+    #section--about, #section--footer {
+      transform: translateX(-100vw);
+      transition: transform 1s $page-change-transition;
+    }
     #project-column--right {
       transform: translateX(50vw);
+      transition: transform 1s $page-change-transition;
     }
     #project-column--left {
       transform: translateX(-50vw);
+      transition: transform 1s $page-change-transition;
     }
+  }
+
+  .page--project {
+    transform: translateY(0) translateX(50vw);
+    transition:
+            filter .5s $imprint-transition,
+            z-index 0s,
+            transform 1s $page-change-transition .3s,
+            opacity 1s $page-change-transition .3s;
   }
 
   @each $subpage in $subpages {
     &.modal--#{$subpage} #page--#{$subpage} {
       z-index: $z-index-page-visible;
-      transition:
-              z-index 0s $page-change-transition,
-              opacity 1s $page-change-transition;
+      transform: translateY(0) translateX(0);
       opacity: 1;
+    }
+    $i: index($subpages, $subpage) - 1;
+    @if $i < 1 {
+      $i: length($subpages);
+    }
+    &.modal--#{$subpage} #page--#{nth($subpages, $i)} {
+      transform: translateY(0) translateX(-50vw);
     }
   }
 }

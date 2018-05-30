@@ -6,7 +6,7 @@
         </h2>
     </div>
 </div>
-<div class="project-hero fade-in">
+<div class="project-hero fade-in" id="project-hero--space">
     <img src="" data-src="/img/space-banner.jpg" alt="space-hero" sizes="auto">
 </div>
 
