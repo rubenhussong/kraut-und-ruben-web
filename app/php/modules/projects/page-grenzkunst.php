@@ -2,9 +2,9 @@
     <div class="project-title fade-in">
         <h1>Grenzkunst</h1>
         <div class="project-details">
-            <p>
+            <h2>
                 <span>Branding</span>
-            </p>
+            </h2>
         </div>
     </div>
 </div>

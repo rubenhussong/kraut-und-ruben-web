@@ -1,11 +1,9 @@
 .page--project {
-  box-sizing: border-box;
   background: $color-background-green;
   color: $color-green;
-  padding: 8vw (.5 * $gutter-x) (.5 * $gutter-y);
   .project-title {
     box-sizing: border-box;
-    padding: 0 (.5 * $gutter-x) (.5 * $gutter-y);
+    padding: 8vw $gutter-x (.5 * $gutter-y);
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -26,7 +24,7 @@
   }
   .project-hero {
     box-sizing: border-box;
-    padding: ($gutter-y) (.5 * $gutter-x);
+    padding: $gutter-y $gutter-x;
     width: 100%;
     float: left;
     img {
@@ -37,9 +35,12 @@
   .project-description {
     display: inline-block;
     width: 45rem;
-    padding: (.5 * $gutter-y) (.5 * $gutter-x);
+    padding: (.5 * $gutter-y) $gutter-x;
     max-width: 100%;
     @include font-serif(l, .01em, 1.5);
+    p {
+      width: 100%;
+    }
   }
   .project-images {
     width: 100%;
@@ -47,6 +48,7 @@
     display: inline-block;
     box-sizing: border-box;
     .img-container {
+      padding: $gutter-y (.5 * $gutter-x);
       &.img-small { width: 30%; }
       &.img-middle { width: 50%; }
       &.img-large { width: 70%; }
@@ -55,7 +57,6 @@
         &.img-middle { width: 80%; }
         &.img-large { width: 90%; }
       }
-      padding: $gutter-y 0;
       img { width: 100%; }
       p {
         @include font-serif(xs, 0em, 1.4);

@@ -2,8 +2,7 @@
     <h1>Space – A Journey into the Void</h1>
     <div class="project-details">
         <h2>
-            <span>Editorial,</span>
-            <span>Illustration</span>
+            Editorial, Illustration
         </h2>
     </div>
 </div>
