@@ -36,6 +36,7 @@ $imprint-transition: ease;
   }
   .page {
     filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
   }
   #imprint {
     transform: translateY(0);
@@ -87,12 +88,15 @@ header {
   transition:
           z-index 0s  1s,
           filter .5s $imprint-transition,
+          -webkit-filter .5s $imprint-transition,
           opacity 1s $page-change-transition;
 }
 #page--main {
   z-index: $z-index-page-visible;
 
-  transition: filter .5s $imprint-transition;
+  transition:
+          filter .5s $imprint-transition,
+          -webkit-filter .5s $imprint-transition;
 
   #project-column--right, #project-column--left {
     transform: translateX(0);
