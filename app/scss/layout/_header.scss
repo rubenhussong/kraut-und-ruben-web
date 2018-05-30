@@ -17,8 +17,8 @@ header {
         position: absolute;
         top: 0;
         margin: (($gutter-x - 1.5rem) / 2) 0;
-        &#h1--left { right: calc(50% + 0.7rem); }
-        &#h1--right { left: calc(50% + 0.7rem); }
+        &#h1--left { right: calc(50% + 0.8rem); }
+        &#h1--right { left: calc(50% + 0.8rem); }
         &#h1--center {
           text-align: center;
           width: .8rem;
@@ -42,12 +42,37 @@ header {
       width: 1rem;
       margin: (($gutter-x - 1.5rem) / 2);
       text-align: center;
-      &.header-element--left { left: 0; }
-      &.header-element--right { right: 0; }
+      &.header-element--left { 
+        left: 0;
+        p {
+          display: inline-block;
+          transition: transform .75s ease;
+        }
+        &:hover p {
+          transform: translateX(-.4rem);
+        }
+      }
+      &.header-element--right { 
+        right: 0;
+        p {
+          display: inline-block;
+          transition: transform .75s ease;
+        }
+        &:hover p {
+          transform: translateX(.4rem);
+        } 
+      }
       &.header-element--center {
         left: calc(50% - .5rem);
         margin-left: 0;
         margin-right: 0;
+        p {
+          display: inline-block;
+          transition: transform .75s ease;
+        }
+        &:hover p {
+          transform: translatey(-.4rem);
+        } 
       }
     }
   }
