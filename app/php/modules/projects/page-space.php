@@ -32,5 +32,8 @@
             <img src="/img/space/space03.jpg" alt="Book spread, graphic nonsense.">
             <p>There we go again.</p>
         </div>  
-    </div>   
+    </div> 
+    <footer class="section" id="section--footer">
+        <?php include 'php/modules/footer.php'; ?>
+    </footer>  
 </div>
