@@ -3,6 +3,7 @@ footer {
   box-sizing: border-box;
   width: 100%;
   padding: $gutter-x (.5 * $gutter-y) (.5 * $gutter-x);
+  color: $color-red;
   background: linear-gradient(to bottom, $color-background-green 0, $color-background-red 80%);
   #footer-text {
     box-sizing: border-box;

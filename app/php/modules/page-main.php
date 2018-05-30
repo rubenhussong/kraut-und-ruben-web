@@ -1,6 +1,5 @@
 <div class="on-load scroll-top" id="scroll-marker-wrapper">
     <a href="#section--projects" id="scroll-marker">
-        <p>Projekte</p>
         <p>
             <?php if ($lang == 'de'): ?>
                 Projekte
