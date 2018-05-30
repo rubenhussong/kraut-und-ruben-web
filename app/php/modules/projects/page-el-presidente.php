@@ -2,9 +2,9 @@
     <div class="project-title fade-in">
         <h1>El Presidente</h1>
         <div class="project-details">
-            <p>
+            <h2>
                 <span>Virtual Reality</span>
-            </p>
+            </h2>
         </div>
     </div>
 </div>

@@ -2,9 +2,9 @@
     <div class="project-title fade-in">
         <h1>Casino Bregenz</h1>
         <div class="project-details">
-            <p>
+            <h2>
                 <span>Animation</span>
-            </p>
+            </h2>
         </div>
     </div>
 </div>
