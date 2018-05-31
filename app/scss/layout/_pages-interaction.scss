@@ -98,21 +98,20 @@ header {
   transition:
           filter .5s $imprint-transition,
           z-index 0s 1.3s,
-          transform 1s $page-change-transition,
+          transform 1s $page-change-transition 1.3s,
           opacity 1s $page-change-transition;
 }
 #page--main {
   z-index: $z-index-page-visible;
-
+  opacity: 1;
   transition:
+          opacity 1s $page-change-transition .3s,
           filter .5s $imprint-transition;
 
   #section--about, #section--footer {
-    transform: translateY(0);
     transition: transform 1s $page-change-transition .3s;
   }
   #project-column--right, #project-column--left {
-    transform: translateY(0);
     transition: transform 1s $page-change-transition .3s;
   }
 }
@@ -151,16 +150,24 @@ header {
 
   #page--main {
     z-index: $z-index-page-hidden;
-    #section--about, #section--footer {
-      transform: translateX(-100vw);
+    opacity: 0;
+    transition:
+            opacity 1s $page-change-transition,
+            filter .5s $imprint-transition;
+    #section--about {
+      transform: translateY(-20vh);
       transition: transform 1s $page-change-transition;
     }
+    #section--footer {
+       transform: translateY(20vh);
+       transition: transform 1s $page-change-transition;
+     }
     #project-column--right {
-      transform: translateX(50vw);
+      transform: translateX(50vh);
       transition: transform 1s $page-change-transition;
     }
     #project-column--left {
-      transform: translateX(-50vw);
+      transform: translateX(-50vh);
       transition: transform 1s $page-change-transition;
     }
   }

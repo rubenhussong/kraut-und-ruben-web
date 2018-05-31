@@ -29,6 +29,6 @@
         <p>There we go again.</p>
     </div> 
 </div>
-<footer class="section" id="section--footer">
+<footer class="section change-color" id="section--footer">
     <?php include 'php/modules/footer.php'; ?>
 </footer> 

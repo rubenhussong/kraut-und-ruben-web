@@ -2,14 +2,13 @@ footer {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: $gutter-x (.5 * $gutter-y) (.5 * $gutter-x);
+  padding: (.5 * $gutter-x) (.5 * $gutter-y);
   color: $color-red;
-  background: linear-gradient(to bottom, $color-background-green 0, $color-background-red 80%);
   #footer-text {
     box-sizing: border-box;
     width: 50rem;
     max-width: 100%;
-    padding: $gutter-y (.5 * $gutter-x);
+    padding: (.5 * $gutter-y) (.5 * $gutter-x) $gutter-y;
     @include font-serif(l);
     p { margin: 0; }
   }

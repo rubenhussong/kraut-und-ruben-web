@@ -8,6 +8,7 @@ const existingSubPages = [
     "hypernet",
     "el-presidente"
 ];
+var currentPage;
 
 var pageMainTitle = document.title;
 
@@ -91,15 +92,19 @@ function openModal(target) {
             $('body').removeClass(bodyClassList[i]);
         }
     }
-    lazyLoadImages('#page--' + target);
+    currentPage = '#page--' + target;
+    lazyLoadImages(currentPage);
     changeDocumentTitle(target);
+    bodyColorChange($(currentPage), '.change-color');
     $('body').addClass('modal-is-active');
     $('body').addClass('modal--' + target);
 }
 
 function closeModal() {
+    currentPage = '#page--main';
     lazyLoadImages('#page--main');
     changeDocumentTitle('main');
+    bodyColorChange($(currentPage), '.change-color');
     var bodyClassList = $('body').attr('class').split(' ');
     for (var i = 0; i < bodyClassList.length; i++) {
         if (bodyClassList[i].includes('modal')) {
@@ -166,18 +171,15 @@ $(window).on('load', function() {
 
     $('.page').each(function() {
         var thisPage = '#' + $(this).attr('id');
-        $(thisPage).find('.fade-in').each(function() {
-            objectScrollAnimation($(thisPage), $(this));
-        });
+        objectScrollAnimation($(thisPage), '.fade-in');
         if (thisPage == '#page--main') {
             scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
             headerScrollAnimation(scrollDistance);
             arrowScrollAnimation(scrollDistance);
         }
         $(thisPage).scroll(function() {
-            $(this).find('.fade-in').each(function() {
-                objectScrollAnimation($(thisPage), $(this));
-            });
+            objectScrollAnimation($(thisPage), '.fade-in');
+            bodyColorChange($(thisPage), '.change-color');
             if (thisPage == '#page--main') {
                 scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
                 headerScrollAnimation(scrollDistance);
@@ -235,18 +237,75 @@ function arrowScrollAnimation(distance) {
 /** ================================================== Object Scroll Animation
  */
 
-function objectScrollAnimation(page, object) {
-    var scrollPositionTop = 0;
-    var scrollPosition = $(window).height();
-    var elementPosition = object.offset().top + .5 * object.outerHeight() - page.offset().top;
-    if (scrollPositionTop > elementPosition) {
-        object.removeClass('fade-in-visible');
-        object.addClass('fade-out');
-    } else if (scrollPosition > elementPosition) {
-        object.addClass('fade-in-visible');
-        object.removeClass('fade-out');
+function objectScrollAnimation(page, selector) {
+    var scrollArea = .3;
+    var windowTop = 0;
+    var windowHeight = $(window).height();
+    var visiblePartTop = scrollArea * windowHeight;
+    var visiblePartBottom = (1 - scrollArea) * windowHeight;
+    $(page).find(selector).each(function() {
+        var object = $(this);
+        var objectHeight = object.height();
+        var objectTop = object.offset().top - page.offset().top;
+        var objectCenter = object.offset().top + .5 * objectHeight - page.offset().top;
+        var objectBottom = object.offset().top + objectHeight - page.offset().top;
+        if (objectHeight >= visiblePartTop) {
+            if (objectBottom < visiblePartTop) {
+                object.removeClass('fade-in-visible');
+                object.addClass('fade-out');
+            } else if (objectTop < visiblePartBottom) {
+                object.addClass('fade-in-visible');
+                object.removeClass('fade-out');
+            } else {
+                object.removeClass('fade-in-visible');
+                object.removeClass('fade-out');
+            }
+        } else {
+            if (objectCenter < windowTop) {
+                object.removeClass('fade-in-visible');
+                object.addClass('fade-out');
+            } else if (objectCenter < windowHeight) {
+                object.addClass('fade-in-visible');
+                object.removeClass('fade-out');
+            } else {
+                object.removeClass('fade-in-visible');
+                object.removeClass('fade-out');
+            }
+        }
+    });
+}
+
+/** ================================================== Body Color Change
+ */
+
+function bodyColorChange(page, selector) {
+    var changeColor = false;
+    var scrollArea = .4;
+    var windowTop = 0;
+    var windowHeight = $(window).height();
+    var visiblePartTop = scrollArea * windowHeight;
+    var visiblePartBottom = (1 - scrollArea) * windowHeight;
+    $(page).find(selector).each(function() {
+        var object = $(this);
+        var objectHeight = object.height();
+        var objectTop = object.offset().top - page.offset().top;
+        var objectCenter = object.offset().top + .5 * objectHeight - page.offset().top;
+        var objectBottom = object.offset().top + objectHeight - page.offset().top;
+        if (objectHeight >= visiblePartTop) {
+            if (objectBottom > visiblePartTop && objectTop < visiblePartBottom) {
+                changeColor = true;
+            }
+        } else {
+            if (objectCenter > windowTop && objectCenter < windowHeight) {
+                changeColor = true;
+            }
+        }
+    });
+    if (changeColor) {
+        $('body').addClass('color-background-red');
+        console.log('body is red')
     } else {
-        object.removeClass('fade-in-visible');
-        object.removeClass('fade-out');
+        $('body').removeClass('color-background-red');
+        console.log('body is green')
     }
 }
