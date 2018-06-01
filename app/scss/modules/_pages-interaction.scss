@@ -1,7 +1,7 @@
 
 $transition-curve--page: cubic-bezier(0, .8, .6, 1);
 $transition-time--page: .3s;
-$transition-delay--page: .3s;
+$transition-delay--page: $transition-time--page;
 
 $transition-curve--header: cubic-bezier(0, .4, .6, 1);
 $transition-curve--header-back: cubic-bezier(.6, 0, 1, .4);
@@ -60,6 +60,15 @@ header {
     transform: translate3D(0, 0, 0)
   }
   // ================================================== Transition [Page to Imprint]
+  header {
+    #header--imprint {
+      .cross-close-imprint {
+        transition-duration: $transition-time--header;
+        transition-timing-function: $transition-curve--header;
+        transition-delay: $transition-delay--header;
+      }
+    }
+  }
   #imprint {
     transition:
             z-index 0s,
@@ -68,6 +77,13 @@ header {
   }
 }
 // ================================================== Transition [Imprint to Page]
+header {
+  #header--imprint {
+    .cross-close-imprint {
+      transition-delay: 0;
+    }
+  }
+}
 #imprint {
   transition:
           z-index 0s $transition-time--imprint,

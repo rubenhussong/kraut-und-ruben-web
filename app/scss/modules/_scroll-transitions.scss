@@ -5,6 +5,10 @@ $transition-time--scroll: 1s;
 $transition-curve--scroll: cubic-bezier(.4, 0, .8, .8);
 $transition-time--scroll: .5s;
 
+$transition-time--header-scroll: .4s;
+$transition-curve--header-scroll: cubic-bezier(.4, 0, .8, .8);
+$transition-delay--header-scroll: $transition-time--header-scroll / 2;
+
 // ================================================== Objects on Scroll
 .fade-in {
   > * {
@@ -40,25 +44,33 @@ $transition-time--scroll: .5s;
 header {
   #header--page-main {
     .word-mark span {
-      transition-duration: .8s;
-      transition-timing-function: ease;
+      transform: translate3D(0, 0, 0);
+      transition-duration: $transition-time--header-scroll;
+      transition-timing-function: $transition-curve--header-scroll;
+      transition-delay: $transition-delay--header-scroll;
     }
-    .header-icon {
+    .header-icon .icon-wrapper {
       opacity: 0;
+      transform: translate3D(0, -4rem, 0);
+      transition-duration: $transition-time--header-scroll;
+      transition-timing-function: $transition-curve--header-scroll;
+      transition-delay: 0s;
     }
   }
   &.scroll-down {
     #header--page-main {
       .word-mark {
         span {
-          &#h1--left { right: 100%; }
-          &#h1--center { top: -3rem; }
-          &#h1--right { left: 100%; }
+          transition-delay: 0s;
+          &#h1--left { transform: translate3D(-50vw, 0, 0); }
+          &#h1--center { transform: translate3D(0, -3rem, 0); }
+          &#h1--right { transform: translate3D(50vw, 0, 0); }
         }
       }
-      .header-icon {
-        top: 0;
+      .header-icon .icon-wrapper {
         opacity: 1;
+        transform: translate3D(0, 0, 0);
+        transition-delay: $transition-delay--header-scroll;
       }
     }
   }

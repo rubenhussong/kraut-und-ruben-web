@@ -31,7 +31,7 @@ header {
       position: absolute;
       margin: (($gutter-x - 2rem) / 2);
       width: 2rem;
-      top: -4rem;
+      top: 0;
       &.header-element--left { left: 0; }
       &.header-element--right { right: 0; }
       img { width: 100%; }
