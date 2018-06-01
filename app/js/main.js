@@ -186,6 +186,13 @@ $(window).on('load', function() {
             }
         });
     });
+    $('.page--project').scroll(function() {
+        var prev = 0;
+        var nav = $('#header--page-project');
+        var scrollObject = nav;
+        console.log(scrollPosition.scrollTop());
+
+    });
 });
 
 /** =========================================================================== H O V E R - M O D U L E S
