@@ -3,17 +3,22 @@
 @import "../modules/breakpoints";
 @import "../modules/typography";
 @import "../modules/color";
+
+@import "../modules/pages-interaction";
 @import "../modules/scroll-transitions";
 @import "../modules/static-animations";
 @import "../modules/general-transitions";
 
-
 body {
-  background: $color-background-red;
+  background: $color-background-green;
+  transition: background .3s ease;
   color: $color-red;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  &.color-background-red {
+    background: $color-background-red;
+  }
 }
 
 .page, #imprint {
@@ -21,9 +26,13 @@ body {
   top: 0;
   left: 0;
   overflow-x: hidden;
-  overflow-y: scroll;
+  overflow-y: visible;
   width: 100vw;
   height: 100vh;
+}
+
+.page--project, #imprint {
+  will-change: opacity, transform;
 }
 
 a {

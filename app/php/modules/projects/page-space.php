@@ -2,11 +2,11 @@
     <h1>Space – A Journey into the Void</h1>
     <div class="project-details">
         <h2>
-            Editorial, Illustration
+            Editorial Design, Illustration
         </h2>
     </div>
 </div>
-<div class="project-hero fade-in">
+<div class="project-hero fade-in" id="project-hero--space">
     <img src="" data-src="/img/space-banner.jpg" alt="space-hero" sizes="auto">
 </div>
 
@@ -36,6 +36,6 @@
     </div>
     <p>See you, space cowboy…</p>
 </div>
-<footer class="section" id="section--footer">
+<footer class="section change-color" id="section--footer">
     <?php include 'php/modules/footer.php'; ?>
 </footer> 

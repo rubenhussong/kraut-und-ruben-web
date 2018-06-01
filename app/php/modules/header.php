@@ -5,11 +5,15 @@
             <span id="h1--center">&</span>
             <span id="h1--right">Ruben</span>
         </h1>
-        <div class="header-icon header-element header-element--left object-rotate--left">
-            <img src="/img/kraut-icon.png" alt="kraut-icon" sizes="auto">
+        <div class="header-icon header-element header-element--left">
+            <div class="icon-wrapper">
+                <img class="object-rotate--left" src="/img/kraut-icon.png" alt="kraut-icon" sizes="auto">
+            </div>
         </div>
-        <div class="header-icon header-element header-element--right object-rotate--right">
-            <img src="/img/ruebe-icon.png" alt="ruebe-icon" sizes="auto">
+        <div class="header-icon header-element header-element--right">
+            <div class="icon-wrapper">
+                <img class="object-rotate--right" src="/img/ruebe-icon.png" alt="ruebe-icon" sizes="auto">
+            </div>
         </div>
     </div>
     <div class="page-header" id="header--page-project">

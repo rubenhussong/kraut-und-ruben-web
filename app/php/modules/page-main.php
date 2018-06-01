@@ -10,7 +10,7 @@
         <p id="scroll-arrow">&#x2193;</p>
     </a>
 </div>
-<div class="section" id="section--about">
+<div class="section change-color" id="section--about">
     <div id="about-images">
         <img class="about-image" id="about-image--wir" src="/img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
     </div>
@@ -108,7 +108,7 @@
         </div>
     </div>
 </div>
-<footer class="section" id="section--footer">
+<footer class="section change-color" id="section--footer">
     <div class="fade-in" id="footer-text">
         <p>
             Wir arbeiten von überall, aber meistens vom schönen Konstanz aus.

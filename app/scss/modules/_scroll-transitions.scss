@@ -1,107 +1,95 @@
-// Animations on Scroll
-// Javascript: AddClass and RemoveClass
+/*
+$transition-curve--scroll: cubic-bezier(0, .4, .4, 1);
+$transition-time--scroll: 1s;
+*/
+$transition-curve--scroll: cubic-bezier(.4, 0, .8, .8);
+$transition-time--scroll: .5s;
 
-// Main-Elements on Scroll (Project-Images and About-Text)
+$transition-time--header-scroll: .4s;
+$transition-curve--header-scroll: cubic-bezier(.4, 0, .8, .8);
+$transition-delay--header-scroll: $transition-time--header-scroll / 2;
+
+// ================================================== Objects on Scroll
+.fade-in {
+  > * {
+    opacity: 0;
+    transition:
+            opacity (.7 * $transition-time--scroll) $transition-curve--scroll,
+            transform $transition-time--scroll $transition-curve--scroll;
+  }
+  &.footer-li > * {
+    transition: opacity $transition-time--scroll $transition-curve--scroll;
+    transform: translate3D(0, 0, 0);
+  }
+  &.fade-in-visible > * { opacity: 1; }
+  &.fade-out > * { opacity: 0; }
+}
+
 .page--main {
   .fade-in {
-    > * {
-      transition:
-              opacity 1s cubic-bezier(0, .4, .4, 1),
-              transform 1.5s cubic-bezier(0, .4, .4, 1);
-      opacity: 0;
-      transform: perspective(100vw) rotateX(-30deg) scale(0.95) translate(0, 5rem);
-    }
-    &.footer-li > * {
-      transition: opacity 1.5s cubic-bezier(0, .4, .4, 1);
-      transform: translate(0, 0);
-    }
-    &.fade-in-visible > * {
-      opacity: 1;
-      transform: perspective(100vw) rotateX(0deg) scale(1) translate(0, 0);
-    }
-    &.fade-out > * {
-      opacity: 0;
-      transform: perspective(100vw) rotateX(30deg) scale(0.95) translate(0, -5rem);
-    }
+    > * { transform: perspective(100vw) rotateX(-30deg) scale(0.95) translate3D(0, 5rem, 0); }
+    &.fade-in-visible > * { transform: perspective(100vw) rotateX(0deg) scale(1) translate3D(0, 0, 0); }
+    &.fade-out > * { transform: perspective(100vw) rotateX(30deg) scale(0.95) translate3D(0, -5rem, 0); }
   }
 }
 .page--project {
   .fade-in {
-    > * {
-      transition:
-              opacity 1s cubic-bezier(0, .4, .4, 1),
-              transform 1.5s cubic-bezier(0, .4, .4, 1);
-      opacity: 0;
-      transform: translate(0, 5rem);
-    }
-    &.fade-in-visible > * {
-      opacity: 1;
-      transform: translate(0, 0);
-    }
-    &.fade-out > * {
-      opacity: 0;
-      transform: translate(0, -5rem);
-    }
+    > * { transform: translate3D(0, 5rem, 0); }
+    &.fade-in-visible > * { transform: translate3D(0, 0, 0); }
+    &.fade-out > * { transform: translate3D(0, -5rem, 0); }
   }
 }
 
-// Header on Scroll
+// ================================================== Header on Scroll
 header {
   #header--page-main {
     .word-mark span {
-      transition: right .8s ease, left .8s ease, top .8s ease;
+      transform: translate3D(0, 0, 0);
+      transition-duration: $transition-time--header-scroll;
+      transition-timing-function: $transition-curve--header-scroll;
+      transition-delay: $transition-delay--header-scroll;
     }
-    .header-icon {
+    .header-icon .icon-wrapper {
       opacity: 0;
-      transition:
-              opacity .6s cubic-bezier(.25, 0, .25, 1) .4s,
-              top 1.2s cubic-bezier(.25, 0, .25, 1),
-              left 1.2s cubic-bezier(.25, 0, .25, 1),
-              right 1.2s cubic-bezier(.25, 0, .25, 1);
+      transform: translate3D(0, -4rem, 0);
+      transition-duration: $transition-time--header-scroll;
+      transition-timing-function: $transition-curve--header-scroll;
+      transition-delay: 0s;
     }
   }
   &.scroll-down {
     #header--page-main {
       .word-mark {
         span {
-          &#h1--left {
-            right: 120%;
-          }
-          &#h1--center {
-            top: -3rem;
-          }
-          &#h1--right {
-            left: 120%;
-          }
+          transition-delay: 0s;
+          &#h1--left { transform: translate3D(-50vw, 0, 0); }
+          &#h1--center { transform: translate3D(0, -3rem, 0); }
+          &#h1--right { transform: translate3D(50vw, 0, 0); }
         }
       }
-      .header-icon {
-        top: 0;
+      .header-icon .icon-wrapper {
         opacity: 1;
-        transition:
-                opacity .6s cubic-bezier(.25, 0, .25, 1),
-                top 1.2s cubic-bezier(.25, 0, .25, 1),
-                left 1.2s cubic-bezier(.25, 0, .25, 1),
-                right 1.2s cubic-bezier(.25, 0, .25, 1);
+        transform: translate3D(0, 0, 0);
+        transition-delay: $transition-delay--header-scroll;
       }
     }
   }
 }
 
-// Scroll-Marker on Scroll
+// ================================================== Scroll-Marker on Scroll
 #scroll-marker-wrapper {
   #scroll-marker {
     transition:
             transform .8s cubic-bezier(.75, 0, .25, 1),
             pointer-events 0s linear .7s,
             opacity .6s cubic-bezier(.75, 0, .25, 1);
-    transform: translateY(0);
+    transform: translate3D(0, 0, 0);
   }
   &.scroll-down {
     #scroll-marker {
       opacity: 0;
       pointer-events: none;
-      transform: translateY(4rem);
+      transform: translate3D(0, 4rem, 0);
     }
   }
 }

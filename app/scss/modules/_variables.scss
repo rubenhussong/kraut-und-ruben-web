@@ -3,8 +3,8 @@
 // ================================================== COLOR
 
 $color-red:                   rgb(232, 72, 76);
-$color-green:                 rgb(133, 205, 117);
-$color-background-red:        hsl(350, 90, 95);	  // light
+$color-green:                 rgb(130, 195, 115);
+$color-background-red:        rgb(254, 231, 235);	  // light
 $color-background-green:      rgb(228, 236, 228); // dark
 
 $color-hover-background-light: #EEE;
@@ -23,7 +23,7 @@ $gutter-y: $gutter-x;
 
 
 $z-index-header:               1000;
-$z-index-imprint:			   900;
+$z-index-imprint:			   200;
 $z-index-page-visible:         100;
 $z-index-page-hidden:          -100;
 

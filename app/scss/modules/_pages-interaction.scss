@@ -1,0 +1,231 @@
+
+$transition-curve--page: cubic-bezier(0, .8, .6, 1);
+$transition-time--page: .3s;
+$transition-delay--page: $transition-time--page;
+
+$transition-curve--header: cubic-bezier(0, .4, .6, 1);
+$transition-curve--header-back: cubic-bezier(.6, 0, 1, .4);
+$transition-time--header: $transition-time--page;
+$transition-delay--header: $transition-delay--page;
+
+$transition-time--imprint: .6s;
+$transition-curve--imprint: $transition-curve--page;
+
+// =========================================================================== I M P R I N T
+// ================================================== Header [Imprint not active]
+header {
+  #header--imprint {
+    .cross-close-imprint { top: -3rem; }
+  }
+}
+// ================================================== Page [Imprint not active]
+.page {
+  filter: blur(0);
+  -webkit-filter: blur(0);
+}
+#imprint {
+  opacity: 0;
+  z-index: $z-index-page-hidden;
+  transform: translate3D(0, 25vh, 0);
+}
+.imprint-is-active {
+  // ================================================== Header [Imprint active]
+  header {
+    #header--imprint {
+      .cross-close-imprint { top: 0; }
+    }
+    #header--page-main {
+      .word-mark { top: -3rem; }
+      .header-element--left { left: -4rem; }
+      .header-element--right { right: -4rem; }
+    }
+  }
+  &.modal-is-active {
+    header {
+      #header--page-project {
+        .header-element--center { top: -3rem; }
+        .header-element--left { left: -4rem; }
+        .header-element--right { right: -4rem; }
+      }
+    }
+  }
+  // ================================================== Page [Imprint active]
+  .page {
+    filter: blur(.5rem);
+    -webkit-filter: blur(.5rem);
+  }
+  #imprint {
+    opacity: 1;
+    z-index: $z-index-imprint;
+    transform: translate3D(0, 0, 0)
+  }
+  // ================================================== Transition [Page to Imprint]
+  header {
+    #header--imprint {
+      .cross-close-imprint {
+        transition-duration: $transition-time--header;
+        transition-timing-function: $transition-curve--header;
+        transition-delay: $transition-delay--header;
+      }
+    }
+  }
+  #imprint {
+    transition:
+            z-index 0s,
+            opacity $transition-time--imprint $transition-curve--imprint,
+            transform $transition-time--imprint $transition-curve--imprint;
+  }
+}
+// ================================================== Transition [Imprint to Page]
+header {
+  #header--imprint {
+    .cross-close-imprint {
+      transition-delay: 0;
+    }
+  }
+}
+#imprint {
+  transition:
+          z-index 0s $transition-time--imprint,
+          opacity $transition-time--imprint $transition-curve--imprint,
+          transform $transition-time--imprint $transition-curve--imprint;
+}
+// =========================================================================== P A G E - M A I N
+// ================================================== Header [Page Main active]
+header {
+  #header--page-main {
+    .word-mark { top: 0; }
+    .header-element--left { left: 0; }
+    .header-element--right { right: 0; }
+  }
+  #header--page-project {
+    .header-element--center { top: -3rem; }
+    .header-element--left { left: -4rem; }
+    .header-element--right { right: -4rem; }
+  }
+}
+// ================================================== Page [Page Main active]
+.page--project {
+  z-index: $z-index-page-hidden;
+  transform: translate3D(0, 25vh, 0);
+  opacity: 0;
+}
+#page--main {
+  z-index: $z-index-page-visible;
+  opacity: 1;
+  #section--about, #section--footer, #project-column--right, #project-column--left {
+    transform: translate3D(0, 0, 0);
+  }
+}
+// ================================================== Transition [Page Project to Page Main]
+header {
+  #header--page-main {
+    .header-element {
+      transition-duration: $transition-time--header;
+      transition-timing-function: $transition-curve--header;
+      transition-delay: $transition-delay--header;
+    }
+  }
+  #header--page-project {
+    .header-element {
+      transition-duration: $transition-time--header;
+      transition-timing-function: $transition-curve--header-back;
+      transition-delay: 0s;
+    }
+  }
+}
+.page--project {
+  transition:
+          filter $transition-time--imprint $transition-curve--imprint,
+          z-index 0s ($transition-time--page + $transition-delay--page),
+          transform $transition-time--page $transition-curve--page,
+          opacity $transition-time--page $transition-curve--page;
+}
+#page--main {
+  transition:
+          opacity $transition-time--page $transition-curve--page $transition-delay--page,
+          filter $transition-time--imprint $transition-curve--imprint;
+  #section--about, #section--footer {
+    transition: transform $transition-time--page $transition-curve--page $transition-delay--page;
+  }
+  #project-column--right, #project-column--left {
+    transition: transform $transition-time--page $transition-curve--page $transition-delay--page;
+  }
+}
+// =========================================================================== P A G E - P R O J E C T
+.modal-is-active {
+  // ================================================== Header [Page Project active]
+  header {
+    #header--page-main {
+      .word-mark { top: -3rem; }
+      .header-element--left { left: -4rem; }
+      .header-element--right { right: -4rem; }
+    }
+    #header--page-project {
+      .header-element--center { top: 0; }
+      .header-element--left { left: 0; }
+      .header-element--right { right: 0; }
+    }
+  }
+  // ================================================== Page [Page Project active]
+
+  #page--main {
+    z-index: $z-index-page-hidden;
+    opacity: 0;
+    #section--about { transform: translate3D(0, -20vh, 0); }
+    #section--footer { transform: translate3D(0, 20vh, 0); }
+    #project-column--right { transform: translate3D(50vw, 0, 0); }
+    #project-column--left { transform: translate3D(-50vw, 0, 0); }
+  }
+  .page--project {
+    transform: translate3D(50vw, 0, 0);
+  }
+  @each $subpage in $subpages {
+    &.modal--#{$subpage} #page--#{$subpage} {
+      z-index: $z-index-page-visible;
+      transform: translate3D(0, 0, 0);
+      opacity: 1;
+    }
+    $i: index($subpages, $subpage) - 1;
+    @if $i < 1 {
+      $i: length($subpages);
+    }
+    &.modal--#{$subpage} #page--#{nth($subpages, $i)} {
+      transform: translate3D(-50vw, 0, 0);
+    }
+  }
+}
+
+// ================================================== Transition [Page Main to Page Project]
+.modal-is-active {
+  header {
+    #header--page-main {
+      .header-element {
+        transition-timing-function: $transition-curve--header-back;
+        transition-delay: 0s;
+      }
+    }
+    #header--page-project {
+      .header-element {
+        transition-timing-function: $transition-curve--header;
+        transition-delay: $transition-delay--header;
+      }
+    }
+  }
+  #page--main {
+    transition:
+            opacity $transition-time--page $transition-curve--page,
+            filter .5s $transition-curve--imprint;
+    #section--about, #section--footer, #project-column--right, #project-column--left {
+      transition: transform 1s $transition-curve--page;
+    }
+  }
+  .page--project {
+    transform: translate3D(50vw, 0, 0);
+    transition:
+            filter .5s $transition-curve--imprint,
+            z-index 0s,
+            transform $transition-time--page $transition-curve--page $transition-delay--page,
+            opacity $transition-time--page $transition-curve--page $transition-delay--page;
+  }
+}
