@@ -25,7 +25,7 @@
         <p>There's no lack of void.</p>
     </div>
     <div class="img-container img-large left fade-in">
-        <img src="/img/space/space03.jpg" alt="Book spread, graphic nonsense.">
+        <img src="/img/space/space04.jpg" alt="Book spread, graphic nonsense.">
         <p>There we go again.</p>
     </div> 
     <div class="img-description left fade-in">
@@ -34,7 +34,12 @@
     <div class="img-container img-large right fade-in">
         <img src="img/space/space_detail02.jpg" alt="Book spread, Neil DeGrasse Tyson illustration.">
     </div>
-    <p>See you, space cowboy…</p>
+    <div class="img-container img-large left fade-in">
+        <img src="img/space/space_detail03.jpg" alt="Space poster.">
+    </div>
+</div>
+<div>
+        <p>See you, space cowboy…</p>
 </div>
 <footer class="section change-color" id="section--footer">
     <?php include 'php/modules/footer.php'; ?>
