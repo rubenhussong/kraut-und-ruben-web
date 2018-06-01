@@ -63,8 +63,6 @@ header {
   header {
     #header--imprint {
       .cross-close-imprint {
-        transition-duration: $transition-time--header;
-        transition-timing-function: $transition-curve--header;
         transition-delay: $transition-delay--header;
       }
     }
@@ -80,6 +78,8 @@ header {
 header {
   #header--imprint {
     .cross-close-imprint {
+      transition-duration: $transition-time--header;
+      transition-timing-function: $transition-curve--header;
       transition-delay: 0s;
     }
   }
