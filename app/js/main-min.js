@@ -32,10 +32,11 @@ $(document).on('click', 'a[href^="#"]', function(event) {
     var linkTarget = $(this).attr("href");
     if (linkTarget.match("^#page-")) {
         if (linkTarget == "#page--main") {
+            var scrollPage = currentPage;
+            $(scrollPage).delay(600).scrollTop(0);
             closeModal();
             history.pushState({}, '', '/');
         } else {
-            $(linkTarget).scrollTop(0);
             targetPageDomain = linkTarget.split('--').slice(-1)[0];
             var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
             if (targetPageDomain == 'prev-project') {
@@ -149,6 +150,10 @@ $(window).on('load', function() {
         $(this).addClass('on-load-ready');
     });
 
+    $(currentPage).find(".slider").each(function($(this)) {
+        slideshow();
+    });
+
     /*
      var spanPositionWir = $("#span--wir").offset();
      console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
@@ -192,12 +197,7 @@ $(window).on('load', function() {
         $('#' + $(this).attr('id')).scroll(function() {
             var scrollPosition = $(this).find(">:first-child").offset().top;
             nav.toggleClass('hidden', scrollPosition < prev);
-            if (scrollPosition < prev) {
-                console.log('hide header')
-            }
             prev = scrollPosition;
-            //console.log(scrollPosition);
-            //console.log(scrollObject.attr('id'));
         });
     });
 });
@@ -250,7 +250,7 @@ function arrowScrollAnimation(distance) {
  */
 
 function objectScrollAnimation(page, selector) {
-    var scrollArea = .3;
+    var scrollArea = .2;
     var windowTop = 0;
     var windowHeight = $(window).height();
     var visiblePartTop = scrollArea * windowHeight;
@@ -307,9 +307,13 @@ function bodyColorChange(page, selector) {
             }
         }
     });
-    if (changeColor) {
-        $(body).addClass('color-background-red');
-    } else {
-        $(body).removeClass('color-background-red');
-    }
+    $(body).toggleClass('color-background-red', changeColor);
+}
+
+/** ================================================== Slideshow
+ */
+
+function slideshow(slider) {
+    var count = slider.find('img').length;
+    console.log(count);
 }
