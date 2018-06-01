@@ -50,6 +50,7 @@ header {
         }
         &:hover p {
           transform: translateX(-.4rem);
+          will-change: transform;
         }
       }
       &.header-element--right { 
@@ -60,6 +61,7 @@ header {
         }
         &:hover p {
           transform: translateX(.4rem);
+          will-change: transform;
         } 
       }
       &.header-element--center {
@@ -71,7 +73,8 @@ header {
           transition: transform .75s ease;
         }
         &:hover p {
-          transform: translatey(-.4rem);
+          transform: translateY(-.4rem);
+          will-change: transform;
         } 
       }
     }

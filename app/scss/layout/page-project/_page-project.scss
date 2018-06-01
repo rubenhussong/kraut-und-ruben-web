@@ -42,6 +42,7 @@
       width: 100%;
     }
   }
+
   .project-images {
     width: 100%;
     padding: (.5 * $gutter-y) (.5 * $gutter-x);
@@ -64,5 +65,16 @@
         padding: .25rem 0;
       }
     }
+    .img-description {
+      display: inline-block;
+      @extend clear;
+      width: calc(40% - $gutter-x);
+      padding: $gutter-y (.5 * $gutter-x);
+      p {
+        @include font-serif(s, 0em, 1.6);
+      }
+    }
   }
+
+
 }

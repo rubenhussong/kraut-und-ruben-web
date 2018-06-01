@@ -28,6 +28,13 @@
         <img src="/img/space/space03.jpg" alt="Book spread, graphic nonsense.">
         <p>There we go again.</p>
     </div> 
+    <div class="img-description left fade-in">
+        <p>This project attempts an exploration of the word space and its many meanings. Stretching from the vast expanse of the universe to the measurements of small everyday items, space is everywhere. And yet it doesn't truly exist. Space is the absence of matter.</p>
+    </div>
+    <div class="img-container img-large right fade-in">
+        <img src="img/space/space_detail02.jpg" alt="Book spread, Neil DeGrasse Tyson illustration.">
+    </div>
+    <p>See you, space cowboy…</p>
 </div>
 <footer class="section" id="section--footer">
     <?php include 'php/modules/footer.php'; ?>
