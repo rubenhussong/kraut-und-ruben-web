@@ -9,6 +9,7 @@ const existingSubPages = [
     "el-presidente"
 ];
 var currentPage;
+var body = 'body';
 
 var pageMainTitle = document.title;
 
@@ -19,32 +20,31 @@ $(window).ready(function() {
     loadCurrentPage();
 });
 $(window).on('popstate', function() {
-    $('body').removeClass('imprint-is-active');
+    $(body).removeClass('imprint-is-active');
     loadCurrentPage();
 });
 
-/** ========================= On Link Click (also Page Internal Links)
+/** ========================= On Link Click
  */
 
-$(document).on('click', 'a[href^="#"]', function (event) {
+$(document).on('click', 'a[href^="#"]', function(event) {
     event.preventDefault();
     var linkTarget = $(this).attr("href");
-    if (linkTarget.match("^#page")) {
+    if (linkTarget.match("^#page-")) {
         if (linkTarget == "#page--main") {
             closeModal();
             history.pushState({}, '', '/');
         } else {
             $(linkTarget).scrollTop(0);
             targetPageDomain = linkTarget.split('--').slice(-1)[0];
+            var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
             if (targetPageDomain == 'prev-project') {
-                var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
                 if (existingSubPages.indexOf(currentSubPage) > 0) {
                     targetPageDomain = existingSubPages[existingSubPages.indexOf(currentSubPage) - 1];
                 } else {
                     targetPageDomain = existingSubPages[existingSubPages.length - 1];
                 }
             } else if (targetPageDomain == 'next-project') {
-                var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
                 if (existingSubPages.indexOf(currentSubPage) < existingSubPages.length - 1) {
                     targetPageDomain = existingSubPages[existingSubPages.indexOf(currentSubPage) + 1];
                 } else {
@@ -55,13 +55,7 @@ $(document).on('click', 'a[href^="#"]', function (event) {
             history.pushState({}, '', '/' + targetPageDomain);
         }
     } else {
-        if (linkTarget == "#imprint") {
-            $('body').addClass('imprint-is-active');
-        } else if (linkTarget == "#close-imprint") {
-            $('body').removeClass('imprint-is-active');
-        } else {
-            pageInternalLink($(this));
-        }
+        pageInternalLink(linkTarget);
     }
 });
 
@@ -89,15 +83,15 @@ function openModal(target) {
     var bodyClassList = $('body').attr('class').split(' ');
     for (var i = 0; i < bodyClassList.length; i++) {
         if (bodyClassList[i].includes('modal')) {
-            $('body').removeClass(bodyClassList[i]);
+            $(body).removeClass(bodyClassList[i]);
         }
     }
     currentPage = '#page--' + target;
     lazyLoadImages(currentPage);
     changeDocumentTitle(target);
     bodyColorChange($(currentPage), '.change-color');
-    $('body').addClass('modal-is-active');
-    $('body').addClass('modal--' + target);
+    $(body).addClass('modal-is-active');
+    $(body).addClass('modal--' + target);
 }
 
 function closeModal() {
@@ -105,10 +99,10 @@ function closeModal() {
     lazyLoadImages('#page--main');
     changeDocumentTitle('main');
     bodyColorChange($(currentPage), '.change-color');
-    var bodyClassList = $('body').attr('class').split(' ');
+    var bodyClassList = $(body).attr('class').split(' ');
     for (var i = 0; i < bodyClassList.length; i++) {
         if (bodyClassList[i].includes('modal')) {
-            $('body').removeClass(bodyClassList[i]);
+            $(body).removeClass(bodyClassList[i]);
         }
     }
 }
@@ -136,10 +130,15 @@ function changeDocumentTitle(target) {
 }
 
 function pageInternalLink(link) {
-    var currentPage = '#' + link.closest(".page").attr('id');
-    $($(currentPage)).animate({
-        scrollTop: $(link.attr("href")).position().top
-    }, 1000);
+    if (link == "#imprint") {
+        $(body).addClass('imprint-is-active');
+    } else if (link == "#close-imprint") {
+        $(body).removeClass('imprint-is-active');
+    } else {
+        $($(currentPage)).animate({
+            scrollTop: $(link).position().top
+        }, 600);
+    }
 }
 
 /** =========================================================================== P A G E - I N T E R N A L - E V E N T S
@@ -229,8 +228,7 @@ function arrowScrollAnimation(distance) {
     if (scrollPositionTop > distance) {
         scrollMarker.addClass('scroll-down').removeClass('scroll-top');
     } /*else {
-        nav.addClass('scroll-top');
-        nav.removeClass('scroll-down');
+        nav.addClass('scroll-top').removeClass('scroll-down');
     }*/
 }
 
@@ -247,29 +245,23 @@ function objectScrollAnimation(page, selector) {
         var object = $(this);
         var objectHeight = object.height();
         var objectTop = object.offset().top - page.offset().top;
-        var objectCenter = object.offset().top + .5 * objectHeight - page.offset().top;
-        var objectBottom = object.offset().top + objectHeight - page.offset().top;
+        var objectCenter = objectTop + .5 * objectHeight;
+        var objectBottom = objectTop + objectHeight;
         if (objectHeight >= visiblePartTop) {
             if (objectBottom < visiblePartTop) {
-                object.removeClass('fade-in-visible');
-                object.addClass('fade-out');
+                object.removeClass('fade-in-visible').addClass('fade-out');
             } else if (objectTop < visiblePartBottom) {
-                object.addClass('fade-in-visible');
-                object.removeClass('fade-out');
+                object.addClass('fade-in-visible').removeClass('fade-out');
             } else {
-                object.removeClass('fade-in-visible');
-                object.removeClass('fade-out');
+                object.removeClass('fade-in-visible').removeClass('fade-out');
             }
         } else {
             if (objectCenter < windowTop) {
-                object.removeClass('fade-in-visible');
-                object.addClass('fade-out');
+                object.removeClass('fade-in-visible').addClass('fade-out');
             } else if (objectCenter < windowHeight) {
-                object.addClass('fade-in-visible');
-                object.removeClass('fade-out');
+                object.addClass('fade-in-visible').removeClass('fade-out');
             } else {
-                object.removeClass('fade-in-visible');
-                object.removeClass('fade-out');
+                object.removeClass('fade-in-visible').removeClass('fade-out');
             }
         }
     });
@@ -302,10 +294,8 @@ function bodyColorChange(page, selector) {
         }
     });
     if (changeColor) {
-        $('body').addClass('color-background-red');
-        console.log('body is red')
+        $(body).addClass('color-background-red');
     } else {
-        $('body').removeClass('color-background-red');
-        console.log('body is green')
+        $(body).removeClass('color-background-red');
     }
 }
