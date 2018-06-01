@@ -17,25 +17,28 @@
 </div>
 <div class="project-images">
     <div class="img-container img-small left fade-in">
-        <img src="/img/space/space02.jpg" alt="Book spread, bold typography.">
+        <img src="" data-src="/img/space/space02.jpg" alt="Book spread, bold typography." sizes="auto">
         <p>Aloof in the solar waves, she is carried home.</p>
     </div>
     <div class="img-container img-middle right fade-in">
-        <img src="/img/space/space03.jpg" alt="Book spread, graphic nonsense.">
+        <img src="" data-src="/img/space/space03.jpg" alt="Book spread, graphic nonsense." sizes="auto">
         <p>There's no lack of void.</p>
     </div>
     <div class="img-container img-large left fade-in">
-        <img src="/img/space/space04.jpg" alt="Book spread, graphic nonsense.">
+        <div class="slider">
+            <img src="" data-src="/img/space/space04.jpg" alt="Book spread, graphic nonsense." sizes="auto">
+            <img src="" data-src="/img/space/space01.jpg" alt="Book spread, graphic nonsense." sizes="auto">
+        </div>
         <p>There we go again.</p>
     </div> 
     <div class="img-description left fade-in">
         <p>This project attempts an exploration of the word space and its many meanings. Stretching from the vast expanse of the universe to the measurements of small everyday items, space is everywhere. And yet it doesn't truly exist. Space is the absence of matter.</p>
     </div>
     <div class="img-container img-large right fade-in">
-        <img src="img/space/space_detail02.jpg" alt="Book spread, Neil DeGrasse Tyson illustration.">
+        <img src="" data-src="img/space/space_detail02.jpg" alt="Book spread, Neil DeGrasse Tyson illustration." sizes="auto">
     </div>
     <div class="img-container img-large left fade-in">
-        <img src="img/space/space_detail03.jpg" alt="Space poster.">
+        <img src="" data-src="img/space/space_detail03.jpg" alt="Space poster." sizes="auto">
     </div>
 </div>
 <div>
