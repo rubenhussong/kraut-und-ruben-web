@@ -1,4 +1,4 @@
-<div class="project-title fade-in">
+<div class="project-title fade-in" id="firstchild">
     <h1>Space – A Journey into the Void</h1>
     <div class="project-details">
         <h2>

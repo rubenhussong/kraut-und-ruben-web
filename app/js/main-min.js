@@ -186,12 +186,19 @@ $(window).on('load', function() {
             }
         });
     });
-    $('.page--project').scroll(function() {
+    $('.page--project').each(function() {
         var prev = 0;
         var nav = $('#header--page-project');
-        var scrollObject = nav;
-        console.log(scrollPosition.scrollTop());
-
+        $('#' + $(this).attr('id')).scroll(function() {
+            var scrollPosition = $(this).find(">:first-child").offset().top;
+            nav.toggleClass('hidden', scrollPosition < prev);
+            if (scrollPosition < prev) {
+                console.log('hide header')
+            }
+            prev = scrollPosition;
+            //console.log(scrollPosition);
+            //console.log(scrollObject.attr('id'));
+        });
     });
 });
 
