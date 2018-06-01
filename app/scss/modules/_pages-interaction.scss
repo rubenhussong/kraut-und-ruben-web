@@ -1,10 +1,10 @@
 
-$transition-curve--page: cubic-bezier(0, .8, .6, 1);
+$transition-curve--page: cubic-bezier(.4, 0, .2, 1);
 $transition-time--page: .3s;
 $transition-delay--page: $transition-time--page;
 
-$transition-curve--header: cubic-bezier(0, .4, .6, 1);
-$transition-curve--header-back: cubic-bezier(.6, 0, 1, .4);
+$transition-curve--header: cubic-bezier(0, .4, .2, 1);
+$transition-curve--header-back: cubic-bezier(.6, 0, 1, .8);
 $transition-time--header: $transition-time--page;
 $transition-delay--header: $transition-delay--page;
 

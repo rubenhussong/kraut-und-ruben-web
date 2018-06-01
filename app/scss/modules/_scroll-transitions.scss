@@ -2,11 +2,11 @@
 $transition-curve--scroll: cubic-bezier(0, .4, .4, 1);
 $transition-time--scroll: 1s;
 */
-$transition-curve--scroll: cubic-bezier(.4, 0, .8, .8);
-$transition-time--scroll: .5s;
+$transition-curve--object-scroll: cubic-bezier(.4, 0, .8, .8);
+$transition-time--object-scroll: .5s;
 
 $transition-time--header-scroll: .4s;
-$transition-curve--header-scroll: cubic-bezier(.4, 0, .8, .8);
+$transition-curve--header-scroll: cubic-bezier(.8, 0, .1, 1);
 $transition-delay--header-scroll: $transition-time--header-scroll / 2;
 
 // ================================================== Objects on Scroll
@@ -14,11 +14,11 @@ $transition-delay--header-scroll: $transition-time--header-scroll / 2;
   > * {
     opacity: 0;
     transition:
-            opacity (.7 * $transition-time--scroll) $transition-curve--scroll,
-            transform $transition-time--scroll $transition-curve--scroll;
+            opacity (.7 * $transition-time--object-scroll) $transition-curve--object-scroll,
+            transform $transition-time--object-scroll $transition-curve--object-scroll;
   }
   &.footer-li > * {
-    transition: opacity $transition-time--scroll $transition-curve--scroll;
+    transition: opacity $transition-time--object-scroll $transition-curve--object-scroll;
     transform: translate3D(0, 0, 0);
   }
   &.fade-in-visible > * { opacity: 1; }
@@ -72,6 +72,13 @@ header {
         transform: translate3D(0, 0, 0);
         transition-delay: $transition-delay--header-scroll;
       }
+    }
+  }
+  #header--page-project {
+      transition-duration: $transition-time--header-scroll;
+      transition-timing-function: $transition-curve--header-scroll;
+    &.hidden {
+      transform: translate3D(0, -4rem, 0);
     }
   }
 }
