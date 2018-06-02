@@ -12,7 +12,7 @@
 body {
   background: $color-background-green;
   transition: background .3s ease;
-  color: $color-red;
+  color: $color-green;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
@@ -26,13 +26,17 @@ body {
   top: 0;
   left: 0;
   overflow-x: hidden;
-  overflow-y: visible;
+  overflow-y: scroll;
   width: 100vw;
   height: 100vh;
 }
 
 .page--project, #imprint {
   will-change: opacity, transform;
+}
+
+.change-color, header, #scroll-marker {
+  color: $color-red;
 }
 
 a {

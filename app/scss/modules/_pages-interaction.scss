@@ -16,6 +16,7 @@ $transition-curve--imprint: $transition-curve--page;
 header {
   #header--imprint {
     .cross-close-imprint { top: -3rem; }
+    opacity: 0;
   }
 }
 // ================================================== Page [Imprint not active]
@@ -32,9 +33,11 @@ header {
   // ================================================== Header [Imprint active]
   header {
     #header--imprint {
+      .header-element { opacity: 1; }
       .cross-close-imprint { top: 0; }
     }
     #header--page-main {
+      .header-element { opacity: 0; }
       .word-mark { top: -3rem; }
       .header-element--left { left: -4rem; }
       .header-element--right { right: -4rem; }
@@ -43,6 +46,7 @@ header {
   &.modal-is-active {
     header {
       #header--page-project {
+        .header-element { opacity: 0; }
         .header-element--center { top: -3rem; }
         .header-element--left { left: -4rem; }
         .header-element--right { right: -4rem; }
@@ -94,11 +98,13 @@ header {
 // ================================================== Header [Page Main active]
 header {
   #header--page-main {
+    .header-element { opacity: 1; }
     .word-mark { top: 0; }
     .header-element--left { left: 0; }
     .header-element--right { right: 0; }
   }
   #header--page-project {
+    .header-element { opacity: 0; }
     .header-element--center { top: -3rem; }
     .header-element--left { left: -4rem; }
     .header-element--right { right: -4rem; }
@@ -138,7 +144,7 @@ header {
   transition:
           filter $transition-time--imprint $transition-curve--imprint,
           z-index 0s ($transition-time--page + $transition-delay--page),
-          transform $transition-time--page $transition-curve--page,
+          transform $transition-time--page $transition-curve--page $transition-delay--page,
           opacity $transition-time--page $transition-curve--page;
 }
 #page--main {
@@ -157,11 +163,13 @@ header {
   // ================================================== Header [Page Project active]
   header {
     #header--page-main {
+      .header-element { opacity: 0; }
       .word-mark { top: -3rem; }
       .header-element--left { left: -4rem; }
       .header-element--right { right: -4rem; }
     }
     #header--page-project {
+      .header-element { opacity: 1; }
       .header-element--center { top: 0; }
       .header-element--left { left: 0; }
       .header-element--right { right: 0; }

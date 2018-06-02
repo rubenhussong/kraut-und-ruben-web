@@ -10,9 +10,9 @@ $transition-curve--header-scroll: cubic-bezier(.8, 0, .1, 1);
 $transition-delay--header-scroll: $transition-time--header-scroll / 2;
 
 // ================================================== Objects on Scroll
-.fade-in {
+.scroll-animation {
   > * {
-    opacity: 0;
+    opacity: 1;
     transition:
             opacity (.7 * $transition-time--object-scroll) $transition-curve--object-scroll,
             transform $transition-time--object-scroll $transition-curve--object-scroll;
@@ -21,22 +21,22 @@ $transition-delay--header-scroll: $transition-time--header-scroll / 2;
     transition: opacity $transition-time--object-scroll $transition-curve--object-scroll;
     transform: translate3D(0, 0, 0);
   }
-  &.fade-in-visible > * { opacity: 1; }
-  &.fade-out > * { opacity: 0; }
+  &.scroll-animation-bottom > * { opacity: 0; }
+  &.scroll-animation-top > * { opacity: 0; }
 }
 
 .page--main {
-  .fade-in {
-    > * { transform: perspective(100vw) rotateX(-30deg) scale(0.95) translate3D(0, 5rem, 0); }
-    &.fade-in-visible > * { transform: perspective(100vw) rotateX(0deg) scale(1) translate3D(0, 0, 0); }
-    &.fade-out > * { transform: perspective(100vw) rotateX(30deg) scale(0.95) translate3D(0, -5rem, 0); }
+  .scroll-animation {
+    > * { transform: perspective(100vw) rotateX(0deg) scale(1) translate3D(0, 0, 0); }
+    &.scroll-animation-bottom > * { transform: perspective(100vw) rotateX(-30deg) scale(0.95) translate3D(0, 5rem, 0); }
+    &.scroll-animation-top > * { transform: perspective(100vw) rotateX(30deg) scale(0.95) translate3D(0, -5rem, 0); }
   }
 }
 .page--project {
-  .fade-in {
-    > * { transform: translate3D(0, 5rem, 0); }
-    &.fade-in-visible > * { transform: translate3D(0, 0, 0); }
-    &.fade-out > * { transform: translate3D(0, -5rem, 0); }
+  .scroll-animation {
+    > * { transform: translate3D(0, 0, 0); }
+    &.scroll-animation-bottom > * { transform: translate3D(0, 5rem, 0); }
+    &.scroll-animation-top > * { transform: translate3D(0, -5rem, 0); }
   }
 }
 

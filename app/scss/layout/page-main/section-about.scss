@@ -9,7 +9,6 @@
     width: 50rem;
     max-width: 100%;
     padding: 0 (.5 * $gutter-x);
-    @include on-load--about-text();
     a, span {
       display: inline-block;
       @include font-serif(l, false, false, italic);

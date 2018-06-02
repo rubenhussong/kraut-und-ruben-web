@@ -2,7 +2,6 @@ header {
   user-select: none;
   z-index: $z-index-header;
   position: fixed;
-  color: $color-red;
   width: 100%;
   //@include on-load--header();
   .page-header {

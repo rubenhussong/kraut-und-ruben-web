@@ -14,7 +14,7 @@
     <div id="about-images">
         <img class="about-image" id="about-image--wir" src="/img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
     </div>
-    <div class="fade-in fade-in-visible on-load" id="about-text">
+    <div class="scroll-animation" id="about-text">
         <p>
             <?php if ($lang == 'de'): ?>
 
@@ -49,7 +49,7 @@
 </div>
 <div class="section" id="section--projects">
     <div class="project-column" id="project-column--left">
-        <div class="fade-in project-banner img-large img-left">
+        <div class="scroll-animation project-banner img-large img-left">
             <a href="#page--space" id="project-link--space">
                 <img src="" data-src="/img/space-banner.jpg" alt="space-banner" sizes="auto">
             </a>
@@ -60,7 +60,7 @@
                 </h2>
             </div>
         </div>
-        <div class="fade-in project-banner img-middle img-right">
+        <div class="scroll-animation project-banner img-middle img-right">
             <a href="#page--casino-bregenz" id="project-link--casino-bregenz">
                 <img src="" data-src="/img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
             </a>
@@ -71,7 +71,7 @@
                 </h2>
             </div>
         </div>
-        <div class="fade-in project-banner img-small img-left">
+        <div class="scroll-animation project-banner img-small img-left">
             <a href="#page--grenzkunst" id="project-link--grenzkunst">
                 <img src="" data-src="/img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
             </a>
@@ -84,7 +84,7 @@
         </div>
     </div>
     <div class="project-column" id="project-column--right">
-        <div class="fade-in project-banner img-small img-right">
+        <div class="scroll-animation project-banner img-small img-right">
             <a href="#page--hypernet" id="project-link--hypernet">
                 <img src="" data-src="/img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
             </a>
@@ -95,7 +95,7 @@
                 </h2>
             </div>
         </div>
-        <div class="fade-in project-banner img-middle img-left">
+        <div class="scroll-animation project-banner img-middle img-left">
             <a href="#page--el-presidente" id="project-link--el-presidente">
                 <img src="" data-src="/img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
             </a>
@@ -109,7 +109,7 @@
     </div>
 </div>
 <footer class="section change-color" id="section--footer">
-    <div class="fade-in" id="footer-text">
+    <div class="scroll-animation" id="footer-text">
         <p>
             Wir arbeiten von überall, aber meistens vom schönen Konstanz aus.
             Wenn du ein lustiges, aufregendes oder fantastisches Projekt hast, an dem du mit uns arbeiten möchtest, zeigen wir dir gerne eines unserer Lieblings-Cafés in der Altstadt.

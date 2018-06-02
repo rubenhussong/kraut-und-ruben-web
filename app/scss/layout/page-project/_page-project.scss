@@ -1,5 +1,4 @@
 .page--project {
-  color: $color-green;
   .project-title {
     box-sizing: border-box;
     padding: 8vw $gutter-x (.5 * $gutter-y);
@@ -66,29 +65,10 @@
     }
     .img-description {
       display: inline-block;
-      width: calc(40% - $gutter-x);
       padding: $gutter-y (.5 * $gutter-x);
       p {
         @include font-serif(s, 0em, 1.6);
       }
     }
   }
-
-  .slider {
-    position: relative;
-    width: 100%;
-    height: auto;
-    img:not(:first-child) {
-      position: absolute;
-      top: 0;
-      left: 0;
-    }
-    img {
-      opacity: 0;
-      &.slide--visible {
-        opacity: 1;
-      }
-    }
-  }
-
 }

@@ -1,5 +1,3 @@
-/** =========================================================================== D E E P - L I N K I N G - E V E N T S
- */
 
 const existingSubPages = [
     "space",
@@ -16,13 +14,38 @@ var pageMainTitle = document.title;
 /** ========================= On Page Load & Back and Forward Button
  */
 
-$(window).ready(function() {
-    loadCurrentPage();
-});
 $(window).on('popstate', function() {
     $(body).removeClass('imprint-is-active');
     loadCurrentPage();
 });
+$(document).ready(function() {
+    loadCurrentPage();
+    isTouchDevice();
+});
+
+/** ========================= Track Touch Device
+ */
+
+function isTouchDevice() {
+    var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
+    var mq = function(query) {
+        return window.matchMedia(query).matches;
+    }
+
+    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
+        return true;
+    }
+
+    // include the 'heartz' as a way to have a non matching MQ to help terminate the join
+    // https://git.io/vznFH
+    var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
+    console.log(query);
+    return mq(query);
+}
+
+
+/** =========================================================================== D E E P - L I N K I N G - E V E N T S
+ */
 
 /** ========================= On Link Click
  */
@@ -33,7 +56,9 @@ $(document).on('click', 'a[href^="#"]', function(event) {
     if (linkTarget.match("^#page-")) {
         if (linkTarget == "#page--main") {
             var scrollPage = currentPage;
-            $(scrollPage).delay(600).scrollTop(0);
+            setTimeout(function() {
+                $(scrollPage).scrollTop(0);
+            }, 600);
             closeModal();
             history.pushState({}, '', '/');
         } else {
@@ -96,6 +121,15 @@ function openModal(target) {
 }
 
 function closeModal() {
+    /*
+    var scrollTarget = $(currentPage).scrollTop() - (.8 * $(window).height());
+    $(currentPage).animate({
+        scrollTop: scrollTarget
+    }, {
+        duration: 600,
+        easing: "linear"
+    });
+    */
     currentPage = '#page--main';
     lazyLoadImages('#page--main');
     changeDocumentTitle('main');
@@ -150,10 +184,6 @@ $(window).on('load', function() {
         $(this).addClass('on-load-ready');
     });
 
-    $(currentPage).find(".slider").each(function() {
-        slideshow($(this), 500);
-    });
-
     /*
      var spanPositionWir = $("#span--wir").offset();
      console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
@@ -175,14 +205,14 @@ $(window).on('load', function() {
 
     $('.page').each(function() {
         var thisPage = '#' + $(this).attr('id');
-        objectScrollAnimation($(thisPage), '.fade-in');
+        objectScrollAnimation($(thisPage), '.scroll-animation');
         if (thisPage == '#page--main') {
             scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
             headerScrollAnimation(scrollDistance);
             arrowScrollAnimation(scrollDistance);
         }
         $(thisPage).scroll(function() {
-            objectScrollAnimation($(thisPage), '.fade-in');
+            objectScrollAnimation($(thisPage), '.scroll-animation');
             bodyColorChange($(thisPage), '.change-color');
             if (thisPage == '#page--main') {
                 scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
@@ -195,8 +225,8 @@ $(window).on('load', function() {
         var prev = 0;
         var nav = $('#header--page-project');
         $('#' + $(this).attr('id')).scroll(function() {
-            var scrollPosition = $(this).find(">:first-child").offset().top;
-            nav.toggleClass('hidden', scrollPosition < prev);
+            var scrollPosition = $(this).scrollTop();
+            nav.toggleClass('hidden', scrollPosition > prev);
             prev = scrollPosition;
         });
     });
@@ -263,19 +293,19 @@ function objectScrollAnimation(page, selector) {
         var objectBottom = objectTop + objectHeight;
         if (objectHeight >= visiblePartTop) {
             if (objectBottom < visiblePartTop) {
-                object.removeClass('fade-in-visible').addClass('fade-out');
+                object.addClass('scroll-animation-top');
             } else if (objectTop < visiblePartBottom) {
-                object.addClass('fade-in-visible').removeClass('fade-out');
+                object.removeClass('scroll-animation-bottom').removeClass('scroll-animation-top');
             } else {
-                object.removeClass('fade-in-visible').removeClass('fade-out');
+                object.addClass('scroll-animation-bottom');
             }
         } else {
             if (objectCenter < windowTop) {
-                object.removeClass('fade-in-visible').addClass('fade-out');
+                object.addClass('scroll-animation-top');
             } else if (objectCenter < windowHeight) {
-                object.addClass('fade-in-visible').removeClass('fade-out');
+                object.removeClass('scroll-animation-bottom').removeClass('scroll-animation-top');
             } else {
-                object.removeClass('fade-in-visible').removeClass('fade-out');
+                object.addClass('scroll-animation-bottom');
             }
         }
     });
@@ -312,11 +342,18 @@ function bodyColorChange(page, selector) {
 
 /** ================================================== Slideshow
  */
+/*
+&(window).setInterval(function() {
+     $(this).find('.fade-in-visible').each(function() {
+     $(this).find('.slider').each(function() {
+     slideshow($(this), 500);
+     });
+
+}, 500);
 
 function slideshow(slider, time) {
     var count = slider.find('img').length;
     var selector = 1;
-    console.log(count);
     setInterval(function() {
         slider.find('>:nth-child(' + selector + ')').removeClass('slide--visible');
         selector++;
@@ -324,3 +361,4 @@ function slideshow(slider, time) {
         slider.find('>:nth-child(' + selector + ')').addClass('slide--visible');
     }, time);
 }
+*/

@@ -1,4 +1,4 @@
-<div class="project-title fade-in">
+<div class="project-title scroll-animation">
     <h1>El Presidente</h1>
     <div class="project-details">
         <h2>

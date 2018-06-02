@@ -58,13 +58,11 @@
         }
 
       }
-      &.fade-in-visible {
-        &:hover {
-          .project-text {
-            opacity: 1;
-            h2 {
-              transform: scale(1);
-            }
+      &:hover {
+        .project-text {
+          opacity: 1;
+          h2 {
+            transform: scale(1);
           }
         }
       }
