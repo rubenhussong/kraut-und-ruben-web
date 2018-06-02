@@ -20,29 +20,7 @@ $(window).on('popstate', function() {
 });
 $(document).ready(function() {
     loadCurrentPage();
-    isTouchDevice();
 });
-
-/** ========================= Track Touch Device
- */
-
-function isTouchDevice() {
-    var prefixes = ' -webkit- -moz- -o- -ms- '.split(' ');
-    var mq = function(query) {
-        return window.matchMedia(query).matches;
-    }
-
-    if (('ontouchstart' in window) || window.DocumentTouch && document instanceof DocumentTouch) {
-        return true;
-    }
-
-    // include the 'heartz' as a way to have a non matching MQ to help terminate the join
-    // https://git.io/vznFH
-    var query = ['(', prefixes.join('touch-enabled),('), 'heartz', ')'].join('');
-    console.log(query);
-    return mq(query);
-}
-
 
 /** =========================================================================== D E E P - L I N K I N G - E V E N T S
  */
