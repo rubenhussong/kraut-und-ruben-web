@@ -18,18 +18,4 @@
       opacity: 1;
     }
   }
-	position: relative;
-	width: 100%;
-	height: auto;
-	img:not(:first-child) {
-	  position: absolute;
-	  top: 0;
-	  left: 0;
-	}
-	img {
-	  opacity: 0;
-	  &.slide--visible {
-	    opacity: 1;
-	  }
-	}
 }
