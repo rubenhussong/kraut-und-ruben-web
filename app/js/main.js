@@ -11,28 +11,32 @@ var body = 'body';
 
 var pageMainTitle = document.title;
 
-/** =========================================================================== P R E - L O A D E R
+/** =========================================================================== P A G E - L O A D I N G
  */
 
-$(window).on('DOMContentLoaded', function() {
-    var Body = $('body');
-    Body.addClass('preloader-site');
-});
-$(window).on('load', function() {
-    $('.preloader-wrapper').fadeOut();
-    $('body').removeClass('preloader-site');
-});
+$(window)
+    .on('DOMContentLoaded', function() {
+        loadCurrentPage();
+    })
+    .on('popstate', function() {
+        $(body).removeClass('imprint-is-active');
+        loadCurrentPage();
+    })
+    .on('load', function() {
+        setTimeout(function () {
+            $('.preloader-wrapper').fadeOut();
+        }, 600);
 
-/** ========================= On Page Load & Back and Forward Button
- */
-
-$(window).on('popstate', function() {
-    $(body).removeClass('imprint-is-active');
-    loadCurrentPage();
-});
-$(document).ready(function() {
-    loadCurrentPage();
-});
+        var iconRotation = 0;
+        $(window).mousemove(function() {
+            iconRotation = iconRotation - 5;
+            var kRotate = "rotate(" + iconRotation + "deg)";
+            var rRotate = "rotate(" + (-iconRotation) + "deg)";
+            $('.object-rotate--left').css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
+            $('.object-rotate--right').css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
+        });
+    }
+);
 
 /** =========================================================================== D E E P - L I N K I N G - E V E N T S
  */
@@ -111,15 +115,6 @@ function openModal(target) {
 }
 
 function closeModal() {
-    /*
-    var scrollTarget = $(currentPage).scrollTop() - (.8 * $(window).height());
-    $(currentPage).animate({
-        scrollTop: scrollTarget
-    }, {
-        duration: 600,
-        easing: "linear"
-    });
-    */
     currentPage = '#page--main';
     lazyLoadImages('#page--main');
     changeDocumentTitle('main');
@@ -136,6 +131,7 @@ function lazyLoadImages(page) {
     $(page).find('img').each(function() {
         var lazySrc = $(this).attr('data-src');
         $(this).attr('src', lazySrc);
+        $(this).removeAttr('data-src');
     });
 }
 
@@ -170,10 +166,8 @@ function pageInternalLink(link) {
  */
 
 $(window).on('load', function() {
-    $('.on-load').each(function() {
-        $(this).addClass('on-load-ready');
-    });
 
+    AboutImageFade($('#span--wir'), $('#about-image--wir'));
     /*
      var spanPositionWir = $("#span--wir").offset();
      console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
@@ -182,34 +176,13 @@ $(window).on('load', function() {
      $('#about-image--wir').css('top', spanPositionWir.top).css('left', spanPositionWir.left);
      */
 
-    AboutImageFade($('#span--wir'), $('#about-image--wir'));
-
-    var iconRotation = 0;
-    $(window).mousemove(function() {
-        iconRotation = iconRotation - 5;
-        var kRotate = "rotate(" + iconRotation + "deg)";
-        var rRotate = "rotate(" + (-iconRotation) + "deg)";
-        $('.object-rotate--left').css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
-        $('.object-rotate--right').css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
-    });
-
-    $('.page').each(function() {
-        var thisPage = '#' + $(this).attr('id');
-        objectScrollAnimation($(thisPage), '.scroll-animation');
-        if (thisPage == '#page--main') {
-            scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
-            headerScrollAnimation(scrollDistance);
-            arrowScrollAnimation(scrollDistance);
-        }
-        $(thisPage).scroll(function() {
-            objectScrollAnimation($(thisPage), '.scroll-animation');
-            bodyColorChange($(thisPage), '.change-color');
-            if (thisPage == '#page--main') {
-                scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
-                headerScrollAnimation(scrollDistance);
-                arrowScrollAnimation(scrollDistance);
-            }
-        });
+    var scrollDistance = ($('#page--main').scrollTop() + $('#about-text').offset().top) * .9;
+    headerScrollAnimation(scrollDistance);
+    arrowScrollAnimation(scrollDistance);
+    $('#page--main').scroll(function() {
+        scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
+        headerScrollAnimation(scrollDistance);
+        arrowScrollAnimation(scrollDistance);
     });
     $('.page--project').each(function() {
         var prev = 0;
@@ -218,6 +191,14 @@ $(window).on('load', function() {
             var scrollPosition = $(this).scrollTop();
             nav.toggleClass('hidden', scrollPosition > prev);
             prev = scrollPosition;
+        });
+    });
+    $('.page').each(function() {
+        var thisPage = '#' + $(this).attr('id');
+        objectScrollAnimation($(thisPage), '.scroll-animation');
+        $(thisPage).scroll(function() {
+            objectScrollAnimation($(thisPage), '.scroll-animation');
+            if (currentPage == thisPage) bodyColorChange($(thisPage), '.change-color');
         });
     });
 });
@@ -278,6 +259,7 @@ function objectScrollAnimation(page, selector) {
     $(page).find(selector).each(function() {
         var object = $(this);
         var objectHeight = object.height();
+        if (objectHeight <= 0) objectHeight = windowHeight;
         var objectTop = object.offset().top - page.offset().top;
         var objectCenter = objectTop + .5 * objectHeight;
         var objectBottom = objectTop + objectHeight;

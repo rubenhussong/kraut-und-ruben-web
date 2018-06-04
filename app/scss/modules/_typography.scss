@@ -32,11 +32,15 @@
   font-family: 'Messina Serif';
   src: url('../fonts/MessinaSerifTrial-Regular.otf') format('opentype');
 }
+@font-face {
+  font-family: 'Untitled Sans';
+  src: url('../fonts/UntitledSans-Regular.otf') format('opentype');
+}
 
 // Font Variables
-$logotype:              'Kraut und Ruben Logo', Courier, monospace;
+$logotype:              'Untitled Sans', Courier, monospace;
 $font-serif:            'Galaxie Copernicus', Palatino, serif;
-$font-sans:             'Messina Sans', Helvetica, sans-serif;
+$font-sans:             'Untitled Sans', Helvetica, sans-serif;
 $font-mono:             'Messina Sans Mono', Courier, monospace;
 
 // Font Weight Variables
@@ -104,7 +108,7 @@ $font-size: (
   font-family: $logotype;
   font-size: font-size($font-size);
   font-weight: 400;
-  letter-spacing: .02em;
+  letter-spacing: .01em;
 }
 
 @mixin heading() {

@@ -34,16 +34,3 @@
     }
   }
 }
-
-section {
-  width: 100vw;
-  height: 50%;
-  &.section-dark {
-    background: black;
-    color: white;
-  }
-  &.section-light {
-    background: white;
-    color: black;
-  }
-}

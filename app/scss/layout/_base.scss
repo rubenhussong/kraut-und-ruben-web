@@ -12,12 +12,22 @@
 body {
   background: $color-background-green;
   transition: background .3s ease;
-  color: $color-green;
   overflow: hidden;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  color: $color-green;
+  ::selection {
+    background: $color-red;
+    color: $color-background-green;
+  }
   &.color-background-red {
     background: $color-background-red !important;
+    ::selection {
+      color: $color-background-red;
+    }
+  }
+  .change-color, header, #scroll-marker {
+    color: $color-red;
   }
 }
 
@@ -35,8 +45,9 @@ body {
   will-change: opacity, transform;
 }
 
-.change-color, header, #scroll-marker {
-  color: $color-red;
+img[data-src] {
+  opacity: 0;
+  display: none;
 }
 
 a {
@@ -50,11 +61,6 @@ p {
 
 .small-caps {
   font-variant: small-caps;
-}
-
-::selection {
-  background: $color-green;
-  color: $color-background-red;
 }
 
 %clear {

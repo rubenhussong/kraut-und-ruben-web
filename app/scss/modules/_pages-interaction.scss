@@ -59,8 +59,8 @@ header {
   }
   // ================================================== Page [Imprint active]
   .page {
-    filter: blur(.5rem);
-    -webkit-filter: blur(.5rem);
+    filter: blur(.5rem) brightness(1.1) contrast(.9);
+    -webkit-filter: blur(.5rem) brightness(1.1) contrast(.9);
   }
   #imprint {
     opacity: 1;
@@ -176,7 +176,7 @@ header {
       .header-element { opacity: 1; }
       .header-element--center { top: 0; }
       .header-element--left { left: 0; }
-      .header-element--right { right: 0; }
+      .header-element--right { right: 0; } 
     }
   }
   // ================================================== Page [Page Project active]

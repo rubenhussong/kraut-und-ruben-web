@@ -3,7 +3,6 @@ header {
   z-index: $z-index-header;
   position: fixed;
   width: 100%;
-  //@include on-load--header();
   .page-header {
     position: absolute;
     width: 100%;

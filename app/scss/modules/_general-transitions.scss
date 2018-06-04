@@ -46,7 +46,7 @@
   }
 }
 @mixin hover--footer-link() {
-  transition: transform .9s ease;
+  transition: transform .6s ease;
   &:hover {
     transform: skewX(-8.75deg);
   }
@@ -54,7 +54,7 @@
 
 @mixin hover--about-image() {
   opacity: 0;
-  transition: opacity .9s ease;
+  transition: opacity .6s ease;
   &.about-image-visible {
     opacity: 1;
   }
