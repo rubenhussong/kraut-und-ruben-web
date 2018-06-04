@@ -11,6 +11,18 @@ var body = 'body';
 
 var pageMainTitle = document.title;
 
+/** =========================================================================== P R E - L O A D E R
+ */
+
+$(window).on('DOMContentLoaded', function() {
+    var Body = $('body');
+    Body.addClass('preloader-site');
+});
+$(window).on('load', function() {
+    $('.preloader-wrapper').fadeOut();
+    $('body').removeClass('preloader-site');
+});
+
 /** ========================= On Page Load & Back and Forward Button
  */
 

@@ -10,6 +10,11 @@ if ($lang !== 'de') $lang = 'en';
     <?php include 'php/meta/head.php'; ?>
 </head>
 <body class="home">
+    <div class="preloader-wrapper">
+        <div class="preloader">
+            <p>Kraut & Ruben</p>
+        </div>
+    </div>
     <?php include 'php/modules/header.php'; ?>
 
     <!-- M A I N - P A G E -->

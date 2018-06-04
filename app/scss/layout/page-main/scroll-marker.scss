@@ -12,7 +12,7 @@
     display: inline-block;
     pointer-events: all;
     #scroll-arrow {
-      @include logotype();
+      @include logotype(s);
       font-size: font-size(xs);
       animation: scrollArrow .75s ease infinite alternate-reverse;
     }

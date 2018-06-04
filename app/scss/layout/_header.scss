@@ -11,7 +11,7 @@ header {
       display: inline-block;
       width: 100%;
       position: absolute;
-      @include logotype();
+      @include logotype(s);
       span {
         position: absolute;
         top: 0;
@@ -36,7 +36,7 @@ header {
       img { width: 100%; }
     }
     .arrow-switch-project, .cross-close-imprint {
-      @include logotype();
+      @include logotype(s);
       position: absolute;
       width: 1rem;
       margin: (($gutter-x - 1.5rem) / 2);

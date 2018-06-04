@@ -100,9 +100,9 @@ $font-size: (
 }
 */
 
-@mixin logotype() {
+@mixin logotype($font-size) {
   font-family: $logotype;
-  font-size: font-size(s);
+  font-size: font-size($font-size);
   font-weight: 400;
   letter-spacing: .02em;
 }
