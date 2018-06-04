@@ -15,8 +15,10 @@ $transition-curve--imprint: $transition-curve--page;
 // ================================================== Header [Imprint not active]
 header {
   #header--imprint {
-    .cross-close-imprint { top: -3rem; }
-    opacity: 0;
+    .cross-close-imprint {
+      top: -3rem;
+      opacity: 0;
+    }
   }
 }
 // ================================================== Page [Imprint not active]
@@ -33,8 +35,10 @@ header {
   // ================================================== Header [Imprint active]
   header {
     #header--imprint {
-      .header-element { opacity: 1; }
-      .cross-close-imprint { top: 0; }
+      .cross-close-imprint {
+        top: 0;
+        opacity: 1;
+      }
     }
     #header--page-main {
       .header-element { opacity: 0; }
