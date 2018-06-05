@@ -4,10 +4,10 @@
 @font-face {
   font-family: 'Kraut und Ruben Logo';
   src: 
-      url('../fonts/KrautUndRuben-Logo.ttf') format('truetype'),
-      url('../fonts/KrautUndRuben-Logo.eot') format('embedded-opentype'),
-      url('../fonts/KrautUndRuben-Logo.woff2') format('woff2'),
-      url('../fonts/KrautUndRuben-Logo.woff') format('woff');
+      url('../fonts/KrautundRubenLogo-Regular.ttf') format('truetype'),
+      url('../fonts/KrautundRubenLogo-Regular.eot') format('embedded-opentype'),
+      url('../fonts/KrautundRubenLogo-Regular.woff2') format('woff2'),
+      url('../fonts/KrautundRubenLogo-Regular.woff') format('woff');
 
 }
 @font-face {
@@ -27,7 +27,7 @@
 
 
 // Font Variables
-$logotype:              'Untitled Sans', Courier, monospace;
+$logotype:              'Kraut und Ruben Logo', Courier, monospace;
 $font-serif:            'Galaxie Copernicus', Palatino, serif;
 $font-sans:             'Untitled Sans', Helvetica, sans-serif;
 $font-mono:             'Messina Sans Mono', Courier, monospace;
@@ -97,7 +97,7 @@ $font-size: (
   font-family: $logotype;
   font-size: font-size($font-size);
   font-weight: 400;
-  letter-spacing: .01em;
+  letter-spacing: .03em;
 }
 
 @mixin heading() {
