@@ -21,15 +21,15 @@
 </div>
 
 <div class="project-images">
-    <div class="img-container img-small left scroll-animation">
+    <div class="img-wrapper img-small left scroll-animation">
         <img src="" data-src="/img/space/space02.jpg" alt="Book spread, bold typography." sizes="auto">
         <p>Aloof in the solar waves, she is carried home.</p>
     </div>
-    <div class="img-container img-middle right scroll-animation">
+    <div class="img-wrapper img-middle right scroll-animation">
         <img src="" data-src="/img/space/space03.jpg" alt="Book spread, graphic nonsense." sizes="auto">
         <p>There's no lack of void.</p>
     </div>
-    <div class="img-container img-large left scroll-animation">
+    <div class="img-wrapper img-large left scroll-animation">
         <div class="slider">
             <img src="" data-src="/img/space/space04.jpg" alt="Book spread, graphic nonsense." sizes="auto">
             <img src="" data-src="/img/space/space01.jpg" alt="Book spread, graphic nonsense." sizes="auto">
@@ -46,10 +46,10 @@
             <?php endif ?>
         </p>
     </div>
-    <div class="img-container img-middle right scroll-animation">
+    <div class="img-wrapper img-middle right scroll-animation">
         <img src="" data-src="img/space/space_detail02.jpg" alt="Book spread, Neil DeGrasse Tyson illustration." sizes="auto">
     </div>
-    <div class="img-container img-large left scroll-animation">
+    <div class="img-wrapper img-large left scroll-animation">
         <img src="" data-src="img/space/space_detail03.jpg" alt="Space poster." sizes="auto">
     </div>
 </div>

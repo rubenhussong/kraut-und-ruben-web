@@ -47,11 +47,15 @@
     }
   }
   .project-images {
-    width: 100%;
-    padding: (.5 * $gutter-y) (.5 * $gutter-x);
     display: inline-block;
     box-sizing: border-box;
+    width: 100%;
+    padding: (.5 * $gutter-y) (.5 * $gutter-x);
     .img-container {
+      display: inline-block;
+      box-sizing: border-box;
+    }
+    .img-wrapper {
       box-sizing: border-box;
       padding: $gutter-y (.5 * $gutter-x);
       &.img-small { width: 30%; }
