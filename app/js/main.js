@@ -35,6 +35,18 @@ $(window)
             $('.object-rotate--left').css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
             $('.object-rotate--right').css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
         });
+
+
+
+        var slider = [];
+        var sliderCount = 0;
+        $('.scroll-animation').each(function() {
+            $(this).find('.slider').each(function () {
+                slider[sliderCount] = 'slider' + sliderCount;
+                slideshow($(this), 1500);
+                sliderCount++;
+            });
+        });
     }
 );
 
@@ -166,31 +178,21 @@ function pageInternalLink(link) {
  */
 
 $(window).on('load', function() {
-
-    AboutImageFade($('#span--wir'), $('#about-image--wir'));
-    /*
-     var spanPositionWir = $("#span--wir").offset();
-     console.log("Wir – Top: " + spanPositionWir.top + " Left: " + spanPositionWir.left);
-     var spanPositionWebseiten = $("#span--webseiten").offset();
-     console.log("Webseiten – Top: " + spanPositionWebseiten.top + " Left: " + spanPositionWebseiten.left);
-     $('#about-image--wir').css('top', spanPositionWir.top).css('left', spanPositionWir.left);
-     */
-
-    var scrollDistance = ($('#page--main').scrollTop() + $('#about-text').offset().top) * .9;
-    headerScrollAnimation(scrollDistance);
-    arrowScrollAnimation(scrollDistance);
+    var scrollPositionPageMain = ($('#page--main').scrollTop() + $('#about-text').offset().top) * .8;
+    headerScrollAnimation(scrollPositionPageMain);
+    arrowScrollAnimation(scrollPositionPageMain);
     $('#page--main').scroll(function() {
-        scrollDistance = ($(window).scrollTop() + $('#about-text').offset().top) * .9;
-        headerScrollAnimation(scrollDistance);
-        arrowScrollAnimation(scrollDistance);
+        scrollPositionPageMain = ($(window).scrollTop() + $('#about-text').offset().top) * .8;
+        headerScrollAnimation(scrollPositionPageMain);
+        arrowScrollAnimation(scrollPositionPageMain);
     });
     $('.page--project').each(function() {
         var prev = 0;
         var nav = $('#header--page-project');
         $('#' + $(this).attr('id')).scroll(function() {
-            var scrollPosition = $(this).scrollTop();
-            nav.toggleClass('hidden', scrollPosition > prev);
-            prev = scrollPosition;
+            var scrollPositionPageProject = $(this).scrollTop();
+            nav.toggleClass('hidden', scrollPositionPageProject > prev);
+            prev = scrollPositionPageProject;
         });
     });
     $('.page').each(function() {
@@ -263,22 +265,13 @@ function objectScrollAnimation(page, selector) {
         var objectTop = object.offset().top - page.offset().top;
         var objectCenter = objectTop + .5 * objectHeight;
         var objectBottom = objectTop + objectHeight;
+
         if (objectHeight >= visiblePartTop) {
-            if (objectBottom < visiblePartTop) {
-                object.addClass('scroll-animation-top');
-            } else if (objectTop < visiblePartBottom) {
-                object.removeClass('scroll-animation-bottom').removeClass('scroll-animation-top');
-            } else {
-                object.addClass('scroll-animation-bottom');
-            }
+            object.toggleClass('scroll-animation-top', objectBottom < visiblePartTop);
+            object.toggleClass('scroll-animation-bottom', objectTop > visiblePartBottom);
         } else {
-            if (objectCenter < windowTop) {
-                object.addClass('scroll-animation-top');
-            } else if (objectCenter < windowHeight) {
-                object.removeClass('scroll-animation-bottom').removeClass('scroll-animation-top');
-            } else {
-                object.addClass('scroll-animation-bottom');
-            }
+            object.toggleClass('scroll-animation-top', objectCenter < windowTop);
+            object.toggleClass('scroll-animation-bottom', objectCenter > windowHeight);
         }
     });
 }
@@ -295,13 +288,14 @@ function bodyColorChange(page, selector) {
     var visiblePartBottom = (1 - scrollArea) * windowHeight;
     $(page).find(selector).each(function() {
         var object = $(this);
-        var objectHeight = object.height();
+        var objectHeight = object.outerHeight();
         var objectTop = object.offset().top - page.offset().top;
         var objectCenter = object.offset().top + .5 * objectHeight - page.offset().top;
         var objectBottom = object.offset().top + objectHeight - page.offset().top;
         if (objectHeight >= visiblePartTop) {
             if (objectBottom > visiblePartTop && objectTop < visiblePartBottom) {
                 changeColor = true;
+                if (object.attr('id') == 'section--about') console.log(windowHeight);
             }
         } else {
             if (objectCenter > windowTop && objectCenter < windowHeight) {
@@ -314,14 +308,6 @@ function bodyColorChange(page, selector) {
 
 /** ================================================== Slideshow
  */
-/*
-&(window).setInterval(function() {
-     $(this).find('.fade-in-visible').each(function() {
-     $(this).find('.slider').each(function() {
-     slideshow($(this), 500);
-     });
-
-}, 500);
 
 function slideshow(slider, time) {
     var count = slider.find('img').length;
@@ -333,4 +319,3 @@ function slideshow(slider, time) {
         slider.find('>:nth-child(' + selector + ')').addClass('slide--visible');
     }, time);
 }
-*/

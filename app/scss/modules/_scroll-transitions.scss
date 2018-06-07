@@ -87,14 +87,16 @@ header {
 #scroll-marker-wrapper {
   #scroll-marker {
     transition:
-            transform .8s cubic-bezier(.75, 0, .25, 1),
+            transform .6s cubic-bezier(.75, 0, .25, 1),
             pointer-events 0s linear .7s,
-            opacity .6s cubic-bezier(.75, 0, .25, 1);
+            opacity .6s cubic-bezier(.75, 0, .25, 1),
+            display 0s .6s;
     transform: translate3D(0, 0, 0);
   }
   &.scroll-down {
     #scroll-marker {
       opacity: 0;
+      display: none;
       pointer-events: none;
       transform: translate3D(0, 4rem, 0);
     }

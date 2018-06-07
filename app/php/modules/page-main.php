@@ -11,37 +11,29 @@
     </a>
 </div>
 <div class="section change-color" id="section--about">
-    <div id="about-images">
-        <img class="about-image" id="about-image--wir" src="/img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
-    </div>
     <div class="scroll-animation" id="about-text">
         <p>
             <?php if ($lang == 'de'): ?>
 
-                Hallo, <span id="span--wir">wir</span>
-                sind <span id="span--flo">Flo</span>
-                und <span id="span--ruben">Ruben</span>,
-                zwei Designer aus <span id="span--konstanz">Konstanz</span>.
-                Am Liebsten entwickeln wir <span id="span--webseiten">Webseiten</span>.
-                Außerdem gestalten wir Marken und Editorial-Designs. Mindestens einer von uns ist ein toller Illustrator.
-                Wir mögen Menschen – also <a href="mailto:gutentag@krautundruben.de">schreib</a>
-                uns, <a href="#section--footer">ruf</a>
-                uns an oder <a href="#section--footer">besuch</a>
-                uns gleich auf ein, zwei, drei Kaffee!
+                Guten Tag! <span class="symbol">&#x2600;</span>
+                Wir sind Flo und Ruben, zwei Designer aus Deutschland.
+                Wir lieben es, Webseiten <span class="symbol device-icon"></span>
+                zu entwickeln, auf Bäume <span class="symbol">&#x1f333;</span>
+                zu klettern und Menschen <span class="symbol">&#x1F483;</span> kennen zu lernen –
+                also <a href="mailto:gutentag@krautundruben.de">schreib</a> uns,
+                <a href="#foot-line">ruf</a> uns an oder besuch uns auf ein, zwei Gläschen Eistee.
+                <span class="symbol ice-tea-icon"></span>
 
             <?php else: ?>
 
-                Hello, <span id="span--wir">we</span>
-                are <span id="span--flo">Flo</span>
-                and <span id="span--ruben">Ruben</span>,
-                two designers from <span id="span--konstanz">Constance</span>,
-                Germany.
-                We love creating <span id="span--webseiten">websites</span>,
-                but also do branding and editorial design. At least one of us is a great illustrator.
-                We like people – so <a href="mailto:gutentag@krautundruben.de">mail</a>,
-                <a href="#section--footer">call</a>
-                or simply <a href="#section--footer">visit</a>
-                us for a cup of coffee. Or two.
+                Good day! <span class="symbol">&#x2600;</span>
+                We are Flo and Ruben, two designers from Germany.
+                We love creating websites <span class="symbol device-icon"></span>,
+                climbing trees <span class="symbol">&#x1f333;</span>
+                and meeting people <span class="symbol">&#x1F483;</span> –
+                so <a href="mailto:gutentag@krautundruben.de">mail</a>,
+                <a href="#foot-line">call</a> or simply visit us for a glass of iced tea. <span class="symbol ice-tea-icon"></span>
+                Or two.
 
             <?php endif ?>
         </p>
@@ -111,9 +103,23 @@
 <footer class="section change-color" id="section--footer">
     <div class="scroll-animation" id="footer-text">
         <p>
-            Wir arbeiten von überall, aber meistens vom schönen Konstanz aus.
-            Wenn du ein lustiges, aufregendes oder fantastisches Projekt hast, an dem du mit uns arbeiten möchtest, zeigen wir dir gerne eines unserer Lieblings-Cafés in der Altstadt.
+            <?php if ($lang == 'de'): ?>
+
+                Wir arbeiten von überall, aber meistens vom schönen Konstanz aus.
+                Wenn du ein lustiges, aufregendes oder fantastisches Projekt hast,
+                an dem du mit uns arbeiten möchtest, zeigen wir dir gerne eines unserer Lieblings-Cafés in der Altstadt.
+
+            <?php else: ?>
+
+                We work from anywhere, but are currently based in the beautiful city of Constance.
+                In case you have a whimsical, exciting or flat out fantastic project you’d like to work on with us:
+                we’d be delighted to show you one of our favourite cafés in the old town.
+
+            <?php endif ?>
         </p>
+    </div>
+    <div class="scroll-animation" id="footer-image">
+        <img data-src="/img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
     </div>
     <?php include 'php/modules/footer.php'; ?>
 </footer>

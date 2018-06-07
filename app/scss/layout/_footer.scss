@@ -2,7 +2,7 @@ footer {
   display: inline-block;
   box-sizing: border-box;
   width: 100%;
-  padding: (.5 * $gutter-x) (.5 * $gutter-y);
+  padding: (.5 * $gutter-y) (.5 * $gutter-x);
   #footer-text {
     box-sizing: border-box;
     width: 50rem;
@@ -11,13 +11,24 @@ footer {
     @include font-serif(l);
     p { margin: 0; }
   }
+  #footer-image{
+    font-size: 0;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+    padding: (.5 * $gutter-y) (.5 * $gutter-x);
+    img {
+      width: 50%;
+      float: left;
+    }
+  }
   #foot-line {
     max-width: 85%;
     width: 45rem;
     @include font-sans(xs, .04em, $line-height--extralarge);
     list-style: none;
-    padding: (.5 * $gutter-y) 0 0 0;
-    margin: 0 (.5 * $gutter-y);
+    padding: (.5 * $gutter-y) 0 0;
+    margin: 0 (.5 * $gutter-x);
     display: flex;
     justify-content: space-between;
     li {

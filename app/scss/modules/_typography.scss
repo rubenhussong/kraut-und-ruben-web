@@ -97,7 +97,7 @@ $font-size: (
   font-family: $logotype;
   font-size: font-size($font-size);
   font-weight: 400;
-  letter-spacing: .03em;
+  letter-spacing: .02em;
 }
 
 @mixin heading() {
