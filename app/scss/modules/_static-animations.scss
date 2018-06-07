@@ -3,6 +3,20 @@
   to {transform: translateY(-.25rem);}
 }
 
+@keyframes deviceIcon {
+  0% {content: "\1F5A5";}
+  33% {content: "\1F4BB";}
+  66% {content: "\1F4F1";}
+  100% {content: "\1F5A5";}
+}
+@keyframes iceTeaIcon {
+  0% {content: "\1F37A";}
+  33% {content: "\1F377";}
+  66% {content: "\1F378";}
+  66% {content: "\1F379";}
+  100% {content: "\1F37A";}
+}
+
 .slider {
   position: relative;
   width: 100%;
@@ -14,7 +28,7 @@
       left: 0;
     }
     opacity: 0;
-    &.slide-visible {
+    &.slide--visible {
       opacity: 1;
     }
   }

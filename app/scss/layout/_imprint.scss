@@ -18,7 +18,6 @@
 		@include font-sans(s, 0, 2.5);
 		p {
 			margin: (.2 * $gutter-y) 0 (.6 * $gutter-y) 0;
-			//text-align: center;
 			span {
 				@include font-serif(m, 0, 1.7);
 			}
