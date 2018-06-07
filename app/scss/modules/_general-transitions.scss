@@ -40,13 +40,13 @@
 // ====================================================================== TRANSITIONS ON HOVER
 
 @mixin hover--about-link() {
-  transition: transform .9s ease;
+  transition: transform .5s cubic-bezier(.5, 0, .5, 1);
   &:hover {
     transform: skewX(7.5deg);
   }
 }
 @mixin hover--footer-link() {
-  transition: transform .6s ease;
+  transition: transform .5s ease;
   &:hover {
     transform: skewX(-8.75deg);
   }
