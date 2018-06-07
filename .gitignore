@@ -43,5 +43,6 @@ dist/
 app/css/style.css
 app/js/main-min.css
 fonts/
+app/img/
 
 .idea/*

@@ -47,7 +47,7 @@
         <img src="" data-src="img/casino-bregenz/casino-bregenz-03.jpg" alt="Casino Fassade" sizes="auto">
         <p>Ein heimlicher Blick hinter die Fassade</p>
     </div>
-    <div class="image-description left scroll-animation">
+    <div class="image-description right scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
                 Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see, what is happening there.
