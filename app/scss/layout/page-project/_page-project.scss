@@ -28,16 +28,22 @@
     img {
       width: 80%;
       float: right;
+      @include bp(m) {
+      width: 100%;
+    }
     }
   }
   .project-description {
+    box-sizing: border-box;
     display: inline-block;
     padding: (.5 * $gutter-y) $gutter-x;
+    width: 50rem;
     max-width: 100%;
-    width: 45rem;
     @include font-serif(l, .01em, 1.5);
     p {
-      width: 100%;
+      span {
+        display: block;
+      }
     }
   }
   .project-images {
@@ -46,6 +52,7 @@
     display: inline-block;
     box-sizing: border-box;
     .img-container {
+      box-sizing: border-box;
       padding: $gutter-y (.5 * $gutter-x);
       &.img-small { width: 30%; }
       &.img-middle { width: 50%; }
@@ -53,7 +60,7 @@
       @include bp(m) {
         &.img-small { width: 70%; }
         &.img-middle { width: 80%; }
-        &.img-large { width: 90%; }
+        &.img-large { width: 100%; }
       }
       img { width: 100%; }
       p {
@@ -64,7 +71,7 @@
     }
     .image-description {
       padding: $gutter-y (.5 * $gutter-x);
-      width: 17rem;
+      width: 21rem;
       @include font-serif(s);
     }
   }
