@@ -94,7 +94,7 @@ header {
   transition:
           z-index 0s $transition-time--imprint,
           opacity $transition-time--imprint $transition-curve--imprint,
-          transform $transition-time--imprint $transition-curve--imprint;
+          transform $transition-time--imprint $transition-curve--imprint $transition-time--imprint;
 }
 // =========================================================================== P A G E - M A I N
 // ================================================== Header [Page Main active]
