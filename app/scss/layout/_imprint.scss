@@ -11,18 +11,16 @@
 	h2, h3 {
 		@include font-sans(s);
 	}
-	
 	.imprint-header {
 		padding: (.5 * $gutter-y) (.5 * $gutter-x);
 		margin-bottom: 2rem;
-		@include font-sans(s, 0, 2.5);
+		@include font-sans(s, $line-height: 2.5);
 		p {
 			margin: (.2 * $gutter-y) 0 (.6 * $gutter-y) 0;
 			span {
-				@include font-serif(m, 0, 1.7);
+				@include font-serif(m, $line-height: 1.7);
 			}
 		}
-
 	}
 	.imprint-column {
 	    box-sizing: border-box;

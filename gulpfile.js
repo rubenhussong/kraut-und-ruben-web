@@ -30,18 +30,6 @@ var gulp = require('gulp'),
     changeCase = require('change-case');
 
 
-/*
-cache = require('gulp-cache'),
-del = require("del"),
-deleteEmpty = require("delete-empty"),
-gulpImageresize = require("gulp-image-resize"),
-svgMin = require('gulp-svgmin');
-jshint = require('gulp-jshint'),
-clean = require('gulp-clean'),
-notify = require('gulp-notify'),
-*/
-
-
 
 const screenSize = [
     320,
