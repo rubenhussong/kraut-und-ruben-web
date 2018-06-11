@@ -52,8 +52,9 @@ footer {
       li {
         padding: 0;
         &.footer-li-middle {
-          transform: translateX(0);
+        transform: translateX(0);
         }
+      }
       }
     }
   }
