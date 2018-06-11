@@ -11,6 +11,8 @@
     padding: 0 (.5 * $gutter-x) (.5 * $gutter-y);
     a {
       display: inline-block;
+      backface-visibility: visible;
+      overflow: visible;
       @include font-serif(l, false, false, italic);
       @include hover--about-link();
     }

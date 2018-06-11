@@ -99,10 +99,3 @@ $font-size: (
   font-weight: 400;
   letter-spacing: .02em;
 }
-
-@mixin heading() {
-  line-height: $line-height--heading;
-  letter-spacing: .02em;
-}
-
-

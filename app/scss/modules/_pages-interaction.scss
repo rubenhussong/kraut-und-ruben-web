@@ -24,7 +24,6 @@ header {
 // ================================================== Page [Imprint not active]
 .page {
   filter: blur(0);
-  -webkit-filter: blur(0);
 }
 #imprint {
   opacity: 0;
@@ -60,7 +59,6 @@ header {
   // ================================================== Page [Imprint active]
   .page {
     filter: blur(.5rem) brightness(1.1) contrast(.9);
-    -webkit-filter: blur(.5rem) brightness(1.1) contrast(.9);
   }
   #imprint {
     opacity: 1;
@@ -96,7 +94,7 @@ header {
   transition:
           z-index 0s $transition-time--imprint,
           opacity $transition-time--imprint $transition-curve--imprint,
-          transform $transition-time--imprint $transition-curve--imprint;
+          transform $transition-time--imprint $transition-curve--imprint $transition-time--imprint;
 }
 // =========================================================================== P A G E - M A I N
 // ================================================== Header [Page Main active]

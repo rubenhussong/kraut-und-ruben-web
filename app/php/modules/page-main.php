@@ -21,7 +21,7 @@
                 zu entwickeln, auf Bäume <span class="symbol">&#x1f333;</span>
                 zu klettern und Menschen <span class="symbol">&#x1F483;</span> kennen zu lernen –
                 also <a href="mailto:gutentag@krautundruben.de">schreib</a> uns,
-                <a href="#foot-line">ruf</a> uns an oder besuch uns auf ein, zwei Gläschen Eistee.
+                <a href="#foot-line">ruf &nbsp;</a>uns an oder besuch uns auf ein, zwei Gläschen Eistee.
                 <span class="symbol ice-tea-icon"></span>
 
             <?php else: ?>

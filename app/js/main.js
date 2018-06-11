@@ -61,10 +61,6 @@ $(document).on('click', 'a[href^="#"]', function(event) {
     var linkTarget = $(this).attr("href");
     if (linkTarget.match("^#page-")) {
         if (linkTarget == "#page--main") {
-            var scrollPage = currentPage;
-            setTimeout(function() {
-                $(scrollPage).scrollTop(0);
-            }, 600);
             closeModal();
             history.pushState({}, '', '/');
         } else {
@@ -127,6 +123,9 @@ function openModal(target) {
 }
 
 function closeModal() {
+    setTimeout(function() {
+        $('.page--project').scrollTop(0);
+    }, 600);
     currentPage = '#page--main';
     lazyLoadImages('#page--main');
     changeDocumentTitle('main');
@@ -166,10 +165,13 @@ function pageInternalLink(link) {
     if (link == "#imprint") {
         $(body).addClass('imprint-is-active');
     } else if (link == "#close-imprint") {
+        setTimeout(function() {
+            $('#imprint').scrollTop(0);
+        }, 600);
         $(body).removeClass('imprint-is-active');
     } else {
         $($(currentPage)).animate({
-            scrollTop: $(link).position().top
+            scrollTop: $(currentPage).find(link).offset().top
         }, 600);
     }
 }
