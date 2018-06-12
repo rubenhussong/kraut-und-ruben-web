@@ -6,21 +6,21 @@
 */
 
 $baseFontSize: 12;
-$scalledViewport: 2560;
-$scalledFontSize: 36;
+$scaledViewport: 2560;
+$scaledFontSize: 36;
 
 // better do not change
 $baseViewport: 320;
 $b1: $baseFontSize / 16 * 1em;
-$v1: $scalledFontSize - $baseFontSize;
+$v1: $scaledFontSize - $baseFontSize;
 $v2: $baseViewport / 16 * 1em;
-$v3: $scalledViewport - $baseViewport;
+$v3: $scaledViewport - $baseViewport;
 
 
 html {
   font-size: 18px;
   font-size: calc(#{$b1} + #{$v1} * (100vw - #{$v2}) / #{$v3});
 
-  // Remove system specific highligh color
+  // Remove system specific highlight color
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
