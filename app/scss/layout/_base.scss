@@ -75,9 +75,9 @@ p {
 }
 
 .left {
-  float: left;
+  justify-content: flex-start;
 }
 
 .right {
-  float: right;
+  justify-content: flex-end;
 }

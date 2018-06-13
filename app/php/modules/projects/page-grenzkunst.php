@@ -46,7 +46,7 @@
     </div>
 </div>
 <div class="project-description scroll-animation">
-        <p>Festivals</p>
+        <h3>Festivals</h3>
 </div>
 <div class="project-images">
      <div class="img-wrapper img-large left scroll-animation">
@@ -76,6 +76,9 @@
     </div>
     <div class="img-wrapper img-middle left scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-09.jpg" alt="Eulenflug 2017 poster" sizes="auto">
+    </div>
+    <div class="img-wrapper img-large left scroll-animation">
+        <img src="" data-src="/img/grenzkunst/grenzkunst-10.jpg" alt="Eulenflug 2017 goodies" sizes="auto">
     </div>
 </div>
 
