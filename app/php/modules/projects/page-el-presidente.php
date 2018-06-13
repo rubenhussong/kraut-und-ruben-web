@@ -23,17 +23,17 @@
 <div class="project-images">
     <div class="img-container">
         <div class="img-wrapper img-middle left scroll-animation">
-            <img src="" data-src="/img/el-presidente-banner.jpg" alt="El Presidente Analog Player" sizes="auto">
-            <p>Staunende Passanten schmelzen in einer Symbiose der Emotionen.</p>
+            <img src="" data-src="/img/el-presidente/el-presidente-05.jpg" alt="El Presidente VR Player" sizes="auto">
+            <p>Farbenspiel und geile Dynamik</p>
         </div>
         <div class="img-wrapper img-small right scroll-animation">
             <img src="" data-src="/img/el-presidente/el-presidente-04.jpg" alt="El Presidente One Day VR" sizes="auto">
             <p>Volle Kanne im Prozess! Credits to Tom Hegen</p>
         </div>
     </div>
-    <div class="img-wrapper img-large scroll-animation">
-        <img src="" data-src="/img/el-presidente/el-presidente-05.jpg" alt="El Presidente VR Player" sizes="auto">
-        <p>Farbenspiel und geile Dynamik</p>
+    <div class="img-wrapper img-large left scroll-animation">
+        <img src="" data-src="/img/el-presidente/el-presidente-02.jpg" alt="El Presidente Analog Game" sizes="auto">
+        <p>Volle Kanne im Prozess! Credits to Tom Hegen</p>
     </div>
     <div class="img-container">
         <div class="img-wrapper img-small left scroll-animation">
@@ -45,7 +45,11 @@
             <p>Volle Kanne im Prozess! Credits to Tom Hegen</p>
         </div>
     </div>
-    <div class="image-description left scroll-animation">
+    <div class="img-wrapper img-middle left scroll-animation">
+        <img src="" data-src="/img/el-presidente/el-presidente-07.gif" alt="El Presidente VR Twitter Bird" sizes="auto">
+        <p>Ein heimlicher Blick hinter die Fassade</p>
+    </div>
+    <div class="image-description right scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
                 Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see, what is happening there.
@@ -54,15 +58,7 @@
             <?php endif ?>
         </p>
     </div>
-    <div class="img-wrapper img-middle right scroll-animation">
-        <img src="" data-src="/img/el-presidente/el-presidente-07.gif" alt="El Presidente VR Twitter Bird" sizes="auto">
-        <p>Ein heimlicher Blick hinter die Fassade</p>
-    </div>
     <div class="img-wrapper img-large right scroll-animation">
-        <img src="" data-src="/img/el-presidente/el-presidente-02.jpg" alt="El Presidente Analog Game" sizes="auto">
-        <p>Volle Kanne im Prozess! Credits to Tom Hegen</p>
-    </div>
-    <div class="img-wrapper img-large scroll-animation">
         <img src="" data-src="/img/el-presidente/el-presidente-03.jpg" alt="El Presidente Video" sizes="auto">
         <p>Und noch ein schniekes Video</p>
     </div>

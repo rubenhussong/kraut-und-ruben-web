@@ -66,17 +66,19 @@
         &.img-middle { width: 80%; }
         &.img-large { width: 100%; }
       }
-      img { width: 100%; }
+      img, video { width: 100%; }
       p {
-        @include font-serif(xs, 0em, 1.4);
+        @include font-sans(s, 0.02em, 1.4);
         width: 90%;
+        float: right;
+        text-align: right;
         padding-top: .25rem;
       }
     }
     .image-description {
       padding: $gutter-y (.5 * $gutter-x);
-      width: 21rem;
-      @include font-serif(s);
+      width: 31rem;
+      @include font-serif(m);
     }
   }
 }

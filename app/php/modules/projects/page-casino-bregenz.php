@@ -44,7 +44,7 @@
         </div>
     </div>
     <div class="img-wrapper img-middle left scroll-animation">
-        <img src="" data-src="img/casino-bregenz/casino-bregenz-03.jpg" alt="Casino Fassade" sizes="auto">
+        <img src="" data-src="/img/casino-bregenz/casino-bregenz-03.jpg" alt="Casino Fassade" sizes="auto">
         <p>Ein heimlicher Blick hinter die Fassade</p>
     </div>
     <div class="image-description right scroll-animation">
@@ -57,7 +57,9 @@
         </p>
     </div>
     <div class="img-wrapper img-large right scroll-animation">
-        <img src="" data-src="img/casino-bregenz/casino-bregenz-04.jpg" alt="Casino Animation Video" sizes="auto">
+        <video controls>
+            <source src="/img/casino-bregenz/161026_Casino_Bregenz_Casestudy_1080p.mp4" type="video/mp4">
+        </video>
         <p>Und noch ein schniekes Video</p>
     </div>
 </div>
