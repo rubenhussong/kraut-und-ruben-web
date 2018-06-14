@@ -2,10 +2,15 @@ header {
   user-select: none;
   z-index: $z-index-header;
   position: fixed;
-  width: 100%;
+  width: 100vw;
   .page-header {
     position: absolute;
     width: 100%;
+
+    .header-element {
+        margin: .75rem;
+    }
+
     .word-mark {
       display: inline-block;
       width: 100%;
@@ -14,7 +19,6 @@ header {
       span {
         position: absolute;
         top: 0;
-        margin: (($gutter-x - 1.5rem) / 2) 0;
         &#h1--left { right: calc(50% + 0.9rem); }
         &#h1--right { left: calc(50% + 0.9rem); }
         &#h1--center {
@@ -25,9 +29,10 @@ header {
       }
     }
     .header-icon {
+      margin: .375rem;
+
       display: inline-block;
       position: absolute;
-      margin: (($gutter-x - 2rem) / 2);
       width: 2rem;
       top: 0;
       &.header-element--left { left: 0; }
@@ -38,7 +43,6 @@ header {
       @include logotype(s);
       position: absolute;
       width: 1rem;
-      margin: (($gutter-x - 1.5rem) / 2);
       text-align: center;
       &.header-element--left { 
         left: 0;

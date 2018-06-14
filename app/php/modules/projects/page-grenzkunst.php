@@ -24,11 +24,12 @@
         <?php endif ?></p>
 </div>
 
-<div class="project-images">
-    <div class="img-wrapper img-small left scroll-animation">
+<div class="project-content">
+    <div class="img-wrapper img-s img-left scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst_logo_animation.gif" alt="Logo Redesign reveal" sizes="auto">
         <p>Logo refresh</p>
     </div>
+<!--
     <div class="image-description right scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
@@ -38,18 +39,17 @@
             <?php endif ?>
         </p>
     </div>
-    <div class="img-container">
-        <div class="img-wrapper img-large right scroll-animation">
-            <img src="" data-src="/img/grenzkunst/grenzkunst-03.jpg" alt="Stationery" sizes="auto">
-            <p>A new look</p>
-        </div>
+-->
+    <div class="img-wrapper img-l img-right scroll-animation">
+        <img src="" data-src="/img/grenzkunst/grenzkunst-03.jpg" alt="Stationery" sizes="auto">
+        <p>A new look</p>
     </div>
 </div>
 <div class="project-description scroll-animation">
         <h3>Festivals</h3>
 </div>
-<div class="project-images">
-     <div class="img-wrapper img-large left scroll-animation">
+<div class="project-content end">
+     <div class="img-wrapper img-l img-left scroll-animation">
         <div class="slider">
             <img src="" data-src="/img/grenzkunst/grenzkunst-03c.jpg" alt="Festival crowd" sizes="auto">
             <img src="" data-src="/img/grenzkunst/grenzkunst-03b.jpg" alt="Festival crowd resting" sizes="auto">
@@ -57,11 +57,12 @@
         </div>
         <p>Eulenflug 2017</p>
     </div>
-    <div class="img-wrapper img-middle left scroll-animation">
+    <div class="img-wrapper img-m img-left scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-06.png" alt="Website redesign" sizes="auto">
         <p>Website rebrand.</p>
     </div>
-    <div class="image-description right scroll-animation">
+<!-- 
+    <div class="image-description img-right scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
                 Deutscher Text zum Projekt. Alle Fotos by Natalie Götz.
@@ -70,14 +71,15 @@
             <?php endif ?>
         </p>
     </div>
-    <div class="img-wrapper img-large right scroll-animation">
+-->
+    <div class="img-wrapper img-l img-right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-08.jpg" alt="Eulenflug 2017 tickets" sizes="auto">
         <p>Eulenflug print materials</p>
     </div>
-    <div class="img-wrapper img-middle left scroll-animation">
+    <div class="img-wrapper img-m img-left scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-09.jpg" alt="Eulenflug 2017 poster" sizes="auto">
     </div>
-    <div class="img-wrapper img-large left scroll-animation">
+    <div class="img-wrapper img-l img-left scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-10.jpg" alt="Eulenflug 2017 goodies" sizes="auto">
     </div>
 </div>

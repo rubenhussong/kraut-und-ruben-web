@@ -72,6 +72,11 @@ $font-size: (
   @if $letter-spacing { letter-spacing: $letter-spacing; }
   @if $line-height { line-height: $line-height; } @else { line-height: $line-height--base }
   @if $font-style { font-style: $font-style; }
+  @if ($font-size == xs) {
+    @include bp(m) {
+      font-size: font-size(s);
+    }
+  }
 }
 
 @mixin font-serif($font-size, $letter-spacing: false, $line-height: false, $font-style: false) {
@@ -81,6 +86,11 @@ $font-size: (
   @if $letter-spacing { letter-spacing: $letter-spacing; }
   @if $line-height { line-height: $line-height; } @else { line-height: $line-height--base }
   @if $font-style { font-style: $font-style; }
+  @if $font-size == xs {
+    @include bp(m) {
+      font-size: font-size(s);
+    }
+  }
 }
 
 /* @mixin sans($size...) {
