@@ -13,7 +13,8 @@
             »The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home.« <span>– Carl Sagan</span>
         <?php else: ?>
             “The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home.” <span>– Carl Sagan</span>
-        <?php endif ?></p>
+        <?php endif ?>
+    </p>
 </div>
 
 <div class="project-content clear">
@@ -33,7 +34,7 @@
         </div>
         <p class="img-description">There we go again.</p>
     </div>
-    <div class="project-box text-box left scroll-animation">
+    <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
                 Dieses Projekt wagt den Versuch, dem Wort »space« und seinen vielen Bedeutungen auf den Grund zu gehen. Von der endlosen Weite des Universums über geographische Räume hin zu mathematischen und philosophischen Auseinandersetzungen: Raum ist überall. Und doch existiert er nicht tatsächlich. Raum ist das Zwischendrin, die Abwesenheit von Substanz.

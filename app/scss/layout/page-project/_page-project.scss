@@ -163,7 +163,7 @@
       }
       &.text-box {
         box-sizing: border-box;
-        display: inline-block;
+        display: block;
         width: 34rem;
         margin: $gutter-y (.5 * $gutter-x);
         max-width: calc(100% - #{$gutter-x});
