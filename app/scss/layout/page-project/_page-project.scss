@@ -88,7 +88,11 @@
 
 .page--project {
   .project-title {
+<<<<<<< HEAD
     margin: calc(3rem + 10vw) $gutter-x $gutter-y;
+=======
+    margin: calc(3rem + 8vw) $gutter-x (2 * $gutter-y);
+>>>>>>> f8544454ac8e21f9951190edd1c6915ae46a92e3
     //width: 100%;
     h1 {
       box-sizing: border-box;
@@ -106,6 +110,7 @@
 
   .project-hero {
     padding: $gutter-y $gutter-x;
+    margin: (2 * $gutter-y) $gutter-x;
     img {
       width: 80%;
       margin-left: 20%;
@@ -117,7 +122,15 @@
   }
 
   .project-description {
+<<<<<<< HEAD
     margin: $gutter-y $gutter-x;
+=======
+    box-sizing: border-box;
+    display: inline-block;
+    margin: (2 * $gutter-y) $gutter-x;
+    width: 50rem;
+    max-width: 100%;
+>>>>>>> f8544454ac8e21f9951190edd1c6915ae46a92e3
     @include font-serif(l, .01em, 1.5);
     p {
       box-sizing: border-box;
