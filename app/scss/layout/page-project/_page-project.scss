@@ -88,11 +88,7 @@
 
 .page--project {
   .project-title {
-<<<<<<< HEAD
-    margin: calc(3rem + 10vw) $gutter-x $gutter-y;
-=======
     margin: calc(3rem + 8vw) $gutter-x (2 * $gutter-y);
->>>>>>> f8544454ac8e21f9951190edd1c6915ae46a92e3
     //width: 100%;
     h1 {
       box-sizing: border-box;
@@ -109,7 +105,6 @@
   }
 
   .project-hero {
-    padding: $gutter-y $gutter-x;
     margin: (2 * $gutter-y) $gutter-x;
     img {
       width: 80%;
@@ -122,31 +117,20 @@
   }
 
   .project-description {
-<<<<<<< HEAD
-    margin: $gutter-y $gutter-x;
-=======
-    box-sizing: border-box;
-    display: inline-block;
     margin: (2 * $gutter-y) $gutter-x;
-    width: 50rem;
-    max-width: 100%;
->>>>>>> f8544454ac8e21f9951190edd1c6915ae46a92e3
-    @include font-serif(l, .01em, 1.5);
+    @include font-serif(l, .01em, 1.6);
     p {
-      box-sizing: border-box;
       display: inline-block;
-      width: 50rem;
-      max-width: 100%;
-      span {
-        display: block;
-      }
+      width: 100%;
+      max-width: 45rem;
+      span { display: block; }
     }
   }
 
   .project-content {
     box-sizing: border-box;
     width: 100%;
-    padding: (.25 * $gutter-y) (.5 * $gutter-x);
+    padding: 0 (.5 * $gutter-x);
     margin-bottom:  13.25rem;
     
     .project-box {

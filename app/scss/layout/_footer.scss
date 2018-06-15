@@ -22,7 +22,7 @@ footer {
       float: left;
     }
   }
-  #foot-line {
+  .foot-line {
     max-width: 85%;
     width: 45rem;
     @include font-sans(xs, .04em, $line-height--extralarge);
@@ -32,7 +32,7 @@ footer {
     display: flex;
     justify-content: space-between;
     li {
-      padding: (.5 * $gutter-y) 0;
+      margin: (.5 * $gutter-y) 0;
       p {
         //margin: .4rem 0;
         a {
@@ -50,7 +50,7 @@ footer {
     @include bp(s) {
       flex-direction: column;
       li {
-        padding: 0;
+        margin: 0;
         &.footer-li-middle {
         transform: translateX(0);
         }
