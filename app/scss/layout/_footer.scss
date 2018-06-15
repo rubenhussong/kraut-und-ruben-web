@@ -12,25 +12,21 @@ footer {
     p { margin: 0; }
   }
   #footer-image{
-    font-size: 0;
     box-sizing: border-box;
     width: 100%;
-    float: left;
     padding: (.5 * $gutter-y) (.5 * $gutter-x);
     img {
       width: 50%;
-      float: left;
     }
   }
   .foot-line {
-    max-width: 85%;
-    width: 45rem;
+    display: inline-block;
+    box-sizing: border-box;
+    width: calc(100% - #{$gutter-x});
     @include font-sans(xs, .04em, $line-height--extralarge);
     list-style: none;
     padding: (.5 * $gutter-y) 0 0;
     margin: 0 (.5 * $gutter-x);
-    display: flex;
-    justify-content: space-between;
     li {
       margin: (.5 * $gutter-y) 0;
       p {
@@ -43,8 +39,16 @@ footer {
       span {
         display: inline-block;
       }
+      &.footer-li-left {
+        float: left;
+        width: 50%;
+      }
       &.footer-li-middle {
-        //transform: translateX(-1rem);
+        float: left;
+      }
+      &.footer-li-right {
+        float: right;
+        width: 5.6em;
       }
     }
     @include bp(s) {
