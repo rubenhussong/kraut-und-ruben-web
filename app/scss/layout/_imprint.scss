@@ -22,6 +22,12 @@
 			}
 		}
 	}
+	.contact {
+		a {
+			@include hover--footer-link();
+			display: inline-block;
+		}
+	}
 	.imprint-column {
 	    box-sizing: border-box;
 	    float: left;

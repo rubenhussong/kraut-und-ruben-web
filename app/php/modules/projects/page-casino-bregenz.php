@@ -42,9 +42,9 @@
     <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
-                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see, what is happening there.
+                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see what's happening there.
             <?php else: ?>
-                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see, what is happening there.
+                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see what's happening there.
             <?php endif ?>
         </p>
     </div>

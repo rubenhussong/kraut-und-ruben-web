@@ -4,7 +4,7 @@
 </div>
 
 <div class="project-hero scroll-animation" id="project-hero--space">
-    <img src="" data-src="/img/space-banner.jpg" alt="space-hero" sizes="auto">
+    <img src="" data-src="/img/space/space-banner.jpg" alt="space-hero" sizes="auto">
 </div>
 
 <div class="project-description scroll-animation">

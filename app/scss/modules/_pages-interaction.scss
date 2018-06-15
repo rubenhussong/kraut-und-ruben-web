@@ -59,6 +59,9 @@ header {
   // ================================================== Page [Imprint active]
   .page {
     filter: blur(.5rem) brightness(1.1) contrast(.9);
+    -webkit-transform: translateZ(0);
+    -webkit-backface-visibility: hidden;
+    -webkit-perspective: 1000;
   }
   #imprint {
     opacity: 1;
