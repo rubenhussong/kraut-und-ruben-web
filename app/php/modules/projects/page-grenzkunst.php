@@ -86,8 +86,8 @@
         <ul class="ul-left">
             <li><span>Client</span>Grenzkunst e.V.</li>
             <li><span>Year</span>2017</li>
-            <li><span>Photography</span>Natalie Götz</li>
-            <li><span>Visit</span> <a href="https://www.grenz-kunst.de">grenz-kunst.de</a></li>
+            <li><span>Photography</span><a rel="noopener" href="https://www.behance.net/NatalieGoee3c4">Natalie Götz</li>
+            <li><span>Visit</span> <a rel="noopener" href="https://www.grenz-kunst.de">grenz-kunst.de</a></li>
         </ul>
 </div>
 
