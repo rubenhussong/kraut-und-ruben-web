@@ -3,7 +3,7 @@
   box-sizing: border-box;
   width: 100%;
   padding: calc(3rem + 6vw) (.5 * $gutter-x) (.5 * $gutter-y);
-  @include font-serif(l);
+  @include font-serif(l, .01em, 1.6);
   #about-text {
     box-sizing: border-box;
     width: 50rem;

@@ -1,5 +1,5 @@
 <ul class="scroll-animation foot-line">
-    <li class="footer-li">
+    <li class="footer-li footer-li-left">
         <p>
             <a href="mailto:gutentag@krautundruben.de">gutentag@krautundruben.de</a>
         </p>
@@ -15,7 +15,7 @@
             <a href="https://twitter.com/kraut_und_ruben">Twitter</a>
         </p>
     </li>
-    <li class="footer-li">
+    <li class="footer-li footer-li-right">
         <p>
             <a href="#imprint">
                 <?php if ($lang == 'de'): ?>

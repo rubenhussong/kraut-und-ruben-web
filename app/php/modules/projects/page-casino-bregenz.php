@@ -1,14 +1,12 @@
 <div class="project-title scroll-animation">
     <h1>Casino Bregenz</h1>
-    <div class="project-details">
-        <h2>
-            <?php if ($lang == 'de'): ?>
-                Animation
-            <?php else: ?>
-                Branding, Graphic Design
-            <?php endif ?>
-        </h2>
-    </div>
+    <h3>
+        <?php if ($lang == 'de'): ?>
+            Animation
+        <?php else: ?>
+            Branding, Graphic Design
+        <?php endif ?>
+    </h3>
 </div>
 
 <div class="project-hero scroll-animation" id="project-hero--casino-bregenz">
@@ -24,30 +22,24 @@
         <?php endif ?></p>
 </div>
 
-<div class="project-images">
-    <div class="img-wrapper img-large scroll-animation">
+<div class="project-content">
+    <div class="project-box img-xl right scroll-animation">
         <img src="" data-src="/img/casino-bregenz/casino-bregenz-01.jpg" alt="Casino Bregenz Front View" sizes="auto">
-        <p>Staunende Passanten schmelzen in einer Symbiose der Emotionen.</p>
+        <p class="img-description">Staunende Passanten schmelzen in einer Symbiose der Emotionen.</p>
     </div>
-    <div class="img-container">
-        <div class="img-wrapper img-small left scroll-animation">
-            <img src="" data-src="/img/casino-bregenz/casino-bregenz-05.jpg" alt="Camera Man Tom Hegen" sizes="auto">
-            <p>Volle Kanne im Prozess! Credits to Tom Hegen</p>
+    <div class="project-box img-s left scroll-animation">
+        <img src="" data-src="/img/casino-bregenz/casino-bregenz-05.jpg" alt="Camera Man Tom Hegen" sizes="auto">
+        <p class="img-description">Volle Kanne im Prozess! Credits to Tom Hegen</p>
+    </div>
+    <div class="project-box img-l right shift scroll-animation">
+        <div class="slider">
+            <img src="" data-src="/img/casino-bregenz/casino-bregenz-02c.jpg" alt="Casino Fassade" sizes="auto">
+            <img src="" data-src="/img/casino-bregenz/casino-bregenz-02b.jpg" alt="Casino Fassade" sizes="auto">
+            <img src="" data-src="/img/casino-bregenz/casino-bregenz-02a.jpg" alt="Casino Fassade" sizes="auto">
         </div>
-        <div class="img-wrapper img-middle right scroll-animation">
-            <div class="slider">
-                <img src="" data-src="/img/casino-bregenz/casino-bregenz-02c.jpg" alt="Casino Fassade" sizes="auto">
-                <img src="" data-src="/img/casino-bregenz/casino-bregenz-02b.jpg" alt="Casino Fassade" sizes="auto">
-                <img src="" data-src="/img/casino-bregenz/casino-bregenz-02a.jpg" alt="Casino Fassade" sizes="auto">
-            </div>
-            <p>Farbenspiel und geile Dynamik</p>
-        </div>
+        <p class="img-description">Farbenspiel und geile Dynamik</p>
     </div>
-    <div class="img-wrapper img-middle left scroll-animation">
-        <img src="" data-src="/img/casino-bregenz/casino-bregenz-03.jpg" alt="Casino Fassade" sizes="auto">
-        <p>Ein heimlicher Blick hinter die Fassade</p>
-    </div>
-    <div class="image-description right scroll-animation">
+    <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
                 Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see, what is happening there.
@@ -56,11 +48,15 @@
             <?php endif ?>
         </p>
     </div>
-    <div class="img-wrapper img-large right scroll-animation">
+    <div class="project-box img-l right scroll-animation">
+        <img src="" data-src="/img/casino-bregenz/casino-bregenz-03.jpg" alt="Casino Fassade" sizes="auto">
+        <p class="img-description">Ein heimlicher Blick hinter die Fassade</p>
+    </div>
+    <div class="project-box img-xl scroll-animation">
         <video controls>
             <source src="/img/casino-bregenz/161026_Casino_Bregenz_Casestudy_1080p.mp4" type="video/mp4">
         </video>
-        <p>Und noch ein schniekes Video</p>
+        <p class="img-description">Und noch ein schniekes Video</p>
     </div>
 </div>
 

@@ -119,7 +119,7 @@
         </p>
     </div>
     <div class="scroll-animation" id="footer-image">
-        <img data-src="/img/flo-und-ruben-02.jpg" alt="kraut-und-ruben" sizes="auto">
+        <img data-src="/img/about-image.jpg" alt="kraut-und-ruben" sizes="auto">
     </div>
     <?php include 'php/modules/footer.php'; ?>
 </footer>
