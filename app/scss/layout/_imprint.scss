@@ -34,5 +34,10 @@
 			@include font-serif(xs, 0, $line-height--large);
 			margin: 1.275rem 0;
 		}
+		a {
+			@include font-sans(xs);
+			@include hover--footer-link();
+			display: inline-block;
+		}
 	}
 }
