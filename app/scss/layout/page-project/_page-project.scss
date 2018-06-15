@@ -88,7 +88,7 @@
 
 .page--project {
   .project-title {
-    margin: calc(3rem + 8vw) $gutter-x $gutter-y;
+    margin: calc(3rem + 8vw) $gutter-x (2 * $gutter-y);
     //width: 100%;
     h1 {
       box-sizing: border-box;
@@ -103,7 +103,7 @@
   }
 
   .project-hero {
-    padding: $gutter-y $gutter-x;
+    margin: (2 * $gutter-y) $gutter-x;
     img {
       width: 80%;
       margin-left: 20%;
@@ -117,7 +117,7 @@
   .project-description {
     box-sizing: border-box;
     display: inline-block;
-    padding: $gutter-y $gutter-x;
+    margin: (2 * $gutter-y) $gutter-x;
     width: 50rem;
     max-width: 100%;
     @include font-serif(l, .01em, 1.5);
