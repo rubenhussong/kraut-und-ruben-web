@@ -67,8 +67,8 @@
             <a target="blank" rel="noopener" href="www.lisamarquardt.com">Lisa Marquardt</a>,
             <a target="blank" rel="noopener" href="www.carlagrammel.com">Carla Grammel</a>,
             <a target="blank" rel="noopener" href="www.hannahkeuerleber.com">Hannah Keuerleber</a>,
-            <a target="blank" rel="noopener" href="www.marcel.com">Marcel</a> und
-            <a target="blank" rel="noopener" href="www.julian.com">Julian</a>
+            <a target="blank" rel="noopener" href="www.marcel.com">Marcel Peterson</a> und
+            <a target="blank" rel="noopener" href="www.julian.com">Julian Findus</a>
         </li>
     </ul>
 </div>

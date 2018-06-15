@@ -43,7 +43,7 @@
     <div class="project-column" id="project-column--left">
         <div class="scroll-animation project-banner img-large img-left">
             <a href="#page--space" id="project-link--space">
-                <img src="" data-src="/img/space-banner.jpg" alt="space-banner" sizes="auto">
+                <img src="" data-src="/img/space/space-banner.jpg" alt="space-banner" sizes="auto">
             </a>
             <div class="project-text project-text--light">
                 <h2>
@@ -54,7 +54,7 @@
         </div>
         <div class="scroll-animation project-banner img-middle img-right">
             <a href="#page--casino-bregenz" id="project-link--casino-bregenz">
-                <img src="" data-src="/img/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
+                <img src="" data-src="/img/casino-bregenz/casino-bregenz-banner.jpg" alt="casino-bregenz-banner" sizes="auto">
             </a>
             <div class="project-text project-text--dark">
                 <h2>
@@ -65,7 +65,7 @@
         </div>
         <div class="scroll-animation project-banner img-small img-left">
             <a href="#page--grenzkunst" id="project-link--grenzkunst">
-                <img src="" data-src="/img/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
+                <img src="" data-src="/img/grenzkunst/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
             </a>
             <div class="project-text project-text--light">
                 <h2>
@@ -78,7 +78,7 @@
     <div class="project-column" id="project-column--right">
         <div class="scroll-animation project-banner img-small img-right">
             <a href="#page--hypernet" id="project-link--hypernet">
-                <img src="" data-src="/img/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
+                <img src="" data-src="/img/hypernet/hypernet-banner.jpg" alt="hypernet-banner" sizes="auto">
             </a>
             <div class="project-text project-text--dark">
                 <h2>
@@ -89,7 +89,7 @@
         </div>
         <div class="scroll-animation project-banner img-middle img-left">
             <a href="#page--el-presidente" id="project-link--el-presidente">
-                <img src="" data-src="/img/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
+                <img src="" data-src="/img/el-presidente/el-presidente-banner.jpg" alt="el-presidente-banner" sizes="auto">
             </a>
             <div class="project-text project-text--dark">
                 <h2>
