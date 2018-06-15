@@ -67,7 +67,7 @@
             <a href="#page--grenzkunst" id="project-link--grenzkunst">
                 <img src="" data-src="/img/grenzkunst/grenzkunst-banner.jpg" alt="grenzkunst-banner" sizes="auto">
             </a>
-            <div class="project-text project-text--light">
+            <div class="project-text project-text--dark">
                 <h2>
                     Grenzkunst<br>
                     <span>Branding</span>
