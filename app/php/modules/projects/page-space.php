@@ -51,6 +51,17 @@
         <p class="img-description">Exhibition poster.</p>
     </div>
 </div>
+<div class="project-details">
+        <ul class="ul-left">
+            <li><span>Client</span> Private project</li>
+            <li><span>Year</span> 2015</li>
+        </ul>
+        <ul>
+            <li><span>Photography</span> Manuel Fleig</li>
+            <li><span>Visit</span> <a href="#">krautundruben.com</a></li>
+        </ul>
+</div>
+
 
 <footer class="section change-color" id="section--footer">
     <?php include 'php/modules/footer.php'; ?>

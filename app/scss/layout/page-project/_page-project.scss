@@ -136,7 +136,7 @@
     box-sizing: border-box;
     width: 100%;
     padding: 0 (.5 * $gutter-x);
-    margin-bottom:  13.25rem;
+    margin: (2 * $gutter-y) 0;
     
     .project-box {
       float: left;
@@ -163,12 +163,40 @@
       }
       &.text-box {
         box-sizing: border-box;
-        display: inline-block;
+        display: block;
         width: 34rem;
         margin: $gutter-y (.5 * $gutter-x);
         max-width: calc(100% - #{$gutter-x});
-        @include font-serif(m, false, 1.7);
+        @include font-sans(m, false, 1.7);
       }
+    }
+  }
+
+  .project-details {
+    margin-bottom:  4rem;
+    padding: 0 $gutter-x;
+    display: flex;
+    justify-content: flex-start;
+
+    ul {
+      list-style: none;
+      padding: 0;
+      width: 45%;
+      li {
+        @include font-serif(m, false, 1.6);
+        margin-bottom: 1em;
+      }
+      a {
+        @include hover--footer-link();
+      }
+      .ul-left { flex-grow: 2; }
+    }
+    span {
+      @include font-sans(s);
+      padding-right: .25rem;
+      padding-left: 0.025em;
+      display: block;
+      transform: translateY(- .2em);
     }
   }
 }
