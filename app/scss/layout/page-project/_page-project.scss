@@ -93,14 +93,19 @@
     h1 {
       box-sizing: border-box;
       display: inline-block;
-      @include font-sans(xl, false, 1.2);
-      width: 35rem;
+      @include font-sans(xl, false, 1.3);
+      width: 30rem;
       //width: 25rem;
       max-width: calc(100% - #{$gutter-x});
+      span {
+        @include bp(m) {
+          display: block;
+        }
+      }
     }
     h3 {
-      @include font-serif(s);
-      margin: .5rem 0 0 .2rem;
+      @include font-serif(m, 0.01em);
+      margin: 1rem 0 0 .2rem;
     }
   }
 
@@ -160,7 +165,7 @@
         box-sizing: border-box;
         display: inline-block;
         width: 34rem;
-        margin-top: 3rem;
+        margin: $gutter-y (.5 * $gutter-x);
         max-width: calc(100% - #{$gutter-x});
         @include font-serif(m, false, 1.7);
       }
