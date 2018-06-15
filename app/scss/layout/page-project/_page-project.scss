@@ -88,8 +88,8 @@
 
 .page--project {
   .project-title {
-    padding: calc(3rem + 8vw) $gutter-x $gutter-y;
-    width: 100%;
+    margin: calc(3rem + 8vw) $gutter-x $gutter-y;
+    //width: 100%;
     h1 {
       box-sizing: border-box;
       display: inline-block;
@@ -97,12 +97,11 @@
       width: 25rem;
       max-width: calc(100% - #{$gutter-x});
     }
-    .project-details {
-      h2 {
-        @include font-serif(xs);
-      }
+    h3 {
+      @include font-serif(xs);
     }
   }
+
   .project-hero {
     padding: $gutter-y $gutter-x;
     img {

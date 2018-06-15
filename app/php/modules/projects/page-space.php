@@ -1,10 +1,6 @@
 <div class="project-title scroll-animation">
     <h1>Space – A Journey into the Void</h1>
-    <div class="project-details">
-        <h2>
-            Editorial Design, Illustration
-        </h2>
-    </div>
+    <h3>Editorial Design, Illustration</h3>
 </div>
 
 <div class="project-hero scroll-animation" id="project-hero--space">
