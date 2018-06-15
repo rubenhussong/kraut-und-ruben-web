@@ -44,6 +44,7 @@
 
   .project-content {
     box-sizing: border-box;
+    display: inline-block;
     width: 100%;
     padding: 0 (.5 * $gutter-x);
     margin: (2 * $gutter-y) 0;

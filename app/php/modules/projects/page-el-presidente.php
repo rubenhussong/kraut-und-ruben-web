@@ -56,6 +56,23 @@
     </div>
 </div>
 
+<div class="project-details">
+    <ul class="ul-left">
+        <li><span>Client</span>Private project</li>
+        <li><span>Year</span>2017</li>
+        <li><span>Visit</span><a href="#">krautundruben.com</a></li>
+        <li>
+            <span>Collaboration</span>
+            <a target="blank" rel="noopener" href="http://www.mirjambanzhaf.com">Mirjam Banzhaf</a>,
+            <a target="blank" rel="noopener" href="www.lisamarquardt.com">Lisa Marquardt</a>,
+            <a target="blank" rel="noopener" href="www.carlagrammel.com">Carla Grammel</a>,
+            <a target="blank" rel="noopener" href="www.hannahkeuerleber.com">Hannah Keuerleber</a>,
+            <a target="blank" rel="noopener" href="www.marcel.com">Marcel</a> und
+            <a target="blank" rel="noopener" href="www.julian.com">Julian</a>
+        </li>
+    </ul>
+</div>
+
 <footer class="section change-color" id="section--footer">
     <?php include 'php/modules/footer.php'; ?>
 </footer>
