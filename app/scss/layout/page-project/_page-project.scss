@@ -88,40 +88,55 @@
 
 .page--project {
   .project-title {
+<<<<<<< HEAD
+    margin: calc(3rem + 10vw) $gutter-x $gutter-y;
+=======
     margin: calc(3rem + 8vw) $gutter-x (2 * $gutter-y);
+>>>>>>> f8544454ac8e21f9951190edd1c6915ae46a92e3
     //width: 100%;
     h1 {
       box-sizing: border-box;
       display: inline-block;
-      @include font-sans(xl, false, 1.3);
-      width: 25rem;
+      @include font-sans(xl, false, 1.2);
+      width: 35rem;
+      //width: 25rem;
       max-width: calc(100% - #{$gutter-x});
     }
     h3 {
-      @include font-serif(xs);
+      @include font-serif(s);
+      margin: .5rem 0 0 .2rem;
     }
   }
 
   .project-hero {
+    padding: $gutter-y $gutter-x;
     margin: (2 * $gutter-y) $gutter-x;
     img {
       width: 80%;
       margin-left: 20%;
       @include bp(m) {
-      width: 100%;
-      margin-left: 0;
+        width: 100%;
+        margin-left: 0;
       }
     }
   }
 
   .project-description {
+<<<<<<< HEAD
+    margin: $gutter-y $gutter-x;
+=======
     box-sizing: border-box;
     display: inline-block;
     margin: (2 * $gutter-y) $gutter-x;
     width: 50rem;
     max-width: 100%;
+>>>>>>> f8544454ac8e21f9951190edd1c6915ae46a92e3
     @include font-serif(l, .01em, 1.5);
     p {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 50rem;
+      max-width: 100%;
       span {
         display: block;
       }
@@ -160,9 +175,10 @@
       &.text-box {
         box-sizing: border-box;
         display: inline-block;
-        width: 31rem;
+        width: 34rem;
+        margin-top: 3rem;
         max-width: calc(100% - #{$gutter-x});
-        @include font-serif(m);
+        @include font-serif(m, false, 1.7);
       }
     }
   }

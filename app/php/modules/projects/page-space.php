@@ -44,11 +44,11 @@
     </div>
     <div class="project-box img-xl right scroll-animation">
         <img src="" data-src="img/space/space_detail02.jpg" alt="Book spread, Neil DeGrasse Tyson illustration." sizes="auto">
-        <p class="img-description">Hallo Ruben.</p>
+        <p class="img-description">Chapter titles with illustrations.</p>
     </div>
     <div class="project-box img-l scroll-animation">
         <img src="" data-src="img/space/space_detail03.jpg" alt="Space poster." sizes="auto">
-        <p class="img-description">Gute Nacht Ruben.</p>
+        <p class="img-description">Exhibition poster.</p>
     </div>
 </div>
 
