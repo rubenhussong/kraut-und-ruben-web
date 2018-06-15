@@ -44,7 +44,7 @@ footer {
         display: inline-block;
       }
       &.footer-li-middle {
-        transform: translateX(-1rem);
+        //transform: translateX(-1rem);
       }
     }
     @include bp(s) {
