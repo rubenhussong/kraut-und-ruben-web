@@ -64,7 +64,7 @@ $(document).on('click', 'a[href^="#"]', function(event) {
             closeModal();
             history.pushState({}, '', '/');
         } else {
-            targetPageDomain = linkTarget.split('--').slice(-1)[0];
+            var targetPageDomain = linkTarget.split('--').slice(-1)[0];
             var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
             if (targetPageDomain == 'prev-project') {
                 if (existingSubPages.indexOf(currentSubPage) > 0) {
