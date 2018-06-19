@@ -6,11 +6,8 @@ const existingSubPages = [
     "hypernet",
     "el-presidente"
 ];
-const body = document.getElementsByTagName("body")[0];
 var currentPage;
-
-var pageMain = $('#page--main');
-var pageProject = $('.page--project');
+const body = 'body';
 
 var pageMainTitle = document.title;
 
@@ -22,7 +19,7 @@ $(window)
         loadCurrentPage();
     })
     .on('popstate', function() {
-        body.removeClass('imprint-is-active');
+        $(body).removeClass('imprint-is-active');
         loadCurrentPage();
     })
     .on('load', function() {
@@ -30,7 +27,16 @@ $(window)
             $('.preloader-wrapper').fadeOut();
         }, 600);
 
-        rotateOnMouseMove(5);
+        var iconRotation = 0;
+        var objectRotateLeft = $('.object-rotate--left');
+        var objectRotateRight = $('.object-rotate--right');
+        $(window).mousemove(function() {
+            iconRotation = iconRotation - 5;
+            var kRotate = "rotate(" + iconRotation + "deg)";
+            var rRotate = "rotate(" + (-iconRotation) + "deg)";
+            objectRotateLeft.css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
+            objectRotateRight.css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
+        });
 
         var slider = [];
         var sliderCount = 0;
@@ -43,19 +49,6 @@ $(window)
         });
     }
 );
-
-function rotateOnMouseMove(speed) {
-    var iconRotation = 0;
-    var objectRotateLeft = $('.object-rotate--left');
-    var objectRotateRight = $('.object-rotate--right');
-    $(window).mousemove(function() {
-        iconRotation = iconRotation - speed;
-        var kRotate = "rotate(" + iconRotation + "deg)";
-        var rRotate = "rotate(" + (-iconRotation) + "deg)";
-        objectRotateLeft.css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
-        objectRotateRight.css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
-    });
-}
 
 /** =========================================================================== D E E P - L I N K I N G - E V E N T S
  */
@@ -71,7 +64,7 @@ $(document).on('click', 'a[href^="#"]', function(event) {
             closeModal();
             history.pushState({}, '', '/');
         } else {
-            var targetPageDomain = linkTarget.split('--').slice(-1)[0];
+            targetPageDomain = linkTarget.split('--').slice(-1)[0];
             var currentSubPage = window.location.pathname.split('/').slice(-1)[0];
             if (targetPageDomain == 'prev-project') {
                 if (existingSubPages.indexOf(currentSubPage) > 0) {
@@ -115,32 +108,32 @@ function loadCurrentPage() {
 }
 
 function openModal(target) {
-    var bodyClassList = body.attr('class').split(' ');
+    var bodyClassList = $(body).attr('class').split(' ');
     for (var i = 0; i < bodyClassList.length; i++) {
         if (bodyClassList[i].includes('modal')) {
-            body.removeClass(bodyClassList[i]);
+            $(body).removeClass(bodyClassList[i]);
         }
     }
     currentPage = '#page--' + target;
     lazyLoadImages(currentPage);
     changeDocumentTitle(target);
     bodyColorChange($(currentPage), '.change-color');
-    body.addClass('modal-is-active');
-    body.addClass('modal--' + target);
+    $(body).addClass('modal-is-active');
+    $(body).addClass('modal--' + target);
 }
 
 function closeModal() {
     setTimeout(function() {
-        pageProject.scrollTop(0);
+        $('.page--project').scrollTop(0);
     }, 600);
     currentPage = '#page--main';
     lazyLoadImages('#page--main');
     changeDocumentTitle('main');
     bodyColorChange($(currentPage), '.change-color');
-    var bodyClassList = body.attr('class').split(' ');
+    var bodyClassList = $(body).attr('class').split(' ');
     for (var i = 0; i < bodyClassList.length; i++) {
         if (bodyClassList[i].includes('modal')) {
-            body.removeClass(bodyClassList[i]);
+            $(body).removeClass(bodyClassList[i]);
         }
     }
 }
@@ -170,12 +163,12 @@ function changeDocumentTitle(target) {
 
 function pageInternalLink(link) {
     if (link == "#imprint") {
-        body.addClass('imprint-is-active');
+        $(body).addClass('imprint-is-active');
     } else if (link == "#close-imprint") {
         setTimeout(function() {
             $('#imprint').scrollTop(0);
         }, 600);
-        body.removeClass('imprint-is-active');
+        $(body).removeClass('imprint-is-active');
     } else {
         $($(currentPage)).animate({
             scrollTop: $(currentPage).find(link).offset().top
@@ -187,18 +180,15 @@ function pageInternalLink(link) {
  */
 
 $(window).on('load', function() {
-    var header = $('header');
-    var scrollMarker = $('#scroll-marker-wrapper');
-    var aboutText = $('#about-text');
-    var scrollPositionPageMain = (pageMain.scrollTop() + aboutText.offset().top) * .8;
-    headerScrollAnimation(header, scrollPositionPageMain);
-    scrollMarkerScrollAnimation(scrollMarker, scrollPositionPageMain);
-    pageMain.scroll(function() {
-        scrollPositionPageMain = (aboutText.offset().top) * .8;
-        headerScrollAnimation(header, scrollPositionPageMain);
-        scrollMarkerScrollAnimation(scrollMarker, scrollPositionPageMain);
+    var scrollPositionPageMain = ($('#page--main').scrollTop() + $('#about-text').offset().top) * .8;
+    headerScrollAnimation(scrollPositionPageMain);
+    arrowScrollAnimation(scrollPositionPageMain);
+    $('#page--main').scroll(function() {
+        scrollPositionPageMain = ($(window).scrollTop() + $('#about-text').offset().top) * .8;
+        headerScrollAnimation(scrollPositionPageMain);
+        arrowScrollAnimation(scrollPositionPageMain);
     });
-    pageProject.each(function() {
+    $('.page--project').each(function() {
         var prev = 0;
         var nav = $('#header--page-project');
         $('#' + $(this).attr('id')).scroll(function() {
@@ -217,28 +207,45 @@ $(window).on('load', function() {
     });
 });
 
+/** =========================================================================== H O V E R - M O D U L E S
+ */
+
+/** ================================================== Fading Title Images in About Section on Hover
+ */
+
+function AboutImageFade(selector, image) {
+    selector.mouseenter(function() {
+        image.addClass('about-image-visible');
+    });
+    selector.mouseleave(function() {
+        image.removeClass('about-image-visible');
+    });
+}
+
 /** =========================================================================== S C R O L L - M O D U L E S
  */
 
 /** ================================================== Header Scroll Animation
  */
 
-function headerScrollAnimation(headerSelector, distance) {
-    var scrollPositionTop = pageMain.scrollTop();
+function headerScrollAnimation(distance) {
+    var scrollPositionTop = $('#page--main').scrollTop();
+    var header = $('header');
     if (scrollPositionTop > distance) {
-        headerSelector.addClass('scroll-down').removeClass('scroll-top');
+        header.addClass('scroll-down').removeClass('scroll-top');
     } else {
-        headerSelector.addClass('scroll-top').removeClass('scroll-down');
+        header.addClass('scroll-top').removeClass('scroll-down');
     }
 }
 
 /** ================================================== Scroll Marker Scroll Animation
  */
 
-function scrollMarkerScrollAnimation(scrollMarkerSelector, distance) {
-    var scrollPositionTop = pageMain.scrollTop();
+function arrowScrollAnimation(distance) {
+    var scrollPositionTop = $('#page--main').scrollTop();
+    var scrollMarker = $('#scroll-marker-wrapper');
     if (scrollPositionTop > distance) {
-        scrollMarkerSelector.addClass('scroll-down').removeClass('scroll-top');
+        scrollMarker.addClass('scroll-down').removeClass('scroll-top');
     } /*else {
         nav.addClass('scroll-top').removeClass('scroll-down');
     }*/
@@ -298,7 +305,7 @@ function bodyColorChange(page, selector) {
             }
         }
     });
-    body.toggleClass('color-background-red', changeColor);
+    $(body).toggleClass('color-background-red', changeColor);
 }
 
 /** ================================================== Slideshow

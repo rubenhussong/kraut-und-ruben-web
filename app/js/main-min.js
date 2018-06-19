@@ -7,7 +7,7 @@ const existingSubPages = [
     "el-presidente"
 ];
 var currentPage;
-var body = 'body';
+const body = 'body';
 
 var pageMainTitle = document.title;
 
@@ -28,15 +28,15 @@ $(window)
         }, 600);
 
         var iconRotation = 0;
+        var objectRotateLeft = $('.object-rotate--left');
+        var objectRotateRight = $('.object-rotate--right');
         $(window).mousemove(function() {
             iconRotation = iconRotation - 5;
             var kRotate = "rotate(" + iconRotation + "deg)";
             var rRotate = "rotate(" + (-iconRotation) + "deg)";
-            $('.object-rotate--left').css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
-            $('.object-rotate--right').css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
+            objectRotateLeft.css({"-moz-transform" : kRotate, "-webkit-transform" : kRotate});
+            objectRotateRight.css({"-moz-transform" : rRotate, "-webkit-transform" : rRotate});
         });
-
-
 
         var slider = [];
         var sliderCount = 0;
@@ -108,7 +108,7 @@ function loadCurrentPage() {
 }
 
 function openModal(target) {
-    var bodyClassList = $('body').attr('class').split(' ');
+    var bodyClassList = $(body).attr('class').split(' ');
     for (var i = 0; i < bodyClassList.length; i++) {
         if (bodyClassList[i].includes('modal')) {
             $(body).removeClass(bodyClassList[i]);
