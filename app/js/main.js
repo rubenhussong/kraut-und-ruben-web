@@ -275,6 +275,9 @@ function objectScrollAnimation(page, selector) {
             object.toggleClass('scroll-animation-top', objectCenter < windowTop);
             object.toggleClass('scroll-animation-bottom', objectCenter > windowHeight);
         }
+        if (object.css('transform')) console.log(object.css('transform'));
+        // if starts with 'matrix3d(' split at ',' and take 14th or 3rd from end
+        // if starts with 'matrix(' split at ',' and take 6th or last
     });
 }
 

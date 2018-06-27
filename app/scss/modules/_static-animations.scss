@@ -3,6 +3,15 @@
   to {transform: translateY(-.25rem);}
 }
 
+@keyframes sunIcon {
+  0% {content: "\1F325";}
+  25% {content: "\1F325";}
+  37.5% {content: "\1F324";}
+  50% {content: "\1F325";}
+  75% {content: "\1F325";}
+  87.5% {content: "\26C5";}
+  100% {content: "\1F325";}
+}
 @keyframes deviceIcon {
   0% {content: "\1F5A5";}
   33% {content: "\1F4BB";}
@@ -15,6 +24,19 @@
   50% {content: "\1F378";}
   75% {content: "\1F379";}
   100% {content: "\1F37A";}
+}
+@keyframes humanIcon {
+  0% {content: "\1F483";}
+  87.5% {content: "\1F483";}
+  93.75% {content: "\1F57A";}
+  100% {content: "\1F483";}
+}
+@keyframes treeIcon {
+  0% {content: "\1F332";}
+  25% {content: "\1F333";}
+  50% {content: "\1F334";}
+  75% {content: "\1F333";}
+  100% {content: "\1F332";}
 }
 
 .slider {
