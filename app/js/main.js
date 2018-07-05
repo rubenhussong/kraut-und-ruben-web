@@ -244,11 +244,12 @@ function headerScrollAnimation(distance) {
 function arrowScrollAnimation(distance) {
     var scrollPositionTop = $('#page--main').scrollTop();
     var scrollMarker = $('#scroll-marker-wrapper');
-    if (scrollPositionTop > distance) {
+    if (scrollPositionTop > distance)  {
         scrollMarker.addClass('scroll-down').removeClass('scroll-top');
-    } /*else {
-        nav.addClass('scroll-top').removeClass('scroll-down');
-    }*/
+    }
+    if ($('#about-text').offset().top + $('#about-text').height() + $('#scroll-marker-wrapper').height() >= $(window).height()) {
+        scrollMarker.addClass('scroll-down').removeClass('scroll-top');
+    }
 }
 
 /** ================================================== Object Scroll Animation
@@ -264,7 +265,17 @@ function objectScrollAnimation(page, selector) {
         var object = $(this);
         var objectHeight = object.height();
         if (objectHeight <= 0) objectHeight = windowHeight;
-        var objectTop = object.offset().top - page.offset().top;
+
+        var objectTranslateY;
+        if (object.css('transform').startsWith("matrix(")) {
+            objectTranslateY = .9 * parseFloat(object.css('transform').split(',').slice(-1)[0].replace(')', ''));
+        } else if (object.css('transform').startsWith("matrix3d(")) {
+            objectTranslateY = .9 * parseFloat(object.css('transform').split(',')[13].replace(' ', ''));
+        } else {
+            objectTranslateY = 0;
+        }
+        var objectTop = object.offset().top - objectTranslateY - page.offset().top;
+
         var objectCenter = objectTop + .5 * objectHeight;
         var objectBottom = objectTop + objectHeight;
 
@@ -297,7 +308,6 @@ function bodyColorChange(page, selector) {
         if (objectHeight >= visiblePartTop) {
             if (objectBottom > visiblePartTop && objectTop < visiblePartBottom) {
                 changeColor = true;
-                if (object.attr('id') == 'section--about') console.log(windowHeight);
             }
         } else {
             if (objectCenter > windowTop && objectCenter < windowHeight) {

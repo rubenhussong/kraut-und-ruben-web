@@ -19,13 +19,25 @@
     .symbol {
       font-family: $logotype;
     }
+    .sun-icon:before {
+      content: '';
+      animation: sunIcon 4s infinite;
+    }
     .device-icon:before {
       content: '';
-      animation: deviceIcon 1.8s infinite;
+      animation: deviceIcon 3s infinite;
+    }
+    .human-icon:before {
+      content: '';
+      animation: humanIcon 4s infinite;
+    }
+    .tree-icon:before {
+      content: '';
+      animation: treeIcon 8s infinite;
     }
     .ice-tea-icon:before {
       content: '';
-      animation: iceTeaIcon 2.4s infinite;
+      animation: iceTeaIcon 4s infinite;
     }
     &.scroll-animation-top, &.scroll-animation-bottom {
       .device-icon:before {
