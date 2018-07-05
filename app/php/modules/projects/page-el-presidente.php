@@ -10,9 +10,9 @@
 <div class="project-description scroll-animation">
     <p>
         <?php if ($lang == 'de'): ?>
-            Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte.
+            Ein Spieler bedient ein analoges Spielfeld mit Spiegelfiguren, die mit einem Code versehen sind. Der zweite Spieler kann dank innovativer Technik im VR-Raum darauf reagieren.
         <?php else: ?>
-            Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte.
+            XXX
         <?php endif ?></p>
 </div>
 
@@ -32,9 +32,9 @@
     <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
-                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see, what is happening there.
+                Trump vs Mexikaner, wer wird wohl gewinnen? Der Mexikaner, der in VR über die Grenze nach Amerika kommen muss, oder Trump, der auf seinem analogen Planfeld fiese Züge mithilfe getrackter Spielsteine machen kann, die den Mexikaner von seinem Ziel abbringen sollen. Die Entscheidung liegt bei euch!
             <?php else: ?>
-                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see, what is happening there.
+                XXX
             <?php endif ?>
         </p>
     </div>
@@ -57,7 +57,7 @@
 </div>
 
 <div class="project-details">
-    <ul class="ul-left">
+    <ul>
         <li><span>Client</span>Private project</li>
         <li><span>Year</span>2017</li>
         <li><span>Presented by</span><a target="blank" rel="noopener" href="http://vr.design-in-konstanz.de/">OneDay_VR</a></li>
@@ -66,13 +66,9 @@
             <a target="blank" rel="noopener" href="http://www.mirjambanzhaf.com">Mirjam Banzhaf</a>,
             <a target="blank" rel="noopener" href="www.lisamarquardt.com">Lisa Marquardt</a>,
             <a target="blank" rel="noopener" href="www.carlagrammel.com">Carla Grammel</a>,
-            <a target="blank" rel="noopener" href="www.hannahkeuerleber.com">Hannah Keuerleber</a>
+            <a target="blank" rel="noopener" href="http://hannahkeuerleber.com/">Hannah Keuerleber</a>
         </li>
-        <li>
-            <span>Development</span>
-            <a target="blank" rel="noopener" href="www.marcel.com">Marcel Peterson</a> und
-            <a target="blank" rel="noopener" href="www.julian.com">Julian Findus</a>
-        </li>
+        <li><span>Development</span>Julian Altmeyer, Marcel Kieser</li>
     </ul>
 </div>
 

@@ -54,7 +54,7 @@
     </div>
 </div>
 <div class="project-details">
-        <ul class="ul-left">
+        <ul>
             <li><span>Client</span> Private project</li>
             <li><span>Year</span> 2015</li>
             <li><span>Photography</span> Florian Ortlieb</li>

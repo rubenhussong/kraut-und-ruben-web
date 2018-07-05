@@ -85,7 +85,7 @@
 </div>
 
 <div class="project-details">
-        <ul class="ul-left">
+        <ul>
             <li><span>Client</span>Grenzkunst e.V.</li>
             <li><span>Year</span>2017</li>
             <li><span>Photography</span><a target="_blank" rel="noopener" href="https://www.behance.net/NatalieGoee3c4">Natalie Götz</a></li>

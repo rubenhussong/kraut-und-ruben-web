@@ -61,13 +61,16 @@
 </div>
 
 <div class="project-details">
-    <ul class="ul-left">
+    <ul>
         <li>
             <span>Client</span>
             <a target="blank" rel="noopener" href="https://www.casinos.at/de/bregenz">Casino Bregenz</a></li>
         </li>
         <li><span>Year</span>2016</li>
-        <li><span>Presented by</span><a target="blank" rel="noopener" href="http://vr.design-in-konstanz.de/">Vlow!</a></li>
+        <li>
+            <span>Presented by</span>
+            <a target="blank" rel="noopener" href="http://www.vlow.net/">Vlow!</a>
+        </li>
         <li><span>Award</span>Casino Capix Award</li>
         <li>
             <span>Collaboration</span>
