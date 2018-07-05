@@ -193,7 +193,7 @@ $(window).on('load', function() {
         var nav = $('#header--page-project');
         $('#' + $(this).attr('id')).scroll(function() {
             var scrollPositionPageProject = $(this).scrollTop();
-            nav.toggleClass('hidden', scrollPositionPageProject > prev);
+            nav.toggleClass('hidden', scrollPositionPageProject > prev && $(this).find('footer').offset().bottom > $(window).height());
             prev = scrollPositionPageProject;
         });
     });

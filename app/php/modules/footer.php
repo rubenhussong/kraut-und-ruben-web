@@ -9,10 +9,10 @@
     </li>
     <li class="footer-li footer-li-middle">
         <p>
-            <a href="https://www.instagram.com/krautundruben/">Instagram</a>
+            <a target="_blank" href="https://www.instagram.com/krautundruben/">Instagram</a>
         </p>
         <p>
-            <a href="https://twitter.com/kraut_und_ruben">Twitter</a>
+            <a target="_blank" href="https://twitter.com/kraut_und_ruben">Twitter</a>
         </p>
     </li>
     <li class="footer-li footer-li-right">
