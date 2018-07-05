@@ -18,15 +18,16 @@
 </div>
 
 <div class="project-content clear">
-    <div class="project-box img-s scroll-animation">
-        <img src="" data-src="/img/space/space02.jpg" alt="Book spread, bold typography." sizes="auto">
-        <p class="img-description">Aloof in the solar waves, she is carried home.</p>
-    </div>
-    <div class="project-box img-l right shift scroll-animation">
+
+    <div class="project-box img-l shift scroll-animation">
         <img src="" data-src="/img/space/space03.jpg" alt="Book spread, graphic nonsense." sizes="auto">
         <p class="img-description">There's no lack of void.</p>
     </div>
-    <div class="project-box img-xl scroll-animation">
+    <div class="project-box img-s right scroll-animation">
+        <img src="" data-src="/img/space/space02.jpg" alt="Book spread, bold typography." sizes="auto">
+        <p class="img-description">Aloof in the solar waves, she is carried home.</p>
+    </div>
+    <div class="project-box img-xl right scroll-animation">
         <div class="slider">
             <img src="" data-src="/img/space/space04.jpg" alt="Book spread, graphic nonsense." sizes="auto">
             <img src="" data-src="/img/space/space01.jpg" alt="Book spread, graphic nonsense." sizes="auto">
