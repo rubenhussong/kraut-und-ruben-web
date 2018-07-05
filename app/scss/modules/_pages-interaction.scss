@@ -24,10 +24,12 @@ header {
 // ================================================== Page [Imprint not active]
 .page {
   filter: blur(0);
+  pointer-events: all;
 }
 #imprint {
   opacity: 0;
-  z-index: $z-index-page-hidden;
+  pointer-events: none;
+  //z-index: $z-index-page-hidden;
   transform: translate3D(0, 25vh, 0);
 }
 .imprint-is-active {
@@ -62,10 +64,12 @@ header {
     -webkit-transform: translateZ(0);
     -webkit-backface-visibility: hidden;
     -webkit-perspective: 1000;
+    pointer-events: none;
   }
   #imprint {
     opacity: 1;
-    z-index: $z-index-imprint;
+    //z-index: $z-index-imprint;
+    pointer-events: all;
     transform: translate3D(0, 0, 0)
   }
   // ================================================== Transition [Page to Imprint]
@@ -117,12 +121,14 @@ header {
 }
 // ================================================== Page [Page Main active]
 .page--project {
-  z-index: $z-index-page-hidden;
+  //z-index: $z-index-page-hidden;
+  pointer-events: none;
   transform: translate3D(0, 25vh, 0);
   opacity: 0;
 }
 #page--main {
-  z-index: $z-index-page-visible;
+  //z-index: $z-index-page-visible;
+  pointer-events: all;
   opacity: 1;
   #section--about, #section--footer, #project-column--right, #project-column--left {
     transform: translate3D(0, 0, 0);
@@ -183,7 +189,8 @@ header {
   // ================================================== Page [Page Project active]
 
   #page--main {
-    z-index: $z-index-page-hidden;
+    //z-index: $z-index-page-hidden;
+    pointer-events: none;
     opacity: 0;
     #section--about { transform: translate3D(0, -20vh, 0); }
     #section--footer { transform: translate3D(0, 20vh, 0); }
@@ -195,7 +202,8 @@ header {
   }
   @each $subpage in $subpages {
     &.modal--#{$subpage} #page--#{$subpage} {
-      z-index: $z-index-page-visible;
+      //z-index: $z-index-page-visible;
+      pointer-events: all;
       transform: translate3D(0, 0, 0);
       opacity: 1;
     }

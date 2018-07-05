@@ -62,7 +62,6 @@
         </ul>
 </div>
 
-
-<footer class="section change-color" id="section--footer">
+<footer class="section section--footer change-color">
     <?php include 'php/modules/footer.php'; ?>
 </footer> 

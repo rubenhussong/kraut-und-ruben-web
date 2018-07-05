@@ -20,28 +20,34 @@
       font-family: $logotype;
     }
     .sun-icon:before {
-      content: '';
+      content: '\1F325';
       animation: sunIcon 4s infinite;
     }
     .device-icon:before {
-      content: '';
+      content: '\1F5A5';
       animation: deviceIcon 3s infinite;
     }
     .human-icon:before {
-      content: '';
+      content: '\1F483';
       animation: humanIcon 4s infinite;
     }
     .tree-icon:before {
-      content: '';
+      content: '\1F333';
       animation: treeIcon 8s infinite;
     }
     .ice-tea-icon:before {
-      content: '';
+      content: '\1F37A';
       animation: iceTeaIcon 4s infinite;
     }
     &.scroll-animation-top, &.scroll-animation-bottom {
-      .device-icon:before {
-        animation: null;
+      .sun-icon,
+      .device-icon,
+      .human-icon,
+      .tree-icon,
+      .ice-tea-icon {
+        &:before {
+          animation: null;
+        }
       }
     }
 

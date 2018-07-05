@@ -193,7 +193,7 @@ $(window).on('load', function() {
         var nav = $('#header--page-project');
         $('#' + $(this).attr('id')).scroll(function() {
             var scrollPositionPageProject = $(this).scrollTop();
-            nav.toggleClass('hidden', scrollPositionPageProject > prev && $(this).find('footer').offset().bottom > $(window).height());
+            nav.toggleClass('hidden', scrollPositionPageProject > prev && $(this).find('footer').offset().top + $(this).find('footer').height() * .7 > $(window).height());
             prev = scrollPositionPageProject;
         });
     });
@@ -231,11 +231,7 @@ function AboutImageFade(selector, image) {
 function headerScrollAnimation(distance) {
     var scrollPositionTop = $('#page--main').scrollTop();
     var header = $('header');
-    if (scrollPositionTop > distance) {
-        header.addClass('scroll-down').removeClass('scroll-top');
-    } else {
-        header.addClass('scroll-top').removeClass('scroll-down');
-    }
+    header.toggleClass('scroll-down', scrollPositionTop > distance);
 }
 
 /** ================================================== Scroll Marker Scroll Animation
@@ -244,12 +240,7 @@ function headerScrollAnimation(distance) {
 function arrowScrollAnimation(distance) {
     var scrollPositionTop = $('#page--main').scrollTop();
     var scrollMarker = $('#scroll-marker-wrapper');
-    if (scrollPositionTop > distance)  {
-        scrollMarker.addClass('scroll-down').removeClass('scroll-top');
-    }
-    if ($('#about-text').offset().top + $('#about-text').height() + $('#scroll-marker-wrapper').height() >= $(window).height()) {
-        scrollMarker.addClass('scroll-down').removeClass('scroll-top');
-    }
+    scrollMarker.toggleClass('scroll-down', scrollPositionTop > distance || $('#about-text').offset().top + $('#about-text').height() + $('#scroll-marker-wrapper').height() >= $(window).height());
 }
 
 /** ================================================== Object Scroll Animation
