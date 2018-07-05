@@ -16,20 +16,19 @@ $transition-curve--imprint: $transition-curve--page;
 header {
   #header--imprint {
     .cross-close-imprint {
-      top: -3rem;
+      transform: translate3D(0, -3rem, 0);
       opacity: 0;
     }
   }
 }
 // ================================================== Page [Imprint not active]
 .page {
-  filter: blur(0);
+  filter: blur(0) brightness(1) contrast(1);
   pointer-events: all;
 }
 #imprint {
   opacity: 0;
   pointer-events: none;
-  //z-index: $z-index-page-hidden;
   transform: translate3D(0, 25vh, 0);
 }
 .imprint-is-active {
@@ -37,38 +36,34 @@ header {
   header {
     #header--imprint {
       .cross-close-imprint {
-        top: 0;
+        transform: translate3D(0, 0, 0);
         opacity: 1;
       }
     }
     #header--page-main {
       .header-element { opacity: 0; }
-      .word-mark { top: -3rem; }
-      .header-element--left { left: -4rem; }
-      .header-element--right { right: -4rem; }
+      .word-mark { transform: translate3D(0, -3rem, 0); }
+      .header-element--left { transform: translate3D(-4rem, 0, 0); }
+      .header-element--right { transform: translate3D(4rem, 0, 0); }
     }
   }
   &.modal-is-active {
     header {
       #header--page-project {
         .header-element { opacity: 0; }
-        .header-element--center { top: -3rem; }
-        .header-element--left { left: -4rem; }
-        .header-element--right { right: -4rem; }
+        .header-element--center { transform: translate3D(0, -3rem, 0); }
+        .header-element--left { transform: translate3D(-4rem, 0, 0); }
+        .header-element--right { transform: translate3D(4rem, 0, 0); }
       }
     }
   }
   // ================================================== Page [Imprint active]
   .page {
     filter: blur(.5rem) brightness(1.1) contrast(.9);
-    -webkit-transform: translateZ(0);
-    -webkit-backface-visibility: hidden;
-    -webkit-perspective: 1000;
     pointer-events: none;
   }
   #imprint {
     opacity: 1;
-    //z-index: $z-index-imprint;
     pointer-events: all;
     transform: translate3D(0, 0, 0)
   }
@@ -82,7 +77,6 @@ header {
   }
   #imprint {
     transition:
-            z-index 0s,
             opacity $transition-time--imprint $transition-curve--imprint,
             transform $transition-time--imprint $transition-curve--imprint;
   }
@@ -99,7 +93,6 @@ header {
 }
 #imprint {
   transition:
-          z-index 0s $transition-time--imprint,
           opacity $transition-time--imprint $transition-curve--imprint,
           transform $transition-time--imprint $transition-curve--imprint $transition-time--imprint;
 }
@@ -108,26 +101,24 @@ header {
 header {
   #header--page-main {
     .header-element { opacity: 1; }
-    .word-mark { top: 0; }
-    .header-element--left { left: 0; }
-    .header-element--right { right: 0; }
+    .word-mark { transform: translate3D(0, 0, 0); }
+    .header-element--left { transform: translate3D(0, 0, 0); }
+    .header-element--right { transform: translate3D(0, 0, 0); }
   }
   #header--page-project {
     .header-element { opacity: 0; }
-    .header-element--center { top: -3rem; }
-    .header-element--left { left: -4rem; }
-    .header-element--right { right: -4rem; }
+    .header-element--center { transform: translate3D(0, -3rem, 0); }
+    .header-element--left { transform: translate3D(-4rem, 0, 0); }
+    .header-element--right { transform: translate3D(4rem, 0, 0); }
   }
 }
 // ================================================== Page [Page Main active]
 .page--project {
-  //z-index: $z-index-page-hidden;
   pointer-events: none;
   transform: translate3D(0, 25vh, 0);
   opacity: 0;
 }
 #page--main {
-  //z-index: $z-index-page-visible;
   pointer-events: all;
   opacity: 1;
   #section--about, #section--footer, #project-column--right, #project-column--left {
@@ -154,7 +145,6 @@ header {
 .page--project {
   transition:
           filter $transition-time--imprint $transition-curve--imprint,
-          z-index 0s ($transition-time--page + $transition-delay--page),
           transform $transition-time--page $transition-curve--page $transition-delay--page,
           opacity $transition-time--page $transition-curve--page;
 }
@@ -175,21 +165,20 @@ header {
   header {
     #header--page-main {
       .header-element { opacity: 0; }
-      .word-mark { top: -3rem; }
-      .header-element--left { left: -4rem; }
-      .header-element--right { right: -4rem; }
+      .word-mark { transform: translate3D(0, -3rem, 0); }
+      .header-element--left { transform: translate3D(-4rem, 0, 0); }
+      .header-element--right { transform: translate3D(4rem, 0, 0); }
     }
     #header--page-project {
       .header-element { opacity: 1; }
-      .header-element--center { top: 0; }
-      .header-element--left { left: 0; }
-      .header-element--right { right: 0; } 
+      .header-element--center { transform: translate3D(0, 0, 0); }
+      .header-element--left { transform: translate3D(0, 0, 0); }
+      .header-element--right { transform: translate3D(0, 0, 0); }
     }
   }
   // ================================================== Page [Page Project active]
 
   #page--main {
-    //z-index: $z-index-page-hidden;
     pointer-events: none;
     opacity: 0;
     #section--about { transform: translate3D(0, -20vh, 0); }
@@ -202,7 +191,6 @@ header {
   }
   @each $subpage in $subpages {
     &.modal--#{$subpage} #page--#{$subpage} {
-      //z-index: $z-index-page-visible;
       pointer-events: all;
       transform: translate3D(0, 0, 0);
       opacity: 1;
@@ -245,7 +233,6 @@ header {
     transform: translate3D(50vw, 0, 0);
     transition:
             filter .5s $transition-curve--imprint,
-            z-index 0s,
             transform $transition-time--page $transition-curve--page $transition-delay--page,
             opacity $transition-time--page $transition-curve--page $transition-delay--page;
   }
