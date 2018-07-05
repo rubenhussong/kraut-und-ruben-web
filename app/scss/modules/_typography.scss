@@ -3,21 +3,24 @@
 // ================================================== FONTS & TYPOGRAPHY
 @font-face {
   font-family: 'Kraut und Ruben Logo';
-  src: 
-      url('../fonts/KrautundRubenLogo-Regular.ttf') format('truetype'),
-      url('../fonts/KrautundRubenLogo-Regular.eot') format('embedded-opentype'),
-      url('../fonts/KrautundRubenLogo-Regular.woff2') format('woff2'),
-      url('../fonts/KrautundRubenLogo-Regular.woff') format('woff');
-
+  src:
+    url('../fonts/KrautundRubenLogo-Regular.eot') format('embedded-opentype'),
+    url('../fonts/KrautundRubenLogo-Regular.woff2') format('woff2'),
+    url('../fonts/KrautundRubenLogo-Regular.woff') format('woff');
 }
 @font-face {
   font-family: 'Galaxie Copernicus';
-  src: url('../fonts/CopernicusBook.otf') format('opentype');
-  font-style: normal;
+  src:
+    url('../fonts/Copernicus-Book.eot') format('embedded-opentype'),
+    url('../fonts/Copernicus-Book.woff2') format('woff2'),
+    url('../fonts/Copernicus-Book.woff') format('woff');
 }
 @font-face {
   font-family: 'Galaxie Copernicus';
-  src: url('../fonts/CopernicusBookItalic.otf') format('opentype');
+  src:
+    url('../fonts/Copernicus-BookItalic.eot') format('embedded-opentype'),
+    url('../fonts/Copernicus-BookItalic.woff2') format('woff2'),
+    url('../fonts/Copernicus-BookItalic.woff') format('woff');
   font-style: italic;
 }
 @font-face {

@@ -6,11 +6,9 @@ header {
   .page-header {
     position: absolute;
     width: 100%;
-
     .header-element {
         margin: .75rem;
     }
-
     .word-mark {
       display: inline-block;
       width: 100%;
@@ -19,18 +17,17 @@ header {
       span {
         position: absolute;
         top: 0;
-        &#h1--left { right: calc(50% + 0.9rem); }
-        &#h1--right { left: calc(50% + 0.9rem); }
+        &#h1--left { right: calc(50% + 0.9em); }
+        &#h1--right { left: calc(50% + 0.9em); }
         &#h1--center {
           text-align: center;
-          width: .8rem;
-          left: calc(50% - .4rem);
+          width: .8em;
+          left: calc(50% - .4em);
         }
       }
     }
     .header-icon {
       margin: .375rem;
-
       display: inline-block;
       position: absolute;
       width: 2rem;

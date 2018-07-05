@@ -16,7 +16,7 @@ var gulp = require('gulp'),
     // HTML
     minifyHtml = require('gulp-minify-html'),           // minify HTML-Code
     replace = require('gulp-replace'),                  // replace img-tags to create img-srcsets
-    lazyScr = require('gulp-lazysizes-srcset'),
+    lazySrc = require('gulp-lazysizes-srcset'),
 
     // JS
     uglify = require('gulp-uglify'),
@@ -113,7 +113,7 @@ function convertHtml(destination){
         //.pipe(minifyHtml({collapseWhitespace: true}))
         .pipe(replace('src=', 'data-src='))
         .pipe(replace('sizes=', 'data-sizes='))
-        .pipe(lazyScr({
+        .pipe(lazySrc({
             decodeEntities: false,
             src: 'data-src',
             srcset: 'data-srcset',
