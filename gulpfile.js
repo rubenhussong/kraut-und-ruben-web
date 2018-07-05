@@ -11,6 +11,7 @@ var gulp = require('gulp'),
     concatCss = require('gulp-concat-css'),             // combine CSS-Files
     minifyCss = require('gulp-clean-css'),              // minify CSS-Code
     autoprefixer = require('gulp-autoprefixer'),        // add vendor prefixes automatically
+    purgecss = require('gulp-purgecss'),                // remove unused css
 
     // HTML
     minifyHtml = require('gulp-minify-html'),           // minify HTML-Code

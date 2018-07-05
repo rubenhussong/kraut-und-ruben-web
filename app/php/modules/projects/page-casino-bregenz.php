@@ -53,7 +53,7 @@
         <p class="img-description">Ein heimlicher Blick hinter die Fassade</p>
     </div>
     <div class="project-box img-xl scroll-animation">
-        <video controls>
+        <video loop playsinline="true" webkit-playsinline="true">
             <source src="/img/casino-bregenz/161026_Casino_Bregenz_Casestudy_1080p.mp4" type="video/mp4">
         </video>
         <p class="img-description">Und noch ein schniekes Video</p>
