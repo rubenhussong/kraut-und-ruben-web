@@ -15,7 +15,7 @@
         <li><span>Year</span>2018</li>
         <li><span>Development</span>Lars Knaack</li>
         <li>
-            <span>Promotet by</span>
+            <span>Promoted by</span>
             <a target="blank" rel="noopener" href="http://oil.htwg-konstanz.de/wordpress/2018/03/15/virtual-reality-in-oil-2-3/">The Space of Education</a>
         </li>
     </ul>
