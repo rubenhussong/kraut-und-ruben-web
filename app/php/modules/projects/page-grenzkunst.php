@@ -25,20 +25,22 @@
 
 <div class="project-content">
 
-    <div class="project-box img-s right scroll-animation">
+    <div class="project-box img-s scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst_logo_animation.gif" alt="Logo Redesign reveal" sizes="auto">
         <p class="img-description">Logo refresh</p>
     </div>
 
-    <div class="project-box img-xl scroll-animation">
+    <div class="project-box img-m shift scroll-animation">
+        <img src="" data-src="/img/grenzkunst/grenzkunst-06.jpg" alt="Website redesign" sizes="auto">
+        <p class="img-description">Website rebrand.</p>
+    </div>
+
+
+    <div class="project-box img-xl right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-03.jpg" alt="Stationery" sizes="auto">
         <p class="img-description">A new look</p>
     </div>
 
-    <div class="project-box img-m right scroll-animation">
-        <img src="" data-src="/img/grenzkunst/grenzkunst-06.jpg" alt="Website redesign" sizes="auto">
-        <p class="img-description">Website rebrand.</p>
-    </div>
 
     <div class="project-box text-box scroll-animation">
         <p>
@@ -81,6 +83,12 @@
     <div class="project-box img-l right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-10.jpg" alt="Eulenflug 2017 goodies" sizes="auto">
         <p class="img-description">Eulenflug print materials</p>
+    </div>
+
+    <div class="project-box img-l right scroll-animation">
+        <video playsinline="true" webkit-playsinline="true" loop autoplay>
+            <source src="/img/grenzkunst/grenzkunst-web.mp4" type="video/mp4"/>
+        </video>
     </div>
 </div>
 
