@@ -25,20 +25,22 @@
 
 <div class="project-content">
 
-    <div class="project-box img-s right scroll-animation">
+    <div class="project-box img-s scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst_logo_animation.gif" alt="Logo Redesign reveal" sizes="auto">
         <p class="img-description">Logo refresh</p>
     </div>
 
-    <div class="project-box img-xl scroll-animation">
+    <div class="project-box img-m shift scroll-animation">
+        <img src="" data-src="/img/grenzkunst/grenzkunst-06.jpg" alt="Website redesign" sizes="auto">
+        <p class="img-description">Website rebrand.</p>
+    </div>
+
+
+    <div class="project-box img-xl right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-03.jpg" alt="Stationery" sizes="auto">
         <p class="img-description">A new look</p>
     </div>
 
-    <div class="project-box img-m right scroll-animation">
-        <img src="" data-src="/img/grenzkunst/grenzkunst-06.jpg" alt="Website redesign" sizes="auto">
-        <p class="img-description">Website rebrand.</p>
-    </div>
 
     <div class="project-box text-box scroll-animation">
         <p>
