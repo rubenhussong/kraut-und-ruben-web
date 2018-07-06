@@ -61,14 +61,14 @@
         <li><span>Client</span>Private project</li>
         <li><span>Year</span>2017</li>
         <li><span>Presented by</span><a target="blank" rel="noopener" href="http://vr.design-in-konstanz.de/">OneDay_VR</a></li>
+        <li><span>Development</span>Julian Altmeyer, Marcel Kieser</li>
         <li>
             <span>Collaboration</span>
-            <a target="blank" rel="noopener" href="">Mirjam Banzhaf</a>,
+            Mirjam Banzhaf,
             <a target="blank" rel="noopener" href="https://www.lisamarquardt.com/">Lisa Marquardt</a>,
             <a target="blank" rel="noopener" href="https://www.behance.net/Carla93">Carla Grammel</a>,
             <a target="blank" rel="noopener" href="http://hannahkeuerleber.com/">Hannah Keuerleber</a>
         </li>
-        <li><span>Development</span>Julian Altmeyer, Marcel Kieser</li>
     </ul>
 </div>
 
