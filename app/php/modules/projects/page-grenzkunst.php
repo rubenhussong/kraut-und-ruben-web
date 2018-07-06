@@ -84,6 +84,12 @@
         <img src="" data-src="/img/grenzkunst/grenzkunst-10.jpg" alt="Eulenflug 2017 goodies" sizes="auto">
         <p class="img-description">Eulenflug print materials</p>
     </div>
+
+    <div class="project-box img-l right scroll-animation">
+        <video playsinline="true" webkit-playsinline="true" loop autoplay>
+            <source src="/img/grenzkunst/grenzkunst-web.mp4" type="video/mp4"/>
+        </video>
+    </div>
 </div>
 
 <div class="project-details">
