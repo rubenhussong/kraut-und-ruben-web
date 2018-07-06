@@ -16,32 +16,39 @@
       @include font-serif(l, false, false, italic);
       @include hover--about-link();
     }
-    .symbol {
+    .icon {
       font-family: $logotype;
+      will-change: content;
     }
-    .sun-icon:before {
-      content: '';
+    .icon--sun:before {
+      content: '\1F325';
       animation: sunIcon 4s infinite;
     }
-    .device-icon:before {
-      content: '';
+    .icon--device:before {
+      content: '\1F5A5';
       animation: deviceIcon 3s infinite;
     }
-    .human-icon:before {
-      content: '';
+    .icon--human:before {
+      content: '\1F483';
       animation: humanIcon 4s infinite;
     }
-    .tree-icon:before {
-      content: '';
+    .icon--tree:before {
+      content: '\1F333';
       animation: treeIcon 8s infinite;
     }
-    .ice-tea-icon:before {
-      content: '';
+    .icon--ice-tea:before {
+      content: '\1F37A';
       animation: iceTeaIcon 4s infinite;
     }
     &.scroll-animation-top, &.scroll-animation-bottom {
-      .device-icon:before {
-        animation: null;
+      .icon--sun,
+      .icon--device,
+      .icon--human,
+      .icon--tree,
+      .icon--ice-tea {
+        &:before {
+          animation: null;
+        }
       }
     }
 

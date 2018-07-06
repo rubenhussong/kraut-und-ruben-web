@@ -18,13 +18,6 @@
   66% {content: "\1F4F1";}
   100% {content: "\1F5A5";}
 }
-@keyframes iceTeaIcon {
-  0% {content: "\1F37A";}
-  25% {content: "\1F377";}
-  50% {content: "\1F378";}
-  75% {content: "\1F379";}
-  100% {content: "\1F37A";}
-}
 @keyframes humanIcon {
   0% {content: "\1F483";}
   87.5% {content: "\1F483";}
@@ -37,6 +30,13 @@
   50% {content: "\1F334";}
   75% {content: "\1F333";}
   100% {content: "\1F332";}
+}
+@keyframes iceTeaIcon {
+  0% {content: "\1F37A";}
+  25% {content: "\1F377";}
+  50% {content: "\1F378";}
+  75% {content: "\1F379";}
+  100% {content: "\1F37A";}
 }
 
 .slider {

@@ -41,8 +41,8 @@ body {
   height: 100vh;
 }
 
-.page--project, #imprint {
-  will-change: opacity, transform;
+.page, #imprint, .scroll-animation, header {
+  will-change: auto;
 }
 
 img[data-src] {
