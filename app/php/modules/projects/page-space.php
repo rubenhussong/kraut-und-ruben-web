@@ -48,11 +48,16 @@
         <img src="" data-src="img/space/space_detail02.jpg" alt="Book spread, Neil DeGrasse Tyson illustration." sizes="auto">
         <p class="img-description">Chapter titles with illustrations.</p>
     </div>
-    <div class="project-box img-l scroll-animation">
+    <div class="project-box img-l shift scroll-animation">
         <img src="" data-src="img/space/space_detail03.jpg" alt="Space poster." sizes="auto">
         <p class="img-description">Exhibition poster.</p>
     </div>
+    <div class="project-box img-s scroll-animation">
+        <img src="" data-src="img/space/space05.jpg" alt="Space is everywhere." sizes="auto">
+        <p class="img-description">Space in use.</p>
+    </div>
 </div>
+
 <div class="project-details">
         <ul>
             <li><span>Client</span> Private project</li>
