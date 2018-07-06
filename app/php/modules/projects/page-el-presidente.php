@@ -63,9 +63,9 @@
         <li><span>Presented by</span><a target="blank" rel="noopener" href="http://vr.design-in-konstanz.de/">OneDay_VR</a></li>
         <li>
             <span>Collaboration</span>
-            <a target="blank" rel="noopener" href="http://www.mirjambanzhaf.com">Mirjam Banzhaf</a>,
-            <a target="blank" rel="noopener" href="www.lisamarquardt.com">Lisa Marquardt</a>,
-            <a target="blank" rel="noopener" href="www.carlagrammel.com">Carla Grammel</a>,
+            <a target="blank" rel="noopener" href="">Mirjam Banzhaf</a>,
+            <a target="blank" rel="noopener" href="https://www.lisamarquardt.com/">Lisa Marquardt</a>,
+            <a target="blank" rel="noopener" href="https://www.behance.net/Carla93">Carla Grammel</a>,
             <a target="blank" rel="noopener" href="http://hannahkeuerleber.com/">Hannah Keuerleber</a>
         </li>
         <li><span>Development</span>Julian Altmeyer, Marcel Kieser</li>

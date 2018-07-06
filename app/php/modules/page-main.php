@@ -15,14 +15,14 @@
         <p>
             <?php if ($lang == 'de'): ?>
 
-                Guten Tag! <span class="symbol sun-icon"></span>
+                Guten Tag! <span class="icon icon--sun"></span>
                 Wir sind Flo und Ruben, zwei Designer aus Deutschland.
-                Wir lieben es, Webseiten <span class="symbol device-icon"></span>
-                zu entwickeln, auf Bäume <span class="symbol tree-icon"></span>
-                zu klettern und Menschen <span class="symbol human-icon"></span> kennen zu lernen –
+                Wir lieben es, Webseiten <span class="icon icon--device"></span>
+                zu entwickeln, auf Bäume <span class="icon icon--tree"></span>
+                zu klettern und Menschen <span class="icon icon--human"></span> kennen zu lernen –
                 also <a href="mailto:gutentag@krautundruben.de">schreib</a> uns,
                 <a href="#foot-line">ruf &nbsp;</a>uns an oder besuch uns auf ein, zwei Gläschen Eistee.
-                <span class="symbol ice-tea-icon"></span>
+                <span class="icon icon--ice-tea"></span>
 
             <?php else: ?>
 

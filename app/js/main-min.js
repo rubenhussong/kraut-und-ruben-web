@@ -207,21 +207,6 @@ $(window).on('load', function() {
     });
 });
 
-/** =========================================================================== H O V E R - M O D U L E S
- */
-
-/** ================================================== Fading Title Images in About Section on Hover
- */
-
-function AboutImageFade(selector, image) {
-    selector.mouseenter(function() {
-        image.addClass('about-image-visible');
-    });
-    selector.mouseleave(function() {
-        image.removeClass('about-image-visible');
-    });
-}
-
 /** =========================================================================== S C R O L L - M O D U L E S
  */
 
@@ -306,8 +291,12 @@ function bodyColorChange(page, selector) {
             }
         }
     });
-    $(body).toggleClass('color-background-red', changeColor);
+    function bodyBackgroundRed() {
+        $(body).toggleClass('color-background-red', changeColor);
+    }
+    requestAnimationFrame(bodyBackgroundRed);
 }
+
 
 /** ================================================== Slideshow
  */
