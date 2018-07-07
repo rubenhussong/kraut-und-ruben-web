@@ -86,9 +86,15 @@
     </div>
 
     <div class="project-box img-l right scroll-animation">
-        <video playsinline="true" webkit-playsinline="true" loop autoplay>
-            <source src="/img/grenzkunst/grenzkunst-web.mp4" type="video/mp4"/>
-        </video>
+        <div class="video hover--light" data-autoplay="true" data-audio="false">
+            <video controls muted>
+                <source src="/img/grenzkunst/grenzkunst-web.mp4" type="video/mp4"/>
+            </video>
+            <div class="controls">
+                <button class="button button--play"></button>
+                <button class="button button--sound"></button>
+            </div>
+        </div>
     </div>
 </div>
 
