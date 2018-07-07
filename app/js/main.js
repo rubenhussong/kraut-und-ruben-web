@@ -303,6 +303,16 @@ function bodyColorChange(page, selector) {
     requestAnimationFrame(rAFbodyColorChange);
 }
 
+/** =========================================================================== T O U C H - C L A S S
+ */
+
+window.addEventListener('touchstart', function onFirstTouch() {
+    document.body.classList.add('touch-device');
+    window.removeEventListener('touchstart', onFirstTouch, false);
+});
+
+/** =========================================================================== M E D I A - M O D U L E S
+ */
 
 /** ================================================== Slideshow
  */
@@ -354,7 +364,6 @@ function videoPreferences(video) {
             media.prop('muted', false);
         }
     }
-
     buttonPlay.on('click', function() {
         if (isPlaying) {
             isPlaying = false;

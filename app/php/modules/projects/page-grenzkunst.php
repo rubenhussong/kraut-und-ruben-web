@@ -86,13 +86,13 @@
     </div>
 
     <div class="project-box img-l right scroll-animation">
-        <div class="video hover--light" data-autoplay="true" data-audio="false">
+        <div class="video" data-autoplay="true" data-audio="false">
             <video controls muted>
                 <source src="/img/grenzkunst/grenzkunst-web.mp4" type="video/mp4"/>
             </video>
-            <div class="controls">
-                <button class="button button--play"></button>
-                <button class="button button--sound"></button>
+            <div class="controls hover--light">
+                <button class="button--play"></button>
+                <button class="button--sound"></button>
             </div>
         </div>
     </div>

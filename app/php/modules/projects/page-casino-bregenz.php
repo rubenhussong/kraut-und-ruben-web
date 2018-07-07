@@ -53,11 +53,11 @@
         <p class="img-description">Ein heimlicher Blick hinter die Fassade</p>
     </div>
     <div class="project-box img-xl scroll-animation">
-        <div class="video hover--dark" data-autoplay="true" data-audio="true">
+        <div class="video" data-autoplay="true" data-audio="true">
             <video controls muted>
                 <source src="/img/casino-bregenz/161026_Casino_Bregenz_Casestudy_1080p.mp4" type="video/mp4">
             </video>
-            <div class="controls">
+            <div class="controls hover--dark">
                 <button class="button button--play"></button>
                 <button class="button button--sound"></button>
             </div>

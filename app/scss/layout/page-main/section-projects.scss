@@ -57,13 +57,29 @@
         }
 
       }
-      &:hover {
+      @include hover() {
         .project-text {
           opacity: 1;
           h2 {
             transform: scale(1);
           }
         }
+      }
+    }
+  }
+}
+
+.touch-device & {
+  #section--projects .project-column .project-banner .project-text {
+    opacity: 1;
+    position: inherit;
+    height: 5rem;
+    align-items: flex-start;
+    &.project-text--light, &.project-text--dark {
+      background: none;
+      h2 {
+        transform: scale(1);
+        color: $color-hover-dark;
       }
     }
   }
