@@ -183,6 +183,9 @@ $(window).on('load', function() {
     var scrollPositionPageMain = ($('#page--main').scrollTop() + $('#about-text').offset().top) * .8;
     headerScrollAnimation(scrollPositionPageMain);
     arrowScrollAnimation(scrollPositionPageMain);
+    $('.video').each(function() {
+        videoPreferences($(this));
+    });
     $('#page--main').scroll(function() {
         scrollPositionPageMain = ($(window).scrollTop() + $('#about-text').offset().top) * .8;
         headerScrollAnimation(scrollPositionPageMain);
@@ -255,13 +258,16 @@ function objectScrollAnimation(page, selector) {
         var objectCenter = objectTop + .5 * objectHeight;
         var objectBottom = objectTop + objectHeight;
 
-        if (objectHeight >= visiblePartTop) {
-            object.toggleClass('scroll-animation-top', objectBottom < visiblePartTop);
-            object.toggleClass('scroll-animation-bottom', objectTop > visiblePartBottom);
-        } else {
-            object.toggleClass('scroll-animation-top', objectCenter < windowTop);
-            object.toggleClass('scroll-animation-bottom', objectCenter > windowHeight);
+        function rAFobjectScollAnimation() {
+            if (objectHeight >= visiblePartTop) {
+                object.toggleClass('scroll-animation-top', objectBottom < visiblePartTop);
+                object.toggleClass('scroll-animation-bottom', objectTop > visiblePartBottom);
+            } else {
+                object.toggleClass('scroll-animation-top', objectCenter < windowTop);
+                object.toggleClass('scroll-animation-bottom', objectCenter > windowHeight);
+            }
         }
+        requestAnimationFrame(rAFobjectScollAnimation);
     });
 }
 
@@ -291,12 +297,22 @@ function bodyColorChange(page, selector) {
             }
         }
     });
-    function bodyBackgroundRed() {
+    function rAFbodyColorChange() {
         $(body).toggleClass('color-background-red', changeColor);
     }
-    requestAnimationFrame(bodyBackgroundRed);
+    requestAnimationFrame(rAFbodyColorChange);
 }
 
+/** =========================================================================== T O U C H - C L A S S
+ */
+
+window.addEventListener('touchstart', function onFirstTouch() {
+    document.body.classList.add('touch-device');
+    window.removeEventListener('touchstart', onFirstTouch, false);
+});
+
+/** =========================================================================== M E D I A - M O D U L E S
+ */
 
 /** ================================================== Slideshow
  */
@@ -310,4 +326,68 @@ function slideshow(slider, time) {
         if (selector > count) selector = 1;
         slider.find('>:nth-child(' + selector + ')').addClass('slide--visible');
     }, time);
+}
+
+/** ================================================== Video
+ */
+
+function videoPreferences(video) {
+    var media = video.find('video');
+    var controls = video.find('.controls');
+    var buttonPlay = controls.find('.button--play');
+    var isPlaying = false;
+    var buttonSound = controls.find('.button--sound');
+    var isMuted = false;
+    if (video.attr('data-autoplay') == 'true') {
+        controls.addClass('controls-active');
+        media[0].controls = false;
+        media[0].loop = true;
+        isPlaying = true;
+        buttonPlay.addClass('playing');
+        buttonPlay[0].title = 'pause';
+        media[0].play();
+        if (video.attr('data-audio') == 'true') {
+            controls.addClass('audio-active');
+        } else {
+            isMuted = true;
+            media.prop('muted', true);
+        }
+        if ($("video").prop('muted')) {
+            isMuted = true;
+            buttonSound.addClass('muted');
+            buttonSound[0].title = 'unmute';
+            media.prop('muted', true);
+        } else {
+            isMuted = false;
+            buttonSound.removeClass('muted');
+            buttonSound[0].title = 'mute';
+            media.prop('muted', false);
+        }
+    }
+    buttonPlay.on('click', function() {
+        if (isPlaying) {
+            isPlaying = false;
+            buttonPlay.removeClass('playing');
+            buttonPlay[0].title = 'play';
+            media[0].pause();
+        } else {
+            isPlaying = true;
+            buttonPlay.addClass('playing');
+            buttonPlay[0].title = 'pause';
+            media[0].play();
+        }
+    });
+    buttonSound.on('click', function() {
+        if (isMuted) {
+            isMuted = false;
+            buttonSound.removeClass('muted');
+            buttonSound[0].title = 'mute';
+            media.prop('muted', false);
+        } else {
+            isMuted = true;
+            buttonSound.addClass('muted');
+            buttonSound[0].title = 'unmute';
+            media.prop('muted', true);
+        }
+    });
 }
