@@ -16,6 +16,7 @@ $transition-delay--header-scroll: $transition-time--header-scroll / 2;
   transition:
           opacity (.7 * $transition-time--object-scroll) $transition-curve--object-scroll,
           transform $transition-time--object-scroll $transition-curve--object-scroll;
+  will-change: transform;
   &.foot-line {
     transition: opacity $transition-time--object-scroll $transition-curve--object-scroll;
     transform: translate3D(0, 0, 0);
