@@ -53,7 +53,7 @@
         <p class="img-description">Exhibition poster.</p>
     </div>
 </div>
-<div class="project-details">
+<div class="project-details scroll-animation">
         <ul>
             <li><span>Client</span> Private project</li>
             <li><span>Year</span> 2015</li>

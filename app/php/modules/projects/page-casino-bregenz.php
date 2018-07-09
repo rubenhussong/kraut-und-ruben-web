@@ -19,17 +19,30 @@
             Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte. Nice Job, Boys!
         <?php else: ?>
             Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte. Nice Job, Boys!
-        <?php endif ?></p>
+        <?php endif ?>
+    </p>
 </div>
 
 <div class="project-content">
     <div class="project-box img-xl right scroll-animation">
         <img src="" data-src="/img/casino-bregenz/casino-bregenz-01.jpg" alt="Casino Bregenz Front View" sizes="auto">
-        <p class="img-description">Staunende Passanten schmelzen in einer Symbiose der Emotionen.</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Fusion von Architektur und Umgebung
+            <?php else: ?>
+                Relation between building and surrounding
+            <?php endif ?>
+        </p>
     </div>
     <div class="project-box img-s left scroll-animation">
         <img src="" data-src="/img/casino-bregenz/casino-bregenz-05.jpg" alt="Camera Man Tom Hegen" sizes="auto">
-        <p class="img-description">Volle Kanne im Prozess! Credits to Tom Hegen</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Entstehungsprozess
+            <?php else: ?>
+                Development process
+            <?php endif ?>
+        </p>
     </div>
     <div class="project-box img-l right shift scroll-animation">
         <div class="slider">
@@ -37,7 +50,13 @@
             <img src="" data-src="/img/casino-bregenz/casino-bregenz-02b.jpg" alt="Casino Fassade" sizes="auto">
             <img src="" data-src="/img/casino-bregenz/casino-bregenz-02a.jpg" alt="Casino Fassade" sizes="auto">
         </div>
-        <p class="img-description">Farbenspiel und geile Dynamik</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Passant als visuelles Vorbild
+            <?php else: ?>
+                Passanger as a visual pattern
+            <?php endif ?>
+        </p>
     </div>
     <div class="project-box text-box scroll-animation">
         <p>
@@ -50,7 +69,13 @@
     </div>
     <div class="project-box img-l right scroll-animation">
         <img src="" data-src="/img/casino-bregenz/casino-bregenz-03.jpg" alt="Casino Fassade" sizes="auto">
-        <p class="img-description">Ein heimlicher Blick hinter die Fassade</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                LED-Beleuchtung hinter der Fassade
+            <?php else: ?>
+                LED illumination behind the facade
+            <?php endif ?>
+        </p>
     </div>
     <div class="project-box img-xl scroll-animation">
         <div class="video" data-autoplay="true" data-audio="true">
@@ -62,11 +87,17 @@
                 <button class="button button--sound"></button>
             </div>
         </div>
-        <p class="img-description">Und noch ein schniekes Video</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Imagevideo des Animationskonzepts
+            <?php else: ?>
+                Image video of the animation concept
+            <?php endif ?>
+        </p>
     </div>
 </div>
 
-<div class="project-details">
+<div class="project-details scroll-animation">
     <ul>
         <li>
             <span>Client</span>

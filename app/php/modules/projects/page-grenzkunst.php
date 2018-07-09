@@ -98,7 +98,7 @@
     </div>
 </div>
 
-<div class="project-details">
+<div class="project-details scroll-animation">
         <ul>
             <li><span>Client</span>Grenzkunst e.V.</li>
             <li><span>Year</span>2017</li>

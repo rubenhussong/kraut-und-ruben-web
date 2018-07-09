@@ -9,7 +9,7 @@
     </h3>
 </div>
 
-<div class="project-details">
+<div class="project-details scroll-animation">
     <ul>
         <li><span>Client</span>Private Project</li>
         <li><span>Year</span>2018</li>
