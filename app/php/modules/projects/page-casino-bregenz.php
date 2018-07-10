@@ -2,9 +2,9 @@
     <h1>Casino Bregenz</h1>
     <h3>
         <?php if ($lang == 'de'): ?>
-            Animation
+            Animation, Szenografie
         <?php else: ?>
-            Branding, Graphic Design
+            Animation, Scenography
         <?php endif ?>
     </h3>
 </div>
@@ -100,18 +100,54 @@
 <div class="project-details scroll-animation">
     <ul>
         <li>
-            <span>Client</span>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Jahr
+                <?php else: ?>
+                    Year
+                <?php endif ?>
+            </span>
+            2016
+        </li>
+        <li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Kunde
+                <?php else: ?>
+                    Client
+                <?php endif ?>
+            </span>
             <a target="blank" rel="noopener" href="https://www.casinos.at/de/bregenz">Casino Bregenz</a></li>
         </li>
-        <li><span>Year</span>2016</li>
         <li>
-            <span>Presented by</span>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Kollaboration
+                <?php else: ?>
+                    Collaboration
+                <?php endif ?>
+            </span>
+            <a target="blank" rel="noopener" href="http://tomhegen.de">Tom Hegen</a>
+        </li>
+        <li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Unterstützt von
+                <?php else: ?>
+                    Promoted by
+                <?php endif ?>
+            </span>
             <a target="blank" rel="noopener" href="http://www.vlow.net/">Vlow!</a>
         </li>
-        <li><span>Award</span>Casino Capix Award</li>
         <li>
-            <span>Collaboration</span>
-            <a target="blank" rel="noopener" href="http://tomhegen.de">Tom Hegen</a>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Auszeichnung
+                <?php else: ?>
+                    Award
+                <?php endif ?>
+            </span>
+            Casino Capix Award
         </li>
     </ul>
 </div>

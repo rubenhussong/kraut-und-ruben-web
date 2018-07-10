@@ -2,9 +2,9 @@
     <h1>Grenzkunst</h1>
     <h3>
         <?php if ($lang == 'de'): ?>
-            Branding, Grafikdesign
+            Branding, Grafik
         <?php else: ?>
-            Branding, Art direction
+            Branding, Graphic
         <?php endif ?>
     </h3>
 </div>
@@ -100,10 +100,46 @@
 
 <div class="project-details scroll-animation">
         <ul>
-            <li><span>Client</span>Grenzkunst e.V.</li>
-            <li><span>Year</span>2017</li>
-            <li><span>Photography</span><a target="_blank" rel="noopener" href="https://www.behance.net/NatalieGoee3c4">Natalie Götz</a></li>
-            <li><span>Visit</span> <a target="_blank" rel="noopener" href="http://www.grenz-kunst.de">grenz-kunst.de</a></li>
+            <li>
+                <span>
+                    <?php if ($lang == 'de'): ?>
+                        Jahr
+                    <?php else: ?>
+                        Year
+                    <?php endif ?>
+                </span>
+                2017
+            </li>
+            <li>
+                <span>
+                    <?php if ($lang == 'de'): ?>
+                        Kunde
+                    <?php else: ?>
+                        Client
+                    <?php endif ?>
+                </span>
+                Grenzkunst e.V.
+            </li>
+            <li>
+                <span>
+                    <?php if ($lang == 'de'): ?>
+                        Fotografie
+                    <?php else: ?>
+                        Photography
+                    <?php endif ?>
+                </span>
+                <a target="_blank" rel="noopener" href="https://www.behance.net/NatalieGoee3c4">Natalie Götz</a>
+            </li>
+            <li>
+                <span>
+                    <?php if ($lang == 'de'): ?>
+                        Mehr
+                    <?php else: ?>
+                        More
+                    <?php endif ?>
+                </span>
+                <a target="_blank" rel="noopener" href="http://www.grenz-kunst.de">grenz-kunst.de</a>
+            </li>
         </ul>
 </div>
 

@@ -1,6 +1,12 @@
 <div class="project-title scroll-animation">
     <h1 class="">Space – <span>A Journey into the Void</span></h1>
-    <h3 class="">Editorial, Illustration</h3>
+    <h3 class="">
+        <?php if ($lang == 'de'): ?>
+            Editorial, Illustration
+        <?php else: ?>
+            Editorial, Illustration
+        <?php endif ?>
+    </h3>
 </div>
 
 <div class="project-hero scroll-animation" id="project-hero--space">
@@ -55,10 +61,26 @@
 </div>
 <div class="project-details scroll-animation">
         <ul>
-            <li><span>Client</span> Private project</li>
-            <li><span>Year</span> 2015</li>
-            <li><span>Photography</span> Florian Ortlieb</li>
-            <li><span>Visit</span> <a href="#">krautundruben.com</a></li>
+            <li>
+                <span>
+                    <?php if ($lang == 'de'): ?>
+                        Jahr
+                    <?php else: ?>
+                        Year
+                    <?php endif ?>
+                </span>
+                2015
+            </li>
+            <li>
+                <span>
+                    <?php if ($lang == 'de'): ?>
+                        Fotografie
+                    <?php else: ?>
+                        Photography
+                    <?php endif ?>
+                </span>
+                Florian Ortlieb
+            </li>
         </ul>
 </div>
 
