@@ -2,9 +2,9 @@
     <h1>Grenzkunst</h1>
     <h3>
         <?php if ($lang == 'de'): ?>
-            Branding, Grafik
+            Branding, Art Direction
         <?php else: ?>
-            Branding, Graphic
+            Branding, Art Direction
         <?php endif ?>
     </h3>
 </div>
@@ -16,7 +16,7 @@
 <div class="project-description scroll-animation">
     <p>
         <?php if ($lang == 'de'): ?>
-            Grenzkunst organisiert Elektro-Festivals in Süddeutschland. Der kleine, gemeinnützige Verein spendet alle Einnahmen an ein Kinderhilfswerk in Lima, Perú. 
+            Grenzkunst organisiert Elektro-Festivals in Süddeutschland. Der kleine, gemeinnützige Verein spendet alle Einnahmen an ein Kinderhilfswerk in Lima, Perú.
         <?php else: ?>   
             Grenzkunst is a small non-profit society that hosts electronic music festivals in Southern Germany. All proceeds go to a children’s charity in Lima, Perú.
         <?php endif ?>        
@@ -27,27 +27,41 @@
 
     <div class="project-box img-s scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst_logo_animation.gif" alt="Logo Redesign reveal" sizes="auto">
-        <p class="img-description">Logo refresh</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Neugestaltung der Wortmarke
+            <?php else: ?>
+                Keeping the logo recognizable
+            <?php endif ?>
+        </p>
     </div>
 
     <div class="project-box img-m shift scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-06.jpg" alt="Website redesign" sizes="auto">
-        <p class="img-description">Website rebrand.</p>
+        <p class="img-description">Web development</p>
     </div>
 
 
     <div class="project-box img-xl right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-03.jpg" alt="Stationery" sizes="auto">
-        <p class="img-description">A new look</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Farben werden im CD zurückgenommen
+            <?php else: ?>
+                Colour takes a back stage in the corporate materials
+            <?php endif ?>
+        </p>
     </div>
 
 
     <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
-                Deutscher Text zum Projekt. Alle Fotos by Natalie Götz.
+                Meine Aufgabe war es, die visuelle Identität des Vereins zu überarbeiten und ein Gestaltungskonzept 
+                für die Festivals zu entwickeln. Entstehen sollte eine solide und möglichst kostengünstige Grundlage, 
+                die beliebig erweitert werden kann.
             <?php else: ?>
-                I was tasked with unifying the brand identity and giving the festivals a fresh coat of paint. The main focus of this rebrand was creating a solid, cost-efficient foundation the team could expand and build upon.        
+                I was tasked with unifying the brand identity and giving the festivals a fresh coat of paint. The main focus of this rebrand was creating a solid, cost-efficient foundation the team could expand and build upon. 
             <?php endif ?>
         </p>
     </div>
@@ -58,31 +72,39 @@
             <img src="" data-src="/img/grenzkunst/grenzkunst-03b.jpg" alt="Festival crowd resting" sizes="auto">
             <img src="" data-src="/img/grenzkunst/grenzkunst-03a.jpg" alt="Eulenflug at night" sizes="auto">
         </div>
-        <p class="img-description">Eulenflug Festival 2017</p>
-    </div>
-
-<!-- 
-    <div class="image-description right scroll-animation">
-        <p>
+        <p class="img-description"> 
             <?php if ($lang == 'de'): ?>
-                Deutscher Text zum Projekt. Alle Fotos by Natalie Götz.
+                Eulenflug 2017 – Eindrücke
             <?php else: ?>
-                Both festivals (Sundowner & Eulenflug) received a makeover. Art direction: Florian Ortlieb, Lina Gerber.   
+                Eulenflug Festival 2017 – Impressions
             <?php endif ?>
         </p>
     </div>
--->
+
     <div class="project-box img-l shift scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-08.jpg" alt="Eulenflug 2017 tickets" sizes="auto">
         <p class="img-description">Tickets</p>
     </div>
     <div class="project-box img-s right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-09.jpg" alt="Eulenflug 2017 poster" sizes="auto">
-        <p class="img-description">Festival poster</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Plakat mit Lineup
+            <?php else: ?>
+                Lineup poster
+            <?php endif ?>            
+        </p>
     </div>
-    <div class="project-box img-l right scroll-animation">
+    <div class="project-box img-l box-center scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-10.jpg" alt="Eulenflug 2017 goodies" sizes="auto">
-        <p class="img-description">Eulenflug print materials</p>
+        <p class="img-description">
+            
+            <?php if ($lang == 'de'): ?>
+                Festivalzubehör
+            <?php else: ?>
+                Goodies & print materials
+            <?php endif ?>
+        </p>
     </div>
 
     <div class="project-box img-l right scroll-animation">
@@ -95,6 +117,13 @@
                 <button class="button--sound"></button>
             </div>
         </div>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Entwurf für den Webauftritt des Sundowner Festivals
+            <?php else: ?>
+                Concept for a new Sundowner Festival web presence
+            <?php endif ?>
+        </p>
     </div>
 </div>
 
