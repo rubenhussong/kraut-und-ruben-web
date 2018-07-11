@@ -2,9 +2,9 @@
     <h1>Casino Bregenz</h1>
     <h3>
         <?php if ($lang == 'de'): ?>
-            Animation
+            Animation, Szenografie
         <?php else: ?>
-            Branding, Graphic Design
+            Animation, Scenography
         <?php endif ?>
     </h3>
 </div>
@@ -16,9 +16,13 @@
 <div class="project-description scroll-animation">
     <p>
         <?php if ($lang == 'de'): ?>
-            Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte. Nice Job, Boys!
+            Das Casino liegt an der Seepromenade in Bregenz.
+            Jeden Tag sehen viele tausend Passanten seine digital bespielbare Außenfassade.
+            In Kooperation mit Tom Hegen entstand eine Animation, die jeden Abend darauf wiedergegeben wird.
         <?php else: ?>
-            Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte. Nice Job, Boys!
+            The casino is located alongside the lake promenade in Bregenz.
+            Every day thousands of pedestrians get a view of its digitally projected façade.
+            A cooperation with Tom Hegen resulted in an animation displayed there all night.
         <?php endif ?>
     </p>
 </div>
@@ -54,16 +58,20 @@
             <?php if ($lang == 'de'): ?>
                 Passant als visuelles Vorbild
             <?php else: ?>
-                Passanger as a visual pattern
+                Passenger as a visual pattern
             <?php endif ?>
         </p>
     </div>
     <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
-                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see what's happening there.
+                Die Animation hebt die Grenzen zwischen dem Casino und seiner Umgebung auf.
+                Beobachtern wird der Eindruck vermittelt, in das Gebäude hinein blicken zu können.
+                Aus der Ferne verschmelzen die Konturen der Passanten mit der bespielten Fassade.
             <?php else: ?>
-                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see what's happening there.
+                The animation dissolves borders between the casino and its surroundings.
+                Observers are under the impression of seeing the inside of the building.
+                From afar, contours of passersby merge into the façade projection.
             <?php endif ?>
         </p>
     </div>
@@ -100,18 +108,54 @@
 <div class="project-details scroll-animation">
     <ul>
         <li>
-            <span>Client</span>
-            <a target="blank" rel="noopener" href="https://www.casinos.at/de/bregenz">Casino Bregenz</a></li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Jahr
+                <?php else: ?>
+                    Year
+                <?php endif ?>
+            </span>
+            2016
         </li>
-        <li><span>Year</span>2016</li>
         <li>
-            <span>Presented by</span>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Kunde
+                <?php else: ?>
+                    Client
+                <?php endif ?>
+            </span>
+            Casino Bregenz
+        </li>
+        <li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Kollaboration
+                <?php else: ?>
+                    Collaboration
+                <?php endif ?>
+            </span>
+            <a target="blank" rel="noopener" href="http://tomhegen.de">Tom Hegen</a>
+        </li>
+        <li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Unterstützt von
+                <?php else: ?>
+                    Promoted by
+                <?php endif ?>
+            </span>
             <a target="blank" rel="noopener" href="http://www.vlow.net/">Vlow!</a>
         </li>
-        <li><span>Award</span>Casino Capix Award</li>
         <li>
-            <span>Collaboration</span>
-            <a target="blank" rel="noopener" href="http://tomhegen.de">Tom Hegen</a>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Auszeichnung
+                <?php else: ?>
+                    Recognition
+                <?php endif ?>
+            </span>
+            Casino Capix Award
         </li>
     </ul>
 </div>

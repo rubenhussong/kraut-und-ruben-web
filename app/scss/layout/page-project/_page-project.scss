@@ -84,7 +84,7 @@
 
   .project-details {
     margin: (2 * $gutter-y) 0;
-    padding: 0 $gutter-x;
+    padding: 0 (.5 * $gutter-x);
     ul {
       width: 100%;
       box-sizing: border-box;
@@ -93,9 +93,9 @@
       padding: 0;
       li {
         @include font-serif(m, false, 1.6);
-        margin-bottom: 1em;
         float: left;
-        width: 50%;
+        width: calc(50% - 1.5 * #{$gutter-x});
+        margin: 0 (.5 * $gutter-x) 1em;
       }
       a {
         display: inline-block;
