@@ -58,7 +58,7 @@
         <p>
             <?php if ($lang == 'de'): ?>
                 Meine Aufgabe war es, die visuelle Identität des Vereins zu überarbeiten und ein Gestaltungskonzept 
-                für die Festivals zu entwickeln. Entstehen sollte eine solide und möglichst kostengünstige Grundlage, 
+                für die Festivals zu entwickeln. Es sollte eine solide und möglichst kostengünstige Grundlage entstehen, 
                 die beliebig erweitert werden kann.
             <?php else: ?>
                 I was tasked with unifying the brand identity and giving the festivals a fresh coat of paint. The main focus of this rebrand was creating a solid, cost-efficient foundation the team could expand and build upon. 
@@ -83,7 +83,9 @@
 
     <div class="project-box img-l shift scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-08.jpg" alt="Eulenflug 2017 tickets" sizes="auto">
-        <p class="img-description">Tickets</p>
+        <p class="img-description">
+            Design foundation: pattern, colour scheme, type system.
+        </p>
     </div>
     <div class="project-box img-s right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-09.jpg" alt="Eulenflug 2017 poster" sizes="auto">
