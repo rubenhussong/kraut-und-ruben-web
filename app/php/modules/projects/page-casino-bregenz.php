@@ -73,7 +73,7 @@
             <?php if ($lang == 'de'): ?>
                 LED-Beleuchtung hinter der Fassade
             <?php else: ?>
-                LED illumination behind the facade
+                LED illumination behind the façade
             <?php endif ?>
         </p>
     </div>

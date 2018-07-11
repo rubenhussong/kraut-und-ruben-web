@@ -10,9 +10,9 @@
 <div class="project-description scroll-animation">
     <p>
         <?php if ($lang == 'de'): ?>
-            »The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home.« <span>– Carl Sagan</span>
+            »The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home.« <span>– Carl Sagan, Cosmos</span>
         <?php else: ?>
-            “The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home.” <span>– Carl Sagan</span>
+            “The size and age of the Cosmos are beyond ordinary human understanding. Lost somewhere between immensity and eternity is our tiny planetary home.” <span>– Carl Sagan, Cosmos</span>
         <?php endif ?>
     </p>
 </div>
@@ -20,12 +20,12 @@
 <div class="project-content clear">
 
     <div class="project-box img-l shift scroll-animation">
-        <img src="" data-src="/img/space/space03.jpg" alt="Book spread, graphic nonsense." sizes="auto">
-        <p class="img-description">There's no lack of void.</p>
+        <img src="" data-src="/img/space/space02.jpg" alt="Book spread, graphic nonsense." sizes="auto">
+        <p class="img-description">Space is what we all share</p>
     </div>
     <div class="project-box img-s right scroll-animation">
-        <img src="" data-src="/img/space/space02.jpg" alt="Book spread, bold typography." sizes="auto">
-        <p class="img-description">Aloof in the solar waves, she is carried home.</p>
+        <img src="" data-src="/img/space/space03.jpg" alt="Book spread, bold typography." sizes="auto">
+        <p class="img-description">Space is the void</p>
     </div>
     <div class="project-box img-xl right scroll-animation">
         <div class="slider">
@@ -33,7 +33,7 @@
             <img src="" data-src="/img/space/space01.jpg" alt="Book spread, graphic nonsense." sizes="auto">
             <img src="" data-src="/img/space/space02.jpg" alt="Book spread, bold typography." sizes="auto">
         </div>
-        <p class="img-description">There we go again.</p>
+        <p class="img-description">Space is an open book</p>
     </div>
     <div class="project-box text-box scroll-animation">
         <p>

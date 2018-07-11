@@ -32,13 +32,13 @@
 
     <div class="project-box img-m shift scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-06.jpg" alt="Website redesign" sizes="auto">
-        <p class="img-description">Website rebrand.</p>
+        <p class="img-description">Website rebrand</p>
     </div>
 
 
     <div class="project-box img-xl right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-03.jpg" alt="Stationery" sizes="auto">
-        <p class="img-description">A new look</p>
+        <p class="img-description">Colour takes a back stage in the corporate materials</p>
     </div>
 
 
@@ -58,7 +58,7 @@
             <img src="" data-src="/img/grenzkunst/grenzkunst-03b.jpg" alt="Festival crowd resting" sizes="auto">
             <img src="" data-src="/img/grenzkunst/grenzkunst-03a.jpg" alt="Eulenflug at night" sizes="auto">
         </div>
-        <p class="img-description">Eulenflug Festival 2017</p>
+        <p class="img-description">Eulenflug Festival 2017 – Impressions</p>
     </div>
 
 <!-- 
@@ -82,7 +82,7 @@
     </div>
     <div class="project-box img-l right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-10.jpg" alt="Eulenflug 2017 goodies" sizes="auto">
-        <p class="img-description">Eulenflug print materials</p>
+        <p class="img-description">Goodies & print materials</p>
     </div>
 
     <div class="project-box img-l right scroll-animation">
