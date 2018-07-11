@@ -2,9 +2,9 @@
     <h1>El Presidente</h1>
     <h3>
         <?php if ($lang == 'de'): ?>
-            Virtuelle Realität, Spielentwicklung
+            Virtual Reality, Spielentwicklung
         <?php else: ?>
-            Virtual Reality, Game
+            Virtual Reality, Game Development
         <?php endif ?>
     </h3>
 </div>
@@ -16,15 +16,13 @@
 <div class="project-description scroll-animation">
     <p>
         <?php if ($lang == 'de'): ?>
-            El Presidente ist ein Spiel, dass in Echtzeit zwischen Realität und virtuellem Raum übersetzt.
+            El Presidente ist ein Spiel, das in Echtzeit zwischen Realität und virtuellem Raum übersetzt.
             Ein Spieler platziert Figuren auf einem live getrackten Spielfeld.
-            Der zweite Spieler reagiert in der Virtuellen Ralität auf die ausgelösten Aktionen.
-            All seine Bewegungen visualisiert ein Beamer auf dem analogen Spielfeld.
+            Der zweite Spieler reagiert in der virtuellen Realität auf die ausgelösten Aktionen.
         <?php else: ?>
-            El Presidente is a game, which translates between reality and virtual space in real time.
-            One player triggers actions by moving tokens on a live tracked game board.
+            El Presidente is a game bridging the gap between reality and virtual space.
+            One player triggers actions by moving tokens on an analogue playboard.
             The second player reacts in Virtual Reality.
-            All of of his moves are displayed by a beamer on the analog game bord.
         <?php endif ?>
     </p>
 </div>
@@ -51,12 +49,12 @@
         </p>
     </div>
     <div class="project-box img-xl right scroll-animation">
-        <img src="" data-src="/img/el-presidente/el-presidente-02.jpg" alt="El Presidente Analog Game" sizes="auto">
+        <img src="" data-src="/img/el-presidente/el-presidente-02.jpg" alt="El Presidente Analogue Game" sizes="auto">
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
                 In Echtzeit getracktes analoges Spielbrett
             <?php else: ?>
-                Live tracked analog game board
+                Live tracked analogue game board
             <?php endif ?>
         </p>
     </div>
@@ -78,9 +76,9 @@
         <img src="" data-src="/img/el-presidente/el-presidente-01.jpg" alt="El Presidente Analog Game" sizes="auto">
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
-                Der Twittervogel-Spielstein
+                Tweet-Spielstein
             <?php else: ?>
-                The Twitter bird token
+                Analog tweet token
             <?php endif ?>
         </p>
     </div>
@@ -88,9 +86,9 @@
         <img src="" data-src="/img/el-presidente/el-presidente-06.gif" alt="El Presidente VR Twitter Bird" sizes="auto">
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
-                Gefährlicher Twittervogel in Virtueller Realität
+                Explosiver Tweet in VR
             <?php else: ?>
-                Dangerous Twitter bird in Virtual Reality
+                Explosive tweet in VR
             <?php endif ?>
         </p>
     </div>
@@ -98,9 +96,9 @@
         <img src="" data-src="/img/el-presidente/el-presidente-07.gif" alt="El Presidente VR Twitter Bird" sizes="auto">
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
-                Bedrohlicher Trompetenhagel in Virtueller Realität
+                Launischer Trompetenhagel
             <?php else: ?>
-                Threatening trumpet hail in Virtual Reality
+                Whimsical trumpet hail
             <?php endif ?>
         </p>
     </div>
@@ -146,10 +144,12 @@
                     Collaboration
                 <?php endif ?>
             </span>
-            Mirjam Banzhaf,
-            <a target="blank" rel="noopener" href="https://www.lisamarquardt.com/">Lisa Marquardt</a>,
-            <a target="blank" rel="noopener" href="https://www.behance.net/Carla93">Carla Grammel</a>,
+            Mirjam Banzhaf, Lisa Marquardt, Carla Grammel, Hannah Keuerleber
+            <!--
+            <a target="blank" rel="noopener" href="https://www.lisamarquardt.com/">Lisa Marquardt</a><br>
+            <a target="blank" rel="noopener" href="https://www.behance.net/Carla93">Carla Grammel</a><br>
             <a target="blank" rel="noopener" href="http://hannahkeuerleber.com/">Hannah Keuerleber</a>
+            -->
         </li>
         <li>
             <span>

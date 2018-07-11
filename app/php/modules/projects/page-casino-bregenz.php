@@ -16,7 +16,9 @@
 <div class="project-description scroll-animation">
     <p>
         <?php if ($lang == 'de'): ?>
-            Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte. Nice Job, Boys!
+            Das Casino Bregenz am Bodensee ist ein architektonisch feinfühliges Biotop. Mehr als 14.000 LEDs ermöglichen die Bespielung seiner Außenfassade.
+            Die danebenliegende Seepromenade passieren jeden Tag viele tausend Menschen.
+            In Kooperation mit Tom Hegen entstand Animations, die die Fassade 
         <?php else: ?>
             Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte. Nice Job, Boys!
         <?php endif ?>
@@ -54,16 +56,20 @@
             <?php if ($lang == 'de'): ?>
                 Passant als visuelles Vorbild
             <?php else: ?>
-                Passanger as a visual pattern
+                Passenger as a visual pattern
             <?php endif ?>
         </p>
     </div>
     <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
-                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see what's happening there.
+                Die Animation hebt die Grenzen zwischen dem Casino und seiner Umgebung auf.
+                Beobachtern wird der Eindruck vermittelt, in das Gebäude hinein blicken zu können.
+                Aus der Ferne verschmelzen die Konturen der Passanten mit der bespielten Fassade.
             <?php else: ?>
-                Our concept and key idea was to dissolve the borders between the casino and square around the theatre by taking the pedestrians straight onto the wall of the casino. When you’re outside of the building you get a sort of a feeling that you can look through the façade into the casino and see what's happening there.
+                The animation dissolves borders between the casino and its surroundings.
+                Observers are under the impression of seeing the inside of the building.
+                From afar, contours of passersby melt into the façade projection.
             <?php endif ?>
         </p>
     </div>
@@ -73,7 +79,7 @@
             <?php if ($lang == 'de'): ?>
                 LED-Beleuchtung hinter der Fassade
             <?php else: ?>
-                LED illumination behind the facade
+                LED illumination behind the façade
             <?php endif ?>
         </p>
     </div>
@@ -117,7 +123,7 @@
                     Client
                 <?php endif ?>
             </span>
-            <a target="blank" rel="noopener" href="https://www.casinos.at/de/bregenz">Casino Bregenz</a></li>
+            Casino Bregenz
         </li>
         <li>
             <span>
@@ -144,7 +150,7 @@
                 <?php if ($lang == 'de'): ?>
                     Auszeichnung
                 <?php else: ?>
-                    Award
+                    Recognition
                 <?php endif ?>
             </span>
             Casino Capix Award

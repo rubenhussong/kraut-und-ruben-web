@@ -133,9 +133,9 @@
             <li>
                 <span>
                     <?php if ($lang == 'de'): ?>
-                        Mehr
+                        Webseite
                     <?php else: ?>
-                        More
+                        Website
                     <?php endif ?>
                 </span>
                 <a target="_blank" rel="noopener" href="http://www.grenz-kunst.de">grenz-kunst.de</a>

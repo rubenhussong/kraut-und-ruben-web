@@ -2,7 +2,7 @@
     <h1>Hypernet</h1>
     <h3>
         <?php if ($lang == 'de'): ?>
-            Virtuelle Realität, Interface
+            Virtual Reality, Interface
         <?php else: ?>
             Virtual Reality, Interface
         <?php endif ?>
@@ -46,7 +46,7 @@
                 <?php if ($lang == 'de'): ?>
                     Besonderer Dank an
                 <?php else: ?>
-                    Special Thanks to
+                    Special thanks to
                 <?php endif ?>
             </span>
             <?php if ($lang == 'de'): ?>
