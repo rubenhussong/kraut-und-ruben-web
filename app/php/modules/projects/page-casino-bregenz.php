@@ -16,11 +16,13 @@
 <div class="project-description scroll-animation">
     <p>
         <?php if ($lang == 'de'): ?>
-            Das Casino Bregenz am Bodensee ist ein architektonisch feinfühliges Biotop. Mehr als 14.000 LEDs ermöglichen die Bespielung seiner Außenfassade.
-            Die danebenliegende Seepromenade passieren jeden Tag viele tausend Menschen.
-            In Kooperation mit Tom Hegen entstand Animations, die die Fassade 
+            Das Casino liegt an der Seepromenade in Bregenz.
+            Jeden Tag sehen viele tausend Passanten seine digital bespielbare Außenfassade.
+            In Kooperation mit Tom Hegen entstand eine Animation, die jeden Abend darauf wiedergegeben wird.
         <?php else: ?>
-            Das Casino Bregenz am Bodensee ist ein architektonisches Meisterwerk der Extrasahne. Seine durch mehr als 14.000 LEDs bespielte Außenfassade fasziniert jeden Tag tausende von Passanten. In Kooperation mit Tom Hegen entstand eine Animation, die gleich mal den Casino Capix Award abräumte. Nice Job, Boys!
+            The casino is located alongside the lake promenade in Bregenz.
+            Every day thousands of pedestrians get a view of its digitally projected façade.
+            A cooperation with Tom Hegen resulted in an animation displayed there all night.
         <?php endif ?>
     </p>
 </div>
@@ -69,7 +71,7 @@
             <?php else: ?>
                 The animation dissolves borders between the casino and its surroundings.
                 Observers are under the impression of seeing the inside of the building.
-                From afar, contours of passersby melt into the façade projection.
+                From afar, contours of passersby merge into the façade projection.
             <?php endif ?>
         </p>
     </div>
