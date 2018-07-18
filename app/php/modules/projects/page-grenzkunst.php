@@ -1,7 +1,11 @@
 <div class="project-title scroll-animation">
     <h1>Grenzkunst</h1>
     <h3>
-        Branding, Art Direction
+        <?php if ($lang == 'de'): ?>
+            Branding, Art Direction
+        <?php else: ?>
+            Branding, Art Direction
+        <?php endif ?>
     </h3>
 </div>
 
@@ -15,10 +19,10 @@
             Grenzkunst ist ein gemeinnütziger Verein aus dem Süden Deutschlands.
             Jährlich organisiert er mehrere Elektro-Festivals.
             Alle Einnahmen kommen einem Kinderhilfswerk in Lima, Peru zugute.
-        <?php else: ?>   
+        <?php else: ?>
             Grenzkunst is a small non-profit society that hosts electronic music festivals in Southern Germany.
             All proceeds go to a children’s charity in Lima, Peru.
-        <?php endif ?>        
+        <?php endif ?>
     </p>
 </div>
 
@@ -46,7 +50,6 @@
         </p>
     </div>
 
-
     <div class="project-box img-xl right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-03.jpg" alt="Stationery" sizes="auto">
         <p class="img-description">
@@ -57,7 +60,6 @@
             <?php endif ?>
         </p>
     </div>
-
 
     <div class="project-box text-box scroll-animation">
         <p>
@@ -73,13 +75,13 @@
         </p>
     </div>
 
-     <div class="project-box img-xl right scroll-animation">
+    <div class="project-box img-xl right scroll-animation">
         <div class="slider">
             <img src="" data-src="/img/grenzkunst/grenzkunst-03c.jpg" alt="Festival crowd" sizes="auto">
             <img src="" data-src="/img/grenzkunst/grenzkunst-03b.jpg" alt="Festival crowd resting" sizes="auto">
             <img src="" data-src="/img/grenzkunst/grenzkunst-03a.jpg" alt="Eulenflug at night" sizes="auto">
         </div>
-        <p class="img-description"> 
+        <p class="img-description">
             <?php if ($lang == 'de'): ?>
                 Eulenflug 2017 – Eindrücke
             <?php else: ?>
@@ -90,7 +92,9 @@
 
     <div class="project-box img-l shift scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-08.jpg" alt="Eulenflug 2017 tickets" sizes="auto">
-        <p class="img-description">Tickets</p>
+        <p class="img-description">
+            Design foundation: Pattern, colour scheme, type system
+        </p>
     </div>
     <div class="project-box img-s right scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-09.jpg" alt="Eulenflug 2017 poster" sizes="auto">
@@ -99,13 +103,13 @@
                 Plakat mit Lineup
             <?php else: ?>
                 Lineup poster
-            <?php endif ?>            
+            <?php endif ?>
         </p>
     </div>
     <div class="project-box img-l box-center scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-10.jpg" alt="Eulenflug 2017 goodies" sizes="auto">
         <p class="img-description">
-            
+
             <?php if ($lang == 'de'): ?>
                 Festivalzubehör
             <?php else: ?>
@@ -135,48 +139,48 @@
 </div>
 
 <div class="project-details scroll-animation">
-        <ul>
-            <li>
-                <span>
-                    <?php if ($lang == 'de'): ?>
-                        Jahr
-                    <?php else: ?>
-                        Year
-                    <?php endif ?>
-                </span>
-                2017
-            </li>
-            <li>
-                <span>
-                    <?php if ($lang == 'de'): ?>
-                        Kunde
-                    <?php else: ?>
-                        Client
-                    <?php endif ?>
-                </span>
-                Grenzkunst e.V.
-            </li>
-            <li>
-                <span>
-                    <?php if ($lang == 'de'): ?>
-                        Fotografie
-                    <?php else: ?>
-                        Photography
-                    <?php endif ?>
-                </span>
-                <a target="_blank" rel="noopener" href="https://www.behance.net/NatalieGoee3c4">Natalie Götz</a>
-            </li>
-            <li>
-                <span>
-                    <?php if ($lang == 'de'): ?>
-                        Webseite
-                    <?php else: ?>
-                        Website
-                    <?php endif ?>
-                </span>
-                <a target="_blank" rel="noopener" href="http://www.grenz-kunst.de">grenz-kunst.de</a>
-            </li>
-        </ul>
+    <ul>
+        <li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Jahr
+                <?php else: ?>
+                    Year
+                <?php endif ?>
+            </span>
+            2017
+        </li>
+        <li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Kunde
+                <?php else: ?>
+                    Client
+                <?php endif ?>
+            </span>
+            Grenzkunst e.V.
+        </li>
+        <li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Fotografie
+                <?php else: ?>
+                    Photography
+                <?php endif ?>
+            </span>
+            <a target="_blank" rel="noopener" href="https://www.behance.net/NatalieGoee3c4">Natalie Götz</a>
+        </li>
+        <li>
+            <span>
+                <?php if ($lang == 'de'): ?>
+                    Webseite
+                <?php else: ?>
+                    Website
+                <?php endif ?>
+            </span>
+            <a target="_blank" rel="noopener" href="http://www.grenz-kunst.de">grenz-kunst.de</a>
+        </li>
+    </ul>
 </div>
 
 <footer class="section section--footer change-color">
