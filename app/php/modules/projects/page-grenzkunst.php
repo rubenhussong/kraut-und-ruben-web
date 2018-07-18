@@ -1,11 +1,7 @@
 <div class="project-title scroll-animation">
     <h1>Grenzkunst</h1>
     <h3>
-        <?php if ($lang == 'de'): ?>
-            Branding, Art Direction
-        <?php else: ?>
-            Branding, Art Direction
-        <?php endif ?>
+        Branding, Art Direction
     </h3>
 </div>
 
