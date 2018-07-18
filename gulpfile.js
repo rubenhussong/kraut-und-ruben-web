@@ -147,7 +147,7 @@ function convertImgs(destination, sourceSet, imageWidth){ // TO DO: add responsi
     return gulp.src('app/img/**/*')
         .pipe(rename(function(path){
             path.basename = path.basename + '-' + sourceSet.toString() + 'px';
-            path.extname = changeCase.lowerCase(path.extname)
+            path.extname = changeCase.lowerCase(path.extname);
         }))
         .pipe(changed(destination + '/img/'/* + sourceSet + 'px'*/))
         .pipe(imageResize({

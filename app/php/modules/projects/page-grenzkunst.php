@@ -16,9 +16,12 @@
 <div class="project-description scroll-animation">
     <p>
         <?php if ($lang == 'de'): ?>
-            Grenzkunst organisiert Elektro-Festivals in Süddeutschland. Der kleine, gemeinnützige Verein spendet alle Einnahmen an ein Kinderhilfswerk in Lima, Perú.
+            Grenzkunst ist ein gemeinnütziger Verein aus dem Süden Deutschlands.
+            Jährlich organisiert er mehrere Elektro-Festivals.
+            Alle Einnahmen kommen einem Kinderhilfswerk in Lima, Peru zugute.
         <?php else: ?>   
-            Grenzkunst is a small non-profit society that hosts electronic music festivals in Southern Germany. All proceeds go to a children’s charity in Lima, Perú.
+            Grenzkunst is a small non-profit society that hosts electronic music festivals in Southern Germany.
+            All proceeds go to a children’s charity in Lima, Peru.
         <?php endif ?>        
     </p>
 </div>
@@ -29,7 +32,7 @@
         <img src="" data-src="/img/grenzkunst/grenzkunst_logo_animation.gif" alt="Logo Redesign reveal" sizes="auto">
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
-                Neugestaltung der Wortmarke
+                Neugestaltung des Logos
             <?php else: ?>
                 Keeping the logo recognizable
             <?php endif ?>
@@ -38,7 +41,13 @@
 
     <div class="project-box img-m shift scroll-animation">
         <img src="" data-src="/img/grenzkunst/grenzkunst-06.jpg" alt="Website redesign" sizes="auto">
-        <p class="img-description">Web development</p>
+        <p class="img-description">
+            <?php if ($lang == 'de'): ?>
+                Grenzkunst Webseite
+            <?php else: ?>
+                Grenzkunst Website
+            <?php endif ?>
+        </p>
     </div>
 
 
@@ -57,11 +66,13 @@
     <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
-                Meine Aufgabe war es, die visuelle Identität des Vereins zu überarbeiten und ein Gestaltungskonzept 
-                für die Festivals zu entwickeln. Entstehen sollte eine solide und möglichst kostengünstige Grundlage, 
-                die beliebig erweitert werden kann.
+                Neben der Überarbeitung der visuellen Identität des Vereins, bekamen auch die Festivals einen frischen Anstrich.
+                Für beides entstand eine flexibel erweiterbare Visualisierung.
+                Um das Budget des Vereins nicht zu sprengen, wurden die Produktionskosten auf das Nötigste minimiert.
+                Das Gastaltungskonzept ist einfach und kosten-effizient. Dies ermöglicht dem Team, es flexibel auszubauen.
             <?php else: ?>
-                I was tasked with unifying the brand identity and giving the festivals a fresh coat of paint. The main focus of this rebrand was creating a solid, cost-efficient foundation the team could expand and build upon. 
+                I was tasked with unifying the brand identity and giving the festivals a fresh coat of paint.
+                The main focus of this rebrand was creating a solid, cost-efficient foundation the team could expand and build upon.
             <?php endif ?>
         </p>
     </div>

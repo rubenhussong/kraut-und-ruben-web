@@ -15,24 +15,32 @@
         <p>
             <?php if ($lang == 'de'): ?>
 
+<!--
                 Guten Tag! <span class="icon icon--sun"></span>
                 Wir sind Flo und Ruben, zwei Designer aus Deutschland.
                 Wir lieben es, Webseiten <span class="icon icon--device"></span>
                 zu entwickeln, auf Bäume <span class="icon icon--tree"></span>
                 zu klettern und Menschen <span class="icon icon--human"></span> kennen zu lernen –
                 also <a href="mailto:gutentag@krautundruben.de">schreib</a> uns,
-                <a href="#foot-line">ruf &nbsp;</a>uns an oder besuch uns auf ein, zwei Gläschen Eistee.
+                <a href="#foot-line">ruf&nbsp;</a>uns an oder besuch uns auf ein, zwei Gläschen Eistee.
                 <span class="icon icon--ice-tea"></span>
+-->
+
+                Guten Tag! <span class="icon icon--sun"></span>
+                Wir sind Flo und Ruben, zwei Designer aus Deutschland.
+                Wir lieben es, Webseiten <span class="icon icon--device"></span>
+                zu entwickeln, schöne Dinge zu gestalten, auf Bäume <span class="icon icon--tree"></span>
+                zu klettern und den Wind in den Haaren zu spüren.
 
             <?php else: ?>
 
-                Good day! <span class="symbol">&#x2600;</span>
+                Good day! <span class="icon icon--sun"></span>
                 We are Flo and Ruben, two designers from Germany.
-                We love creating websites <span class="symbol device-icon"></span>,
-                climbing trees <span class="symbol">&#x1f333;</span>
-                and meeting people <span class="symbol">&#x1F483;</span> –
-                so <a href="mailto:gutentag@krautundruben.de">mail</a>,
-                <a href="#foot-line">call</a> or simply visit us for a glass of iced tea. <span class="symbol ice-tea-icon"></span>
+                We love creating websites <span class="icon icon--device"></span>,
+                climbing trees <span class="icon icon--tree"></span>
+                and meeting people <span class="icon icon--human"></span>.
+                So <a href="mailto:gutentag@krautundruben.de">mail</a>,
+                <a href="#foot-line">call</a> or simply visit us for a glass of iced tea <span class="icon icon--ice-tea"></span>.
                 Or two.
 
             <?php endif ?>
@@ -105,9 +113,7 @@
         <p>
             <?php if ($lang == 'de'): ?>
 
-                Wir arbeiten von überall, aber meistens vom schönen Konstanz aus.
-                Wenn du ein lustiges, aufregendes oder fantastisches Projekt hast,
-                an dem du mit uns arbeiten möchtest, zeigen wir dir gerne eines unserer Lieblings-Cafés in der Altstadt.
+                Webseiten gestalten. Webseiten entwickeln. Branding. Rebranding. Logos und Wortmarken. Editorial. Illustration. User Experience. App Design. Grafik Design.
 
             <?php else: ?>
 

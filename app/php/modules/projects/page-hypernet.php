@@ -40,7 +40,7 @@
         <p>
             <?php if ($lang == 'de'): ?>
                 Als Daten-Fundament dient die Enzyklopädie Wikipedia.
-                Deren Artikel werden live und generativ in die Virtual Reality übersetzt.
+                Deren Artikel werden in Echtzeit generativ in die Virtual Reality übersetzt.
                 Das Hypernet ist der Grundstein eines VR-Webbrowsers.
             <?php else: ?>
 
@@ -74,7 +74,7 @@
                 der verständlichen Strukturierung von Datenmasse
                 und der Optimierung des Lese-Erlebnisses im virtuellen Raum.
             <?php else: ?>
-                
+
             <?php endif ?>
         </p>
     </div>
