@@ -21,7 +21,7 @@
             In Kooperation mit Tom Hegen entstand eine Animation, die jeden Abend darauf wiedergegeben wird.
         <?php else: ?>
             The casino is located alongside the lake promenade in Bregenz.
-            Every day thousands of pedestrians get a view of its digitally projected façade.
+            Every day thousands of pedestrians get to view its digitally projected façade.
             A cooperation with Tom Hegen resulted in an animation displayed there all night.
         <?php endif ?>
     </p>
@@ -58,7 +58,7 @@
             <?php if ($lang == 'de'): ?>
                 Passant als visuelles Vorbild
             <?php else: ?>
-                Passenger as a visual pattern
+                Pedestrian as a visual pattern
             <?php endif ?>
         </p>
     </div>
@@ -70,7 +70,7 @@
                 Aus der Ferne verschmelzen die Konturen der Passanten mit der bespielten Fassade.
             <?php else: ?>
                 The animation dissolves borders between the casino and its surroundings.
-                Observers are under the impression of seeing the inside of the building.
+                Observers are granted the impression of being able to see into the building.
                 From afar, contours of passersby merge into the façade projection.
             <?php endif ?>
         </p>

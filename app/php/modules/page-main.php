@@ -105,6 +105,7 @@
         <p>
             <?php if ($lang == 'de'): ?>
 
+                
                 Wir arbeiten von überall, aber meistens vom schönen Konstanz aus.
                 Wenn du ein lustiges, aufregendes oder fantastisches Projekt hast,
                 an dem du mit uns arbeiten möchtest, zeigen wir dir gerne eines unserer Lieblings-Cafés in der Altstadt.

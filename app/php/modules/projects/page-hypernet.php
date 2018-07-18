@@ -19,8 +19,8 @@
             Das Hypernet ist eine Forschungsarbeit mit dem Ziel, Orientierung im World Wide Web zu schaffen.
             Um eine objektive Meinungsbildung zu ermöglichen, wird die grafische Benutzeroberfläche des Web in den dreidimensionalen Raum übertragen.
         <?php else: ?>
-            Hypernet is a research how to ensure orientation in the world wide web.
-            To achieve the possibility of evaluating information objectivly, its graphical user interface gets transmitted into three-dimensional space.
+            Hypernet is a research project on how to facilitate orientation in the world wide web.
+            To enable an objective evaluation of information, the visualization of the web is transmitted into three-dimensional space.
         <?php endif ?>
     </p>
 </div>
@@ -39,11 +39,13 @@
     <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
-                Als Daten-Fundament dient die Enzyklopädie Wikipedia.
-                Deren Artikel werden live und generativ in die Virtual Reality übersetzt.
+                Als Fundament dient die Datenbank der Enzyklopädie Wikipedia.
+                Deren Artikel werden in Echtzeit generativ in Virtual Reality übersetzt.
                 Das Hypernet ist der Grundstein eines VR-Webbrowsers.
             <?php else: ?>
-
+                Wikipedia provides the data framework for this application. 
+                The articles are generatively translated into VR in real time.
+                Hypernet is the foundation of a Virtual Reality web browser.
             <?php endif ?>
         </p>
     </div>
@@ -74,7 +76,8 @@
                 der verständlichen Strukturierung von Datenmasse
                 und der Optimierung des Lese-Erlebnisses im virtuellen Raum.
             <?php else: ?>
-                
+                Further focus is put on user experience with three-dimensional interfaces, how to structure 
+                massive data and optimize the Virtual Reality reading experience.
             <?php endif ?>
         </p>
     </div>

@@ -10,7 +10,7 @@
   "license": "ISC",
   "devDependencies": {
     "change-case": "^3.0.2",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-cache": "^1.0.2",
     "gulp-changed": "^3.2.0",
@@ -21,7 +21,6 @@
     "gulp-dom": "^0.9.17",
     "gulp-filelog": "^0.4.1",
     "gulp-if": "^2.0.2",
-    "gulp-image-resize": "^0.13.0",
     "gulp-imagemin": "^4.1.0",
     "gulp-lazysizes-data-srcset": "^1.0.0",
     "gulp-lazysizes-srcset": "^0.2.0",
@@ -30,7 +29,7 @@
     "gulp-newer": "^1.4.0",
     "gulp-purgecss": "^1.0.0",
     "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.6.1",
+    "gulp-responsive": "^2.11.0",
     "gulp-sass": "^4.0.1",
     "gulp-scss-lint": "^0.6.1",
     "gulp-uglify": "^3.0.0",
@@ -38,5 +37,7 @@
     "imagemin": "^5.3.1",
     "imagemin-pngquant": "^5.1.0"
   },
-  "dependencies": {}
+  "dependencies": {
+    "sharp": "^0.20.5"
+  }
 }

@@ -23,11 +23,11 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),                    // combine JS-Files
 
     // IMG
+    responsive = require('gulp-responsive'),            // Generates images at different sizes
     imagemin = require('gulp-imagemin'),                // optimize IMGs
     changed = require('gulp-changed'),                  // just convert new or changed images (don’t know difference yet)
     pngquant = require('imagemin-pngquant'),            // optimize PNGs even more
     rename = require('gulp-rename'),
-    imageResize = require("gulp-image-resize"),
     changeCase = require('change-case');
 
 
@@ -144,16 +144,20 @@ function convertJs(destination){
 }
 
 function convertImgs(destination, sourceSet, imageWidth){ // TO DO: add responsive image function
-    return gulp.src('app/img/**/*')
+    return gulp.src('app/img/**/*{png,jpg}')
         .pipe(rename(function(path){
             path.basename = path.basename + '-' + sourceSet.toString() + 'px';
             path.extname = changeCase.lowerCase(path.extname)
         }))
         .pipe(changed(destination + '/img/'/* + sourceSet + 'px'*/))
-        .pipe(imageResize({
-            width : sourceSet, // TO DO: implement imageSize-coefficient (search with dom() for sizes-attribute of img-tag with alt=path.basename and make it a number)
-            upscale: true,
-            imageMagick: true
+        .pipe(responsive(config, {
+            errorOnEnlargement: false,
+            quality: 80,
+            withMetadata: false,
+            compressionLevel: 7,
+            max: true,
+            width : sourceSet // TO DO: implement imageSize-coefficient (search with dom() for sizes-attribute of img-tag with alt=path.basename and make it a number)
+
         }))
         .pipe(imagemin({ // TO DO: check out imagemin options
             progressive: true,
