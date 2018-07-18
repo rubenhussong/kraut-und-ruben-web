@@ -39,8 +39,13 @@
     <div class="project-box text-box scroll-animation">
         <p>
             <?php if ($lang == 'de'): ?>
+
                 Als Fundament dient die Datenbank der Enzyklopädie Wikipedia.
                 Deren Artikel werden in Echtzeit generativ in Virtual Reality übersetzt.
+
+                Als Daten-Fundament dient die Enzyklopädie Wikipedia.
+                Deren Artikel werden in Echtzeit generativ in die Virtual Reality übersetzt.
+
                 Das Hypernet ist der Grundstein eines VR-Webbrowsers.
             <?php else: ?>
                 Wikipedia provides the data framework for this application. 
@@ -76,8 +81,12 @@
                 der verständlichen Strukturierung von Datenmasse
                 und der Optimierung des Lese-Erlebnisses im virtuellen Raum.
             <?php else: ?>
+
                 Further focus is put on user experience with three-dimensional interfaces, how to structure 
                 massive data and optimize the Virtual Reality reading experience.
+
+
+
             <?php endif ?>
         </p>
     </div>
