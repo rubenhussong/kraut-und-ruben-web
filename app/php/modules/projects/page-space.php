@@ -74,6 +74,20 @@
             <li>
                 <span>
                     <?php if ($lang == 'de'): ?>
+                        Studienprojekt
+                    <?php else: ?>
+                        University project
+                    <?php endif ?>
+                </span>
+                    <?php if ($lang == 'de'): ?>
+                        Held des Alltags
+                    <?php else: ?>
+                        Everyday Hero
+                    <?php endif ?>  
+            </li>
+            <li>
+                <span>
+                    <?php if ($lang == 'de'): ?>
                         Fotografie
                     <?php else: ?>
                         Photography
