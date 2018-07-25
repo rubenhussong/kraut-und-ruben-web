@@ -13,55 +13,14 @@ footer {
     max-width: calc(100% - #{$gutter-x});
     @include font-sans(m, false, 1.7);
     p { margin: 0; }
-    a {
-      display: inline-block;
-      backface-visibility: visible;
-      overflow: visible;
-      @include font-serif(l, false, false, italic);
-      @include hover--about-link();
-    }
-    .icon {
-      font-family: $logotype;
-      will-change: content;
-    }
-    .icon--sun:before {
-      content: '\1F325';
-      animation: sunIcon 4s infinite;
-    }
-    .icon--device:before {
-      content: '\1F5A5';
-      animation: deviceIcon 3s infinite;
-    }
-    .icon--human:before {
-      content: '\1F483';
-      animation: humanIcon 4s infinite;
-    }
-    .icon--tree:before {
-      content: '\1F333';
-      animation: treeIcon 8s infinite;
-    }
-    .icon--ice-tea:before {
-      content: '\1F37A';
-      animation: iceTeaIcon 4s infinite;
-    }
-    &.scroll-animation-top, &.scroll-animation-bottom {
-      .icon--sun,
-      .icon--device,
-      .icon--human,
-      .icon--tree,
-      .icon--ice-tea {
-        &:before {
-          animation: null;
-        }
-      }
-    }
   }
   #footer-image{
     box-sizing: border-box;
     width: 100%;
     padding: (.5 * $gutter-y) (.5 * $gutter-x);
     img {
-      width: 50%;
+      width: 60%;
+      float: right;
     }
   }
   .foot-line {

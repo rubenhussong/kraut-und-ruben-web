@@ -21,7 +21,7 @@
                 zu entwickeln, auf Bäume <span class="icon icon--tree"></span>
                 zu klettern und Menschen <span class="icon icon--human"></span> kennen zu lernen –
                 also <a href="mailto:gutentag@krautundruben.de">schreib</a> uns,
-                <a href="#foot-line">ruf &nbsp;</a>uns an oder besuch uns auf ein, zwei Gläschen Eistee.
+                <a href="#foot-line">ruf&nbsp;</a>uns an oder besuch uns auf ein, zwei Gläschen Eistee.
                 <span class="icon icon--ice-tea"></span>
 
             <?php else: ?>
@@ -105,16 +105,16 @@
         <p>
             <?php if ($lang == 'de'): ?>
 
-                
-                Wir arbeiten von überall, aber meistens vom schönen Konstanz aus.
-                Wenn du ein lustiges, aufregendes oder fantastisches Projekt hast,
-                an dem du mit uns arbeiten möchtest, zeigen wir dir gerne eines unserer Lieblings-Cafés in der Altstadt.
+                Wir arbeiten gerne mit Menschen aus unterschiedlichen Disziplinen zusammen.
+                Wir legen wir viel Wert auf ausgeklügelte Konzepte und streben danach, Dinge zu erschaffen, die helfen und Spaß machen.
+                Sind Qualitäten gefragt, die über die unseren hinausgehen, holen wir uns gute Freunde mit ins Beet.
 
             <?php else: ?>
 
-                We work from anywhere, but are currently based in the beautiful city of Constance.
-                In case you have a whimsical, exciting or flat out fantastic project you’d like to work on with us:
-                we’d be delighted to show you one of our favourite cafés in the old town.
+                We enjoy working with people from different disciplines.
+                We emphasise in ingenious concepts and strive for creations that help and delight.
+                If other qualitites than ours are required, we love collaborating with good friends.
+
 
             <?php endif ?>
         </p>

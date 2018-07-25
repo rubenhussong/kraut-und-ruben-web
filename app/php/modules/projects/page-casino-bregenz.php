@@ -10,7 +10,7 @@
 </div>
 
 <div class="project-hero scroll-animation" id="project-hero--casino-bregenz">
-    <img src="" data-src="/img/casino-bregenz/casino-bregenz-04.jpg" alt="casino-bregenz-hero" sizes="auto">
+    <img data-src="/img/casino-bregenz/casino-bregenz-04.jpg" alt="casino-bregenz-hero" data-sizes="auto">
 </div>
 
 <div class="project-description scroll-animation">
@@ -29,7 +29,7 @@
 
 <div class="project-content">
     <div class="project-box img-xl right scroll-animation">
-        <img src="" data-src="/img/casino-bregenz/casino-bregenz-01.jpg" alt="Casino Bregenz Front View" sizes="auto">
+        <img data-src="/img/casino-bregenz/casino-bregenz-01.jpg" alt="Casino Bregenz Front View" data-sizes="auto">
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
                 Fusion von Architektur und Umgebung
@@ -39,7 +39,7 @@
         </p>
     </div>
     <div class="project-box img-s left scroll-animation">
-        <img src="" data-src="/img/casino-bregenz/casino-bregenz-05.jpg" alt="Camera Man Tom Hegen" sizes="auto">
+        <img data-src="/img/casino-bregenz/casino-bregenz-05.jpg" alt="Camera Man Tom Hegen" data-sizes="auto">
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
                 Entstehungsprozess
@@ -50,9 +50,9 @@
     </div>
     <div class="project-box img-l right shift scroll-animation">
         <div class="slider">
-            <img src="" data-src="/img/casino-bregenz/casino-bregenz-02c.jpg" alt="Casino Fassade" sizes="auto">
-            <img src="" data-src="/img/casino-bregenz/casino-bregenz-02b.jpg" alt="Casino Fassade" sizes="auto">
-            <img src="" data-src="/img/casino-bregenz/casino-bregenz-02a.jpg" alt="Casino Fassade" sizes="auto">
+            <img data-src="/img/casino-bregenz/casino-bregenz-02c.jpg" alt="Casino Fassade" data-sizes="auto">
+            <img data-src="/img/casino-bregenz/casino-bregenz-02b.jpg" alt="Casino Fassade" data-sizes="auto">
+            <img data-src="/img/casino-bregenz/casino-bregenz-02a.jpg" alt="Casino Fassade" data-sizes="auto">
         </div>
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
@@ -76,7 +76,7 @@
         </p>
     </div>
     <div class="project-box img-l right scroll-animation">
-        <img src="" data-src="/img/casino-bregenz/casino-bregenz-03.jpg" alt="Casino Fassade" sizes="auto">
+        <img data-src="/img/casino-bregenz/casino-bregenz-03.jpg" alt="Casino Fassade" data-sizes="auto">
         <p class="img-description">
             <?php if ($lang == 'de'): ?>
                 LED-Beleuchtung hinter der Fassade
@@ -88,7 +88,7 @@
     <div class="project-box img-xl scroll-animation">
         <div class="video" data-autoplay="true" data-audio="true">
             <video controls muted>
-                <source src="/img/casino-bregenz/161026_Casino_Bregenz_Casestudy_1080p.mp4" type="video/mp4">
+                <source data-src="/img/casino-bregenz/161026_Casino_Bregenz_Casestudy_1080p.mp4" type="video/mp4">
             </video>
             <div class="controls hover--dark">
                 <button class="button button--play"></button>

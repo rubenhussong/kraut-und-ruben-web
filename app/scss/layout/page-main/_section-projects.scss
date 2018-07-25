@@ -1,3 +1,7 @@
+
+$transition-curve--project-teaser:        cubic-bezier(0,.5,.5,1);
+$transition-curve--project-teaser-back:   cubic-bezier(.5,0,1,.5);
+
 #section--projects {
   display: inline-block;
   padding: $gutter-y (.5 * $gutter-x);
@@ -33,10 +37,10 @@
         align-items: center;
         justify-content: center;
         opacity: 0;
-        transition: opacity .6s ease;
+        transition: opacity .2s $transition-curve--project-teaser-back;
         h2 {
           @include font-sans(m, .03em, 1.15);
-          transition: transform .5s ease;
+          transition: transform .2s $transition-curve--project-teaser-back;
           transform: scale(0);
           text-align: center;
           span {
@@ -60,8 +64,10 @@
       @include hover() {
         .project-text {
           opacity: 1;
+          transition: opacity .4s $transition-curve--project-teaser;
           h2 {
             transform: scale(1);
+            transition: transform .4s $transition-curve--project-teaser;
           }
         }
       }

@@ -42,10 +42,6 @@
 
                 Als Fundament dient die Datenbank der Enzyklopädie Wikipedia.
                 Deren Artikel werden in Echtzeit generativ in Virtual Reality übersetzt.
-
-                Als Daten-Fundament dient die Enzyklopädie Wikipedia.
-                Deren Artikel werden in Echtzeit generativ in die Virtual Reality übersetzt.
-
                 Das Hypernet ist der Grundstein eines VR-Webbrowsers.
             <?php else: ?>
                 Wikipedia provides the data framework for this application. 

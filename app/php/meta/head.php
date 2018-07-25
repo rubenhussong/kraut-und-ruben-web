@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="/css/normalize.css">
 <link rel="stylesheet" href="/css/style.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
-<script language="javascript" type="text/javascript" src="/js/main-min.js"></script>
+<script language="javascript" type="text/javascript" src="/js/main.js"></script>
 
 <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
 <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">

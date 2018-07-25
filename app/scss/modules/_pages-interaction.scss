@@ -59,7 +59,7 @@ header {
   }
   // ================================================== Page [Imprint active]
   .page {
-    //filter: blur(.5rem) brightness(1.1) contrast(.9);
+    filter: opacity(0.08);
     pointer-events: none;
   }
   #imprint {

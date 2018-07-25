@@ -143,6 +143,27 @@ function lazyLoadImages(page) {
         var lazySrc = $(this).attr('data-src');
         $(this).attr('src', lazySrc);
         $(this).removeAttr('data-src');
+
+        var lazySrcset = $(this).attr('data-srcset');
+        $(this).attr('srcset', lazySrcset);
+        $(this).removeAttr('data-srcset');
+
+        var lazySizes = $(this).attr('data-sizes');
+        $(this).attr('sizes', lazySizes);
+        $(this).removeAttr('data-sizes');
+    });
+
+    $(page).find('video').each(function() {
+        $(page).find('source').each(function() {
+            var lazySrc = $(this).attr('data-src');
+            $(this).attr('src', lazySrc);
+            $(this).removeAttr('data-src');
+
+            var lazySrcset = $(this).attr('data-srcset');
+            $(this).attr('srcset', lazySrcset);
+            $(this).removeAttr('data-srcset');
+        });
+        $(this)[0].load();
     });
 }
 

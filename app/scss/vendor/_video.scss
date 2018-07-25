@@ -1,5 +1,10 @@
 // ================================================== Video Controls Layout
 
+$transition-time--video:         .4s;
+$transition-curve--video:        cubic-bezier(0,.5,.5,1);
+$transition-time--video-back:    .2s;
+$transition-curve--video-back:   cubic-bezier(.5,0,1,.5);
+
 .video {
   display: inline-block;
   box-sizing: border-box;
@@ -25,7 +30,7 @@
     align-items: center;
     justify-content: center;
     opacity: 0;
-    transition: opacity .6s ease;
+    transition: opacity $transition-time--video-back $transition-curve--video-back;
     button {
       position: absolute;
       cursor: pointer;
@@ -67,13 +72,18 @@
       }
       @include hover() {
         opacity: 1;
+        transition: opacity $transition-time--video $transition-curve--video;
         button {
           transform: scale(1);
+          transition:
+                  transform $transition-time--video $transition-curve--video,
+                  opacity .2s ease,
+                  color .2s ease;
         }
       }
       button {
         transition:
-                transform .5s ease,
+                transform .2s $transition-curve--video-back,
                 opacity .2s ease,
                 color .2s ease;
         @include hover() {
